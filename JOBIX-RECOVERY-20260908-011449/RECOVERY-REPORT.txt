@@ -1,0 +1,157 @@
+﻿JOBIX RECOVERY REPORT
+Created: 09/08/2026 01:14:49
+
+=== EXACT CSS FILES ===
+
+FullName                                      
+--------                                      
+D:\Jobix\apps\web\app\jobix.css               
+D:\Jobix\JOBIX-RECOVERY-20260908-011449\fro...
+D:\Jobix\apps\web\app\jobix.css.damaged-backup
+D:\Jobix\apps\web\app\jobix.css.before-reco...
+D:\Jobix\apps\api\app\jobix.css               
+
+
+
+=== CSS-LIKE BACKUPS ===
+
+FullName                                      
+--------                                      
+D:\Jobix\JOBIX-RECOVERY-20260908-011449\fro...
+D:\Jobix\apps\web\app\jobix.css               
+D:\Jobix\JOBIX-RECOVERY-20260908-011449\fro...
+D:\Jobix\apps\web\app\jobix-interaction.css   
+D:\Jobix\apps\api\app\jobix.css               
+
+
+
+=== CSS GENERATOR / RECOVERY SCRIPTS ===
+
+Name                           Length LastWrit
+                                      eTime   
+----                           ------ --------
+.jobix_sidebar_state.py          1316 03-09...
+.jobix_shell_state.py             545 03-09...
+.jobix_width_repair.py           2714 03-09...
+.jobix_import_fix.py              360 03-09...
+.jobix_interaction_css.py        5805 03-09...
+.jobix_sidebar_v2.py             1805 03-09...
+.jobix_shell_v2.py                746 03-09...
+.jobix_sidebar_css_final.py      7581 03-09...
+.jobix_sidebar_final.py          1964 03-09...
+.jobix_shell_final.py             777 03-09...
+.jobix_layout_final.py           9797 03-09...
+.jobix_sidebar_update.py         2079 03-09...
+.jobix_shell_fix.py               860 03-09...
+.jobix_shell_update.py            888 03-09...
+.fix_jobix_layout_css.py        11181 03-09...
+.fix_jobix_shell.py               871 03-09...
+.fix_sidebar_logout_css.py       2368 03-09...
+.fix_sidebar_logout.py           1879 03-09...
+.fix_template_css.py             8975 03-09...
+.fix_template_gallery.py         9034 03-09...
+.jobix_template_gallery_fix.py   9076 03-09...
+.jobix_templates_page_fix.py      461 03-09...
+.jobix_global_css.py             8901 03-09...
+.jobix_sidebar_production.py     3103 03-09...
+.jobix_theme_fix.py              1850 03-09...
+.jobix_header_fix.py             3694 03-09...
+.jobix_dashboard_shell.py         443 03-09...
+.jobix_sidebar_layout_fix.py     2708 03-09...
+.jobix_sidebar_css.py            2452 03-09...
+.jobix_sidebar_fix.py            2247 03-09...
+.jobix_fix_login.py              3368 02-09...
+
+
+
+=== TARGET SELECTORS FOUND IN RECOVERY SCRIPTS ===
+[NOT FOUND] .jobix-landing
+[NOT FOUND] .jobix-landing-nav
+[NOT FOUND] .jobix-landing-brand
+[NOT FOUND] .jobix-landing-actions
+[NOT FOUND] .jobix-landing-hero
+[NOT FOUND] .jobix-landing-dashboard
+[NOT FOUND] .jobix-hero
+[NOT FOUND] .jobix-hero-content
+[NOT FOUND] .jobix-hero-actions
+[NOT FOUND] .jobix-stat-grid
+[NOT FOUND] .jobix-section
+[NOT FOUND] .jobix-primary-button
+[NOT FOUND] .jobix-secondary-button
+[NOT FOUND] .jobix-sidebar-v2
+[NOT FOUND] .jobix-navigation-v2
+[NOT FOUND] .jobix-main
+[NOT FOUND] .jobix-menu-toggle-v2
+=== SOURCE COMPONENT SELECTORS ===
+
+FILE: D:\Jobix\apps\web\components\jobix\landing\JobixLandingPage.tsx
+<main className={`jobix-landing jobix-landing-${theme}`}>
+<nav className="jobix-landing-nav">
+className="jobix-landing-brand"
+<span className="jobix-landing-mark">
+<span className="jobix-landing-brand-text">
+<div className="jobix-landing-actions">
+className="jobix-theme-button"
+className={
+className="jobix-landing-login-button"
+className="jobix-landing-signup"
+<section className="jobix-landing-hero">
+<div className="jobix-landing-hero-copy">
+<span className="jobix-landing-pill">
+<div className="jobix-landing-hero-actions">
+className="jobix-landing-primary"
+className="jobix-landing-secondary"
+<div className="jobix-landing-visual">
+<div className="jobix-landing-glow" />
+<div className="jobix-landing-dashboard">
+<div className="jobix-mini-sidebar">
+<div className="jobix-mini-logo">
+<span className="active">
+<div className="jobix-mini-content">
+<div className="jobix-mini-header">
+<div className="jobix-mini-hero">
+<div className="jobix-mini-stats">
+<div className="jobix-mini-cards">
+<div className="jobix-floating-match">
+
+FILE: D:\Jobix\apps\web\components\jobix\dashboard\JobixDashboard.tsx
+<div className="jobix-dashboard-auth-guard">
+<div className="jobix-dashboard-auth-spinner"></div>
+<main className="jobix-dashboard">
+className="jobix-dashboard-menu-button"
+<div className="jobix-dashboard-menu-overlay">
+className="jobix-dashboard-menu-backdrop"
+<aside className="jobix-dashboard-menu-panel">
+<div className="jobix-dashboard-menu-header">
+<nav className="jobix-dashboard-menu-nav">
+<section className="jobix-hero">
+<div className="jobix-hero-content">
+<span className="jobix-eyebrow">
+<div className="jobix-hero-actions">
+<button className="jobix-primary-button">
+<button className="jobix-secondary-button">
+<div className="jobix-hero-symbol">
+<section className="jobix-stat-grid">
+<article className="jobix-card jobix-stat-card" key={label}>
+<section className="jobix-section">
+<div className="jobix-section-heading">
+=== CURRENT CSS SIZE ===
+57109
+=== CURRENT INTERACTION CSS SIZE ===
+5963
+=== SNAPSHOT ===
+
+Name                      Length LastWriteTime
+----                      ------ -------------
+jobix-interaction.css       5963 03-09-2026...
+jobix.css                  57109 08-09-2026...
+JobixDashboard.tsx          4348 08-09-2026...
+JobixLandingPage.tsx        5636 08-09-2026...
+layout.tsx                   649 03-09-2026...
+page.tsx                      73 07-09-2026...
+ResumeAnalyzingScreen.tsx  10635 07-09-2026...
+ResumeResultsV2.tsx        22251 07-09-2026...
+ResumeStudioShell.tsx      22458 07-09-2026...
+
+
+
