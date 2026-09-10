@@ -1,0 +1,15 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="512" height="512" rx="108" fill="#071936"/>
+
+  <!-- Single cyan J -->
+  <path
+    d="M282 132H347V284C347 365 305 407 237 407C204 407 174 397 149 376L190 327C204 340 219 347 238 347C269 347 282 327 282 291V132Z"
+    fill="#08A9D3"
+  />
+
+  <!-- White inner stroke of the same J -->
+  <path
+    d="M282 173H229V286C229 307 219 319 201 319C187 319 176 313 165 302L145 328C162 346 184 355 208 355C255 355 282 329 282 286V173Z"
+    fill="white"
+  />
+</svg>
