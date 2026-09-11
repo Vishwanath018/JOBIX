@@ -90,6 +90,10 @@ function EyeIcon({ visible }: { visible: boolean }) {
 }
 
 export default function SignupPage() {
+  ;
+
+  ;
+
   const [fullName, setFullName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -315,6 +319,7 @@ export default function SignupPage() {
         <div className="grid grid-cols-2 gap-5">
           <button
             type="button"
+            onClick={() => window.location.href = "http://127.0.0.1:8000/auth/google"}
             className="flex h-[76px] items-center justify-center gap-5 rounded-2xl border-2 border-[#d8e3f0] bg-white text-[19px] font-semibold text-[#111827] shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
           >
             <img src="/google-g.svg" alt="Google" className="h-[38px] w-[38px]" />
@@ -323,6 +328,7 @@ export default function SignupPage() {
 
           <button
             type="button"
+            onClick={() => window.location.href = "http://127.0.0.1:8000/auth/linkedin"}
             className="flex h-[76px] items-center justify-center gap-5 rounded-2xl border-2 border-[#d8e3f0] bg-white text-[19px] font-semibold text-[#111827] shadow-sm transition hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md"
           >
             <img src="/linkedin.svg" alt="LinkedIn" className="h-[38px] w-[38px]" />

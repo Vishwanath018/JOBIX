@@ -1,6 +1,9 @@
 "use client";
 
+import Script from "next/script";
+
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { apiRequest } from "@/lib/api";
 
@@ -46,6 +49,11 @@ function Arrow() {
 }
 
 export default function LoginPage() {
+  const router = useRouter();
+  ;
+
+  ;
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [remember, setRemember] = useState(true);
@@ -56,8 +64,14 @@ export default function LoginPage() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+
     if (params.get("registered") === "1") {
       setRegistered(true);
+      window.history.replaceState({}, "", "/login");
+    }
+
+    if (params.get("oauth_success") === "1") {
+      setMessage("You logged in successfully. Welcome to JOBIX Career!");
       window.history.replaceState({}, "", "/login");
     }
   }, []);
@@ -85,6 +99,7 @@ export default function LoginPage() {
 
       if (remember) {
         localStorage.setItem("jobix_access_token", data.access_token);
+      localStorage.setItem("jobix_user", JSON.stringify(data.user));
         localStorage.setItem("jobix_user", JSON.stringify(data.user));
       } else {
         sessionStorage.setItem("jobix_access_token", data.access_token);
@@ -92,6 +107,7 @@ export default function LoginPage() {
       }
 
       setMessage(`Welcome back${data.user.full_name ? `, ${data.user.full_name}` : ""}!`);
+      setTimeout(() => router.push("/home"), 700);
     } catch (error) {
       setMessage(error instanceof Error ? error.message : "Unable to login.");
     } finally {
@@ -130,7 +146,7 @@ export default function LoginPage() {
           {registered && (
           <div className="mb-5 flex items-center gap-3 rounded-2xl border border-green-200 bg-green-50 px-5 py-4 text-[15px] font-semibold text-green-700 shadow-sm">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
-              ✓
+              âœ“
             </span>
             <span>Account created successfully. Please login to continue.</span>
           </div>
@@ -221,22 +237,22 @@ export default function LoginPage() {
             <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
               <button
                 type="button"
+                onClick={() => window.location.href = "http://127.0.0.1:8000/auth/google"}
                 className="flex h-[62px] items-center justify-center gap-7 rounded-2xl border border-[#d4deec] bg-white shadow-[0_4px_18px_rgba(32,73,130,0.055)] transition-all duration-200 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-100/70 text-[19px] font-medium"
               >
                 <img src="/google-g.svg" alt="Google" className="h-8 w-8 object-contain" />
                 Google
               </button>
-
               <button
                 type="button"
+                onClick={() => window.location.href = "http://127.0.0.1:8000/auth/linkedin"}
                 className="flex h-[62px] items-center justify-center gap-7 rounded-2xl border border-[#d4deec] bg-white shadow-[0_4px_18px_rgba(32,73,130,0.055)] transition-all duration-200 focus-within:border-blue-500 focus-within:ring-4 focus-within:ring-blue-100/70 text-[19px] font-medium"
               >
                 <span className="flex h-[42px] w-[42px] items-center justify-center rounded-md bg-[#1685c4] text-[31px] font-bold text-white">
                   in
                 </span>
                 LinkedIn
-              </button>
-            </div>
+              </button>            </div>
 
             <p className="mt-6 text-center text-[17px] text-[#61789f]">
               Don&apos;t have an account?{" "}
