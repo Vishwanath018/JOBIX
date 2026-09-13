@@ -1,7 +1,8 @@
-import secrets
+﻿import secrets
 
 import jwt
 from urllib.parse import urlencode
+from app.core.security import get_current_user
 
 import requests
 from google.oauth2 import id_token
@@ -23,6 +24,7 @@ from app.schemas.auth import (
 from app.core.config import settings
 from app.core.security import (
     create_access_token,
+    get_current_user,
     hash_password,
     verify_password,
 )
@@ -50,7 +52,7 @@ def send_login_notification(user: User):
         </div>
         <p style="color:#61789f;font-size:14px;line-height:1.6;margin:24px 0 0;">If you did not make this login, please secure your account and contact JOBIX support.</p>
         <div style="border-top:1px solid #e5edf7;margin-top:30px;padding-top:20px;text-align:center;">
-          <p style="margin:0;color:#8a9ab5;font-size:12px;">JOBIX Career · Your career, smarter.</p>
+          <p style="margin:0;color:#8a9ab5;font-size:12px;">JOBIX Career ┬╖ Your career, smarter.</p>
         </div>
       </div>
     </div>
@@ -252,7 +254,7 @@ def google_callback(
     send_login_notification(user)
 
     return RedirectResponse(
-        f"{frontend_url}/oauth/callback#access_token={token}"
+        f"{frontend_url}/oauth/callback?access_token={urlencode({"value": token})[6:]}"
     )
 
 @router.get("/linkedin")
@@ -346,45 +348,8 @@ def linkedin_callback(
     )
 
 @router.get("/me", response_model=UserResponse)
-def get_current_user(
-    authorization: str | None = Header(default=None),
-    db: Session = Depends(get_db),
+def get_me(
+    current_user: User = Depends(get_current_user),
 ):
-    if not authorization or not authorization.startswith("Bearer "):
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Authentication required.",
-        )
+    return current_user
 
-    token = authorization.replace("Bearer ", "", 1)
-
-    try:
-        payload = jwt.decode(
-            token,
-            settings.jwt_secret_key,
-            algorithms=[settings.jwt_algorithm],
-        )
-        user_id = payload.get("sub")
-    except Exception:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid authentication token.",
-        )
-
-    if not user_id:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="Invalid authentication token.",
-        )
-
-    user = db.scalar(
-        select(User).where(User.id == int(user_id))
-    )
-
-    if not user or not user.is_active:
-        raise HTTPException(
-            status_code=status.HTTP_401_UNAUTHORIZED,
-            detail="User account is unavailable.",
-        )
-
-    return user

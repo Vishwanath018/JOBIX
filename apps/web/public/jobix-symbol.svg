@@ -1,15 +1,31 @@
-<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="512" height="512" rx="108" fill="#071936"/>
+﻿<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="blue" x1="130" y1="90" x2="390" y2="430" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#20D7E8"/>
+      <stop offset="0.48" stop-color="#087FF5"/>
+      <stop offset="1" stop-color="#2928F5"/>
+    </linearGradient>
+    <linearGradient id="white" x1="150" y1="190" x2="280" y2="390" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DDE8F7"/>
+    </linearGradient>
+  </defs>
 
-  <!-- Single cyan J -->
+  <rect width="512" height="512" rx="118" fill="#061A45"/>
+
   <path
-    d="M282 132H347V284C347 365 305 407 237 407C204 407 174 397 149 376L190 327C204 340 219 347 238 347C269 347 282 327 282 291V132Z"
-    fill="#08A9D3"
+    d="M202 101H353V246C353 319 312 361 242 361C192 361 153 334 153 291V239H202V101Z"
+    fill="url(#blue)"
   />
 
-  <!-- White inner stroke of the same J -->
   <path
-    d="M282 173H229V286C229 307 219 319 201 319C187 319 176 313 165 302L145 328C162 346 184 355 208 355C255 355 282 329 282 286V173Z"
-    fill="white"
+    d="M202 101V246C202 274 190 290 167 304C151 314 143 329 143 350C143 386 171 410 208 410C259 410 291 379 291 326V205C291 239 271 255 237 264C207 272 188 287 177 309V101H202Z"
+    fill="url(#white)"
+  />
+
+  <path
+    d="M291 205C291 239 271 255 237 264C207 272 188 287 177 309C188 290 202 279 222 274C270 262 291 238 291 205Z"
+    fill="#0A5EFF"
+    opacity="0.92"
   />
 </svg>

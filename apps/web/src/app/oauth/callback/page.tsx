@@ -2,37 +2,53 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { saveAuth } from "@/lib/auth";
 
 export default function OAuthCallbackPage() {
   const router = useRouter();
 
   useEffect(() => {
-    const params = new URLSearchParams(
+    const query = new URLSearchParams(window.location.search);
+    const hash = new URLSearchParams(
       window.location.hash.replace(/^#/, "")
     );
 
-    const token = params.get("access_token");
-    const email = params.get("email");
-    const fullName = params.get("full_name");
+    const token =
+      query.get("access_token") ||
+      hash.get("access_token");
 
-    if (!token) {
-      router.replace("/login?oauth_error=1");
+    const email =
+      query.get("email") ||
+      hash.get("email") ||
+      "";
+
+    const fullName =
+      query.get("full_name") ||
+      hash.get("full_name") ||
+      "";
+
+    if (token) {
+      saveAuth(
+        token,
+        {
+          email,
+          full_name: fullName,
+        },
+        true
+      );
+
+      sessionStorage.setItem("jobix_oauth_processed", "1");
+
+      router.replace("/home");
       return;
     }
 
-    localStorage.setItem("jobix_access_token", token);
-
-    if (email || fullName) {
-      localStorage.setItem(
-        "jobix_user",
-        JSON.stringify({
-          email: email || "",
-          full_name: fullName || "",
-        })
-      );
+    if (sessionStorage.getItem("jobix_oauth_processed") === "1") {
+      router.replace("/home");
+      return;
     }
 
-    router.replace("/home");
+    router.replace("/login?oauth_error=1");
   }, [router]);
 
   return (

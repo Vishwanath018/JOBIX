@@ -1,14 +1,15 @@
-from fastapi import FastAPI
+﻿from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
 from app.core.config import settings
 from app.db.session import engine
 from app.routers.auth import router as auth_router
+from app.routers.ats import router as ats_router
 
 app = FastAPI(
     title=settings.app_name,
-    version="0.1.0",
+    version="0.2.0",
 )
 
 app.add_middleware(
@@ -20,6 +21,7 @@ app.add_middleware(
 )
 
 app.include_router(auth_router)
+app.include_router(ats_router)
 
 
 @app.get("/")
@@ -27,7 +29,7 @@ def root():
     return {
         "name": "JOBIX API",
         "status": "running",
-        "version": "0.1.0",
+        "version": "0.2.0",
     }
 
 
@@ -36,6 +38,7 @@ def health():
     try:
         with engine.connect() as connection:
             connection.execute(text("SELECT 1"))
+
         return {
             "status": "healthy",
             "database": "connected",

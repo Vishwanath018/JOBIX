@@ -1,4 +1,4 @@
-import os
+﻿import os
 from pathlib import Path
 
 from dotenv import load_dotenv
@@ -25,6 +25,10 @@ class Settings(BaseSettings):
     linkedin_client_secret: str
     resend_api_key: str = ""
     email_from: str = ""
+    sarvam_api_key: str = ""
+    sarvam_base_url: str = "https://api.sarvam.ai"
+    sarvam_resume_model: str = "sarvam-105b"
+    resume_request_timeout_seconds: int = 90
 
     model_config = SettingsConfigDict(
         env_file=ENV_FILE,
@@ -41,4 +45,10 @@ settings = Settings(
     google_client_secret=os.environ.get("GOOGLE_CLIENT_SECRET", ""),
     linkedin_client_id=os.environ.get("LINKEDIN_CLIENT_ID", ""),
     linkedin_client_secret=os.environ.get("LINKEDIN_CLIENT_SECRET", ""),
+    sarvam_api_key=os.environ.get("SARVAM_API_KEY", ""),
+    sarvam_base_url=os.environ.get("SARVAM_BASE_URL", "https://api.sarvam.ai"),
+    sarvam_resume_model=os.environ.get("SARVAM_RESUME_MODEL", "sarvam-105b"),
+    resume_request_timeout_seconds=int(
+        os.environ.get("RESUME_REQUEST_TIMEOUT_SECONDS", "90")
+    ),
 )

@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Script from "next/script";
 
@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { FormEvent, useEffect, useState } from "react";
 import { apiRequest } from "@/lib/api";
+import { saveAuth } from "@/lib/auth";
 
 function MailIcon() {
   return (
@@ -97,14 +98,7 @@ export default function LoginPage() {
         }),
       });
 
-      if (remember) {
-        localStorage.setItem("jobix_access_token", data.access_token);
-      localStorage.setItem("jobix_user", JSON.stringify(data.user));
-        localStorage.setItem("jobix_user", JSON.stringify(data.user));
-      } else {
-        sessionStorage.setItem("jobix_access_token", data.access_token);
-        sessionStorage.setItem("jobix_user", JSON.stringify(data.user));
-      }
+      saveAuth(data.access_token, data.user, remember);
 
       setMessage(`Welcome back${data.user.full_name ? `, ${data.user.full_name}` : ""}!`);
       setTimeout(() => router.push("/home"), 700);
@@ -146,7 +140,7 @@ export default function LoginPage() {
           {registered && (
           <div className="mb-5 flex items-center gap-3 rounded-2xl border border-green-200 bg-green-50 px-5 py-4 text-[15px] font-semibold text-green-700 shadow-sm">
             <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-green-600 text-white">
-              âœ“
+              ├ó┼ôΓÇ£
             </span>
             <span>Account created successfully. Please login to continue.</span>
           </div>
@@ -280,3 +274,5 @@ export default function LoginPage() {
     </main>
   );
 }
+
+
