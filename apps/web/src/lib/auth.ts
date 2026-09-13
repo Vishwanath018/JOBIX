@@ -1,5 +1,5 @@
-﻿const TOKEN_KEY = "jobix_access_token";
-const USER_KEY = "jobix_user";
+﻿const TOKEN_KEY = "jobix_access_token_v2";
+const USER_KEY = "jobix_user_v2";
 
 export function saveAuth(
   token: string,
@@ -8,10 +8,7 @@ export function saveAuth(
 ) {
   if (typeof window === "undefined") return;
 
-  localStorage.removeItem(TOKEN_KEY);
-  sessionStorage.removeItem(TOKEN_KEY);
-  localStorage.removeItem(USER_KEY);
-  sessionStorage.removeItem(USER_KEY);
+  clearAuth();
 
   const storage = remember ? localStorage : sessionStorage;
 
@@ -29,6 +26,7 @@ export function setAccessToken(
   sessionStorage.removeItem(TOKEN_KEY);
 
   const storage = remember ? localStorage : sessionStorage;
+
   storage.setItem(TOKEN_KEY, token);
 }
 
@@ -64,4 +62,9 @@ export function clearAuth() {
   localStorage.removeItem(USER_KEY);
   sessionStorage.removeItem(TOKEN_KEY);
   sessionStorage.removeItem(USER_KEY);
+
+  localStorage.removeItem("jobix_access_token");
+  localStorage.removeItem("jobix_user");
+  sessionStorage.removeItem("jobix_access_token");
+  sessionStorage.removeItem("jobix_user");
 }
