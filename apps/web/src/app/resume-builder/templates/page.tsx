@@ -204,7 +204,7 @@ export default function ResumeTemplatesPage() {
             <button
               onClick={() =>
                 router.push(
-                  `/resume-builder/editor?template=${selected}&mode=${mode}`
+                  `/resume-builder/questions?template=${selected}&mode=${mode}`
                 )
               }
               className={`rounded-xl px-7 py-3.5 text-sm font-extrabold text-white ${
@@ -221,3 +221,4 @@ export default function ResumeTemplatesPage() {
     </main>
   );
 }
+
