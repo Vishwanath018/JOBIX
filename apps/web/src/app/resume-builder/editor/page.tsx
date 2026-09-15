@@ -147,198 +147,185 @@ const emptyLanguage = (): Language => ({
 });
 
 const defaultData: ResumeData = {
-  fullName: "Vishwanath Samrat",
-  title: "Software Engineer",
-  email: "vishwanath.samrat@example.com",
-  phone: "+91 98765 43210",
-  location: "Bengaluru, Karnataka, India",
-  linkedin: "linkedin.com/in/vishwanathsamrat",
-  github: "github.com/vishwanathsamrat",
-  portfolio: "vishwanathsamrat.dev",
-  summary: "Computer Science student and aspiring software engineer with hands-on experience building full-stack web applications, AI-powered tools, and data-driven projects. Strong foundation in Java, Python, React, Next.js, databases, and machine learning with a focus on creating reliable and user-friendly products.",
+  fullName: "Aarav Mehta",
+  title: "Full Stack Developer",
+  email: "aarav.mehta@example.com",
+  phone: "+91 91234 56789",
+  location: "Pune, Maharashtra, India",
+  linkedin: "linkedin.com/in/aaravmehta",
+  github: "github.com/aaravmehta",
+  portfolio: "aaravmehta.dev",
+  summary: "Full Stack Developer with experience building scalable web applications, REST APIs, and data-driven products. Strong foundation in TypeScript, React, Node.js, Python, PostgreSQL, and cloud technologies with a focus on reliable systems and intuitive user experiences.",
   experiences: [
     {
       id: "exp-1",
-      company: "TechNova Solutions",
-      role: "Software Engineering Intern",
-      location: "Bengaluru, Karnataka",
-      start: "Jun 2026",
-      end: "Aug 2026",
-      current: false,
+      company: "NovaStack Technologies",
+      role: "Software Developer",
+      location: "Pune, Maharashtra",
+      start: "Jul 2024",
+      end: "Present",
       bullets: [
-        "Developed responsive web features using React, Next.js, TypeScript, and REST APIs.",
-        "Improved application performance by optimizing API requests and reusable frontend components.",
-        "Collaborated with developers to debug production issues and deliver features within sprint deadlines."
+        "Developed full-stack web applications using React, TypeScript, Node.js, and PostgreSQL.",
+        "Designed REST APIs and backend services for business-critical application workflows.",
+        "Improved application performance through database optimization and reusable frontend components."
       ]
     },
     {
       id: "exp-2",
-      company: "CodeCraft Labs",
-      role: "Full Stack Development Intern",
-      location: "Remote",
-      start: "Jan 2026",
-      end: "May 2026",
-      current: false,
+      company: "BlueOrbit Systems",
+      role: "Software Engineering Intern",
+      location: "Hyderabad, Telangana",
+      start: "Jan 2024",
+      end: "Jun 2024",
       bullets: [
-        "Built backend services with Python and FastAPI and connected applications to PostgreSQL databases.",
-        "Created reusable dashboard components and implemented authentication workflows.",
-        "Worked with Git and GitHub to manage feature development and code reviews."
+        "Built responsive interfaces and integrated frontend applications with backend APIs.",
+        "Created automated testing workflows and resolved recurring application defects.",
+        "Worked with cross-functional teams to deliver features within sprint timelines."
       ]
     },
     {
       id: "exp-3",
-      company: "University Technology Club",
-      role: "Technical Team Member",
-      location: "Bengaluru, Karnataka",
-      start: "Aug 2024",
-      end: "Dec 2025",
-      current: false,
+      company: "PixelForge Labs",
+      role: "Web Development Intern",
+      location: "Remote",
+      start: "May 2023",
+      end: "Aug 2023",
       bullets: [
-        "Built internal tools and technical prototypes for student events and project demonstrations.",
-        "Mentored junior students in Java, Python, Git, and web development fundamentals."
+        "Implemented reusable UI components for internal business applications.",
+        "Connected application interfaces with REST services and database-driven workflows."
       ]
     }
   ],
   education: [
     {
       id: "edu-1",
-      institution: "Bangalore Institute of Technology",
-      degree: "Bachelor of Engineering",
-      field: "Computer Science and Engineering",
-      grade: "9.2 / 10",
-      start: "2023",
-      end: "2027",
-      location: "Bengaluru, India"
+      institution: "Vishwakarma Institute of Technology",
+      degree: "Bachelor of Technology in Computer Engineering",
+      location: "Pune, Maharashtra",
+      start: "2020",
+      end: "2024",
+      bullets: [
+        "Focused on software engineering, databases, operating systems, and distributed systems.",
+        "Completed academic and independent projects involving web development and machine learning."
+      ]
     },
     {
       id: "edu-2",
-      institution: "ABC Pre-University College",
-      degree: "Pre-University Course",
-      field: "Science",
-      grade: "94%",
-      start: "2021",
-      end: "2023",
-      location: "Bengaluru, India"
+      institution: "St. Xavier's Junior College",
+      degree: "Higher Secondary Education",
+      location: "Pune, Maharashtra",
+      start: "2018",
+      end: "2020",
+      bullets: [
+        "Studied mathematics, computer science, physics, and chemistry."
+      ]
     }
   ],
   projects: [
     {
       id: "project-1",
-      name: "JOBIX Career Platform",
-      technologies: "Next.js, TypeScript, FastAPI, PostgreSQL",
-      description: "Career platform designed to help students and professionals improve resumes, evaluate ATS compatibility, and build professional applications.",
-      contribution: "Designed the frontend architecture, authentication flow, resume builder interface, ATS workflow, and responsive user experience.",
-      result: "Created a production-style platform with reusable career tools and live resume editing.",
-      link: "github.com/vishwanathsamrat/jobix"
+      name: "FleetFlow",
+      technologies: "React, Node.js, PostgreSQL",
+      description: "Fleet management platform for tracking vehicles, maintenance schedules, driver activity, and operational expenses.",
+      contribution: "Designed the application architecture, dashboard interface, REST APIs, and database workflows.",
+      result: "Delivered a centralized platform for managing fleet operations and vehicle records.",
+      link: "github.com/aaravmehta/fleetflow"
     },
     {
       id: "project-2",
-      name: "AI Resume Analyzer",
-      technologies: "Python, FastAPI, Sarvam AI, NLP",
-      description: "AI-powered resume analysis system that evaluates resumes against job descriptions and generates structured improvement recommendations.",
-      contribution: "Implemented document ingestion, text extraction, prompt design, structured AI responses, scoring logic, and result presentation.",
-      result: "Generated detailed ATS-style feedback with an overall match score, keyword gaps, strengths, and improvement actions.",
-      link: "github.com/vishwanathsamrat/ai-resume-analyzer"
+      name: "MarketLens",
+      technologies: "Next.js, Python, FastAPI",
+      description: "Business analytics dashboard that transforms sales data into interactive reports and performance insights.",
+      contribution: "Built data processing services, API integrations, dashboard components, and visualization workflows.",
+      result: "Created an interactive analytics platform for monitoring sales performance.",
+      link: "github.com/aaravmehta/marketlens"
     },
     {
       id: "project-3",
-      name: "Bank Statement Analyzer",
-      technologies: "Python, FastAPI, Machine Learning, SQLite",
-      description: "Financial document analysis application that extracts transactions from bank statements and categorizes spending.",
-      contribution: "Built ingestion and normalization pipelines, transaction validation, categorization logic, analytics, and automated report generation.",
-      result: "Produced structured financial summaries and downloadable analysis reports from uploaded statements.",
-      link: "github.com/vishwanathsamrat/bank-statement-analyzer"
+      name: "SecureVault",
+      technologies: "TypeScript, Express, PostgreSQL",
+      description: "Secure document management application with role-based access control and audit tracking.",
+      contribution: "Implemented authentication, authorization, document workflows, database models, and audit logging.",
+      result: "Built a structured document platform with controlled access and activity tracking.",
+      link: "github.com/aaravmehta/securevault"
     },
     {
       id: "project-4",
-      name: "Student Performance Predictor",
-      technologies: "Python, Pandas, Scikit-learn, Streamlit",
-      description: "Machine learning application that predicts student performance using academic and behavioral features.",
-      contribution: "Prepared datasets, trained classification models, evaluated performance, and created an interactive prediction interface.",
-      result: "Achieved strong validation performance while providing interpretable prediction results.",
-      link: "github.com/vishwanathsamrat/student-performance"
+      name: "StudySync",
+      technologies: "React, Firebase, Tailwind CSS",
+      description: "Collaborative learning platform for courses, study groups, assignments, and shared resources.",
+      contribution: "Developed the frontend architecture, collaboration workflows, authentication, and responsive layouts.",
+      result: "Created a unified learning workspace for students and study groups.",
+      link: "github.com/aaravmehta/studysync"
     },
     {
       id: "project-5",
-      name: "Campus Event Management",
-      technologies: "Java, Spring Boot, MySQL, HTML, CSS",
-      description: "Web application for managing college events, registrations, participants, and event announcements.",
-      contribution: "Developed REST APIs, database models, registration workflows, and administrative functionality.",
-      result: "Simplified event registration and centralized participant management for student organizations.",
-      link: "github.com/vishwanathsamrat/campus-events"
+      name: "TravelMate",
+      technologies: "Next.js, Node.js, MongoDB",
+      description: "Travel planning application for creating itineraries, managing destinations, and organizing trip expenses.",
+      contribution: "Built itinerary management, destination search, expense tracking, and backend APIs.",
+      result: "Delivered an organized trip planning experience with centralized travel information.",
+      link: "github.com/aaravmehta/travelmate"
+    },
+    {
+      id: "project-6",
+      name: "PulseMonitor",
+      technologies: "React, Python, Redis",
+      description: "Real-time infrastructure monitoring dashboard displaying service health, alerts, metrics, and system activity.",
+      contribution: "Implemented monitoring dashboards, real-time updates, alert workflows, and metric processing.",
+      result: "Created a centralized interface for tracking application and infrastructure health.",
+      link: "github.com/aaravmehta/pulsemonitor"
     }
   ],
   skills: [
-    "Java",
-    "Python",
-    "JavaScript",
     "TypeScript",
-    "React.js",
+    "JavaScript",
+    "React",
     "Next.js",
+    "Node.js",
+    "Python",
     "FastAPI",
-    "Spring Boot",
     "PostgreSQL",
-    "MySQL",
-    "Git",
-    "GitHub",
+    "MongoDB",
     "REST APIs",
-    "Machine Learning",
-    "NLP"
+    "Docker",
+    "Git"
   ],
   certifications: [
     {
       id: "cert-1",
       name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      year: "2026",
-      credentialId: "AWS-CP-48291",
-      link: "aws.amazon.com/verification"
+      date: "2024"
     },
     {
       id: "cert-2",
-      name: "Python for Data Science",
-      issuer: "IBM",
-      year: "2025",
-      credentialId: "IBM-PDS-72914",
-      link: "coursera.org/verify"
+      name: "Meta Front-End Developer",
+      issuer: "Meta",
+      date: "2023"
     },
     {
       id: "cert-3",
-      name: "Java Programming",
-      issuer: "Oracle Academy",
-      year: "2025",
-      credentialId: "ORA-JAVA-38172",
-      link: "education.oracle.com"
+      name: "Python for Data Science",
+      issuer: "IBM",
+      date: "2023"
     }
   ],
   achievements: [
     {
       id: "ach-1",
       title: "Hackathon Finalist",
-      organization: "Smart India Hackathon",
-      year: "2026",
-      description: "Reached the final stage of a national-level hackathon by developing an AI-assisted career technology solution."
+      description: "Reached the final round of a national-level software development hackathon."
     },
     {
       id: "ach-2",
-      title: "First Place - University Coding Challenge",
-      organization: "Bangalore Institute of Technology",
-      year: "2025",
-      description: "Secured first place in a competitive programming and problem-solving challenge."
+      title: "Technical Lead",
+      description: "Led a four-member student team during an intensive product development challenge."
     },
     {
       id: "ach-3",
-      title: "Technical Excellence Award",
-      organization: "University Technology Club",
-      year: "2025",
-      description: "Recognized for technical contribution and leadership across student technology initiatives."
-    },
-    {
-      id: "ach-4",
       title: "Open Source Contributor",
-      organization: "GitHub",
-      year: "2025",
-      description: "Contributed bug fixes, documentation improvements, and reusable components to open-source projects."
+      description: "Contributed bug fixes and documentation improvements to developer-focused open-source projects."
     }
   ],
   languages: [
@@ -349,13 +336,13 @@ const defaultData: ResumeData = {
     },
     {
       id: "lang-2",
-      name: "Kannada",
+      name: "Hindi",
       level: "Native"
     },
     {
       id: "lang-3",
-      name: "Hindi",
-      level: "Professional"
+      name: "Marathi",
+      level: "Native"
     }
   ]
 };
