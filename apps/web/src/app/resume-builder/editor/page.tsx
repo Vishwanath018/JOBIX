@@ -14,7 +14,7 @@ import {
   Trash2,
   UserRound,
 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import {useEffect, useLayoutEffect, useMemo, useRef, useState} from "react";
 import { useRouter } from "next/navigation";
 
 type Experience = {
@@ -147,22 +147,217 @@ const emptyLanguage = (): Language => ({
 });
 
 const defaultData: ResumeData = {
-  fullName: "",
-  title: "",
-  email: "",
-  phone: "",
-  location: "",
-  linkedin: "",
-  github: "",
-  portfolio: "",
-  summary: "",
-  experiences: [],
-  education: [],
-  projects: [],
-  skills: [],
-  certifications: [],
-  achievements: [],
-  languages: [],
+  fullName: "Vishwanath Samrat",
+  title: "Software Engineer",
+  email: "vishwanath.samrat@example.com",
+  phone: "+91 98765 43210",
+  location: "Bengaluru, Karnataka, India",
+  linkedin: "linkedin.com/in/vishwanathsamrat",
+  github: "github.com/vishwanathsamrat",
+  portfolio: "vishwanathsamrat.dev",
+  summary: "Computer Science student and aspiring software engineer with hands-on experience building full-stack web applications, AI-powered tools, and data-driven projects. Strong foundation in Java, Python, React, Next.js, databases, and machine learning with a focus on creating reliable and user-friendly products.",
+  experiences: [
+    {
+      id: "exp-1",
+      company: "TechNova Solutions",
+      role: "Software Engineering Intern",
+      location: "Bengaluru, Karnataka",
+      start: "Jun 2026",
+      end: "Aug 2026",
+      current: false,
+      bullets: [
+        "Developed responsive web features using React, Next.js, TypeScript, and REST APIs.",
+        "Improved application performance by optimizing API requests and reusable frontend components.",
+        "Collaborated with developers to debug production issues and deliver features within sprint deadlines."
+      ]
+    },
+    {
+      id: "exp-2",
+      company: "CodeCraft Labs",
+      role: "Full Stack Development Intern",
+      location: "Remote",
+      start: "Jan 2026",
+      end: "May 2026",
+      current: false,
+      bullets: [
+        "Built backend services with Python and FastAPI and connected applications to PostgreSQL databases.",
+        "Created reusable dashboard components and implemented authentication workflows.",
+        "Worked with Git and GitHub to manage feature development and code reviews."
+      ]
+    },
+    {
+      id: "exp-3",
+      company: "University Technology Club",
+      role: "Technical Team Member",
+      location: "Bengaluru, Karnataka",
+      start: "Aug 2024",
+      end: "Dec 2025",
+      current: false,
+      bullets: [
+        "Built internal tools and technical prototypes for student events and project demonstrations.",
+        "Mentored junior students in Java, Python, Git, and web development fundamentals."
+      ]
+    }
+  ],
+  education: [
+    {
+      id: "edu-1",
+      institution: "Bangalore Institute of Technology",
+      degree: "Bachelor of Engineering",
+      field: "Computer Science and Engineering",
+      grade: "9.2 / 10",
+      start: "2023",
+      end: "2027",
+      location: "Bengaluru, India"
+    },
+    {
+      id: "edu-2",
+      institution: "ABC Pre-University College",
+      degree: "Pre-University Course",
+      field: "Science",
+      grade: "94%",
+      start: "2021",
+      end: "2023",
+      location: "Bengaluru, India"
+    }
+  ],
+  projects: [
+    {
+      id: "project-1",
+      name: "JOBIX Career Platform",
+      technologies: "Next.js, TypeScript, FastAPI, PostgreSQL",
+      description: "Career platform designed to help students and professionals improve resumes, evaluate ATS compatibility, and build professional applications.",
+      contribution: "Designed the frontend architecture, authentication flow, resume builder interface, ATS workflow, and responsive user experience.",
+      result: "Created a production-style platform with reusable career tools and live resume editing.",
+      link: "github.com/vishwanathsamrat/jobix"
+    },
+    {
+      id: "project-2",
+      name: "AI Resume Analyzer",
+      technologies: "Python, FastAPI, Sarvam AI, NLP",
+      description: "AI-powered resume analysis system that evaluates resumes against job descriptions and generates structured improvement recommendations.",
+      contribution: "Implemented document ingestion, text extraction, prompt design, structured AI responses, scoring logic, and result presentation.",
+      result: "Generated detailed ATS-style feedback with an overall match score, keyword gaps, strengths, and improvement actions.",
+      link: "github.com/vishwanathsamrat/ai-resume-analyzer"
+    },
+    {
+      id: "project-3",
+      name: "Bank Statement Analyzer",
+      technologies: "Python, FastAPI, Machine Learning, SQLite",
+      description: "Financial document analysis application that extracts transactions from bank statements and categorizes spending.",
+      contribution: "Built ingestion and normalization pipelines, transaction validation, categorization logic, analytics, and automated report generation.",
+      result: "Produced structured financial summaries and downloadable analysis reports from uploaded statements.",
+      link: "github.com/vishwanathsamrat/bank-statement-analyzer"
+    },
+    {
+      id: "project-4",
+      name: "Student Performance Predictor",
+      technologies: "Python, Pandas, Scikit-learn, Streamlit",
+      description: "Machine learning application that predicts student performance using academic and behavioral features.",
+      contribution: "Prepared datasets, trained classification models, evaluated performance, and created an interactive prediction interface.",
+      result: "Achieved strong validation performance while providing interpretable prediction results.",
+      link: "github.com/vishwanathsamrat/student-performance"
+    },
+    {
+      id: "project-5",
+      name: "Campus Event Management",
+      technologies: "Java, Spring Boot, MySQL, HTML, CSS",
+      description: "Web application for managing college events, registrations, participants, and event announcements.",
+      contribution: "Developed REST APIs, database models, registration workflows, and administrative functionality.",
+      result: "Simplified event registration and centralized participant management for student organizations.",
+      link: "github.com/vishwanathsamrat/campus-events"
+    }
+  ],
+  skills: [
+    "Java",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React.js",
+    "Next.js",
+    "FastAPI",
+    "Spring Boot",
+    "PostgreSQL",
+    "MySQL",
+    "Git",
+    "GitHub",
+    "REST APIs",
+    "Machine Learning",
+    "NLP"
+  ],
+  certifications: [
+    {
+      id: "cert-1",
+      name: "AWS Certified Cloud Practitioner",
+      issuer: "Amazon Web Services",
+      year: "2026",
+      credentialId: "AWS-CP-48291",
+      link: "aws.amazon.com/verification"
+    },
+    {
+      id: "cert-2",
+      name: "Python for Data Science",
+      issuer: "IBM",
+      year: "2025",
+      credentialId: "IBM-PDS-72914",
+      link: "coursera.org/verify"
+    },
+    {
+      id: "cert-3",
+      name: "Java Programming",
+      issuer: "Oracle Academy",
+      year: "2025",
+      credentialId: "ORA-JAVA-38172",
+      link: "education.oracle.com"
+    }
+  ],
+  achievements: [
+    {
+      id: "ach-1",
+      title: "Hackathon Finalist",
+      organization: "Smart India Hackathon",
+      year: "2026",
+      description: "Reached the final stage of a national-level hackathon by developing an AI-assisted career technology solution."
+    },
+    {
+      id: "ach-2",
+      title: "First Place - University Coding Challenge",
+      organization: "Bangalore Institute of Technology",
+      year: "2025",
+      description: "Secured first place in a competitive programming and problem-solving challenge."
+    },
+    {
+      id: "ach-3",
+      title: "Technical Excellence Award",
+      organization: "University Technology Club",
+      year: "2025",
+      description: "Recognized for technical contribution and leadership across student technology initiatives."
+    },
+    {
+      id: "ach-4",
+      title: "Open Source Contributor",
+      organization: "GitHub",
+      year: "2025",
+      description: "Contributed bug fixes, documentation improvements, and reusable components to open-source projects."
+    }
+  ],
+  languages: [
+    {
+      id: "lang-1",
+      name: "English",
+      level: "Professional"
+    },
+    {
+      id: "lang-2",
+      name: "Kannada",
+      level: "Native"
+    },
+    {
+      id: "lang-3",
+      name: "Hindi",
+      level: "Professional"
+    }
+  ]
 };
 
 function Field({
@@ -301,556 +496,1243 @@ function AddButton({
   );
 }
 
+
+function cleanResumeText(value: string) {
+  if (!value) return "";
+
+  let result = value
+    .replace(/\r\n/g, "\n")
+    .replace(/[ \t]+/g, " ")
+    .replace(/\s+([,.;:!?])/g, "$1")
+    .replace(/([,.;:!?])([A-Za-z])/g, "$1 $2")
+    .trim();
+
+  result = result.replace(
+    /^(description|contribution|result|details|responsibilities)\s*:\s*/i,
+    ""
+  );
+
+  result = result.replace(
+    /^(description|contribution|result|details|responsibilities)\s*:\s*/i,
+    ""
+  );
+
+  if (result) {
+    result =
+      result.charAt(0).toUpperCase() +
+      result.slice(1);
+  }
+
+  return result;
+}
+
+function cleanResumeTitle(value: string) {
+  if (!value) return "";
+
+  const known = new Map([
+    ["software engineer", "Software Engineer"],
+    ["software developer", "Software Developer"],
+    ["full stack developer", "Full Stack Developer"],
+    ["full-stack developer", "Full-Stack Developer"],
+    ["frontend developer", "Frontend Developer"],
+    ["front end developer", "Frontend Developer"],
+    ["backend developer", "Backend Developer"],
+    ["back end developer", "Backend Developer"],
+    ["data scientist", "Data Scientist"],
+    ["data science", "Data Science"],
+    ["machine learning engineer", "Machine Learning Engineer"],
+    ["web developer", "Web Developer"],
+    ["project manager", "Project Manager"],
+    ["student", "Student"],
+    ["fresher", "Fresher"],
+  ]);
+
+  const normalized = value
+    .replace(/\s+/g, " ")
+    .trim();
+
+  const direct = known.get(
+    normalized.toLowerCase()
+  );
+
+  if (direct) return direct;
+
+  return normalized
+    .split(" ")
+    .map((word) => {
+      if (!word) return word;
+
+      const lower = word.toLowerCase();
+
+      if (lower === "ai") return "AI";
+      if (lower === "ml") return "ML";
+      if (lower === "ui") return "UI";
+      if (lower === "ux") return "UX";
+      if (lower === "api") return "API";
+      if (lower === "sql") return "SQL";
+      if (lower === "aws") return "AWS";
+      if (lower === "gcp") return "GCP";
+      if (lower === "css") return "CSS";
+      if (lower === "html") return "HTML";
+      if (lower === "js") return "JS";
+
+      return (
+        word.charAt(0).toUpperCase() +
+        word.slice(1)
+      );
+    })
+    .join(" ");
+}
+
+function cleanTechnology(value: string) {
+  if (!value) return "";
+
+  const technologyMap: Record<string, string> = {
+    "node js": "Node.js",
+    "nodejs": "Node.js",
+    "react js": "React.js",
+    "reactjs": "React.js",
+    "next js": "Next.js",
+    "nextjs": "Next.js",
+    "express js": "Express.js",
+    "expressjs": "Express.js",
+    "mongo db": "MongoDB",
+    "mongodb": "MongoDB",
+    "mysql": "MySQL",
+    "postgres": "PostgreSQL",
+    "postgresql": "PostgreSQL",
+    "power bi": "Power BI",
+    "machine learning": "Machine Learning",
+    "deep learning": "Deep Learning",
+    "scikit learn": "Scikit-learn",
+    "scikit-learn": "Scikit-learn",
+    "tensorflow": "TensorFlow",
+    "pytorch": "PyTorch",
+    "javascript": "JavaScript",
+    "typescript": "TypeScript",
+    "python": "Python",
+    "java": "Java",
+    "c++": "C++",
+    "c#": "C#",
+    "github": "GitHub",
+    "gitlab": "GitLab",
+    "docker": "Docker",
+    "kubernetes": "Kubernetes",
+    "spring boot": "Spring Boot",
+    "rest api": "REST API",
+    "rest apis": "REST APIs",
+    "nlp": "NLP",
+    "computer vision": "Computer Vision",
+  };
+
+  const normalized = value
+    .replace(/\s+/g, " ")
+    .trim();
+
+  return (
+    technologyMap[normalized.toLowerCase()] ||
+    cleanResumeTitle(normalized)
+  );
+}
+
+function cleanTechnologyList(value: string) {
+  if (!value) return "";
+
+  const values = value
+    .split(/[,\n|•]+/)
+    .map((item) =>
+      cleanTechnology(item.trim())
+    )
+    .filter(Boolean);
+
+  return Array.from(
+    new Set(values)
+  ).join(" · ");
+}
+
+function cleanSkills(skills: string[]) {
+  return Array.from(
+    new Set(
+      skills
+        .flatMap((skill) =>
+          skill.split(/[,\n|•]+/)
+        )
+        .map((skill) =>
+          cleanTechnology(skill.trim())
+        )
+        .filter(Boolean)
+    )
+  );
+}
+
+function cleanUrl(value: string) {
+  if (!value) return "";
+
+  return value
+    .replace(/^https?:\/\//i, "")
+    .replace(/^www\./i, "")
+    .replace(/\/+$/, "")
+    .trim();
+}
+
+function cleanDate(value: string) {
+  if (!value) return "";
+
+  return value
+    .replace(/\s+/g, " ")
+    .replace(/\s*[-–—]\s*/g, " – ")
+    .trim();
+}
+
+function cleanResumeData(data: ResumeData): ResumeData {
+  return {
+    ...data,
+
+    fullName: data.fullName
+      ? data.fullName
+          .replace(/\s+/g, " ")
+          .trim()
+      : "",
+
+    title: cleanResumeTitle(
+      data.title || ""
+    ),
+
+    email: data.email
+      ? data.email.trim().toLowerCase()
+      : "",
+
+    phone: data.phone
+      ? data.phone
+          .replace(/\s+/g, " ")
+          .trim()
+      : "",
+
+    location: data.location
+      ? cleanResumeTitle(data.location)
+      : "",
+
+    linkedin: cleanUrl(
+      data.linkedin || ""
+    ),
+
+    github: cleanUrl(
+      data.github || ""
+    ),
+
+    portfolio: cleanUrl(
+      data.portfolio || ""
+    ),
+
+    summary: cleanResumeText(
+      data.summary || ""
+    ),
+
+    skills: cleanSkills(
+      data.skills || []
+    ),
+
+    education: data.education.map(
+      (item) => ({
+        ...item,
+        institution:
+          cleanResumeTitle(
+            item.institution || ""
+          ),
+        degree:
+          cleanResumeTitle(
+            item.degree || ""
+          ),
+        field:
+          cleanResumeTitle(
+            item.field || ""
+          ),
+        grade:
+          item.grade
+            ? item.grade.trim()
+            : "",
+        start:
+          cleanDate(
+            item.start || ""
+          ),
+        end:
+          cleanDate(
+            item.end || ""
+          ),
+        location:
+          item.location
+            ? cleanResumeTitle(
+                item.location
+              )
+            : "",
+      })
+    ),
+
+    experiences:
+      data.experiences.map(
+        (item) => ({
+          ...item,
+          company:
+            cleanResumeTitle(
+              item.company || ""
+            ),
+          role:
+            cleanResumeTitle(
+              item.role || ""
+            ),
+          location:
+            item.location
+              ? cleanResumeTitle(
+                  item.location
+                )
+              : "",
+          start:
+            cleanDate(
+              item.start || ""
+            ),
+          end:
+            cleanDate(
+              item.end || ""
+            ),
+          bullets:
+            item.bullets
+              .map((bullet) =>
+                cleanResumeText(
+                  bullet
+                )
+              )
+              .filter(Boolean),
+        })
+      ),
+
+    projects:
+      data.projects.map(
+        (item) => ({
+          ...item,
+          name:
+            cleanResumeTitle(
+              item.name || ""
+            ),
+          technologies:
+            cleanTechnologyList(
+              item.technologies || ""
+            ),
+          description:
+            cleanResumeText(
+              item.description || ""
+            ),
+          contribution:
+            cleanResumeText(
+              item.contribution || ""
+            ),
+          result:
+            cleanResumeText(
+              item.result || ""
+            ),
+          link:
+            cleanUrl(
+              item.link || ""
+            ),
+        })
+      ),
+
+    certifications:
+      data.certifications.map(
+        (item) => ({
+          ...item,
+          name:
+            cleanResumeTitle(
+              item.name || ""
+            ),
+          issuer:
+            cleanResumeTitle(
+              item.issuer || ""
+            ),
+          year:
+            cleanDate(
+              item.year || ""
+            ),
+          credentialId:
+            item.credentialId
+              ? item.credentialId.trim()
+              : "",
+          link:
+            cleanUrl(
+              item.link || ""
+            ),
+        })
+      ),
+
+    achievements:
+      data.achievements.map(
+        (item) => ({
+          ...item,
+          title:
+            cleanResumeTitle(
+              item.title || ""
+            ),
+          organization:
+            cleanResumeTitle(
+              item.organization || ""
+            ),
+          description:
+            cleanResumeText(
+              item.description || ""
+            ),
+          year:
+            cleanDate(
+              item.year || ""
+            ),
+        })
+      ),
+
+    languages:
+      data.languages.map(
+        (item) => ({
+          ...item,
+          name:
+            cleanResumeTitle(
+              item.name || ""
+            ),
+          level:
+            cleanResumeTitle(
+              item.level || ""
+            ),
+        })
+      ),
+  };
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function Template4Preview({ data }: { data: ResumeData }) {
+  const resume = cleanResumeData(data);
+
+  type Block = {
+    id: string;
+    section: string;
+    heading: boolean;
+    content: React.ReactNode;
+  };
+
+  const [pages, setPages] = useState<Block[][]>([]);
+  const measureRef = useRef<HTMLDivElement>(null);
+
   const contact = [
-    data.email,
-    data.phone,
-    data.location,
+    resume.email,
+    resume.phone,
+    resume.location
   ].filter(Boolean);
 
   const links = [
-    data.linkedin,
-    data.github,
-    data.portfolio,
+    resume.linkedin,
+    resume.github,
+    resume.portfolio
   ].filter(Boolean);
 
+  const makeHeading = (
+    id: string,
+    section: string,
+    title: string,
+    icon: React.ReactNode
+  ): Block => ({
+    id,
+    section,
+    heading: true,
+    content: (
+      <div className="jobix-t4-heading">
+        <span className="jobix-t4-icon">
+          {icon}
+        </span>
+        <span>{title}</span>
+      </div>
+    )
+  });
+
+  const blocks: Block[] = [];
+
+  if (resume.summary.trim()) {
+    blocks.push(
+      makeHeading(
+        "summary-heading",
+        "summary",
+        "Summary",
+        <UserRound size={13} strokeWidth={2} />
+      )
+    );
+
+    blocks.push({
+      id: "summary-content",
+      section: "summary",
+      heading: false,
+      content: (
+        <div className="jobix-t4-content">
+          <p className="jobix-t4-summary">
+            {resume.summary}
+          </p>
+        </div>
+      )
+    });
+  }
+
+  if (resume.education.length) {
+    blocks.push(
+      makeHeading(
+        "education-heading",
+        "education",
+        "Education",
+        <GraduationCap size={13} strokeWidth={2} />
+      )
+    );
+
+    resume.education.forEach((item) => {
+      blocks.push({
+        id: `education-${item.id}`,
+        section: "education",
+        heading: false,
+        content: (
+          <div className="jobix-t4-content jobix-t4-entry">
+            <div className="jobix-t4-grid">
+              <div className="jobix-t4-entry-text">
+                <div className="jobix-t4-strong">
+                  {item.institution}
+                </div>
+
+                <div>
+                  {item.degree}
+                  {item.field
+                    ? ` - ${item.field}`
+                    : ""}
+                  {item.grade
+                    ? `, ${item.grade}`
+                    : ""}
+                </div>
+
+                {(item.start || item.end) && (
+                  <div>
+                    {item.start}
+                    {item.start && item.end
+                      ? " – "
+                      : ""}
+                    {item.end}
+                  </div>
+                )}
+              </div>
+
+              {item.location && (
+                <div className="jobix-t4-right">
+                  {item.location}
+                </div>
+              )}
+            </div>
+          </div>
+        )
+      });
+    });
+  }
+
+  if (resume.experiences.length) {
+    blocks.push(
+      makeHeading(
+        "experience-heading",
+        "experience",
+        "Experience",
+        <BriefcaseBusiness size={13} strokeWidth={2} />
+      )
+    );
+
+    resume.experiences.forEach((item) => {
+      const bullets = item.bullets.filter(Boolean);
+
+      blocks.push({
+        id: `experience-${item.id}`,
+        section: "experience",
+        heading: false,
+        content: (
+          <div className="jobix-t4-content jobix-t4-entry">
+            <div className="jobix-t4-grid">
+              <div className="jobix-t4-entry-text">
+                <div className="jobix-t4-strong">
+                  {item.company}
+                </div>
+
+                <div className="jobix-t4-role">
+                  {item.role}
+                </div>
+              </div>
+
+              <div className="jobix-t4-right">
+                {item.start}
+                {item.start &&
+                (item.end || item.current)
+                  ? " – "
+                  : ""}
+                {item.current
+                  ? "Present"
+                  : item.end}
+              </div>
+            </div>
+
+            {item.location && (
+              <div className="jobix-t4-location">
+                {item.location}
+              </div>
+            )}
+
+            {bullets.length > 0 && (
+              <ul className="jobix-t4-bullets">
+                {bullets.map((bullet, index) => (
+                  <li key={index}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )
+      });
+    });
+  }
+
+  if (resume.skills.filter(Boolean).length) {
+    blocks.push(
+      makeHeading(
+        "skills-heading",
+        "skills",
+        "Skills",
+        <Award size={13} strokeWidth={2} />
+      )
+    );
+
+    blocks.push({
+      id: "skills-content",
+      section: "skills",
+      heading: false,
+      content: (
+        <div className="jobix-t4-content">
+          <div className="jobix-t4-skills">
+            {resume.skills
+              .filter(Boolean)
+              .map((skill, index) => (
+                <span
+                  className="jobix-t4-skill"
+                  key={index}
+                >
+                  {skill}
+                </span>
+              ))}
+          </div>
+        </div>
+      )
+    });
+  }
+
+  if (resume.projects.length) {
+    blocks.push(
+      makeHeading(
+        "projects-heading",
+        "projects",
+        "Projects",
+        <BriefcaseBusiness size={13} strokeWidth={2} />
+      )
+    );
+
+    resume.projects.forEach((item) => {
+      const bullets = [
+        item.description,
+        item.contribution,
+        item.result
+      ].filter(Boolean);
+
+      blocks.push({
+        id: `project-${item.id}`,
+        section: "projects",
+        heading: false,
+        content: (
+          <div className="jobix-t4-content jobix-t4-entry">
+            <div className="jobix-t4-grid">
+              <div>
+                <div className="jobix-t4-project-name">
+                  {item.name}
+                </div>
+
+                {item.technologies && (
+                  <div className="jobix-t4-strong">
+                    {item.technologies}
+                  </div>
+                )}
+              </div>
+
+              {item.link && (
+                <div className="jobix-t4-right">
+                  {item.link}
+                </div>
+              )}
+            </div>
+
+            {bullets.length > 0 && (
+              <ul className="jobix-t4-bullets">
+                {bullets.map((bullet, index) => (
+                  <li key={index}>
+                    {bullet}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        )
+      });
+    });
+  }
+
+  if (resume.certifications.length) {
+    blocks.push(
+      makeHeading(
+        "certifications-heading",
+        "certifications",
+        "Certifications",
+        <Award size={13} strokeWidth={2} />
+      )
+    );
+
+    resume.certifications.forEach((item) => {
+      blocks.push({
+        id: `certification-${item.id}`,
+        section: "certifications",
+        heading: false,
+        content: (
+          <div className="jobix-t4-content jobix-t4-entry">
+            <div className="jobix-t4-certification">
+              <div className="jobix-t4-strong">
+                {item.name}
+              </div>
+
+              <div>
+                {item.issuer}
+                {item.year
+                  ? ` · ${item.year}`
+                  : ""}
+                {item.credentialId
+                  ? ` · ${item.credentialId}`
+                  : ""}
+              </div>
+
+              {item.link && (
+                <div>{item.link}</div>
+              )}
+            </div>
+          </div>
+        )
+      });
+    });
+  }
+
+  if (resume.achievements.length) {
+    blocks.push(
+      makeHeading(
+        "achievements-heading",
+        "achievements",
+        "Achievements",
+        <Award size={13} strokeWidth={2} />
+      )
+    );
+
+    resume.achievements.forEach((item) => {
+      blocks.push({
+        id: `achievement-${item.id}`,
+        section: "achievements",
+        heading: false,
+        content: (
+          <div className="jobix-t4-content jobix-t4-entry">
+            <div className="jobix-t4-grid">
+              <div>
+                <div className="jobix-t4-strong">
+                  {item.title}
+                </div>
+
+                {item.organization && (
+                  <div className="jobix-t4-strong">
+                    {item.organization}
+                  </div>
+                )}
+
+                {item.description && (
+                  <div>
+                    {item.description}
+                  </div>
+                )}
+              </div>
+
+              {item.year && (
+                <div className="jobix-t4-right">
+                  {item.year}
+                </div>
+              )}
+            </div>
+          </div>
+        )
+      });
+    });
+  }
+
+  if (
+    resume.languages.filter(
+      (item) => item.name.trim()
+    ).length
+  ) {
+    blocks.push(
+      makeHeading(
+        "languages-heading",
+        "languages",
+        "Languages",
+        <Languages size={13} strokeWidth={2} />
+      )
+    );
+
+    blocks.push({
+      id: "languages-content",
+      section: "languages",
+      heading: false,
+      content: (
+        <div className="jobix-t4-content">
+          <div className="jobix-t4-languages">
+            {resume.languages
+              .filter(
+                (item) => item.name.trim()
+              )
+              .map((item) => (
+                <span key={item.id}>
+                  <strong>{item.name}</strong>
+                  {item.level
+                    ? ` · ${item.level}`
+                    : ""}
+                </span>
+              ))}
+          </div>
+        </div>
+      )
+    });
+  }
+
+  useLayoutEffect(() => {
+    const root = measureRef.current;
+
+    if (!root) {
+      return;
+    }
+
+    const nodes = Array.from(
+      root.querySelectorAll<HTMLElement>(
+        "[data-jobix-t4-block]"
+      )
+    );
+
+    if (!nodes.length) {
+      setPages([blocks]);
+      return;
+    }
+
+    const measured = blocks.map((block, index) => ({
+      block,
+      height:
+        nodes[index]?.getBoundingClientRect().height || 0
+    }));
+
+    const firstPageLimit = 1000;
+    const otherPageLimit = 1080;
+
+    const result: Block[][] = [];
+    let current: Block[] = [];
+    let currentHeight = 0;
+    let currentSection = "";
+
+    measured.forEach(({ block, height }) => {
+      const limit =
+        result.length === 0
+          ? firstPageLimit
+          : otherPageLimit;
+
+      const sectionChanged =
+        currentSection !== block.section;
+
+      if (
+        current.length > 0 &&
+        currentHeight + height > limit
+      ) {
+        result.push(current);
+        current = [];
+        currentHeight = 0;
+
+        if (
+          !block.heading &&
+          sectionChanged
+        ) {
+          const sectionHeading = blocks.find(
+            (candidate) =>
+              candidate.heading &&
+              candidate.section === block.section
+          );
+
+          if (sectionHeading) {
+            const headingIndex = blocks.findIndex(
+              (candidate) =>
+                candidate.id === sectionHeading.id
+            );
+
+            const headingHeight =
+              measured[headingIndex]?.height || 0;
+
+            current.push(sectionHeading);
+            currentHeight += headingHeight;
+          }
+        }
+      }
+
+      current.push(block);
+      currentHeight += height;
+      currentSection = block.section;
+    });
+
+    if (current.length) {
+      result.push(current);
+    }
+
+    setPages(result.length ? result : [[]]);
+  }, [
+    resume.fullName,
+    resume.title,
+    resume.summary,
+    JSON.stringify(resume.education),
+    JSON.stringify(resume.experiences),
+    JSON.stringify(resume.projects),
+    JSON.stringify(resume.skills),
+    JSON.stringify(resume.certifications),
+    JSON.stringify(resume.achievements),
+    JSON.stringify(resume.languages)
+  ]);
+
   return (
-    <div className="t4-sheet">
+    <div className="jobix-t4-preview">
       <style>{`
-        .t4-sheet {
+        .jobix-t4-preview {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 20px;
+        }
+
+        .jobix-t4-page {
           width: 794px;
+          height: 1123px;
           min-height: 1123px;
           box-sizing: border-box;
-          padding: 28px 30px 34px 30px;
+          position: relative;
+          overflow: hidden;
           background: #ffffff;
           color: #111111;
           font-family: Arial, Helvetica, sans-serif;
+          padding: 18px 25px 24px;
         }
 
-        .t4-header {
+        .jobix-t4-header {
           display: grid;
           grid-template-columns: minmax(0, 1fr) 315px;
-          column-gap: 20px;
+          gap: 18px;
           align-items: start;
-          padding-bottom: 10px;
+          padding-bottom: 8px;
           border-bottom: 2px solid #111111;
         }
 
-        .t4-name {
+        .jobix-t4-name {
           margin: 0;
-          font-size: 31px;
-          line-height: 31px;
+          font-size: 38px;
+          line-height: 40px;
           font-weight: 700;
-          letter-spacing: -1px;
+          letter-spacing: -0.5px;
         }
 
-        .t4-title {
-          margin-top: 4px;
-          font-size: 10px;
-          line-height: 13px;
+        .jobix-t4-title {
+          margin-top: 2px;
+          font-size: 12px;
+          line-height: 14px;
           font-weight: 700;
         }
 
-        .t4-contact {
+        .jobix-t4-contact {
           text-align: right;
-          font-size: 8px;
-          line-height: 11px;
+          font-size: 11px;
+          line-height: 12px;
         }
 
-        .t4-contact-line {
+        .jobix-t4-contact-line {
           display: block;
           white-space: nowrap;
         }
 
-        .t4-links {
-          margin-top: 2px;
+        .jobix-t4-links {
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
         }
 
-        .t4-body {
-          padding-top: 10px;
+        .jobix-t4-body {
+          padding-top: 7px;
         }
 
-        .t4-section {
-          margin-bottom: 13px;
-          page-break-inside: avoid;
-        }
-
-        .t4-heading {
+        .jobix-t4-heading {
           display: flex;
           align-items: center;
-          gap: 6px;
-          margin-bottom: 4px;
-          font-size: 11px;
+          gap: 5px;
+          margin: 0 0 2px;
+          color: #111111;
+          font-size: 12px;
           line-height: 14px;
           font-weight: 700;
         }
 
-        .t4-icon {
+        .jobix-t4-icon {
           width: 14px;
           height: 14px;
           min-width: 14px;
-          display: flex;
+          display: inline-flex;
           align-items: center;
           justify-content: center;
         }
 
-        .t4-content {
-          margin-left: 20px;
+        .jobix-t4-content {
+          margin-left: 19px;
+          font-size: 11px;
+          line-height: 12px;
         }
 
-        .t4-summary {
-          font-size: 8.5px;
-          line-height: 11.5px;
+        .jobix-t4-summary {
+          margin: 0 0 4px;
+          font-size: 11px;
+          line-height: 12px;
         }
 
-        .t4-grid {
+        .jobix-t4-entry {
+          margin-bottom: 4px;
+          break-inside: avoid;
+          page-break-inside: avoid;
+        }
+
+        .jobix-t4-grid {
           display: grid;
           grid-template-columns: minmax(0, 1fr) 145px;
-          gap: 15px;
+          gap: 13px;
+          align-items: start;
         }
 
-        .t4-right {
+        .jobix-t4-entry-text {
+          min-width: 0;
+          font-size: 11px;
+          line-height: 12px;
+        }
+
+        .jobix-t4-strong {
+          font-weight: 700;
+        }
+
+        .jobix-t4-role {
+          font-weight: 700;
+        }
+
+        .jobix-t4-right {
           text-align: right;
           white-space: nowrap;
-          color: #555;
-          font-size: 7.8px;
-          line-height: 11px;
+          font-size: 11px;
+          line-height: 12px;
+          color: #555555;
           font-style: italic;
         }
 
-        .t4-entry {
-          margin-bottom: 8px;
-        }
-
-        .t4-entry:last-child {
-          margin-bottom: 0;
-        }
-
-        .t4-company {
-          font-size: 9px;
-          line-height: 11px;
-          font-weight: 700;
-        }
-
-        .t4-role {
-          font-size: 8.8px;
-          line-height: 11px;
-          font-weight: 700;
-        }
-
-        .t4-location {
-          font-size: 7.8px;
-          line-height: 10px;
-          color: #555;
+        .jobix-t4-location {
+          margin-top: 0;
+          font-size: 11px;
+          line-height: 12px;
+          color: #555555;
           font-style: italic;
         }
 
-        .t4-bullets {
-          margin: 3px 0 0 0;
-          padding-left: 16px;
-          font-size: 8.3px;
-          line-height: 11px;
+        .jobix-t4-bullets {
+          margin: 2px 0 0;
+          padding-left: 15px;
+          font-size: 11px;
+          line-height: 12px;
         }
 
-        .t4-bullets li {
-          margin-bottom: 1px;
-          padding-left: 2px;
+        .jobix-t4-bullets li {
+          margin: 0;
+          padding-left: 1px;
         }
 
-        .t4-education {
-          font-size: 8.5px;
-          line-height: 11px;
-        }
-
-        .t4-education-main {
+        .jobix-t4-project-name {
+          font-size: 11px;
+          line-height: 12px;
           font-weight: 700;
         }
 
-        .t4-project {
-          margin-bottom: 7px;
-          font-size: 8.3px;
-          line-height: 11px;
-        }
-
-        .t4-project-name {
-          font-size: 9px;
-          line-height: 11px;
-          font-weight: 700;
-        }
-
-        .t4-tech {
-          font-weight: 700;
-        }
-
-        .t4-label {
-          font-weight: 700;
-        }
-
-        .t4-skills {
+        .jobix-t4-skills {
           display: flex;
           flex-wrap: wrap;
-          gap: 4px;
+          gap: 3px;
         }
 
-        .t4-skill {
+        .jobix-t4-skill {
           display: inline-flex;
           align-items: center;
-          min-height: 20px;
+          min-height: 17px;
           box-sizing: border-box;
-          padding: 3px 7px;
-          border: 1px solid #b9bec4;
-          border-radius: 4px;
-          font-size: 7.8px;
-          line-height: 10px;
+          padding: 2px 5px;
+          border: 1px solid #aeb4bb;
+          border-radius: 3px;
+          background: #ffffff;
+          color: #111111;
+          font-size: 9.5px;
+          line-height: 12px;
         }
 
-        .t4-cert,
-        .t4-achievement {
-          margin-bottom: 6px;
-          font-size: 8.3px;
-          line-height: 11px;
+        .jobix-t4-certification,
+        .jobix-t4-achievement {
+          font-size: 11px;
+          line-height: 12px;
         }
 
-        .t4-bold {
-          font-weight: 700;
-        }
-
-        .t4-languages {
+        .jobix-t4-languages {
           display: flex;
           flex-wrap: wrap;
-          gap: 5px 22px;
-          font-size: 8.3px;
-          line-height: 11px;
+          gap: 4px 22px;
+          font-size: 11px;
+          line-height: 12px;
+        }
+
+        .jobix-t4-page-number {
+          position: absolute;
+          right: 25px;
+          bottom: 9px;
+          font-size: 7px;
+          color: #777777;
+        }
+
+        .jobix-t4-measure {
+          position: fixed;
+          left: -10000px;
+          top: 0;
+          width: 744px;
+          visibility: hidden;
+          pointer-events: none;
+          background: #ffffff;
         }
 
         @media print {
-          .t4-sheet {
+          .jobix-t4-preview {
+            display: block;
+          }
+
+          .jobix-t4-page {
             width: 210mm;
+            height: 297mm;
             min-height: 297mm;
-            padding: 7.4mm 7.4mm 8mm 7.4mm;
+            padding: 5mm 6.5mm 7mm;
+            box-shadow: none;
+            page-break-after: always;
+            break-after: page;
+          }
+
+          .jobix-t4-page:last-child {
+            page-break-after: auto;
+            break-after: auto;
+          }
+
+          .jobix-t4-measure {
+            display: none;
           }
         }
       `}</style>
 
-      <header className="t4-header">
-        <div>
-          <h1 className="t4-name">
-            {data.fullName || "Your Name"}
-          </h1>
-
-          {data.title && (
-            <div className="t4-title">
-              {data.title}
-            </div>
-          )}
-        </div>
-
-        <div className="t4-contact">
-          {contact.map((item, index) => (
-            <span className="t4-contact-line" key={index}>
-              {item}
-            </span>
-          ))}
-
-          {links.length > 0 && (
-            <div className="t4-links">
-              {links.join(" · ")}
-            </div>
-          )}
-        </div>
-      </header>
-
-      <div className="t4-body">
-        {data.summary && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <UserRound size={13} strokeWidth={2.4} />
-              </span>
-              Summary
-            </div>
-
-            <div className="t4-content t4-summary">
-              {data.summary}
-            </div>
-          </section>
-        )}
-
-        {data.education.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <GraduationCap size={13} strokeWidth={2.4} />
-              </span>
-              Education
-            </div>
-
-            <div className="t4-content">
-              {data.education.map((item) => (
-                <div className="t4-entry t4-education" key={item.id}>
-                  <div className="t4-grid">
-                    <div>
-                      <div className="t4-education-main">
-                        {item.institution}
-                      </div>
-
-                      <div>
-                        {item.degree}
-                        {item.field ? ` - ${item.field}` : ""}
-                        {item.grade ? `, ${item.grade}` : ""}
-                      </div>
-
-                      {(item.start || item.end) && (
-                        <div>
-                          {item.start}
-                          {item.start || item.end ? " – " : ""}
-                          {item.end}
-                        </div>
-                      )}
-                    </div>
-
-                    {item.location && (
-                      <div className="t4-right">
-                        {item.location}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {data.experiences.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <BriefcaseBusiness size={13} strokeWidth={2.4} />
-              </span>
-              Experience
-            </div>
-
-            <div className="t4-content">
-              {data.experiences.map((item) => (
-                <div className="t4-entry" key={item.id}>
-                  <div className="t4-grid">
-                    <div>
-                      <div className="t4-company">
-                        {item.company}
-                      </div>
-
-                      <div className="t4-role">
-                        {item.role}
-                      </div>
-                    </div>
-
-                    <div className="t4-right">
-                      {item.start}
-                      {item.start || item.end ? " – " : ""}
-                      {item.current ? "Present" : item.end}
-                    </div>
-                  </div>
-
-                  {item.location && (
-                    <div className="t4-location">
-                      {item.location}
-                    </div>
-                  )}
-
-                  {item.bullets.filter(Boolean).length > 0 && (
-                    <ul className="t4-bullets">
-                      {item.bullets
-                        .filter(Boolean)
-                        .map((bullet, index) => (
-                          <li key={index}>{bullet}</li>
-                        ))}
-                    </ul>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {data.projects.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <BriefcaseBusiness size={13} strokeWidth={2.4} />
-              </span>
-              Projects
-            </div>
-
-            <div className="t4-content">
-              {data.projects.map((item) => (
-                <div className="t4-project" key={item.id}>
-                  <div className="t4-grid">
-                    <div>
-                      <div className="t4-project-name">
-                        {item.name}
-                      </div>
-
-                      {item.technologies && (
-                        <div className="t4-tech">
-                          {item.technologies}
-                        </div>
-                      )}
-                    </div>
-
-                    {item.link && (
-                      <div className="t4-right">
-                        {item.link}
-                      </div>
-                    )}
-                  </div>
-
-                  {item.description && (
-                    <div>{item.description}</div>
-                  )}
-
-                  {item.contribution && (
-                    <div>
-                      <span className="t4-label">
-                        Contribution:
-                      </span>{" "}
-                      {item.contribution}
-                    </div>
-                  )}
-
-                  {item.result && (
-                    <div>
-                      <span className="t4-label">
-                        Result:
-                      </span>{" "}
-                      {item.result}
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {data.skills.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <Award size={13} strokeWidth={2.4} />
-              </span>
-              Skills
-            </div>
-
-            <div className="t4-content">
-              <div className="t4-skills">
-                {data.skills.filter(Boolean).map((skill, index) => (
-                  <span className="t4-skill" key={index}>
-                    {skill}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
-
-        {data.certifications.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <Award size={13} strokeWidth={2.4} />
-              </span>
-              Certifications
-            </div>
-
-            <div className="t4-content">
-              {data.certifications.map((item) => (
-                <div className="t4-cert" key={item.id}>
-                  <div className="t4-bold">
-                    {item.name}
-                  </div>
-
-                  <div>
-                    {item.issuer}
-                    {item.year ? ` · ${item.year}` : ""}
-                    {item.credentialId
-                      ? ` · ${item.credentialId}`
-                      : ""}
-                  </div>
-
-                  {item.link && (
-                    <div>{item.link}</div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {data.achievements.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <Award size={13} strokeWidth={2.4} />
-              </span>
-              Achievements
-            </div>
-
-            <div className="t4-content">
-              {data.achievements.map((item) => (
-                <div className="t4-achievement" key={item.id}>
-                  <div className="t4-grid">
-                    <div>
-                      <div className="t4-bold">
-                        {item.title}
-                      </div>
-
-                      {item.organization && (
-                        <div className="t4-bold">
-                          {item.organization}
-                        </div>
-                      )}
-
-                      {item.description && (
-                        <div>{item.description}</div>
-                      )}
-                    </div>
-
-                    {item.year && (
-                      <div className="t4-right">
-                        {item.year}
-                      </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        {data.languages.length > 0 && (
-          <section className="t4-section">
-            <div className="t4-heading">
-              <span className="t4-icon">
-                <Languages size={13} strokeWidth={2.4} />
-              </span>
-              Languages
-            </div>
-
-            <div className="t4-content">
-              <div className="t4-languages">
-                {data.languages.map((item) => (
-                  <span key={item.id}>
-                    <strong>{item.name}</strong>
-                    {item.level ? ` · ${item.level}` : ""}
-                  </span>
-                ))}
-              </div>
-            </div>
-          </section>
-        )}
+      <div
+        ref={measureRef}
+        className="jobix-t4-measure"
+        aria-hidden="true"
+      >
+        {blocks.map((block) => (
+          <div
+            key={block.id}
+            data-jobix-t4-block="true"
+          >
+            {block.content}
+          </div>
+        ))}
       </div>
+
+      {pages.length > 0 &&
+        pages.map((page, pageIndex) => (
+          <div
+            className="jobix-t4-page"
+            key={pageIndex}
+          >
+            {pageIndex === 0 && (
+              <header className="jobix-t4-header">
+                <div>
+                  <h1 className="jobix-t4-name">
+                    {resume.fullName || "Your Name"}
+                  </h1>
+
+                  {resume.title && (
+                    <div className="jobix-t4-title">
+                      {resume.title}
+                    </div>
+                  )}
+                </div>
+
+                <div className="jobix-t4-contact">
+                  {contact.map((item, index) => (
+                    <span
+                      className="jobix-t4-contact-line"
+                      key={index}
+                    >
+                      {item}
+                    </span>
+                  ))}
+
+                  {links.length > 0 && (
+                    <div className="jobix-t4-links">
+                      {links.join(" · ")}
+                    </div>
+                  )}
+                </div>
+              </header>
+            )}
+
+            <div className="jobix-t4-body">
+              {page.map((block) => (
+                <div key={block.id}>
+                  {block.content}
+                </div>
+              ))}
+            </div>
+
+            {pages.length > 1 && (
+              <div className="jobix-t4-page-number">
+                {pageIndex + 1}
+              </div>
+            )}
+          </div>
+        ))}
     </div>
   );
 }
@@ -998,43 +1880,12 @@ export default function ResumeEditorPage() {
     setTemplate(selectedTemplate);
     setMode(selectedMode);
 
-    const stored = sessionStorage.getItem(
-      "jobix_resume_builder_data"
+    sessionStorage.removeItem("jobix_resume_builder_data");
+    setData(defaultData);
+    sessionStorage.setItem(
+      "jobix_resume_builder_data",
+      JSON.stringify(defaultData)
     );
-
-    if (stored) {
-      try {
-        const parsed = JSON.parse(stored);
-
-        setData({
-          ...defaultData,
-          ...parsed,
-          experiences: Array.isArray(parsed.experiences)
-            ? parsed.experiences
-            : [],
-          education: Array.isArray(parsed.education)
-            ? parsed.education
-            : [],
-          projects: Array.isArray(parsed.projects)
-            ? parsed.projects
-            : [],
-          skills: Array.isArray(parsed.skills)
-            ? parsed.skills
-            : [],
-          certifications: Array.isArray(parsed.certifications)
-            ? parsed.certifications
-            : [],
-          achievements: Array.isArray(parsed.achievements)
-            ? parsed.achievements
-            : [],
-          languages: Array.isArray(parsed.languages)
-            ? parsed.languages
-            : [],
-        });
-      } catch {
-        setData(defaultData);
-      }
-    }
   }, []);
 
   useEffect(() => {
