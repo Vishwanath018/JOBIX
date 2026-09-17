@@ -155,7 +155,7 @@ const defaultData: ResumeData = {
   linkedin: "linkedin.com/in/aaravmehta",
   github: "github.com/aaravmehta",
   portfolio: "aaravmehta.dev",
-  summary: "Full Stack Developer with experience building scalable web applications, REST APIs, and data-driven products. Strong foundation in TypeScript, React, Node.js, Python, PostgreSQL, and cloud technologies with a focus on reliable systems and intuitive user experiences.",
+  summary: "Full Stack Developer experienced in building scalable web applications, REST APIs, and data-driven products using modern technologies.",
   experiences: [
     {
       id: "exp-1",
@@ -164,10 +164,11 @@ const defaultData: ResumeData = {
       location: "Pune, Maharashtra",
       start: "Jul 2024",
       end: "Present",
+      current: true,
       bullets: [
-        "Developed full-stack web applications using React, TypeScript, Node.js, and PostgreSQL.",
-        "Designed REST APIs and backend services for business-critical application workflows.",
-        "Improved application performance through database optimization and reusable frontend components."
+        "Developed full-stack applications using React, TypeScript, Node.js, and PostgreSQL.",
+        "Designed REST APIs and backend services for production application workflows.",
+        "Improved application performance through database optimization and reusable components."
       ]
     },
     {
@@ -177,10 +178,11 @@ const defaultData: ResumeData = {
       location: "Hyderabad, Telangana",
       start: "Jan 2024",
       end: "Jun 2024",
+      current: false,
       bullets: [
         "Built responsive interfaces and integrated frontend applications with backend APIs.",
-        "Created automated testing workflows and resolved recurring application defects.",
-        "Worked with cross-functional teams to deliver features within sprint timelines."
+        "Created testing workflows and resolved application defects.",
+        "Collaborated with engineers to deliver features within sprint timelines."
       ]
     },
     {
@@ -190,9 +192,10 @@ const defaultData: ResumeData = {
       location: "Remote",
       start: "May 2023",
       end: "Aug 2023",
+      current: false,
       bullets: [
-        "Implemented reusable UI components for internal business applications.",
-        "Connected application interfaces with REST services and database-driven workflows."
+        "Implemented reusable UI components for internal applications.",
+        "Integrated application interfaces with REST services and database workflows."
       ]
     }
   ],
@@ -200,25 +203,22 @@ const defaultData: ResumeData = {
     {
       id: "edu-1",
       institution: "Vishwakarma Institute of Technology",
-      degree: "Bachelor of Technology in Computer Engineering",
-      location: "Pune, Maharashtra",
+      degree: "Bachelor of Technology",
+      field: "Computer Engineering",
+      grade: "8.7 CGPA",
       start: "2020",
       end: "2024",
-      bullets: [
-        "Focused on software engineering, databases, operating systems, and distributed systems.",
-        "Completed academic and independent projects involving web development and machine learning."
-      ]
+      location: "Pune, Maharashtra"
     },
     {
       id: "edu-2",
       institution: "St. Xavier's Junior College",
       degree: "Higher Secondary Education",
-      location: "Pune, Maharashtra",
+      field: "Science",
+      grade: "91%",
       start: "2018",
       end: "2020",
-      bullets: [
-        "Studied mathematics, computer science, physics, and chemistry."
-      ]
+      location: "Pune, Maharashtra"
     }
   ],
   projects: [
@@ -226,54 +226,54 @@ const defaultData: ResumeData = {
       id: "project-1",
       name: "FleetFlow",
       technologies: "React, Node.js, PostgreSQL",
-      description: "Fleet management platform for tracking vehicles, maintenance schedules, driver activity, and operational expenses.",
-      contribution: "Designed the application architecture, dashboard interface, REST APIs, and database workflows.",
-      result: "Delivered a centralized platform for managing fleet operations and vehicle records.",
+      description: "Fleet management platform for tracking vehicles, maintenance, and operations.",
+      contribution: "Designed the frontend, REST API layer, database schema, and authentication flow.",
+      result: "Centralized fleet operations and reduced manual tracking.",
       link: "github.com/aaravmehta/fleetflow"
     },
     {
       id: "project-2",
       name: "MarketLens",
       technologies: "Next.js, Python, FastAPI",
-      description: "Business analytics dashboard that transforms sales data into interactive reports and performance insights.",
-      contribution: "Built data processing services, API integrations, dashboard components, and visualization workflows.",
-      result: "Created an interactive analytics platform for monitoring sales performance.",
+      description: "Market analytics dashboard with interactive financial visualizations.",
+      contribution: "Built the dashboard interface and FastAPI data services.",
+      result: "Created a responsive workflow for exploring market trends.",
       link: "github.com/aaravmehta/marketlens"
     },
     {
       id: "project-3",
       name: "SecureVault",
       technologies: "TypeScript, Express, PostgreSQL",
-      description: "Secure document management application with role-based access control and audit tracking.",
-      contribution: "Implemented authentication, authorization, document workflows, database models, and audit logging.",
-      result: "Built a structured document platform with controlled access and activity tracking.",
+      description: "Credential management application with authenticated workflows.",
+      contribution: "Implemented APIs, database models, validation, and access control.",
+      result: "Provided structured secure credential management.",
       link: "github.com/aaravmehta/securevault"
     },
     {
       id: "project-4",
       name: "StudySync",
       technologies: "React, Firebase, Tailwind CSS",
-      description: "Collaborative learning platform for courses, study groups, assignments, and shared resources.",
-      contribution: "Developed the frontend architecture, collaboration workflows, authentication, and responsive layouts.",
-      result: "Created a unified learning workspace for students and study groups.",
+      description: "Collaborative study platform for notes, tasks, and learning resources.",
+      contribution: "Developed React components and Firebase workflows.",
+      result: "Centralized study activity management.",
       link: "github.com/aaravmehta/studysync"
     },
     {
       id: "project-5",
       name: "TravelMate",
       technologies: "Next.js, Node.js, MongoDB",
-      description: "Travel planning application for creating itineraries, managing destinations, and organizing trip expenses.",
-      contribution: "Built itinerary management, destination search, expense tracking, and backend APIs.",
-      result: "Delivered an organized trip planning experience with centralized travel information.",
+      description: "Travel planning application for destinations and itineraries.",
+      contribution: "Implemented frontend experience and backend data services.",
+      result: "Simplified itinerary planning.",
       link: "github.com/aaravmehta/travelmate"
     },
     {
       id: "project-6",
       name: "PulseMonitor",
       technologies: "React, Python, Redis",
-      description: "Real-time infrastructure monitoring dashboard displaying service health, alerts, metrics, and system activity.",
-      contribution: "Implemented monitoring dashboards, real-time updates, alert workflows, and metric processing.",
-      result: "Created a centralized interface for tracking application and infrastructure health.",
+      description: "Application monitoring dashboard for service health and metrics.",
+      contribution: "Built monitoring interface and data-processing services.",
+      result: "Centralized operational monitoring.",
       link: "github.com/aaravmehta/pulsemonitor"
     }
   ],
@@ -296,36 +296,48 @@ const defaultData: ResumeData = {
       id: "cert-1",
       name: "AWS Certified Cloud Practitioner",
       issuer: "Amazon Web Services",
-      date: "2024"
+      year: "2024",
+      credentialId: "AWS-CP-48291",
+      link: "aws.amazon.com/certification/"
     },
     {
       id: "cert-2",
       name: "Meta Front-End Developer",
       issuer: "Meta",
-      date: "2023"
+      year: "2023",
+      credentialId: "META-FE-73152",
+      link: "coursera.org/"
     },
     {
       id: "cert-3",
       name: "Python for Data Science",
       issuer: "IBM",
-      date: "2023"
+      year: "2023",
+      credentialId: "IBM-PDS-29418",
+      link: "coursera.org/"
     }
   ],
   achievements: [
     {
       id: "ach-1",
       title: "Hackathon Finalist",
+      organization: "National Software Hackathon",
+      year: "2024",
       description: "Reached the final round of a national-level software development hackathon."
     },
     {
       id: "ach-2",
       title: "Technical Lead",
-      description: "Led a four-member student team during an intensive product development challenge."
+      organization: "VIT Developer Community",
+      year: "2023",
+      description: "Led a four-member student team during a product development challenge."
     },
     {
       id: "ach-3",
       title: "Open Source Contributor",
-      description: "Contributed bug fixes and documentation improvements to developer-focused open-source projects."
+      organization: "Open Source Community",
+      year: "2023",
+      description: "Contributed bug fixes and documentation improvements to open-source projects."
     }
   ],
   languages: [
