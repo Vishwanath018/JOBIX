@@ -166,9 +166,9 @@ const defaultData: ResumeData = {
       end: "Present",
       current: true,
       bullets: [
-        "Developed full-stack applications using React, TypeScript, Node.js, and PostgreSQL.",
-        "Designed REST APIs and backend services for production application workflows.",
-        "Improved application performance through database optimization and reusable components."
+        "Developed scalable full-stack applications using React, TypeScript, Node.js, and PostgreSQL while building reusable components and reliable application workflows.",
+        "Designed and implemented REST APIs and backend services for production workflows, authentication, data processing, and integration with frontend applications.",
+        "Improved application performance through database optimization, reusable components, efficient API design, and systematic reduction of unnecessary application processing."
       ]
     },
     {
@@ -180,9 +180,9 @@ const defaultData: ResumeData = {
       end: "Jun 2024",
       current: false,
       bullets: [
-        "Built responsive interfaces and integrated frontend applications with backend APIs.",
-        "Created testing workflows and resolved application defects.",
-        "Collaborated with engineers to deliver features within sprint timelines."
+        "Built responsive web interfaces and integrated frontend applications with backend APIs while maintaining consistent user experience across desktop and mobile devices.",
+        "Created testing workflows, investigated application defects, and delivered reliable fixes while maintaining development quality and release timelines.",
+        "Collaborated with engineers, designers, and product stakeholders to deliver application features within sprint timelines and established development requirements."
       ]
     },
     {
@@ -194,8 +194,8 @@ const defaultData: ResumeData = {
       end: "Aug 2023",
       current: false,
       bullets: [
-        "Implemented reusable UI components for internal applications.",
-        "Integrated application interfaces with REST services and database workflows."
+        "Implemented reusable UI components for internal applications with consistent layouts, responsive behavior, and maintainable frontend architecture.",
+        "Integrated application interfaces with REST services and database workflows to support reliable data retrieval, validation, and user-driven application operations."
       ]
     }
   ],
@@ -226,27 +226,27 @@ const defaultData: ResumeData = {
       id: "project-1",
       name: "FleetFlow",
       technologies: "React, Node.js, PostgreSQL",
-      description: "Fleet management platform for tracking vehicles, maintenance, and operations.",
-      contribution: "Designed the frontend, REST API layer, database schema, and authentication flow.",
-      result: "Centralized fleet operations and reduced manual tracking.",
+      description: "Built a fleet management platform for tracking vehicles, maintenance schedules, operational activity, and service information through a centralized web interface.",
+      contribution: "Designed the frontend architecture, REST API layer, database schema, authentication flow, and core application workflows for the platform.",
+      result: "Centralized fleet operations and reduced manual tracking by providing structured workflows for vehicle information, maintenance, and operational monitoring.",
       link: "github.com/aaravmehta/fleetflow"
     },
     {
       id: "project-2",
       name: "MarketLens",
       technologies: "Next.js, Python, FastAPI",
-      description: "Market analytics dashboard with interactive financial visualizations.",
-      contribution: "Built the dashboard interface and FastAPI data services.",
-      result: "Created a responsive workflow for exploring market trends.",
+      description: "Built a market analytics dashboard with interactive financial visualizations, structured data views, and responsive workflows for exploring market trends.",
+      contribution: "Built the dashboard interface and FastAPI data services for processing application data and presenting interactive analytics through a responsive user experience.",
+      result: "Created a responsive workflow for exploring market trends, comparing financial information, and presenting data through clear interactive visualizations.",
       link: "github.com/aaravmehta/marketlens"
     },
     {
       id: "project-3",
       name: "SecureVault",
       technologies: "TypeScript, Express, PostgreSQL",
-      description: "Credential management application with authenticated workflows.",
-      contribution: "Implemented APIs, database models, validation, and access control.",
-      result: "Provided structured secure credential management.",
+      description: "Developed a credential management application with authenticated workflows, structured access control, validation, and secure database-backed operations.",
+      contribution: "Implemented APIs, database models, request validation, authentication, and access-control workflows to support reliable application operations.",
+      result: "Provided structured credential management through organized application workflows, authenticated access, and database-backed record management.",
       link: "github.com/aaravmehta/securevault"
     },
     {
@@ -374,7 +374,7 @@ function Field({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-[12px] font-bold text-[#25314a]">
+      <span className="mb-1.5 block text-[12px] font-semibold text-[#25314a]">
         {label}
       </span>
       <input
@@ -401,7 +401,7 @@ function TextArea({
 }) {
   return (
     <label className="block">
-      <span className="mb-1.5 block text-[12px] font-bold text-[#25314a]">
+      <span className="mb-1.5 block text-[12px] font-semibold text-[#25314a]">
         {label}
       </span>
       <textarea
@@ -424,7 +424,7 @@ function SectionTitle({
 }) {
   return (
     <div className="mb-5">
-      <h2 className="text-[17px] font-extrabold tracking-[-0.2px] text-[#101828]">
+      <h2 className="text-[18px] font-black tracking-[-0.35px] text-[#101828]">
         {title}
       </h2>
       {description && (
@@ -454,7 +454,7 @@ function EditorCard({
           <span className="flex h-6 w-6 items-center justify-center rounded-full bg-[#111827] text-[11px] font-bold text-white">
             {number}
           </span>
-          <span className="text-[13px] font-extrabold text-[#1d2939]">
+          <span className="text-[13px] font-bold text-[#1d2939]">
             {title}
           </span>
         </div>
@@ -1094,7 +1094,8 @@ function Template4Preview({ data }: { data: ResumeData }) {
               <ul className="jobix-t4-bullets">
                 {bullets.map((bullet, index) => (
                   <li key={index}>
-                    {bullet}
+                    <span className="jobix-t4-bullet-dot" />
+                    <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
@@ -1185,7 +1186,8 @@ function Template4Preview({ data }: { data: ResumeData }) {
               <ul className="jobix-t4-bullets">
                 {bullets.map((bullet, index) => (
                   <li key={index}>
-                    {bullet}
+                    <span className="jobix-t4-bullet-dot" />
+                    <span>{bullet}</span>
                   </li>
                 ))}
               </ul>
@@ -1434,7 +1436,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
         }
 
         .jobix-t4-page {
-          width: 794px;
+          width: 720px;
           height: 1123px;
           min-height: 1123px;
           box-sizing: border-box;
@@ -1457,9 +1459,9 @@ function Template4Preview({ data }: { data: ResumeData }) {
 
         .jobix-t4-name {
           margin: 0;
-          font-size: 38px;
-          line-height: 40px;
-          font-weight: 700;
+          font-size: 41px;
+          line-height: 42px;
+          font-weight: 800;
           letter-spacing: -0.5px;
         }
 
@@ -1499,7 +1501,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           color: #111111;
           font-size: 12px;
           line-height: 14px;
-          font-weight: 700;
+          font-weight: 800;
         }
 
         .jobix-t4-icon {
@@ -1515,74 +1517,114 @@ function Template4Preview({ data }: { data: ResumeData }) {
           margin-left: 19px;
           font-size: 11px;
           line-height: 12px;
+          font-weight: 400;
         }
 
         .jobix-t4-summary {
           margin: 0 0 4px;
           font-size: 11px;
           line-height: 12px;
+          font-weight: 400;
         }
 
         .jobix-t4-entry {
+          position: relative;
+          width: 100%;
           margin-bottom: 4px;
           break-inside: avoid;
           page-break-inside: avoid;
         }
 
         .jobix-t4-grid {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr) 145px;
-          gap: 13px;
-          align-items: start;
+          display: block;
+          position: relative;
+          width: 100%;
         }
 
         .jobix-t4-entry-text {
+          width: 100%;
           min-width: 0;
+          box-sizing: border-box;
           font-size: 11px;
           line-height: 12px;
-        }
-
-        .jobix-t4-strong {
-          font-weight: 700;
-        }
-
-        .jobix-t4-role {
-          font-weight: 700;
+          font-weight: 400;
         }
 
         .jobix-t4-right {
+          position: absolute;
+          top: 0;
+          right: 0;
+          margin: 0;
+          padding: 0;
           text-align: right;
           white-space: nowrap;
-          font-size: 11px;
+          font-size: 10.5px;
           line-height: 12px;
           color: #555555;
           font-style: italic;
+          pointer-events: none;
         }
 
         .jobix-t4-location {
-          margin-top: 0;
-          font-size: 11px;
+          margin: 0;
+          padding: 0;
+          font-size: 10.5px;
           line-height: 12px;
           color: #555555;
           font-style: italic;
         }
 
         .jobix-t4-bullets {
+          list-style: none;
+          width: 100%;
           margin: 2px 0 0;
-          padding-left: 15px;
+          padding: 0;
           font-size: 11px;
           line-height: 12px;
+          box-sizing: border-box;
         }
 
         .jobix-t4-bullets li {
+          display: flex;
+          align-items: flex-start;
+          width: 100%;
           margin: 0;
-          padding-left: 1px;
+          padding: 0;
+          gap: 6px;
+          box-sizing: border-box;
+        }
+
+        .jobix-t4-bullet-dot {
+          display: block;
+          width: 4px;
+          height: 4px;
+          min-width: 4px;
+          margin-top: 4px;
+          border-radius: 50%;
+          background: #111111;
+        }
+
+        .jobix-t4-bullets li > span:last-child {
+          display: block;
+          flex: 1 1 auto;
+          width: auto;
+          min-width: 0;
+          margin: 0;
+          padding: 0;
+        }
+
+        .jobix-t4-strong {
+          font-weight: 600;
+        }
+
+        .jobix-t4-role {
+          font-weight: 500;
         }
 
         .jobix-t4-project-name {
           font-size: 11px;
           line-height: 12px;
-          font-weight: 700;
+          font-weight: 600;
         }
 
         .jobix-t4-skills {
@@ -1631,7 +1673,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           position: fixed;
           left: -10000px;
           top: 0;
-          width: 744px;
+          width: 670px;
           visibility: hidden;
           pointer-events: none;
           background: #ffffff;
