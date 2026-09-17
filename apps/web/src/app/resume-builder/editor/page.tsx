@@ -1094,7 +1094,20 @@ function Template4Preview({ data }: { data: ResumeData }) {
               <ul className="jobix-t4-bullets">
                 {bullets.map((bullet, index) => (
                   <li key={index}>
-                    <span className="jobix-t4-bullet-dot" />
+                    <span
+  className="jobix-t4-bullet-dot"
+  style={{
+    display: "block",
+    width: "5px",
+    height: "5px",
+    minWidth: "5px",
+    minHeight: "5px",
+    marginTop: "4px",
+    borderRadius: "50%",
+    backgroundColor: "#111111",
+    flex: "0 0 5px"
+  }}
+/>
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -1186,7 +1199,20 @@ function Template4Preview({ data }: { data: ResumeData }) {
               <ul className="jobix-t4-bullets">
                 {bullets.map((bullet, index) => (
                   <li key={index}>
-                    <span className="jobix-t4-bullet-dot" />
+                    <span
+  className="jobix-t4-bullet-dot"
+  style={{
+    display: "block",
+    width: "5px",
+    height: "5px",
+    minWidth: "5px",
+    minHeight: "5px",
+    marginTop: "4px",
+    borderRadius: "50%",
+    backgroundColor: "#111111",
+    flex: "0 0 5px"
+  }}
+/>
                     <span>{bullet}</span>
                   </li>
                 ))}
@@ -2489,6 +2515,33 @@ function Template4Preview({ data }: { data: ResumeData }) {
           }
         }
       
+
+        .jobix-t4-bullet-dot {
+          display: block !important;
+          width: 5px !important;
+          height: 5px !important;
+          min-width: 5px !important;
+          min-height: 5px !important;
+          flex: 0 0 5px !important;
+          margin-top: 4px !important;
+          border-radius: 50% !important;
+          background: #111111 !important;
+          background-color: #111111 !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          -webkit-print-color-adjust: exact !important;
+          print-color-adjust: exact !important;
+        }
+
+        @media print {
+          .jobix-t4-bullet-dot {
+            background: #111111 !important;
+            background-color: #111111 !important;
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+          }
+        }
+
 `}</style>
 
       <div
@@ -2693,6 +2746,7 @@ export default function ResumeEditorPage() {
   const [activeSection, setActiveSection] = useState("contacts");
   const [previewZoom, setPreviewZoom] = useState(106);
   const [saved, setSaved] = useState(false);
+  const [previewOnly, setPreviewOnly] = useState(false);
   const [data, setData] = useState<ResumeData>(defaultData);
 
   useEffect(() => {
@@ -2700,15 +2754,47 @@ export default function ResumeEditorPage() {
     const selectedTemplate = params.get("template") || "4";
     const selectedMode =
       params.get("mode") === "existing" ? "existing" : "scratch";
+    const isPreview = params.get("preview") === "1";
 
     setTemplate(selectedTemplate);
     setMode(selectedMode);
+    setPreviewOnly(isPreview);
 
-    sessionStorage.removeItem("jobix_resume_builder_data");
-    sessionStorage.setItem(
-      "jobix_resume_builder_data",
-      JSON.stringify(defaultData)
+    if (isPreview) {
+      const storedData = sessionStorage.getItem(
+        "jobix_resume_builder_data"
+      );
+
+      if (storedData) {
+        try {
+          setData(JSON.parse(storedData));
+        } catch {
+          setData(defaultData);
+        }
+      }
+
+      return;
+    }
+
+    const storedData = sessionStorage.getItem(
+      "jobix_resume_builder_data"
     );
+    const storedTemplate = sessionStorage.getItem(
+      "jobix_resume_builder_template"
+    );
+
+    if (storedData) {
+      try {
+        setData(JSON.parse(storedData));
+        if (storedTemplate) {
+          setTemplate(storedTemplate);
+        }
+        return;
+      } catch {
+        sessionStorage.removeItem("jobix_resume_builder_data");
+      }
+    }
+
     setData(defaultData);
   }, []);
 
@@ -2765,15 +2851,26 @@ export default function ResumeEditorPage() {
   ];
 
   const saveResume = () => {
+    if (completion < 100) {
+      setSaved(false);
+      return;
+    }
+
     sessionStorage.setItem(
       "jobix_resume_builder_data",
       JSON.stringify(data)
     );
+
     sessionStorage.setItem(
       "jobix_resume_builder_template",
       template
     );
+
     setSaved(true);
+
+    router.push(
+      `/resume-builder/preview?template=${template}&mode=${mode}`
+    );
   };
 
   const nextSection = () => {
@@ -2857,6 +2954,29 @@ export default function ResumeEditorPage() {
       )
     );
   };
+
+  if (previewOnly) {
+    return (
+      <main
+        style={{
+          minHeight: "100vh",
+          margin: 0,
+          padding: "24px",
+          background: "#eef2f6",
+          overflow: "auto"
+        }}
+      >
+        {template === "4" ? (
+          <Template4Preview data={data} />
+        ) : (
+          <GenericPreview
+            data={data}
+            template={template}
+          />
+        )}
+      </main>
+    );
+  }
 
   return (
     <main className="min-h-screen bg-[#f4f6f9] text-[#172033]">
