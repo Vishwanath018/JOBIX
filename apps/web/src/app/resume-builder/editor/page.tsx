@@ -3261,6 +3261,434 @@ export default function ResumeEditorPage() {
           }
         }
 
+
+        .jb-brand-block {
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+        }
+
+        .jb-brand-row {
+          display: flex !important;
+          align-items: center !important;
+          gap: 10px !important;
+        }
+
+        .jb-brand-logo {
+          width: 30px !important;
+          height: 30px !important;
+          object-fit: contain !important;
+          display: block !important;
+        }
+
+        .jb-brand-title {
+          font-size: 21px !important;
+          line-height: 25px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.55px !important;
+          color: #111827 !important;
+        }
+
+        .jb-brand-subtitle {
+          margin-top: 4px !important;
+          margin-left: 40px !important;
+          font-size: 11px !important;
+          line-height: 15px !important;
+          color: #7a8494 !important;
+          font-weight: 600 !important;
+        }
+
+
+        .jb-brand-row {
+          display: flex !important;
+          align-items: center !important;
+          gap: 12px !important;
+        }
+
+        .jb-brand-logo {
+          width: 38px !important;
+          height: 38px !important;
+          object-fit: contain !important;
+          display: block !important;
+          flex: 0 0 38px !important;
+        }
+
+        .jb-brand-title {
+          font-size: 22px !important;
+          line-height: 27px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.55px !important;
+          color: #111827 !important;
+        }
+
+        .jb-brand-subtitle {
+          margin-top: 4px !important;
+          margin-left: 50px !important;
+          font-size: 11px !important;
+          line-height: 15px !important;
+          color: #7a8494 !important;
+          font-weight: 600 !important;
+        }
+
+        .jb-next-arrow {
+          width: 32px !important;
+          height: 32px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255,255,255,.16) !important;
+          color: #ffffff !important;
+          font-size: 21px !important;
+          line-height: 1 !important;
+          font-weight: 700 !important;
+        }
+
+
+        .jb-brand-row {
+          display: flex !important;
+          align-items: center !important;
+          gap: 14px !important;
+        }
+
+        .jb-brand-logo {
+          width: 52px !important;
+          height: 52px !important;
+          min-width: 52px !important;
+          min-height: 52px !important;
+          object-fit: contain !important;
+          display: block !important;
+          flex: 0 0 52px !important;
+        }
+
+        .jb-brand-title {
+          font-size: 28px !important;
+          line-height: 32px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.8px !important;
+          color: #101828 !important;
+        }
+
+        .jb-brand-subtitle {
+          margin-top: 5px !important;
+          margin-left: 66px !important;
+          font-size: 12px !important;
+          line-height: 16px !important;
+          color: #667085 !important;
+          font-weight: 600 !important;
+        }
+
+        .jb-next-arrow {
+          width: 42px !important;
+          height: 42px !important;
+          min-width: 42px !important;
+          min-height: 42px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255,255,255,.18) !important;
+          color: #ffffff !important;
+          font-size: 28px !important;
+          line-height: 1 !important;
+          font-weight: 500 !important;
+        }
+
+
+        .jb-brand-row {
+          display: flex !important;
+          align-items: center !important;
+          gap: 14px !important;
+        }
+
+        .jb-brand-logo {
+          width: 52px !important;
+          height: 52px !important;
+          min-width: 52px !important;
+          min-height: 52px !important;
+          object-fit: contain !important;
+          display: block !important;
+          flex: 0 0 52px !important;
+        }
+
+        .jb-brand-title {
+          font-size: 28px !important;
+          line-height: 32px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.8px !important;
+          color: #101828 !important;
+        }
+
+        .jb-brand-subtitle {
+          margin-top: 5px !important;
+          margin-left: 66px !important;
+          font-size: 12px !important;
+          line-height: 16px !important;
+          color: #667085 !important;
+          font-weight: 600 !important;
+        }
+
+        .jb-next-arrow {
+          width: 42px !important;
+          height: 42px !important;
+          min-width: 42px !important;
+          min-height: 42px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255,255,255,.18) !important;
+          color: #ffffff !important;
+          font-size: 28px !important;
+          line-height: 1 !important;
+          font-weight: 500 !important;
+        }
+
+
+        .jb-brand-block {
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: center !important;
+        }
+
+        .jb-brand-row {
+          display: flex !important;
+          align-items: center !important;
+          gap: 16px !important;
+        }
+
+        .jb-brand-logo-large {
+          width: 56px !important;
+          height: 56px !important;
+          min-width: 56px !important;
+          min-height: 56px !important;
+          object-fit: contain !important;
+          display: block !important;
+          flex: 0 0 56px !important;
+        }
+
+        .jb-brand-title {
+          font-size: 28px !important;
+          line-height: 34px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.8px !important;
+          color: #101828 !important;
+        }
+
+        .jb-brand-subtitle {
+          margin-top: 5px !important;
+          margin-left: 72px !important;
+          font-size: 12px !important;
+          line-height: 16px !important;
+          color: #667085 !important;
+          font-weight: 600 !important;
+        }
+
+        .jb-next-arrow {
+          width: 46px !important;
+          height: 46px !important;
+          min-width: 46px !important;
+          min-height: 46px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255,255,255,.18) !important;
+          color: #ffffff !important;
+          font-size: 30px !important;
+          line-height: 1 !important;
+          font-weight: 500 !important;
+          font-family: Arial, sans-serif !important;
+        }
+
+        .jb-next-button {
+          min-height: 60px !important;
+          border-radius: 12px !important;
+          padding: 8px 14px 8px 24px !important;
+        }
+
+        .jb-next-button > span:first-child {
+          font-size: 16px !important;
+          font-weight: 850 !important;
+        }
+
+
+        .jb-brand-block {
+          width: 100% !important;
+          min-height: 68px !important;
+          display: flex !important;
+          flex-direction: row !important;
+          align-items: center !important;
+          justify-content: flex-start !important;
+          gap: 0 !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-brand-logo-large {
+          width: 56px !important;
+          height: 56px !important;
+          min-width: 56px !important;
+          min-height: 56px !important;
+          margin-right: 18px !important;
+          object-fit: contain !important;
+          display: block !important;
+          flex: 0 0 56px !important;
+        }
+
+        .jb-brand-title {
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 28px !important;
+          line-height: 34px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.8px !important;
+          color: #101828 !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-brand-divider {
+          width: 2px !important;
+          height: 36px !important;
+          margin: 0 20px !important;
+          background: #cbd5e1 !important;
+          flex: 0 0 2px !important;
+        }
+
+        .jb-brand-subtitle {
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 16px !important;
+          line-height: 22px !important;
+          color: #667085 !important;
+          font-weight: 600 !important;
+          white-space: nowrap !important;
+        }
+
+        @media (max-width: 850px) {
+          .jb-brand-logo-large {
+            width: 48px !important;
+            height: 48px !important;
+            min-width: 48px !important;
+            min-height: 48px !important;
+            flex-basis: 48px !important;
+            margin-right: 12px !important;
+          }
+
+          .jb-brand-title {
+            font-size: 23px !important;
+            line-height: 28px !important;
+          }
+
+          .jb-brand-divider {
+            margin: 0 12px !important;
+          }
+
+          .jb-brand-subtitle {
+            font-size: 13px !important;
+          }
+        }
+
+
+        .jb-brand-block {
+          width: 100%;
+          min-height: 72px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          white-space: nowrap;
+        }
+
+        .jb-brand-logo-large {
+          width: 56px !important;
+          height: 56px !important;
+          min-width: 56px !important;
+          min-height: 56px !important;
+          object-fit: contain !important;
+          display: block !important;
+          flex: 0 0 56px !important;
+          margin-right: 18px !important;
+        }
+
+        .jb-brand-title {
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 28px !important;
+          line-height: 34px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.8px !important;
+          color: #101828 !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-brand-divider {
+          width: 2px !important;
+          height: 34px !important;
+          margin: 0 20px !important;
+          background: #cbd5e1 !important;
+          flex: 0 0 2px !important;
+        }
+
+        .jb-brand-subtitle {
+          margin: 0 !important;
+          padding: 0 !important;
+          font-size: 16px !important;
+          line-height: 22px !important;
+          color: #667085 !important;
+          font-weight: 600 !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-next-arrow {
+          width: 46px !important;
+          height: 46px !important;
+          min-width: 46px !important;
+          min-height: 46px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255,255,255,.18) !important;
+          color: #ffffff !important;
+          font-size: 29px !important;
+          line-height: 1 !important;
+          font-family: Arial, sans-serif !important;
+          font-weight: 400 !important;
+        }
+
+
+        .jb-brand-block {
+          display: flex !important;
+          align-items: center !important;
+          width: 100% !important;
+          min-height: 72px !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-brand-logo-large {
+          width: 56px !important;
+          height: 56px !important;
+          min-width: 56px !important;
+          min-height: 56px !important;
+          margin-right: 18px !important;
+          object-fit: contain !important;
+          display: block !important;
+        }
+
+        .jb-brand-title {
+          margin: 0 !important;
+          padding: 0 !important;
+          color: #101828 !important;
+          font-size: 28px !important;
+          line-height: 34px !important;
+          font-weight: 900 !important;
+          letter-spacing: -0.8px !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-card-title .jb-number {
+          display: none !important;
+        }
+
 `}</style>
 
 <style>{`
@@ -3443,15 +3871,15 @@ export default function ResumeEditorPage() {
 
       <div className="jb-shell">
         <header className="jb-topbar">
-          <div>
+          <div className="jb-brand-block">
+            <img
+              src="/jobix-logo.png"
+              alt="JOBIX"
+              className="jb-brand-logo-large"
+            />
+
             <div className="jb-brand-title">
               Resume Builder
-            </div>
-            <div className="jb-brand-subtitle">
-              Template {template} ?{" "}
-              {mode === "existing"
-                ? "Edit Existing Resume"
-                : "Build from Scratch"}
             </div>
           </div>
 
@@ -3697,9 +4125,6 @@ export default function ResumeEditorPage() {
                     <div className="jb-card" key={item.id}>
                       <div className="jb-card-header">
                         <div className="jb-card-title">
-                          <span className="jb-number">
-                            {index + 1}
-                          </span>
                           {item.role || item.company || "Experience"}
                         </div>
 
@@ -4601,9 +5026,7 @@ export default function ResumeEditorPage() {
                         ? "Finish"
                         : "Next"}
                     </span>
-                    <span className="jb-next-arrow">
-                      ?
-                    </span>
+                    <span className="jb-next-arrow">&#8594;</span>
                   </button>
 
                   <div className="jb-next-hint">
