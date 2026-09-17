@@ -1009,7 +1009,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
                   {item.institution}
                 </div>
 
-                <div>
+                <div className="jobix-t4-detail">
                   {item.degree}
                   {item.field
                     ? ` - ${item.field}`
@@ -1169,7 +1169,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
                 </div>
 
                 {item.technologies && (
-                  <div className="jobix-t4-strong">
+                  <div className="jobix-t4-technologies">
                     {item.technologies}
                   </div>
                 )}
@@ -1461,8 +1461,9 @@ function Template4Preview({ data }: { data: ResumeData }) {
           margin: 0;
           font-size: 41px;
           line-height: 42px;
-          font-weight: 800;
-          letter-spacing: -0.5px;
+          font-weight: 900;
+          letter-spacing: -0.8px;
+          color: #111111;
         }
 
         .jobix-t4-title {
@@ -1470,6 +1471,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           font-size: 12px;
           line-height: 14px;
           font-weight: 700;
+          color: #111111;
         }
 
         .jobix-t4-contact {
@@ -1501,7 +1503,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           color: #111111;
           font-size: 12px;
           line-height: 14px;
-          font-weight: 800;
+          font-weight: 700;
         }
 
         .jobix-t4-icon {
@@ -1518,6 +1520,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           font-size: 11px;
           line-height: 12px;
           font-weight: 400;
+          color: #303030;
         }
 
         .jobix-t4-summary {
@@ -1525,6 +1528,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           font-size: 11px;
           line-height: 12px;
           font-weight: 400;
+          color: #303030;
         }
 
         .jobix-t4-entry {
@@ -1560,8 +1564,9 @@ function Template4Preview({ data }: { data: ResumeData }) {
           white-space: nowrap;
           font-size: 10.5px;
           line-height: 12px;
-          color: #555555;
+          color: #777777;
           font-style: italic;
+          font-weight: 400;
           pointer-events: none;
         }
 
@@ -1570,8 +1575,9 @@ function Template4Preview({ data }: { data: ResumeData }) {
           padding: 0;
           font-size: 10.5px;
           line-height: 12px;
-          color: #555555;
+          color: #777777;
           font-style: italic;
+          font-weight: 400;
         }
 
         .jobix-t4-bullets {
@@ -1581,6 +1587,8 @@ function Template4Preview({ data }: { data: ResumeData }) {
           padding: 0;
           font-size: 11px;
           line-height: 12px;
+          font-weight: 400;
+          color: #303030;
           box-sizing: border-box;
         }
 
@@ -1592,6 +1600,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
           padding: 0;
           gap: 6px;
           box-sizing: border-box;
+          font-weight: 540;
         }
 
         .jobix-t4-bullet-dot {
@@ -1603,28 +1612,45 @@ function Template4Preview({ data }: { data: ResumeData }) {
           border-radius: 50%;
           background: #111111;
         }
-
         .jobix-t4-bullets li > span:last-child {
-          display: block;
-          flex: 1 1 auto;
-          width: auto;
-          min-width: 0;
-          margin: 0;
-          padding: 0;
+          font-weight: 540 !important;
+          color: #333333 !important;
+        }
+
+        .jobix-t4-bullets li {
+          font-weight: 540 !important;
         }
 
         .jobix-t4-strong {
-          font-weight: 600;
+          font-weight: 700;
+          color: #111111;
+        }
+
+        .jobix-t4-detail {
+          font-weight: 400;
+          color: #303030;
+        }
+
+        .jobix-t4-technologies {
+          font-weight: 400;
+          color: #303030;
+        }
+
+        .jobix-t4-date {
+          font-weight: 400;
+          color: #777777;
         }
 
         .jobix-t4-role {
-          font-weight: 500;
+          font-weight: 400;
+          color: #202020;
         }
 
         .jobix-t4-project-name {
           font-size: 11px;
           line-height: 12px;
-          font-weight: 600;
+          font-weight: 700;
+          color: #111111;
         }
 
         .jobix-t4-skills {
@@ -1639,18 +1665,21 @@ function Template4Preview({ data }: { data: ResumeData }) {
           min-height: 17px;
           box-sizing: border-box;
           padding: 2px 5px;
-          border: 1px solid #aeb4bb;
+          border: 1px solid #9ea3a8;
           border-radius: 3px;
           background: #ffffff;
-          color: #111111;
+          color: #303030;
           font-size: 9.5px;
           line-height: 12px;
+          font-weight: 400;
         }
 
         .jobix-t4-certification,
         .jobix-t4-achievement {
           font-size: 11px;
           line-height: 12px;
+          color: #303030;
+          font-weight: 400;
         }
 
         .jobix-t4-languages {
@@ -1659,6 +1688,153 @@ function Template4Preview({ data }: { data: ResumeData }) {
           gap: 4px 22px;
           font-size: 11px;
           line-height: 12px;
+          color: #303030;
+          font-weight: 400;
+        }
+
+        .jobix-t4-preview .jobix-t4-name {
+          color: #111111 !important;
+          font-weight: 900 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-title {
+          color: #111111 !important;
+          font-weight: 700 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-heading {
+          color: #111111 !important;
+          font-weight: 800 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-heading span:last-child {
+          color: #111111 !important;
+          font-weight: 800 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-content {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-summary {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-strong {
+          color: #111111 !important;
+          font-weight: 700 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-role {
+          color: #222222 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-detail {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-date {
+          color: #777777 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-location {
+          color: #777777 !important;
+          font-weight: 400 !important;
+          font-style: italic !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-right {
+          color: #777777 !important;
+          font-weight: 400 !important;
+          font-style: italic !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-bullets {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-bullets li {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-project-name {
+          color: #111111 !important;
+          font-weight: 700 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-technologies {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-skill {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-certification,
+        .jobix-t4-preview .jobix-t4-achievement,
+        .jobix-t4-preview .jobix-t4-languages {
+          color: #444444 !important;
+          font-weight: 400 !important;
+        }
+
+        .jobix-t4-preview .jobix-t4-languages strong {
+          color: #111111 !important;
+          font-weight: 700 !important;
+        }
+
+
+        .jobix-t4-bullets,
+        .jobix-t4-bullets li,
+        .jobix-t4-bullets li > span:last-child {
+          font-weight: 540 !important;
+          color: #303030 !important;
+          -webkit-text-stroke: 0.12px #303030;
+        }
+
+        .jobix-t4-content {
+          font-weight: 520 !important;
+          color: #303030 !important;
+          -webkit-text-stroke: 0.08px #303030;
+        }
+
+        .jobix-t4-detail {
+          font-weight: 520 !important;
+          color: #303030 !important;
+          -webkit-text-stroke: 0.08px #303030;
+        }
+
+        .jobix-t4-role {
+          font-weight: 570 !important;
+          color: #202020 !important;
+        }
+
+        .jobix-t4-strong,
+        .jobix-t4-project-name {
+          font-weight: 700 !important;
+          color: #111111 !important;
+          -webkit-text-stroke: 0.1px #111111;
+        }
+
+        .jobix-t4-heading {
+          font-weight: 800 !important;
+          color: #111111 !important;
+        }
+
+        .jobix-t4-right,
+        .jobix-t4-location,
+        .jobix-t4-date {
+          font-weight: 400 !important;
+          color: #777777 !important;
+          -webkit-text-stroke: 0;
         }
 
         .jobix-t4-page-number {
