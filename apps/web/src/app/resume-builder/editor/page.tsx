@@ -1351,7 +1351,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
         nodes[index]?.getBoundingClientRect().height || 0
     }));
 
-    const firstPageLimit = 1000;
+    const firstPageLimit = 1020;
     const otherPageLimit = 1080;
 
     const result: Block[][] = [];
@@ -1433,15 +1433,16 @@ function Template4Preview({ data }: { data: ResumeData }) {
           flex-direction: column;
           align-items: center;
           gap: 20px;
+          overflow: visible;
         }
 
         .jobix-t4-page {
           width: 720px;
-          height: 1123px;
+          height: auto;
           min-height: 1123px;
           box-sizing: border-box;
           position: relative;
-          overflow: hidden;
+          overflow: visible;
           background: #ffffff;
           color: #111111;
           font-family: Arial, Helvetica, sans-serif;
@@ -1837,6 +1838,222 @@ function Template4Preview({ data }: { data: ResumeData }) {
           -webkit-text-stroke: 0;
         }
 
+
+        .jobix-builder-ui {
+          --jb-text: #172033;
+          --jb-muted: #667085;
+          --jb-border: #dfe5ed;
+          --jb-soft: #f7f9fc;
+          --jb-blue: #2563eb;
+          --jb-green: #12b76a;
+        }
+
+        .jobix-builder-ui > header {
+          height: 68px !important;
+          min-height: 68px !important;
+          background: #ffffff !important;
+          border-bottom: 1px solid var(--jb-border) !important;
+          box-shadow: 0 1px 3px rgba(16,24,40,.03) !important;
+        }
+
+        .jobix-builder-ui > header > div {
+          height: 68px !important;
+          padding: 0 22px !important;
+        }
+
+        .jobix-builder-ui > header h1 {
+          font-size: 19px !important;
+          line-height: 23px !important;
+          font-weight: 850 !important;
+          letter-spacing: -.4px !important;
+          color: var(--jb-text) !important;
+        }
+
+        .jobix-builder-ui > header p {
+          font-size: 12px !important;
+          color: var(--jb-muted) !important;
+        }
+
+        .jobix-builder-ui > header button {
+          min-height: 40px !important;
+          border-radius: 9px !important;
+          font-size: 12px !important;
+          font-weight: 750 !important;
+        }
+
+        .jobix-builder-ui > header button:last-child {
+          background: #111827 !important;
+          color: #ffffff !important;
+          border-color: #111827 !important;
+        }
+
+        .jobix-builder-layout {
+          background: #f3f6fa !important;
+        }
+
+        .jobix-builder-ui aside {
+          background: #ffffff !important;
+          border-right: 1px solid var(--jb-border) !important;
+          box-shadow: 2px 0 8px rgba(16,24,40,.025) !important;
+        }
+
+        .jobix-builder-ui aside > div:first-child {
+          padding: 20px 18px !important;
+        }
+
+        .jobix-builder-ui aside h2 {
+          color: var(--jb-text) !important;
+          font-weight: 850 !important;
+          letter-spacing: -.25px !important;
+        }
+
+        .jobix-builder-ui aside p {
+          color: var(--jb-muted) !important;
+        }
+
+        .jobix-builder-ui aside input,
+        .jobix-builder-ui aside textarea,
+        .jobix-builder-ui aside select {
+          border: 1px solid #d8dee8 !important;
+          background: #ffffff !important;
+          border-radius: 9px !important;
+          color: #172033 !important;
+          box-shadow: none !important;
+        }
+
+        .jobix-builder-ui aside input:hover,
+        .jobix-builder-ui aside textarea:hover,
+        .jobix-builder-ui aside select:hover {
+          border-color: #b9c2cf !important;
+        }
+
+        .jobix-builder-ui aside input:focus,
+        .jobix-builder-ui aside textarea:focus,
+        .jobix-builder-ui aside select:focus {
+          border-color: #98a2b3 !important;
+          outline: none !important;
+          box-shadow: 0 0 0 3px rgba(37,99,235,.07) !important;
+        }
+
+        .jobix-builder-ui aside label > span {
+          color: #344054 !important;
+          font-weight: 700 !important;
+        }
+
+        .jobix-builder-ui aside button {
+          border-radius: 9px !important;
+        }
+
+        .jobix-builder-ui aside [class*="rounded-xl"] {
+          border-color: #e2e7ee !important;
+          border-radius: 12px !important;
+          background: #fbfcfe !important;
+        }
+
+        .jobix-builder-ui aside [class*="bg-[#111827]"] {
+          background: #111827 !important;
+        }
+
+        .jobix-builder-ui aside [class*="bg-[#111827]"] span {
+          color: #ffffff !important;
+        }
+
+        .jobix-builder-ui aside [class*="border-[#111827]"] {
+          border-color: #d8dee8 !important;
+        }
+
+        .jobix-builder-ui .jobix-builder-tabs {
+          background: #ffffff !important;
+          border-top: 1px solid #edf0f4 !important;
+          border-bottom: 1px solid #edf0f4 !important;
+          padding: 10px 14px !important;
+        }
+
+        .jobix-builder-ui .jobix-builder-tabs button {
+          height: 38px !important;
+          padding: 0 15px !important;
+          border-radius: 9px !important;
+          color: #667085 !important;
+          font-size: 12px !important;
+          font-weight: 700 !important;
+        }
+
+        .jobix-builder-ui .jobix-builder-tabs button:hover {
+          background: #f5f7fa !important;
+          color: #344054 !important;
+        }
+
+        .jobix-builder-ui .jobix-builder-tabs button.bg-\[\#111827\],
+        .jobix-builder-ui .jobix-builder-tabs button[class*="bg-[#111827]"] {
+          background: #111827 !important;
+          color: #ffffff !important;
+        }
+
+        .jobix-builder-ui .jobix-preview-zone {
+          background: #eef2f6 !important;
+        }
+
+        .jobix-builder-ui .jobix-preview-toolbar {
+          height: 54px !important;
+          background: #ffffff !important;
+          border: 1px solid #dfe5ed !important;
+          border-radius: 10px !important;
+          box-shadow: 0 2px 7px rgba(16,24,40,.04) !important;
+        }
+
+        .jobix-builder-ui .jobix-preview-toolbar button {
+          border-radius: 8px !important;
+          font-size: 12px !important;
+          font-weight: 700 !important;
+        }
+
+        .jobix-builder-ui .jobix-preview-toolbar button:hover {
+          background: #f5f7fa !important;
+        }
+
+        .jobix-builder-ui .jobix-progress-card {
+          border: 1px solid #dfe5ed !important;
+          border-radius: 12px !important;
+          background: #ffffff !important;
+          box-shadow: 0 2px 8px rgba(16,24,40,.03) !important;
+        }
+
+        .jobix-builder-ui .jobix-progress-ring {
+          border: 7px solid #e8edf3 !important;
+          border-top-color: var(--jb-green) !important;
+          border-right-color: var(--jb-green) !important;
+        }
+
+        .jobix-builder-ui .jobix-progress-bar {
+          height: 6px !important;
+          border-radius: 999px !important;
+          background: #e8edf3 !important;
+          overflow: hidden !important;
+        }
+
+        .jobix-builder-ui .jobix-progress-fill {
+          height: 100% !important;
+          border-radius: 999px !important;
+          background: var(--jb-green) !important;
+        }
+
+        @media (max-width: 1200px) {
+          .jobix-builder-layout {
+            grid-template-columns: 525px minmax(0,1fr) !important;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .jobix-builder-layout {
+            grid-template-columns: 1fr !important;
+          }
+
+          .jobix-builder-ui aside {
+            border-right: 0 !important;
+            border-bottom: 1px solid var(--jb-border) !important;
+          }
+        }
+
         .jobix-t4-page-number {
           position: absolute;
           right: 25px;
@@ -1879,7 +2096,400 @@ function Template4Preview({ data }: { data: ResumeData }) {
             display: none;
           }
         }
-      `}</style>
+      
+        .jb-workspace {
+          grid-template-columns: 525px minmax(0, 1fr) !important;
+          height: calc(100vh - 72px) !important;
+        }
+
+        .jb-sidebar {
+          display: flex !important;
+          flex-direction: column !important;
+          min-height: 0 !important;
+          background: #ffffff !important;
+        }
+
+        .jb-progress {
+          padding: 22px 22px 20px !important;
+          flex: 0 0 auto !important;
+        }
+
+        .jb-editor-body {
+          display: grid !important;
+          grid-template-columns: 175px minmax(0, 1fr) !important;
+          flex: 1 1 auto !important;
+          min-height: 0 !important;
+          overflow: hidden !important;
+          border-top: 1px solid #edf0f4 !important;
+        }
+
+
+        .jb-section-sidebar {
+          position: relative !important;
+          height: 100% !important;
+          min-height: 0 !important;
+          overflow-y: auto !important;
+          padding: 20px 12px !important;
+          background: #f7f9fc !important;
+          border-right: 1px solid #dfe5ed !important;
+        }
+
+        .jb-section-sidebar-title {
+          padding: 0 10px 14px !important;
+          color: #667085 !important;
+          font-size: 9px !important;
+          line-height: 13px !important;
+          font-weight: 900 !important;
+          letter-spacing: .1em !important;
+          text-transform: uppercase !important;
+        }
+
+        .jb-section-list {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 6px !important;
+        }
+
+        .jb-section-item {
+          position: relative !important;
+          width: 100% !important;
+          min-height: 49px !important;
+          display: flex !important;
+          align-items: center !important;
+          gap: 10px !important;
+          padding: 0 11px !important;
+          border: 1px solid transparent !important;
+          border-radius: 10px !important;
+          background: transparent !important;
+          color: #475467 !important;
+          text-align: left !important;
+          cursor: pointer !important;
+          transition: all .16s ease !important;
+        }
+
+        .jb-section-item:hover {
+          background: #eaf2ff !important;
+          border-color: #d5e5ff !important;
+          color: #175cd3 !important;
+          transform: translateX(2px) !important;
+        }
+
+        .jb-section-item-active {
+          background: #111827 !important;
+          border-color: #111827 !important;
+          color: #ffffff !important;
+          box-shadow: 0 6px 14px rgba(16,24,40,.16) !important;
+          transform: translateX(2px) !important;
+        }
+
+        .jb-section-number {
+          width: 29px !important;
+          height: 29px !important;
+          flex: 0 0 29px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: #e7ecf3 !important;
+          color: #667085 !important;
+          font-size: 9px !important;
+          font-weight: 900 !important;
+        }
+
+        .jb-section-item-active .jb-section-number {
+          background: #ffffff !important;
+          color: #111827 !important;
+        }
+
+        .jb-section-label {
+          flex: 1 !important;
+          min-width: 0 !important;
+          font-size: 11px !important;
+          line-height: 15px !important;
+          font-weight: 800 !important;
+          white-space: nowrap !important;
+        }
+
+        .jb-section-current {
+          width: 8px !important;
+          height: 8px !important;
+          flex: 0 0 8px !important;
+          border-radius: 50% !important;
+          background: #12b76a !important;
+          box-shadow: 0 0 0 3px rgba(18,183,106,.13) !important;
+        }
+
+        .jb-form {
+          min-width: 0 !important;
+          min-height: 0 !important;
+          overflow-y: auto !important;
+          padding: 30px 30px 34px !important;
+          background: #ffffff !important;
+        }
+
+        .jb-section-heading {
+          margin-bottom: 23px !important;
+          padding-bottom: 17px !important;
+          border-bottom: 1px solid #edf0f4 !important;
+        }
+
+        .jb-section-title {
+          color: #172033 !important;
+          font-size: 21px !important;
+          line-height: 27px !important;
+          font-weight: 850 !important;
+          letter-spacing: -.45px !important;
+        }
+
+        .jb-section-description {
+          margin-top: 5px !important;
+          color: #7a8494 !important;
+          font-size: 11px !important;
+          line-height: 17px !important;
+        }
+
+        .jb-label {
+          color: #344054 !important;
+          font-size: 10px !important;
+          font-weight: 800 !important;
+        }
+
+        .jb-input,
+        .jb-textarea {
+          border-color: #d9e1eb !important;
+          border-radius: 9px !important;
+          background: #ffffff !important;
+          color: #172033 !important;
+          font-size: 12px !important;
+        }
+
+        .jb-input {
+          height: 42px !important;
+        }
+
+        .jb-input:focus,
+        .jb-textarea:focus {
+          border-color: #6b9eea !important;
+          box-shadow: 0 0 0 3px rgba(37,99,235,.08) !important;
+        }
+
+        .jb-card {
+          border-color: #e1e7ef !important;
+          border-radius: 11px !important;
+          background: #fbfcfe !important;
+          box-shadow: 0 1px 2px rgba(16,24,40,.02) !important;
+        }
+
+        .jb-card:hover {
+          border-color: #cfd8e5 !important;
+        }
+
+        .jb-number {
+          background: #eaf2ff !important;
+          color: #1769dc !important;
+        }
+
+        .jb-next-area {
+          margin-top: 30px !important;
+          padding-top: 20px !important;
+          border-top: 1px solid #edf0f4 !important;
+        }
+
+        .jb-next-button {
+          width: 100% !important;
+          height: 48px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          padding: 0 17px 0 20px !important;
+          border: 0 !important;
+          border-radius: 9px !important;
+          background: #1769dc !important;
+          color: #ffffff !important;
+          font-size: 13px !important;
+          font-weight: 850 !important;
+          cursor: pointer !important;
+          box-shadow: 0 7px 16px rgba(37,99,235,.16) !important;
+          transition: all .16s ease !important;
+        }
+
+        .jb-next-button:hover {
+          background: #125ac0 !important;
+          transform: translateY(-1px) !important;
+          box-shadow: 0 9px 19px rgba(37,99,235,.21) !important;
+        }
+
+        .jb-next-arrow {
+          width: 29px !important;
+          height: 29px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          border-radius: 50% !important;
+          background: rgba(255,255,255,.15) !important;
+          font-size: 18px !important;
+          line-height: 1 !important;
+        }
+
+        .jb-next-hint {
+          margin-top: 9px !important;
+          text-align: center !important;
+          color: #98a2b3 !important;
+          font-size: 10px !important;
+          line-height: 15px !important;
+        }
+
+        .jb-preview {
+          min-width: 0 !important;
+          overflow: auto !important;
+          background: #eef2f6 !important;
+        }
+
+        .jb-preview-inner {
+          min-height: 100% !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: flex-start !important;
+          padding: 38px 45px 70px !important;
+        }
+
+        .jb-preview-a4-area {
+          width: 100% !important;
+          min-height: 100% !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: flex-start !important;
+        }
+
+        .jb-resume-wrap {
+          flex: 0 0 auto !important;
+          filter: drop-shadow(0 12px 30px rgba(16,24,40,.13)) !important;
+          transform-origin: top center !important;
+        }
+
+        .jb-preview-toolbar {
+          position: sticky !important;
+          top: 14px !important;
+          z-index: 30 !important;
+          width: min(100%, 430px) !important;
+          min-height: 46px !important;
+          margin: 0 auto 18px !important;
+          padding: 6px 8px 6px 14px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          gap: 14px !important;
+          border: 1px solid #d8dee8 !important;
+          border-radius: 10px !important;
+          background: #ffffff !important;
+          box-shadow: 0 6px 18px rgba(16,24,40,.08) !important;
+        }
+
+        .jb-preview-toolbar-label {
+          color: #344054 !important;
+          font-size: 10px !important;
+          font-weight: 800 !important;
+        }
+
+        .jb-zoom-controls {
+          display: flex !important;
+          align-items: center !important;
+          gap: 5px !important;
+        }
+
+        .jb-zoom-button {
+          width: 32px !important;
+          height: 32px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          padding: 0 !important;
+          border: 1px solid #cfd6e1 !important;
+          border-radius: 7px !important;
+          background: #ffffff !important;
+          color: #101828 !important;
+          font-size: 20px !important;
+          line-height: 1 !important;
+          font-weight: 700 !important;
+          cursor: pointer !important;
+        }
+
+        .jb-zoom-button:hover {
+          border-color: #1769dc !important;
+          background: #f0f6ff !important;
+          color: #1769dc !important;
+        }
+
+        .jb-zoom-value {
+          min-width: 58px !important;
+          height: 32px !important;
+          padding: 0 8px !important;
+          border: 1px solid #cfd6e1 !important;
+          border-radius: 7px !important;
+          background: #f8fafc !important;
+          color: #172033 !important;
+          font-size: 10px !important;
+          font-weight: 850 !important;
+          cursor: pointer !important;
+        }
+
+        .jb-zoom-reset {
+          height: 32px !important;
+          padding: 0 11px !important;
+          border: 0 !important;
+          border-radius: 7px !important;
+          background: #111827 !important;
+          color: #ffffff !important;
+          font-size: 9px !important;
+          font-weight: 800 !important;
+          cursor: pointer !important;
+        }
+
+        .jb-zoom-reset:hover {
+          background: #263142 !important;
+        }
+
+        .jb-resume-wrap {
+          flex: 0 0 auto;
+          filter: drop-shadow(0 12px 30px rgba(16,24,40,.13));
+        }
+
+        @media (max-width: 1100px) {
+          .jb-workspace {
+            grid-template-columns: 340px minmax(0,1fr);
+          }
+
+          .jb-preview-inner {
+            padding: 30px 25px 60px;
+          }
+        }
+
+        @media (max-width: 800px) {
+          .jb-topbar {
+            padding: 0 14px;
+          }
+
+          .jb-live {
+            display: none;
+          }
+
+          .jb-workspace {
+            height: auto;
+            display: block;
+          }
+
+          .jb-sidebar {
+            max-height: 600px;
+            border-right: 0;
+            border-bottom: 1px solid #e1e6ed;
+          }
+
+          .jb-preview {
+            min-height: 900px;
+          }
+        }
+      
+`}</style>
 
       <div
         ref={measureRef}
@@ -2081,28 +2691,25 @@ export default function ResumeEditorPage() {
   const [template, setTemplate] = useState("4");
   const [mode, setMode] = useState("scratch");
   const [activeSection, setActiveSection] = useState("contacts");
+  const [previewZoom, setPreviewZoom] = useState(106);
   const [saved, setSaved] = useState(false);
-
   const [data, setData] = useState<ResumeData>(defaultData);
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
-
     const selectedTemplate = params.get("template") || "4";
     const selectedMode =
-      params.get("mode") === "existing"
-        ? "existing"
-        : "scratch";
+      params.get("mode") === "existing" ? "existing" : "scratch";
 
     setTemplate(selectedTemplate);
     setMode(selectedMode);
 
     sessionStorage.removeItem("jobix_resume_builder_data");
-    setData(defaultData);
     sessionStorage.setItem(
       "jobix_resume_builder_data",
       JSON.stringify(defaultData)
     );
+    setData(defaultData);
   }, []);
 
   useEffect(() => {
@@ -2129,11 +2736,15 @@ export default function ResumeEditorPage() {
       data.title,
       data.email,
       data.phone,
+      data.location,
       data.summary,
       data.education.length > 0,
       data.experiences.length > 0,
       data.projects.length > 0,
       data.skills.length > 0,
+      data.certifications.length > 0,
+      data.achievements.length > 0,
+      data.languages.length > 0,
     ];
 
     return Math.round(
@@ -2142,7 +2753,7 @@ export default function ResumeEditorPage() {
   }, [data]);
 
   const sections = [
-    ["contacts", "Contacts"],
+    ["contacts", "Contact"],
     ["summary", "Summary"],
     ["experience", "Experience"],
     ["education", "Education"],
@@ -2158,370 +2769,1039 @@ export default function ResumeEditorPage() {
       "jobix_resume_builder_data",
       JSON.stringify(data)
     );
-
     sessionStorage.setItem(
       "jobix_resume_builder_template",
       template
     );
-
     setSaved(true);
   };
 
+  const nextSection = () => {
+    const currentIndex = sections.findIndex(
+      ([id]) => id === activeSection
+    );
+
+    if (currentIndex < sections.length - 1) {
+      setActiveSection(sections[currentIndex + 1][0]);
+    }
+  };
+
+  const updateExperience = (
+    id: string,
+    changes: Partial<Experience>
+  ) => {
+    update(
+      "experiences",
+      data.experiences.map((item) =>
+        item.id === id ? { ...item, ...changes } : item
+      )
+    );
+  };
+
+  const updateEducation = (
+    id: string,
+    changes: Partial<Education>
+  ) => {
+    update(
+      "education",
+      data.education.map((item) =>
+        item.id === id ? { ...item, ...changes } : item
+      )
+    );
+  };
+
+  const updateProject = (
+    id: string,
+    changes: Partial<Project>
+  ) => {
+    update(
+      "projects",
+      data.projects.map((item) =>
+        item.id === id ? { ...item, ...changes } : item
+      )
+    );
+  };
+
+  const updateCertification = (
+    id: string,
+    changes: Partial<Certification>
+  ) => {
+    update(
+      "certifications",
+      data.certifications.map((item) =>
+        item.id === id ? { ...item, ...changes } : item
+      )
+    );
+  };
+
+  const updateAchievement = (
+    id: string,
+    changes: Partial<Achievement>
+  ) => {
+    update(
+      "achievements",
+      data.achievements.map((item) =>
+        item.id === id ? { ...item, ...changes } : item
+      )
+    );
+  };
+
+  const updateLanguage = (
+    id: string,
+    changes: Partial<Language>
+  ) => {
+    update(
+      "languages",
+      data.languages.map((item) =>
+        item.id === id ? { ...item, ...changes } : item
+      )
+    );
+  };
+
   return (
-    <main className="min-h-screen bg-[#eef1f5] text-[#101828]">
-      <header className="sticky top-0 z-30 border-b border-[#d9dee7] bg-white">
-        <div className="flex h-[64px] items-center justify-between px-5">
+    <main className="min-h-screen bg-[#f4f6f9] text-[#172033]">
+      <style>{`
+        .jb-shell {
+          min-height: 100vh;
+          background: #f4f6f9;
+        }
+
+        .jb-topbar {
+          height: 72px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 28px;
+          background: #ffffff;
+          border-bottom: 1px solid #e4e8ee;
+          position: sticky;
+          top: 0;
+          z-index: 50;
+        }
+
+        .jb-brand-title {
+          font-size: 20px;
+          line-height: 24px;
+          font-weight: 850;
+          letter-spacing: -0.5px;
+          color: #111827;
+        }
+
+        .jb-brand-subtitle {
+          margin-top: 3px;
+          font-size: 12px;
+          color: #7a8494;
+        }
+
+        .jb-actions {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .jb-live {
+          height: 38px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 0 13px;
+          border-radius: 9px;
+          background: #f4f6f8;
+          color: #344054;
+          font-size: 12px;
+          font-weight: 750;
+        }
+
+        .jb-live-dot {
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background: #12b76a;
+        }
+
+        .jb-action {
+          height: 40px;
+          padding: 0 17px;
+          border-radius: 9px;
+          border: 1px solid #d5dae2;
+          background: #ffffff;
+          color: #344054;
+          font-size: 12px;
+          font-weight: 800;
+          cursor: pointer;
+        }
+
+        .jb-action:hover {
+          background: #f8fafc;
+        }
+
+        .jb-save {
+          border-color: #111827;
+          background: #111827;
+          color: #ffffff;
+        }
+
+        .jb-save:hover {
+          background: #000000;
+        }
+
+
+        /* JOBIX LOCKED EDITOR UI */
+
+        .jb-workspace {
+          display: grid !important;
+          grid-template-columns: 525px minmax(0, 1fr) !important;
+          width: 100% !important;
+          height: calc(100vh - 64px) !important;
+          min-height: 0 !important;
+          overflow: hidden !important;
+        }
+
+        .jb-sidebar {
+          width: 525px !important;
+          min-width: 525px !important;
+          height: 100% !important;
+          min-height: 0 !important;
+          display: flex !important;
+          flex-direction: column !important;
+          overflow: hidden !important;
+          background: #ffffff !important;
+          border-right: 1px solid #dfe5ed !important;
+        }
+
+        .jb-progress {
+          width: 100% !important;
+          flex: 0 0 auto !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-editor-body {
+          display: grid !important;
+          grid-template-columns: 175px minmax(0, 1fr) !important;
+          width: 100% !important;
+          flex: 1 1 auto !important;
+          min-height: 0 !important;
+          overflow: hidden !important;
+        }
+
+        .jb-section-sidebar {
+          width: 175px !important;
+          min-width: 175px !important;
+          height: 100% !important;
+          min-height: 0 !important;
+          overflow-y: auto !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-form {
+          width: auto !important;
+          min-width: 0 !important;
+          height: 100% !important;
+          min-height: 0 !important;
+          overflow-y: auto !important;
+          overflow-x: hidden !important;
+          box-sizing: border-box !important;
+          padding: 30px 28px 40px !important;
+        }
+
+        .jb-preview {
+          display: block !important;
+          width: auto !important;
+          min-width: 0 !important;
+          height: 100% !important;
+          min-height: 0 !important;
+          overflow: auto !important;
+          box-sizing: border-box !important;
+          background: #eef2f6 !important;
+        }
+
+        .jb-preview-inner {
+          position: relative !important;
+          width: 100% !important;
+          min-height: 100% !important;
+          box-sizing: border-box !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: flex-start !important;
+          padding: 28px 36px 70px !important;
+        }
+
+        .jb-preview-toolbar {
+          position: sticky !important;
+          top: 10px !important;
+          z-index: 50 !important;
+          flex: 0 0 auto !important;
+          width: 430px !important;
+          max-width: calc(100% - 20px) !important;
+          margin: 0 auto 18px !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-resume-wrap {
+          position: relative !important;
+          flex: 0 0 auto !important;
+          width: 794px !important;
+          min-width: 794px !important;
+          box-sizing: border-box !important;
+          transform-origin: top center !important;
+          filter: drop-shadow(0 12px 30px rgba(16,24,40,.13)) !important;
+        }
+
+        .jb-next-area {
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-next-button {
+          position: relative !important;
+          width: 100% !important;
+        }
+
+        @media (max-width: 1100px) {
+          .jb-workspace {
+            grid-template-columns: 490px minmax(0, 1fr) !important;
+          }
+
+          .jb-sidebar {
+            width: 490px !important;
+            min-width: 490px !important;
+          }
+        }
+
+        @media (max-width: 850px) {
+          .jb-workspace {
+            display: block !important;
+            height: auto !important;
+            overflow: visible !important;
+          }
+
+          .jb-sidebar {
+            width: 100% !important;
+            min-width: 0 !important;
+            height: auto !important;
+          }
+
+          .jb-editor-body {
+            grid-template-columns: 175px minmax(0, 1fr) !important;
+            min-height: 650px !important;
+          }
+
+          .jb-preview {
+            height: auto !important;
+            min-height: 900px !important;
+          }
+        }
+
+
+        .jb-sidebar .jb-progress-row {
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          width: 100% !important;
+        }
+
+        .jb-sidebar .jb-percent {
+          min-width: 52px !important;
+          color: #1769dc !important;
+          font-size: 22px !important;
+          line-height: 26px !important;
+          font-weight: 900 !important;
+          text-align: right !important;
+          font-variant-numeric: tabular-nums !important;
+        }
+
+        .jb-sidebar .jb-percent-label {
+          margin-top: 2px !important;
+          color: #98a2b3 !important;
+          font-size: 9px !important;
+          line-height: 12px !important;
+          font-weight: 800 !important;
+          text-align: right !important;
+          text-transform: uppercase !important;
+          letter-spacing: .06em !important;
+        }
+
+        .jb-sidebar .jb-progress-track {
+          width: 100% !important;
+          height: 7px !important;
+          margin-top: 15px !important;
+          overflow: hidden !important;
+          border-radius: 999px !important;
+          background: #e8edf3 !important;
+        }
+
+        .jb-sidebar .jb-progress-fill {
+          height: 100% !important;
+          border-radius: 999px !important;
+          background: #1769dc !important;
+          transition: width .3s ease !important;
+        }
+
+        .jb-form .jb-fields {
+          display: flex !important;
+          flex-direction: column !important;
+          gap: 18px !important;
+          width: 100% !important;
+        }
+
+        .jb-form .jb-field {
+          display: block !important;
+          width: 100% !important;
+          min-width: 0 !important;
+        }
+
+        .jb-form .jb-label {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 8px !important;
+          color: #344054 !important;
+          font-size: 11px !important;
+          line-height: 15px !important;
+          font-weight: 800 !important;
+        }
+
+        .jb-form .jb-input,
+        .jb-form .jb-textarea {
+          display: block !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-form .jb-input {
+          height: 44px !important;
+          padding: 0 13px !important;
+          border: 1px solid #d9e1eb !important;
+          border-radius: 9px !important;
+          background: #ffffff !important;
+          color: #172033 !important;
+          font-size: 12px !important;
+          line-height: normal !important;
+        }
+
+        .jb-form .jb-input:focus,
+        .jb-form .jb-textarea:focus {
+          outline: none !important;
+          border-color: #1769dc !important;
+          box-shadow: 0 0 0 3px rgba(23,105,220,.08) !important;
+        }
+
+        .jb-form .jb-two {
+          display: grid !important;
+          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+          gap: 18px !important;
+          width: 100% !important;
+        }
+
+        .jb-form .jb-two .jb-field {
+          min-width: 0 !important;
+        }
+
+        @media (max-width: 620px) {
+          .jb-form .jb-two {
+            grid-template-columns: 1fr !important;
+          }
+        }
+
+
+        .jb-preview {
+          display: block !important;
+          width: 100% !important;
+          height: 100% !important;
+          min-width: 0 !important;
+          min-height: 0 !important;
+          overflow: auto !important;
+          box-sizing: border-box !important;
+          background: #eef2f6 !important;
+        }
+
+        .jb-preview-inner {
+          width: 100% !important;
+          min-height: 100% !important;
+          box-sizing: border-box !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: flex-start !important;
+          padding: 18px 20px 35px !important;
+        }
+
+        .jb-preview-toolbar {
+          position: sticky !important;
+          top: 8px !important;
+          z-index: 50 !important;
+          flex: 0 0 auto !important;
+          width: min(430px, calc(100% - 10px)) !important;
+          min-height: 46px !important;
+          margin: 0 auto 14px !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-preview-a4-area {
+          width: 100% !important;
+          display: flex !important;
+          justify-content: center !important;
+          align-items: flex-start !important;
+          box-sizing: border-box !important;
+        }
+
+        .jb-resume-wrap {
+          flex: 0 0 auto !important;
+          width: 794px !important;
+          min-width: 794px !important;
+          box-sizing: border-box !important;
+          transform-origin: top center !important;
+          filter: drop-shadow(0 10px 24px rgba(16,24,40,.14)) !important;
+        }
+
+        @media (max-width: 900px) {
+          .jb-preview-inner {
+            padding-left: 12px !important;
+            padding-right: 12px !important;
+          }
+        }
+
+`}</style>
+
+<style>{`
+        .jb-editor-body {
+          display: grid;
+          grid-template-columns: 156px minmax(0, 1fr);
+          min-height: calc(100vh - 260px);
+          border-top: 1px solid #edf0f4;
+        }
+
+        .jb-section-sidebar {
+          position: sticky;
+          top: 0;
+          height: calc(100vh - 260px);
+          overflow-y: auto;
+          padding: 18px 10px;
+          background: #f8fafc;
+          border-right: 1px solid #e4e8ee;
+        }
+
+        .jb-section-sidebar-title {
+          padding: 0 8px 12px;
+          color: #98a2b3;
+          font-size: 9px;
+          line-height: 13px;
+          font-weight: 800;
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
+
+        .jb-section-list {
+          display: flex;
+          flex-direction: column;
+          gap: 3px;
+        }
+
+        .jb-section-item {
+          position: relative;
+          width: 100%;
+          min-height: 42px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 0 8px;
+          border: 0;
+          border-radius: 8px;
+          background: transparent;
+          color: #667085;
+          text-align: left;
+          cursor: pointer;
+          transition: background .15s ease, color .15s ease;
+        }
+
+        .jb-section-item:hover {
+          background: #eef2f6;
+          color: #344054;
+        }
+
+        .jb-section-item-active {
+          background: #111827 !important;
+          color: #ffffff !important;
+        }
+
+        .jb-section-number {
+          width: 22px;
+          flex: 0 0 22px;
+          font-size: 9px;
+          font-weight: 750;
+          color: #98a2b3;
+        }
+
+        .jb-section-item-active .jb-section-number {
+          color: #d0d5dd;
+        }
+
+        .jb-section-label {
+          flex: 1;
+          font-size: 10px;
+          line-height: 14px;
+          font-weight: 750;
+        }
+
+        .jb-section-current {
+          width: 5px;
+          height: 5px;
+          flex: 0 0 5px;
+          border-radius: 50%;
+          background: #12b76a;
+        }
+
+        .jb-form {
+          min-width: 0;
+          overflow-y: auto;
+          padding: 28px 22px 50px;
+          background: #ffffff;
+        }
+
+        .jb-preview {
+          min-width: 0;
+          overflow: auto;
+          background: #eef2f6;
+        }
+
+        .jb-preview-inner {
+          min-height: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: flex-start;
+          padding: 38px 44px 70px;
+        }
+
+        .jb-resume-wrap {
+          flex: 0 0 auto;
+          filter: drop-shadow(0 12px 30px rgba(16,24,40,.13));
+        }
+
+        @media (max-width: 1250px) {
+          .jb-workspace {
+            grid-template-columns: 360px minmax(0,1fr);
+          }
+
+          .jb-editor-body {
+            grid-template-columns: 145px minmax(0,1fr);
+          }
+
+          .jb-preview-inner {
+            padding: 30px 24px 60px;
+          }
+        }
+
+        @media (max-width: 950px) {
+          .jb-workspace {
+            grid-template-columns: 1fr;
+            height: auto;
+          }
+
+          .jb-sidebar {
+            border-right: 0;
+            border-bottom: 1px solid #e1e6ed;
+          }
+
+          .jb-editor-body {
+            grid-template-columns: 180px minmax(0,1fr);
+          }
+
+          .jb-section-sidebar {
+            height: auto;
+            max-height: 520px;
+          }
+
+          .jb-preview {
+            min-height: 900px;
+          }
+        }
+
+        @media (max-width: 650px) {
+          .jb-editor-body {
+            display: block;
+          }
+
+          .jb-section-sidebar {
+            position: static;
+            height: auto;
+            max-height: none;
+            border-right: 0;
+            border-bottom: 1px solid #e4e8ee;
+          }
+
+          .jb-section-list {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0,1fr));
+          }
+
+          .jb-form {
+            padding: 24px 16px 40px;
+          }
+        }
+`}
+</style>
+
+      <div className="jb-shell">
+        <header className="jb-topbar">
           <div>
-            <div className="text-[18px] font-extrabold tracking-[-0.3px]">
+            <div className="jb-brand-title">
               Resume Builder
             </div>
-            <div className="text-[11px] text-[#667085]">
-              Template {template} ·{" "}
+            <div className="jb-brand-subtitle">
+              Template {template} ?{" "}
               {mode === "existing"
-                ? "Existing Resume"
+                ? "Edit Existing Resume"
                 : "Build from Scratch"}
             </div>
           </div>
 
-          <div className="flex items-center gap-3">
-            <div className="hidden items-center gap-2 rounded-lg bg-[#f2f4f7] px-3 py-2 text-[11px] font-bold text-[#475467] md:flex">
-              <span className="h-2 w-2 rounded-full bg-[#12b76a]" />
+          <div className="jb-actions">
+            <div className="jb-live">
+              <span className="jb-live-dot" />
               Live Preview
             </div>
 
             <button
               type="button"
+              className="jb-action"
               onClick={() =>
                 router.push(
-                  "/resume-builder/templates?mode=" + mode
+                  `/resume-builder/templates?mode=${mode}`
                 )
               }
-              className="rounded-lg border border-[#d0d5dd] bg-white px-4 py-2.5 text-[12px] font-extrabold text-[#344054] transition hover:bg-[#f9fafb]"
             >
               Change Template
             </button>
 
             <button
               type="button"
+              className="jb-action jb-save"
               onClick={saveResume}
-              className="rounded-lg bg-[#111827] px-5 py-2.5 text-[12px] font-extrabold text-white transition hover:bg-[#000000]"
             >
               {saved ? "Saved" : "Save"}
             </button>
           </div>
-        </div>
-      </header>
+        </header>
 
-      <div className="grid min-h-[calc(100vh-64px)] grid-cols-[390px_minmax(0,1fr)]">
-        <aside className="overflow-y-auto border-r border-[#d9dee7] bg-white">
-          <div className="border-b border-[#eaecf0] px-5 py-4">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="text-[13px] font-extrabold">
-                  Your Resume
+        <div className="jb-workspace">
+          <aside className="jb-sidebar">
+            <div className="jb-progress">
+              <div className="jb-progress-row">
+                <div>
+                  <div className="jb-small-heading">
+                    Your Resume
+                  </div>
+                  <div className="jb-small-copy">
+                    Complete your information
+                  </div>
                 </div>
-                <div className="mt-1 text-[11px] text-[#667085]">
-                  Add your information below
+
+                <div>
+                  <div className="jb-percent">
+                    {completion}%
+                  </div>
+                  <div className="jb-percent-label">
+                    complete
+                  </div>
                 </div>
               </div>
 
-              <div className="text-right">
-                <div className="text-[16px] font-extrabold">
-                  {completion}%
-                </div>
-                <div className="text-[10px] text-[#667085]">
-                  complete
-                </div>
-              </div>
-            </div>
-
-            <div className="mt-3 h-1.5 overflow-hidden rounded-full bg-[#eaecf0]">
-              <div
-                className="h-full rounded-full bg-[#12b76a] transition-all"
-                style={{ width: `${completion}%` }}
-              />
-            </div>
-          </div>
-
-          <nav className="border-b border-[#eaecf0] px-3 py-3">
-            <div className="flex gap-1 overflow-x-auto">
-              {sections.map(([id, label]) => (
-                <button
-                  type="button"
-                  key={id}
-                  onClick={() => setActiveSection(id)}
-                  className={
-                    activeSection === id
-                      ? "whitespace-nowrap rounded-lg bg-[#111827] px-3 py-2 text-[10px] font-extrabold text-white"
-                      : "whitespace-nowrap rounded-lg px-3 py-2 text-[10px] font-bold text-[#667085] hover:bg-[#f2f4f7]"
-                  }
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-          </nav>
-
-          <div className="space-y-6 px-5 py-6">
-            {activeSection === "contacts" && (
-              <section>
-                <SectionTitle
-                  title="Contact information"
-                  description="This appears in the header of your resume."
+              <div className="jb-progress-track">
+                <div
+                  className="jb-progress-fill"
+                  style={{ width: `${completion}%` }}
                 />
+              </div>
+            </div>
 
-                <div className="space-y-4">
-                  <Field
-                    label="Full name"
-                    value={data.fullName}
-                    onChange={(value) =>
-                      update("fullName", value)
-                    }
-                    placeholder="Jennifer Brown"
-                  />
+            <div className="jb-editor-body">
+              <nav className="jb-section-sidebar">
+                <div className="jb-section-sidebar-title">
+                  Resume sections
+                </div>
 
-                  <Field
-                    label="Professional title"
-                    value={data.title}
-                    onChange={(value) =>
-                      update("title", value)
-                    }
-                    placeholder="Software Development Manager"
-                  />
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <Field
-                      label="Email"
-                      value={data.email}
-                      onChange={(value) =>
-                        update("email", value)
+                <div className="jb-section-list">
+                  {sections.map(([id, label], index) => (
+                    <button
+                      type="button"
+                      key={id}
+                      className={
+                        activeSection === id
+                          ? "jb-section-item jb-section-item-active"
+                          : "jb-section-item"
                       }
-                      placeholder="you@email.com"
-                    />
+                      onClick={() => setActiveSection(id)}
+                    >
+                      <span className="jb-section-number">
+                        {String(index + 1).padStart(2, "0")}
+                      </span>
 
-                    <Field
-                      label="Phone"
-                      value={data.phone}
-                      onChange={(value) =>
-                        update("phone", value)
-                      }
-                      placeholder="+91 98765 43210"
-                    />
+                      <span className="jb-section-label">
+                        {label}
+                      </span>
+
+                      {activeSection === id && (
+                        <span className="jb-section-current" />
+                      )}
+                    </button>
+                  ))}
+                </div>
+              </nav>
+
+              <div className="jb-form">
+              {activeSection === "contacts" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Contact information
+                    </div>
+                    <div className="jb-section-description">
+                      These details appear at the top of your resume.
+                    </div>
                   </div>
 
-                  <Field
-                    label="Location"
-                    value={data.location}
-                    onChange={(value) =>
-                      update("location", value)
-                    }
-                    placeholder="Bengaluru, Karnataka"
-                  />
+                  <div className="jb-fields">
+                    <label className="jb-field">
+                      <span className="jb-label">Full name</span>
+                      <input
+                        className="jb-input"
+                        value={data.fullName}
+                        onChange={(e) =>
+                          update("fullName", e.target.value)
+                        }
+                      />
+                    </label>
 
-                  <Field
-                    label="LinkedIn"
-                    value={data.linkedin}
-                    onChange={(value) =>
-                      update("linkedin", value)
-                    }
-                    placeholder="linkedin.com/in/yourname"
-                  />
+                    <label className="jb-field">
+                      <span className="jb-label">
+                        Professional title
+                      </span>
+                      <input
+                        className="jb-input"
+                        value={data.title}
+                        onChange={(e) =>
+                          update("title", e.target.value)
+                        }
+                      />
+                    </label>
 
-                  <Field
-                    label="GitHub"
-                    value={data.github}
-                    onChange={(value) =>
-                      update("github", value)
-                    }
-                    placeholder="github.com/yourname"
-                  />
+                    <div className="jb-two">
+                      <label className="jb-field">
+                        <span className="jb-label">Email</span>
+                        <input
+                          className="jb-input"
+                          value={data.email}
+                          onChange={(e) =>
+                            update("email", e.target.value)
+                          }
+                        />
+                      </label>
 
-                  <Field
-                    label="Portfolio / Website"
-                    value={data.portfolio}
-                    onChange={(value) =>
-                      update("portfolio", value)
-                    }
-                    placeholder="yourwebsite.com"
-                  />
-                </div>
-              </section>
-            )}
+                      <label className="jb-field">
+                        <span className="jb-label">Phone</span>
+                        <input
+                          className="jb-input"
+                          value={data.phone}
+                          onChange={(e) =>
+                            update("phone", e.target.value)
+                          }
+                        />
+                      </label>
+                    </div>
 
-            {activeSection === "summary" && (
-              <section>
-                <SectionTitle
-                  title="Professional summary"
-                  description="Write a concise 2–4 line introduction."
-                />
+                    <label className="jb-field">
+                      <span className="jb-label">Location</span>
+                      <input
+                        className="jb-input"
+                        value={data.location}
+                        onChange={(e) =>
+                          update("location", e.target.value)
+                        }
+                      />
+                    </label>
 
-                <TextArea
-                  label="Summary"
-                  value={data.summary}
-                  onChange={(value) =>
-                    update("summary", value)
-                  }
-                  placeholder="Motivated software engineer with experience in..."
-                />
-              </section>
-            )}
+                    <label className="jb-field">
+                      <span className="jb-label">LinkedIn</span>
+                      <input
+                        className="jb-input"
+                        value={data.linkedin}
+                        onChange={(e) =>
+                          update("linkedin", e.target.value)
+                        }
+                      />
+                    </label>
 
-            {activeSection === "experience" && (
-              <section>
-                <SectionTitle
-                  title="Experience"
-                  description="Add each job separately. Use individual achievements instead of one large paragraph."
-                />
+                    <label className="jb-field">
+                      <span className="jb-label">GitHub</span>
+                      <input
+                        className="jb-input"
+                        value={data.github}
+                        onChange={(e) =>
+                          update("github", e.target.value)
+                        }
+                      />
+                    </label>
 
-                <div className="space-y-4">
+                    <label className="jb-field">
+                      <span className="jb-label">
+                        Portfolio / Website
+                      </span>
+                      <input
+                        className="jb-input"
+                        value={data.portfolio}
+                        onChange={(e) =>
+                          update("portfolio", e.target.value)
+                        }
+                      />
+                    </label>
+                  </div>
+                </section>
+              )}
+
+              {activeSection === "summary" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Professional summary
+                    </div>
+                    <div className="jb-section-description">
+                      Keep this concise and focused on your target role.
+                    </div>
+                  </div>
+
+                  <label className="jb-field">
+                    <span className="jb-label">Summary</span>
+                    <textarea
+                      className="jb-textarea"
+                      value={data.summary}
+                      onChange={(e) =>
+                        update("summary", e.target.value)
+                      }
+                    />
+                  </label>
+                </section>
+              )}
+
+              {activeSection === "experience" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Experience
+                    </div>
+                    <div className="jb-section-description">
+                      Add your professional experience and achievements.
+                    </div>
+                  </div>
+
                   {data.experiences.map((item, index) => (
-                    <EditorCard
-                      key={item.id}
-                      number={index + 1}
-                      title={
-                        item.role ||
-                        item.company ||
-                        "Experience"
-                      }
-                      onRemove={() =>
-                        update(
-                          "experiences",
-                          data.experiences.filter(
-                            (entry) => entry.id !== item.id
-                          )
-                        )
-                      }
-                    >
-                      <div className="space-y-3">
-                        <Field
-                          label="Company"
-                          value={item.company}
-                          onChange={(value) =>
-                            update(
-                              "experiences",
-                              data.experiences.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        company: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Accenture"
-                        />
-
-                        <Field
-                          label="Job title"
-                          value={item.role}
-                          onChange={(value) =>
-                            update(
-                              "experiences",
-                              data.experiences.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        role: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Software Engineer"
-                        />
-
-                        <Field
-                          label="Location"
-                          value={item.location}
-                          onChange={(value) =>
-                            update(
-                              "experiences",
-                              data.experiences.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        location: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Bengaluru, Karnataka"
-                        />
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <Field
-                            label="Start"
-                            value={item.start}
-                            onChange={(value) =>
-                              update(
-                                "experiences",
-                                data.experiences.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          start: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="Jun 2024"
-                          />
-
-                          <Field
-                            label="End"
-                            value={item.end}
-                            onChange={(value) =>
-                              update(
-                                "experiences",
-                                data.experiences.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          end: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="Present"
-                          />
+                    <div className="jb-card" key={item.id}>
+                      <div className="jb-card-header">
+                        <div className="jb-card-title">
+                          <span className="jb-number">
+                            {index + 1}
+                          </span>
+                          {item.role || item.company || "Experience"}
                         </div>
 
-                        <label className="flex cursor-pointer items-center gap-2 text-[12px] font-bold text-[#344054]">
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
+                            update(
+                              "experiences",
+                              data.experiences.filter(
+                                (entry) => entry.id !== item.id
+                              )
+                            )
+                          }
+                        >
+                          <Trash2 size={15} />
+                        </button>
+                      </div>
+
+                      <div className="jb-fields">
+                        <label className="jb-field">
+                          <span className="jb-label">Company</span>
+                          <input
+                            className="jb-input"
+                            value={item.company}
+                            onChange={(e) =>
+                              updateExperience(item.id, {
+                                company: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">Job title</span>
+                          <input
+                            className="jb-input"
+                            value={item.role}
+                            onChange={(e) =>
+                              updateExperience(item.id, {
+                                role: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">Location</span>
+                          <input
+                            className="jb-input"
+                            value={item.location}
+                            onChange={(e) =>
+                              updateExperience(item.id, {
+                                location: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <div className="jb-two">
+                          <label className="jb-field">
+                            <span className="jb-label">Start</span>
+                            <input
+                              className="jb-input"
+                              value={item.start}
+                              onChange={(e) =>
+                                updateExperience(item.id, {
+                                  start: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+
+                          <label className="jb-field">
+                            <span className="jb-label">End</span>
+                            <input
+                              className="jb-input"
+                              value={item.end}
+                              onChange={(e) =>
+                                updateExperience(item.id, {
+                                  end: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+                        </div>
+
+                        <label className="flex items-center gap-2 text-[11px] font-bold text-[#344054]">
                           <input
                             type="checkbox"
                             checked={item.current}
-                            onChange={(event) =>
-                              update(
-                                "experiences",
-                                data.experiences.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          current:
-                                            event.target
-                                              .checked,
-                                        }
-                                      : entry
-                                )
-                              )
+                            onChange={(e) =>
+                              updateExperience(item.id, {
+                                current: e.target.checked,
+                              })
                             }
-                            className="h-4 w-4 accent-[#111827]"
                           />
                           I currently work here
                         </label>
 
                         <div>
-                          <div className="mb-2 text-[12px] font-bold text-[#25314a]">
+                          <div className="jb-label">
                             Achievements
                           </div>
 
@@ -2533,36 +3813,24 @@ export default function ResumeEditorPage() {
                                   key={bulletIndex}
                                 >
                                   <input
+                                    className="jb-input"
                                     value={bullet}
-                                    onChange={(event) => {
+                                    onChange={(e) => {
                                       const bullets = [
                                         ...item.bullets,
                                       ];
                                       bullets[bulletIndex] =
-                                        event.target.value;
+                                        e.target.value;
 
-                                      update(
-                                        "experiences",
-                                        data.experiences.map(
-                                          (entry) =>
-                                            entry.id ===
-                                            item.id
-                                              ? {
-                                                  ...entry,
-                                                  bullets,
-                                                }
-                                              : entry
-                                        )
-                                      );
+                                      updateExperience(item.id, {
+                                        bullets,
+                                      });
                                     }}
-                                    placeholder={
-                                      "Delivered measurable result..."
-                                    }
-                                    className="min-w-0 flex-1 rounded-lg border border-[#d8dee9] bg-white px-3 py-2.5 text-[12px] outline-none focus:border-[#111827]"
                                   />
 
                                   <button
                                     type="button"
+                                    className="jb-remove"
                                     onClick={() => {
                                       const bullets =
                                         item.bullets.filter(
@@ -2570,25 +3838,12 @@ export default function ResumeEditorPage() {
                                             i !== bulletIndex
                                         );
 
-                                      update(
-                                        "experiences",
-                                        data.experiences.map(
-                                          (entry) =>
-                                            entry.id ===
-                                            item.id
-                                              ? {
-                                                  ...entry,
-                                                  bullets:
-                                                    bullets
-                                                      .length
-                                                      ? bullets
-                                                      : [""],
-                                                }
-                                              : entry
-                                        )
-                                      );
+                                      updateExperience(item.id, {
+                                        bullets: bullets.length
+                                          ? bullets
+                                          : [""],
+                                      });
                                     }}
-                                    className="rounded-lg p-2 text-[#98a2b3] hover:bg-[#fff1f1] hover:text-[#d92d20]"
                                   >
                                     <Trash2 size={14} />
                                   </button>
@@ -2599,811 +3854,846 @@ export default function ResumeEditorPage() {
 
                           <button
                             type="button"
-                            onClick={() =>
-                              update(
-                                "experiences",
-                                data.experiences.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          bullets: [
-                                            ...entry.bullets,
-                                            "",
-                                          ],
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
                             className="mt-2 text-[11px] font-extrabold text-[#344054] underline"
+                            onClick={() =>
+                              updateExperience(item.id, {
+                                bullets: [
+                                  ...item.bullets,
+                                  "",
+                                ],
+                              })
+                            }
                           >
                             + Add achievement
                           </button>
                         </div>
                       </div>
-                    </EditorCard>
-                  ))}
-                </div>
-
-                <AddButton
-                  onClick={() =>
-                    update("experiences", [
-                      ...data.experiences,
-                      emptyExperience(),
-                    ])
-                  }
-                >
-                  Add Experience
-                </AddButton>
-              </section>
-            )}
-
-            {activeSection === "education" && (
-              <section>
-                <SectionTitle
-                  title="Education"
-                  description="Add degrees, diplomas, school or university education."
-                />
-
-                <div className="space-y-4">
-                  {data.education.map((item, index) => (
-                    <EditorCard
-                      key={item.id}
-                      number={index + 1}
-                      title={
-                        item.institution ||
-                        item.degree ||
-                        "Education"
-                      }
-                      onRemove={() =>
-                        update(
-                          "education",
-                          data.education.filter(
-                            (entry) => entry.id !== item.id
-                          )
-                        )
-                      }
-                    >
-                      <div className="space-y-3">
-                        <Field
-                          label="Institution"
-                          value={item.institution}
-                          onChange={(value) =>
-                            update(
-                              "education",
-                              data.education.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        institution:
-                                          value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="University of Chicago"
-                        />
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <Field
-                            label="Degree"
-                            value={item.degree}
-                            onChange={(value) =>
-                              update(
-                                "education",
-                                data.education.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          degree: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="B.E."
-                          />
-
-                          <Field
-                            label="Field of study"
-                            value={item.field}
-                            onChange={(value) =>
-                              update(
-                                "education",
-                                data.education.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          field: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="Computer Science"
-                          />
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <Field
-                            label="Grade / GPA"
-                            value={item.grade}
-                            onChange={(value) =>
-                              update(
-                                "education",
-                                data.education.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          grade: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="9.2 / 10"
-                          />
-
-                          <Field
-                            label="Location"
-                            value={item.location}
-                            onChange={(value) =>
-                              update(
-                                "education",
-                                data.education.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          location: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="Bengaluru"
-                          />
-                        </div>
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <Field
-                            label="Start"
-                            value={item.start}
-                            onChange={(value) =>
-                              update(
-                                "education",
-                                data.education.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          start: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="2023"
-                          />
-
-                          <Field
-                            label="End"
-                            value={item.end}
-                            onChange={(value) =>
-                              update(
-                                "education",
-                                data.education.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          end: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="2027"
-                          />
-                        </div>
-                      </div>
-                    </EditorCard>
-                  ))}
-                </div>
-
-                <AddButton
-                  onClick={() =>
-                    update("education", [
-                      ...data.education,
-                      emptyEducation(),
-                    ])
-                  }
-                >
-                  Add Education
-                </AddButton>
-              </section>
-            )}
-
-            {activeSection === "projects" && (
-              <section>
-                <SectionTitle
-                  title="Projects"
-                  description="Projects are especially valuable for students and freshers."
-                />
-
-                <div className="space-y-4">
-                  {data.projects.map((item, index) => (
-                    <EditorCard
-                      key={item.id}
-                      number={index + 1}
-                      title={item.name || "Project"}
-                      onRemove={() =>
-                        update(
-                          "projects",
-                          data.projects.filter(
-                            (entry) => entry.id !== item.id
-                          )
-                        )
-                      }
-                    >
-                      <div className="space-y-3">
-                        <Field
-                          label="Project name"
-                          value={item.name}
-                          onChange={(value) =>
-                            update(
-                              "projects",
-                              data.projects.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        name: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Alzheimer Early Disease Prediction"
-                        />
-
-                        <Field
-                          label="Technologies"
-                          value={item.technologies}
-                          onChange={(value) =>
-                            update(
-                              "projects",
-                              data.projects.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        technologies:
-                                          value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="React, Python, Machine Learning"
-                        />
-
-                        <Field
-                          label="Project link"
-                          value={item.link}
-                          onChange={(value) =>
-                            update(
-                              "projects",
-                              data.projects.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        link: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="github.com/..."
-                        />
-
-                        <TextArea
-                          label="Description"
-                          value={item.description}
-                          onChange={(value) =>
-                            update(
-                              "projects",
-                              data.projects.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        description:
-                                          value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="What does the project do?"
-                        />
-
-                        <TextArea
-                          label="Your contribution"
-                          value={item.contribution}
-                          onChange={(value) =>
-                            update(
-                              "projects",
-                              data.projects.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        contribution:
-                                          value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="What did you personally build or accomplish?"
-                        />
-
-                        <TextArea
-                          label="Result / impact"
-                          value={item.result}
-                          onChange={(value) =>
-                            update(
-                              "projects",
-                              data.projects.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        result: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="What was the measurable result?"
-                        />
-                      </div>
-                    </EditorCard>
-                  ))}
-                </div>
-
-                <AddButton
-                  onClick={() =>
-                    update("projects", [
-                      ...data.projects,
-                      emptyProject(),
-                    ])
-                  }
-                >
-                  Add Project
-                </AddButton>
-              </section>
-            )}
-
-            {activeSection === "skills" && (
-              <section>
-                <SectionTitle
-                  title="Skills"
-                  description="Add the skills relevant to the roles you are targeting."
-                />
-
-                <div className="space-y-2">
-                  {data.skills.map((skill, index) => (
-                    <div className="flex gap-2" key={index}>
-                      <input
-                        value={skill}
-                        onChange={(event) => {
-                          const skills = [...data.skills];
-                          skills[index] = event.target.value;
-                          update("skills", skills);
-                        }}
-                        placeholder="Java"
-                        className="min-w-0 flex-1 rounded-lg border border-[#d8dee9] px-3 py-2.5 text-[12px] outline-none focus:border-[#111827]"
-                      />
-
-                      <button
-                        type="button"
-                        onClick={() =>
-                          update(
-                            "skills",
-                            data.skills.filter(
-                              (_, i) => i !== index
-                            )
-                          )
-                        }
-                        className="rounded-lg p-2 text-[#98a2b3] hover:bg-[#fff1f1] hover:text-[#d92d20]"
-                      >
-                        <Trash2 size={14} />
-                      </button>
                     </div>
                   ))}
-                </div>
 
-                <AddButton
-                  onClick={() =>
-                    update("skills", [...data.skills, ""])
-                  }
-                >
-                  Add Skill
-                </AddButton>
-              </section>
-            )}
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("experiences", [
+                        ...data.experiences,
+                        emptyExperience(),
+                      ])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Experience
+                  </button>
+                </section>
+              )}
 
-            {activeSection === "certifications" && (
-              <section>
-                <SectionTitle
-                  title="Certifications"
-                  description="Add professional, technical and academic certifications."
-                />
+              {activeSection === "education" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Education
+                    </div>
+                    <div className="jb-section-description">
+                      Add your university, college and school education.
+                    </div>
+                  </div>
 
-                <div className="space-y-4">
-                  {data.certifications.map((item, index) => (
-                    <EditorCard
-                      key={item.id}
-                      number={index + 1}
-                      title={item.name || "Certification"}
-                      onRemove={() =>
-                        update(
-                          "certifications",
-                          data.certifications.filter(
-                            (entry) => entry.id !== item.id
-                          )
-                        )
-                      }
-                    >
-                      <div className="space-y-3">
-                        <Field
-                          label="Certification"
-                          value={item.name}
-                          onChange={(value) =>
-                            update(
-                              "certifications",
-                              data.certifications.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        name: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="AWS Certified Developer"
-                        />
-
-                        <Field
-                          label="Issuing organization"
-                          value={item.issuer}
-                          onChange={(value) =>
-                            update(
-                              "certifications",
-                              data.certifications.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        issuer: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Amazon Web Services"
-                        />
-
-                        <div className="grid grid-cols-2 gap-3">
-                          <Field
-                            label="Year"
-                            value={item.year}
-                            onChange={(value) =>
-                              update(
-                                "certifications",
-                                data.certifications.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          year: value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="2026"
-                          />
-
-                          <Field
-                            label="Credential ID"
-                            value={item.credentialId}
-                            onChange={(value) =>
-                              update(
-                                "certifications",
-                                data.certifications.map(
-                                  (entry) =>
-                                    entry.id === item.id
-                                      ? {
-                                          ...entry,
-                                          credentialId:
-                                            value,
-                                        }
-                                      : entry
-                                )
-                              )
-                            }
-                            placeholder="ABC123"
-                          />
+                  {data.education.map((item, index) => (
+                    <div className="jb-card" key={item.id}>
+                      <div className="jb-card-header">
+                        <div className="jb-card-title">
+                          <span className="jb-number">
+                            {index + 1}
+                          </span>
+                          {item.institution || "Education"}
                         </div>
 
-                        <Field
-                          label="Credential URL"
-                          value={item.link}
-                          onChange={(value) =>
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
+                            update(
+                              "education",
+                              data.education.filter(
+                                (entry) => entry.id !== item.id
+                              )
+                            )
+                          }
+                        >
+                          <Trash2 size={15} />
+                        </button>
+                      </div>
+
+                      <div className="jb-fields">
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Institution
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.institution}
+                            onChange={(e) =>
+                              updateEducation(item.id, {
+                                institution: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <div className="jb-two">
+                          <label className="jb-field">
+                            <span className="jb-label">Degree</span>
+                            <input
+                              className="jb-input"
+                              value={item.degree}
+                              onChange={(e) =>
+                                updateEducation(item.id, {
+                                  degree: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+
+                          <label className="jb-field">
+                            <span className="jb-label">
+                              Field of study
+                            </span>
+                            <input
+                              className="jb-input"
+                              value={item.field}
+                              onChange={(e) =>
+                                updateEducation(item.id, {
+                                  field: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+                        </div>
+
+                        <div className="jb-two">
+                          <label className="jb-field">
+                            <span className="jb-label">
+                              Grade / GPA
+                            </span>
+                            <input
+                              className="jb-input"
+                              value={item.grade}
+                              onChange={(e) =>
+                                updateEducation(item.id, {
+                                  grade: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+
+                          <label className="jb-field">
+                            <span className="jb-label">
+                              Location
+                            </span>
+                            <input
+                              className="jb-input"
+                              value={item.location}
+                              onChange={(e) =>
+                                updateEducation(item.id, {
+                                  location: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+                        </div>
+
+                        <div className="jb-two">
+                          <label className="jb-field">
+                            <span className="jb-label">Start</span>
+                            <input
+                              className="jb-input"
+                              value={item.start}
+                              onChange={(e) =>
+                                updateEducation(item.id, {
+                                  start: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+
+                          <label className="jb-field">
+                            <span className="jb-label">End</span>
+                            <input
+                              className="jb-input"
+                              value={item.end}
+                              onChange={(e) =>
+                                updateEducation(item.id, {
+                                  end: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("education", [
+                        ...data.education,
+                        emptyEducation(),
+                      ])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Education
+                  </button>
+                </section>
+              )}
+
+              {activeSection === "projects" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Projects
+                    </div>
+                    <div className="jb-section-description">
+                      Show what you built, how you built it and the result.
+                    </div>
+                  </div>
+
+                  {data.projects.map((item, index) => (
+                    <div className="jb-card" key={item.id}>
+                      <div className="jb-card-header">
+                        <div className="jb-card-title">
+                          <span className="jb-number">
+                            {index + 1}
+                          </span>
+                          {item.name || "Project"}
+                        </div>
+
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
+                            update(
+                              "projects",
+                              data.projects.filter(
+                                (entry) => entry.id !== item.id
+                              )
+                            )
+                          }
+                        >
+                          <Trash2 size={15} />
+                        </button>
+                      </div>
+
+                      <div className="jb-fields">
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Project name
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.name}
+                            onChange={(e) =>
+                              updateProject(item.id, {
+                                name: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Technologies
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.technologies}
+                            onChange={(e) =>
+                              updateProject(item.id, {
+                                technologies: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Project link
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.link}
+                            onChange={(e) =>
+                              updateProject(item.id, {
+                                link: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Description
+                          </span>
+                          <textarea
+                            className="jb-textarea"
+                            value={item.description}
+                            onChange={(e) =>
+                              updateProject(item.id, {
+                                description: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Your contribution
+                          </span>
+                          <textarea
+                            className="jb-textarea"
+                            value={item.contribution}
+                            onChange={(e) =>
+                              updateProject(item.id, {
+                                contribution: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Result / impact
+                          </span>
+                          <textarea
+                            className="jb-textarea"
+                            value={item.result}
+                            onChange={(e) =>
+                              updateProject(item.id, {
+                                result: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  ))}
+
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("projects", [
+                        ...data.projects,
+                        emptyProject(),
+                      ])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Project
+                  </button>
+                </section>
+              )}
+
+              {activeSection === "skills" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Skills
+                    </div>
+                    <div className="jb-section-description">
+                      Add technologies and skills relevant to your target role.
+                    </div>
+                  </div>
+
+                  <div className="jb-fields">
+                    {data.skills.map((skill, index) => (
+                      <div
+                        className="flex items-center gap-2"
+                        key={index}
+                      >
+                        <input
+                          className="jb-input"
+                          value={skill}
+                          onChange={(e) => {
+                            const skills = [...data.skills];
+                            skills[index] = e.target.value;
+                            update("skills", skills);
+                          }}
+                        />
+
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
+                            update(
+                              "skills",
+                              data.skills.filter(
+                                (_, i) => i !== index
+                              )
+                            )
+                          }
+                        >
+                          <Trash2 size={14} />
+                        </button>
+                      </div>
+                    ))}
+                  </div>
+
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("skills", [...data.skills, ""])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Skill
+                  </button>
+                </section>
+              )}
+
+              {activeSection === "certifications" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Certifications
+                    </div>
+                    <div className="jb-section-description">
+                      Add certifications and credentials that strengthen your profile.
+                    </div>
+                  </div>
+
+                  {data.certifications.map((item, index) => (
+                    <div className="jb-card" key={item.id}>
+                      <div className="jb-card-header">
+                        <div className="jb-card-title">
+                          <span className="jb-number">
+                            {index + 1}
+                          </span>
+                          {item.name || "Certification"}
+                        </div>
+
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
                             update(
                               "certifications",
-                              data.certifications.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        link: value,
-                                      }
-                                    : entry
+                              data.certifications.filter(
+                                (entry) => entry.id !== item.id
                               )
                             )
                           }
-                          placeholder="credential.example.com"
-                        />
+                        >
+                          <Trash2 size={15} />
+                        </button>
                       </div>
-                    </EditorCard>
-                  ))}
-                </div>
 
-                <AddButton
-                  onClick={() =>
-                    update("certifications", [
-                      ...data.certifications,
-                      emptyCertification(),
-                    ])
-                  }
-                >
-                  Add Certification
-                </AddButton>
-              </section>
-            )}
+                      <div className="jb-fields">
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Certification
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.name}
+                            onChange={(e) =>
+                              updateCertification(item.id, {
+                                name: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
 
-            {activeSection === "achievements" && (
-              <section>
-                <SectionTitle
-                  title="Achievements"
-                  description="Add hackathons, awards, competitions and other accomplishments."
-                />
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Issuing organization
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.issuer}
+                            onChange={(e) =>
+                              updateCertification(item.id, {
+                                issuer: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
 
-                <div className="space-y-4">
-                  {data.achievements.map((item, index) => (
-                    <EditorCard
-                      key={item.id}
-                      number={index + 1}
-                      title={item.title || "Achievement"}
-                      onRemove={() =>
-                        update(
-                          "achievements",
-                          data.achievements.filter(
-                            (entry) => entry.id !== item.id
-                          )
-                        )
-                      }
-                    >
-                      <div className="space-y-3">
-                        <Field
-                          label="Achievement"
-                          value={item.title}
-                          onChange={(value) =>
-                            update(
-                              "achievements",
-                              data.achievements.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        title: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Hackathon Winner"
-                        />
+                        <div className="jb-two">
+                          <label className="jb-field">
+                            <span className="jb-label">Year</span>
+                            <input
+                              className="jb-input"
+                              value={item.year}
+                              onChange={(e) =>
+                                updateCertification(item.id, {
+                                  year: e.target.value,
+                                })
+                              }
+                            />
+                          </label>
 
-                        <Field
-                          label="Organization"
-                          value={item.organization}
-                          onChange={(value) =>
-                            update(
-                              "achievements",
-                              data.achievements.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        organization:
-                                          value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Smart India Hackathon"
-                        />
+                          <label className="jb-field">
+                            <span className="jb-label">
+                              Credential ID
+                            </span>
+                            <input
+                              className="jb-input"
+                              value={item.credentialId}
+                              onChange={(e) =>
+                                updateCertification(item.id, {
+                                  credentialId:
+                                    e.target.value,
+                                })
+                              }
+                            />
+                          </label>
+                        </div>
 
-                        <Field
-                          label="Year"
-                          value={item.year}
-                          onChange={(value) =>
-                            update(
-                              "achievements",
-                              data.achievements.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        year: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="2026"
-                        />
-
-                        <TextArea
-                          label="Description"
-                          value={item.description}
-                          onChange={(value) =>
-                            update(
-                              "achievements",
-                              data.achievements.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        description:
-                                          value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Describe what you achieved."
-                        />
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Credential URL
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.link}
+                            onChange={(e) =>
+                              updateCertification(item.id, {
+                                link: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
                       </div>
-                    </EditorCard>
+                    </div>
                   ))}
-                </div>
 
-                <AddButton
-                  onClick={() =>
-                    update("achievements", [
-                      ...data.achievements,
-                      emptyAchievement(),
-                    ])
-                  }
-                >
-                  Add Achievement
-                </AddButton>
-              </section>
-            )}
-
-            {activeSection === "languages" && (
-              <section>
-                <SectionTitle
-                  title="Languages"
-                  description="Add languages and proficiency levels."
-                />
-
-                <div className="space-y-3">
-                  {data.languages.map((item, index) => (
-                    <EditorCard
-                      key={item.id}
-                      number={index + 1}
-                      title={item.name || "Language"}
-                      onRemove={() =>
-                        update(
-                          "languages",
-                          data.languages.filter(
-                            (entry) => entry.id !== item.id
-                          )
-                        )
-                      }
-                    >
-                      <div className="grid grid-cols-2 gap-3">
-                        <Field
-                          label="Language"
-                          value={item.name}
-                          onChange={(value) =>
-                            update(
-                              "languages",
-                              data.languages.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        name: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="English"
-                        />
-
-                        <Field
-                          label="Proficiency"
-                          value={item.level}
-                          onChange={(value) =>
-                            update(
-                              "languages",
-                              data.languages.map(
-                                (entry) =>
-                                  entry.id === item.id
-                                    ? {
-                                        ...entry,
-                                        level: value,
-                                      }
-                                    : entry
-                              )
-                            )
-                          }
-                          placeholder="Native"
-                        />
-                      </div>
-                    </EditorCard>
-                  ))}
-                </div>
-
-                <AddButton
-                  onClick={() =>
-                    update("languages", [
-                      ...data.languages,
-                      emptyLanguage(),
-                    ])
-                  }
-                >
-                  Add Language
-                </AddButton>
-              </section>
-            )}
-          </div>
-        </aside>
-
-        <section className="min-w-0 overflow-auto bg-[#eef1f5]">
-          <div className="flex min-h-full justify-center px-8 py-10">
-            <div className="origin-top shadow-[0_8px_30px_rgba(16,24,40,0.12)]">
-              {template === "4" ? (
-                <Template4Preview data={data} />
-              ) : (
-                <GenericPreview
-                  data={data}
-                  template={template}
-                />
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("certifications", [
+                        ...data.certifications,
+                        emptyCertification(),
+                      ])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Certification
+                  </button>
+                </section>
               )}
+
+              {activeSection === "achievements" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Achievements
+                    </div>
+                    <div className="jb-section-description">
+                      Highlight awards, hackathons, leadership and accomplishments.
+                    </div>
+                  </div>
+
+                  {data.achievements.map((item, index) => (
+                    <div className="jb-card" key={item.id}>
+                      <div className="jb-card-header">
+                        <div className="jb-card-title">
+                          <span className="jb-number">
+                            {index + 1}
+                          </span>
+                          {item.title || "Achievement"}
+                        </div>
+
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
+                            update(
+                              "achievements",
+                              data.achievements.filter(
+                                (entry) => entry.id !== item.id
+                              )
+                            )
+                          }
+                        >
+                          <Trash2 size={15} />
+                        </button>
+                      </div>
+
+                      <div className="jb-fields">
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Achievement
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.title}
+                            onChange={(e) =>
+                              updateAchievement(item.id, {
+                                title: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Organization
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.organization}
+                            onChange={(e) =>
+                              updateAchievement(item.id, {
+                                organization:
+                                  e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">Year</span>
+                          <input
+                            className="jb-input"
+                            value={item.year}
+                            onChange={(e) =>
+                              updateAchievement(item.id, {
+                                year: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Description
+                          </span>
+                          <textarea
+                            className="jb-textarea"
+                            value={item.description}
+                            onChange={(e) =>
+                              updateAchievement(item.id, {
+                                description:
+                                  e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  ))}
+
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("achievements", [
+                        ...data.achievements,
+                        emptyAchievement(),
+                      ])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Achievement
+                  </button>
+                </section>
+              )}
+
+              {activeSection === "languages" && (
+                <section>
+                  <div className="jb-section-heading">
+                    <div className="jb-section-title">
+                      Languages
+                    </div>
+                    <div className="jb-section-description">
+                      Add languages and your level of proficiency.
+                    </div>
+                  </div>
+
+                  {data.languages.map((item, index) => (
+                    <div className="jb-card" key={item.id}>
+                      <div className="jb-card-header">
+                        <div className="jb-card-title">
+                          <span className="jb-number">
+                            {index + 1}
+                          </span>
+                          {item.name || "Language"}
+                        </div>
+
+                        <button
+                          type="button"
+                          className="jb-remove"
+                          onClick={() =>
+                            update(
+                              "languages",
+                              data.languages.filter(
+                                (entry) => entry.id !== item.id
+                              )
+                            )
+                          }
+                        >
+                          <Trash2 size={15} />
+                        </button>
+                      </div>
+
+                      <div className="jb-two">
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Language
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.name}
+                            onChange={(e) =>
+                              updateLanguage(item.id, {
+                                name: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+
+                        <label className="jb-field">
+                          <span className="jb-label">
+                            Proficiency
+                          </span>
+                          <input
+                            className="jb-input"
+                            value={item.level}
+                            onChange={(e) =>
+                              updateLanguage(item.id, {
+                                level: e.target.value,
+                              })
+                            }
+                          />
+                        </label>
+                      </div>
+                    </div>
+                  ))}
+
+                  <button
+                    type="button"
+                    className="jb-add"
+                    onClick={() =>
+                      update("languages", [
+                        ...data.languages,
+                        emptyLanguage(),
+                      ])
+                    }
+                  >
+                    <Plus size={15} />
+                    Add Language
+                  </button>
+                </section>
+              )}
+                <div className="jb-next-area">
+                  <button
+                    type="button"
+                    className="jb-next-button"
+                    onClick={nextSection}
+                  >
+                    <span>
+                      {activeSection === "languages"
+                        ? "Finish"
+                        : "Next"}
+                    </span>
+                    <span className="jb-next-arrow">
+                      ?
+                    </span>
+                  </button>
+
+                  <div className="jb-next-hint">
+                    {activeSection === "languages"
+                      ? "Your resume is ready to review."
+                      : `Continue to ${
+                          sections[
+                            sections.findIndex(
+                              ([id]) => id === activeSection
+                            ) + 1
+                          ]?.[1] || "next section"
+                        }.`}
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-        </section>
+          </aside>
+
+          <section className="jb-preview">
+            <div className="jb-preview-inner">
+              <div className="jb-preview-toolbar">
+                <div className="jb-preview-toolbar-label">
+                  Resume preview
+                </div>
+
+                <div className="jb-zoom-controls">
+                  <button
+                    type="button"
+                    className="jb-zoom-button"
+                    onClick={() =>
+                      setPreviewZoom((value) =>
+                        Math.max(50, value - 10)
+                      )
+                    }
+                    aria-label="Zoom out"
+                  >
+                    -
+                  </button>
+
+                  <button
+                    type="button"
+                    className="jb-zoom-value"
+                    onClick={() => setPreviewZoom(106)}
+                  >
+                    {previewZoom}%
+                  </button>
+
+                  <button
+                    type="button"
+                    className="jb-zoom-button"
+                    onClick={() =>
+                      setPreviewZoom((value) =>
+                        Math.min(130, value + 10)
+                      )
+                    }
+                    aria-label="Zoom in"
+                  >
+                    +
+                  </button>
+
+                  <button
+                    type="button"
+                    className="jb-zoom-reset"
+                    onClick={() => setPreviewZoom(106)}
+                  >
+                    Reset
+                  </button>
+                </div>
+              </div>
+
+              <div
+                className="jb-resume-wrap"
+                style={{
+                  zoom: previewZoom / 100
+                }}
+              >
+                {template === "4" ? (
+                  <Template4Preview data={data} />
+                ) : (
+                  <GenericPreview
+                    data={data}
+                    template={template}
+                  />
+                )}
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </main>
   );
 }
+
