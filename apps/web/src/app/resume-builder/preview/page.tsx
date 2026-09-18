@@ -191,33 +191,58 @@ body {
 </html>`;
   };
 
-  const exportPdf = () => {
-    const html = getResumeDocument();
+  const handleExportPdf = async () => {
+    try {
+      const stored =
+        localStorage.getItem("jobix_resume_builder_data") ||
+        sessionStorage.getItem("jobix_resume_builder_data");
 
-    if (!html) {
-      return;
-    }
+      if (!stored) {
+        alert("Saved resume data was not found.");
+        return;
+      }
 
-    const printWindow = window.open(
-      "",
-      "_blank",
-      "width=900,height=1200"
-    );
+      const resumeData = JSON.parse(stored);
 
-    if (!printWindow) {
-      return;
-    }
+      const response = await fetch("/api/resume-builder/pdf", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          resumeData,
+          template,
+          mode
+        })
+      });
 
-    printWindow.document.open();
-    printWindow.document.write(html);
-    printWindow.document.close();
+      if (!response.ok) {
+        const error = await response.json().catch(() => null);
+        throw new Error(
+          error?.error || "PDF generation failed."
+        );
+      }
 
-    printWindow.onload = () => {
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = "JOBIX-Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
       setTimeout(() => {
-        printWindow.focus();
-        printWindow.print();
-      }, 350);
-    };
+        URL.revokeObjectURL(url);
+      }, 1000);
+    } catch (error) {
+      alert(
+        error instanceof Error
+          ? error.message
+          : "PDF generation failed."
+      );
+    }
   };
 
   const exportWord = () => {
@@ -646,7 +671,7 @@ body {
             <button
               type="button"
               className="jobix-preview-button"
-              onClick={exportPdf}
+              onClick={handleExportPdf}
             >
               Export PDF
             </button>

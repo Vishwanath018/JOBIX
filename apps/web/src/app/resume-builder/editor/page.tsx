@@ -1377,8 +1377,8 @@ function Template4Preview({ data }: { data: ResumeData }) {
         nodes[index]?.getBoundingClientRect().height || 0
     }));
 
-    const firstPageLimit = 1020;
-    const otherPageLimit = 1080;
+    const firstPageLimit = 930;
+    const otherPageLimit = 930;
 
     const result: Block[][] = [];
     let current: Block[] = [];
@@ -2559,8 +2559,7 @@ function Template4Preview({ data }: { data: ResumeData }) {
         ))}
       </div>
 
-      {pages.length > 0 &&
-        pages.map((page, pageIndex) => (
+      {(pages.length ? pages : [blocks]).map((page, pageIndex) => (
           <div
             className="jobix-t4-page"
             key={pageIndex}

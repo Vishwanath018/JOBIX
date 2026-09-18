@@ -1,4 +1,4 @@
-﻿from typing import Any
+from typing import Any
 import json
 import re
 from io import BytesIO
@@ -8,6 +8,7 @@ from docx import Document
 from fastapi import APIRouter, Depends, File, Form, HTTPException, UploadFile, status
 from pydantic import BaseModel, Field
 from pypdf import PdfReader
+import fitz
 
 from app.core.config import settings
 from app.core.security import get_current_user
@@ -48,19 +49,57 @@ class AtsResult(BaseModel):
 
 def extract_pdf(file: UploadFile) -> str:
     try:
+        file.file.seek(0)
+
         reader = PdfReader(file.file)
         parts = []
+
         for page in reader.pages:
             text = page.extract_text() or ""
+
             if text.strip():
                 parts.append(text)
-        return "\n".join(parts)
+
+        text = "\n".join(parts).strip()
+
+        if len(text) >= 120:
+            return text
+
+        file.file.seek(0)
+
+        pdf_bytes = file.file.read()
+        document = fitz.open(
+            stream=pdf_bytes,
+            filetype="pdf",
+        )
+
+        fallback_parts = []
+
+        for page in document:
+            page_text = page.get_text(
+                "text",
+                sort=True,
+            )
+
+            if page_text.strip():
+                fallback_parts.append(page_text)
+
+        document.close()
+
+        fallback_text = "\n".join(
+            fallback_parts
+        ).strip()
+
+        if len(fallback_text) > len(text):
+            return fallback_text
+
+        return text
+
     except Exception as exc:
         raise HTTPException(
             status_code=400,
             detail=f"Could not read the PDF: {exc}",
         )
-
 
 def extract_docx(file: UploadFile) -> str:
     try:
@@ -315,44 +354,52 @@ def parse_json_text(text: str) -> dict[str, Any]:
     cleaned = text.strip()
 
     if not cleaned:
-        raise ValueError("Empty response.")
+        raise ValueError("Sarvam returned an empty response.")
 
     if cleaned.startswith("```"):
-        cleaned = re.sub(
-            r"^```(?:json)?\s*",
-            "",
-            cleaned,
-            flags=re.IGNORECASE,
-        )
-        cleaned = re.sub(
-            r"\s*```$",
-            "",
-            cleaned,
-        )
+        cleaned = cleaned.replace("```json", "", 1).replace("```", "", 1).strip()
 
     try:
-        value = json.loads(cleaned)
+        parsed = json.loads(cleaned)
 
-        if isinstance(value, dict):
-            return value
-    except json.JSONDecodeError:
-        pass
+        if not isinstance(parsed, dict):
+            raise ValueError("Sarvam response JSON is not an object.")
 
-    start = cleaned.find("{")
-    end = cleaned.rfind("}")
+        return parsed
+    except json.JSONDecodeError as first_error:
+        decoder = json.JSONDecoder()
 
-    if start >= 0 and end > start:
-        value = json.loads(
-            cleaned[start:end + 1]
+        try:
+            parsed, _ = decoder.raw_decode(cleaned)
+
+            if isinstance(parsed, dict):
+                return parsed
+        except json.JSONDecodeError:
+            pass
+
+        repaired = cleaned
+
+        if repaired.count("{") > repaired.count("}"):
+            repaired += "}" * (
+                repaired.count("{") - repaired.count("}")
+            )
+
+        if repaired.count("[") > repaired.count("]"):
+            repaired += "]" * (
+                repaired.count("[") - repaired.count("]")
+            )
+
+        try:
+            parsed = json.loads(repaired)
+
+            if isinstance(parsed, dict):
+                return parsed
+        except json.JSONDecodeError:
+            pass
+
+        raise ValueError(
+            f"Sarvam returned an ATS response that JOBIX could not parse: {first_error}"
         )
-
-        if isinstance(value, dict):
-            return value
-
-    raise ValueError(
-        "Sarvam did not return a valid JSON object."
-    )
-
 
 def normalize_result(
     data: dict[str, Any],
