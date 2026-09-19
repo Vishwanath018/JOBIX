@@ -165,54 +165,238 @@ export default function HomePage() {
 
       {drawerOpen && (
         <div
-          className="fixed inset-0 z-50 bg-[#07143b]/30"
+          className="fixed inset-0 z-50 bg-[#07143b]/25 backdrop-blur-[2px]"
           onClick={() => setDrawerOpen(false)}
         >
           <aside
             onClick={(event) => event.stopPropagation()}
-            className="h-full w-[310px] overflow-y-auto bg-white p-5 shadow-2xl"
+            className="relative h-full w-[390px] max-w-[92vw] overflow-hidden border-r border-white/60 shadow-2xl"
           >
-            <div className="mb-6 flex items-center justify-between">
-              <div>
-                <p className="text-xl font-extrabold">JOBIX</p>
-                <p className="text-[10px] font-semibold tracking-[0.2em]">
-                  CAREER
-                </p>
-              </div>
-
-              <button
-                onClick={() => setDrawerOpen(false)}
-                className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#f1f5fa] text-xl font-bold"
-              >
-                ×
-              </button>
-            </div>
-
-            <input
-              value={search}
-              onChange={(event) => setSearch(event.target.value)}
-              placeholder="Search..."
-              className="mb-5 w-full rounded-xl border border-[#dce5ef] bg-[#f9fbfe] px-4 py-3 text-sm font-semibold outline-none focus:border-[#1769ff]"
+            <div
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{ backgroundImage: 'url("/sidebar.png")' }}
             />
 
-            <div className="space-y-2">
-              {filteredNavigation.map((item) => (
-                <button
-                  key={item.title}
-                  onClick={() => selectItem(item.title)}
-                  className={`flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-bold transition ${
-                    item.title === "Dashboard"
-                      ? "bg-[#eef4ff] text-[#1769ff]"
-                      : "text-[#405274] hover:bg-[#f4f7fb]"
-                  }`}
-                >
-                  <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-[#f1f5fa] text-base">
-                    {item.icon}
-                  </span>
+            <div className="absolute inset-0 bg-gradient-to-b from-white/80 via-white/35 to-white/5" />
 
-                  {item.title}
+            <div className="relative z-10 flex h-full flex-col px-6 py-6">
+              <div className="flex items-start justify-between">
+                <div>
+                  <div className="flex items-center gap-3">
+                    <img
+                      src="/jobix-logo.png"
+                      alt="JOBIX"
+                      className="h-12 w-12 rounded-2xl object-contain shadow-lg"
+                    />
+                    <div>
+                      <p className="text-[25px] font-black leading-none tracking-tight text-[#07143b]">
+                        JOBIX
+                      </p>
+                      <p className="mt-1 text-[10px] font-bold tracking-[0.28em] text-[#52627f]">
+                        CAREER
+                      </p>
+                    </div>
+                  </div>
+                  <p className="mt-4 text-[11px] font-bold tracking-[0.25em] text-[#53678c]">
+                    YOUR CAREER, SMARTER.
+                  </p>
+                </div>
+
+                <button
+                  onClick={() => setDrawerOpen(false)}
+                  className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-black shadow-lg transition hover:scale-105"
+                  aria-label="Close navigation"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2.8"
+                    strokeLinecap="round"
+                  >
+                    <path d="M6 6l12 12M18 6 6 18" />
+                  </svg>
                 </button>
-              ))}
+              </div>
+
+              <div className="mt-7">
+                <div className="flex h-14 items-center rounded-2xl border border-white/80 bg-white/95 px-4 shadow-md backdrop-blur-md">
+                  <span className="mr-3 flex h-8 w-8 items-center justify-center rounded-full bg-white text-[#07143b]">
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-5 w-5"
+                      fill="none"
+                      stroke="currentColor"
+                      strokeWidth="2.5"
+                      strokeLinecap="round"
+                    >
+                      <circle cx="10.5" cy="10.5" r="6.5" />
+                      <path d="m16 16 5 5" />
+                    </svg>
+                  </span>
+                  <input
+                    value={search}
+                    onChange={(event) => setSearch(event.target.value)}
+                    placeholder="Search anything..."
+                    className="min-w-0 flex-1 bg-transparent text-sm font-bold text-[#07143b] outline-none placeholder:text-[#71809c]"
+                  />
+                  <span className="rounded-md border border-[#d5deeb] bg-white/70 px-2 py-1 text-[10px] font-bold text-[#52627f]">
+                    Ctrl K
+                  </span>
+                </div>
+              </div>
+
+              <nav className="mt-6 flex-1 space-y-2 overflow-y-auto pr-1">
+                {filteredNavigation.map((item) => {
+                  const isDashboard = item.title === "Dashboard";
+
+                  const icon =
+                    item.title === "Dashboard"
+                      ? "?"
+                      : item.title === "ATS Check"
+                        ? "?"
+                        : item.title === "Resume Analysis"
+                          ? "?"
+                          : item.title === "Resume Builder"
+                            ? "?"
+                            : item.title === "Interview Kit"
+                              ? "?"
+                              : item.title === "Job Finder"
+                                ? "?"
+                                : "?";
+
+                  return (
+                    <button
+                      key={item.title}
+                      onClick={() => selectItem(item.title)}
+                      className={`group flex min-h-[72px] w-full items-center gap-4 rounded-2xl px-4 text-left transition ${
+                        isDashboard
+                          ? "bg-black text-white shadow-xl"
+                          : "bg-white/95 text-[#10285a] shadow-sm backdrop-blur-md hover:bg-white"
+                      }`}
+                    >
+                      <span
+                        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl ${
+                          isDashboard
+                            ? "bg-black text-white ring-1 ring-white/20"
+                            : "bg-[#e5efff] text-[#1769ff]"
+                        }`}
+                      >
+                        {item.title === "Dashboard" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+                            <path d="M3 10.8 12 3l9 7.8v9.2a1 1 0 0 1-1 1h-5.5v-6h-5v6H4a1 1 0 0 1-1-1v-9.2Z" />
+                          </svg>
+                        )}
+
+                        {item.title === "ATS Check" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <rect x="4" y="3" width="16" height="18" rx="2" />
+                            <path d="M8 7h8M8 11h5M8 15l2 2 5-5" />
+                          </svg>
+                        )}
+
+                        {item.title === "Resume Analysis" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M4 19V10M10 19V5M16 19v-8M22 19H2" />
+                          </svg>
+                        )}
+
+                        {item.title === "Resume Builder" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-current" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                            <path d="M4 4h11v16H4zM8 8h4M8 12h4M8 16h3" />
+                            <path d="m15 15 4-4 2 2-4 4-3 1z" />
+                          </svg>
+                        )}
+
+                        {item.title === "Interview Kit" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+                            <path d="M4 5h16v11H4zM9 19h6v2H9zM7 8h10v2H7zM7 12h7v2H7z" />
+                          </svg>
+                        )}
+
+                        {item.title === "Job Finder" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-none stroke-current" strokeWidth="2.4" strokeLinecap="round">
+                            <circle cx="10.5" cy="10.5" r="6.5" />
+                            <path d="m16 16 5 5" />
+                          </svg>
+                        )}
+
+                        {item.title === "Your Subscription" && (
+                          <svg viewBox="0 0 24 24" className="h-6 w-6 fill-current">
+                            <path d="m12 2 2.6 5.3 5.9.9-4.3 4.2 1 5.9-5.2-2.8-5.2 2.8 1-5.9-4.3-4.2 5.9-.9L12 2Z" />
+                          </svg>
+                        )}
+                      </span>
+
+                      <span className="min-w-0 flex-1">
+                        <span
+                          className={`block text-[15px] font-extrabold ${
+                            isDashboard ? "text-white" : "text-[#10285a]"
+                          }`}
+                        >
+                          {item.title}
+                        </span>
+                        <span
+                          className={`mt-1 block text-[11px] font-medium ${
+                            isDashboard ? "text-white/70" : "text-[#627493]"
+                          }`}
+                        >
+                          {item.title === "Dashboard"
+                            ? "Overview & insights"
+                            : item.title === "ATS Check"
+                              ? "Check and improve your resume"
+                              : item.title === "Resume Analysis"
+                                ? "Detailed feedback with insights"
+                                : item.title === "Resume Builder"
+                                  ? "Create professional resumes"
+                                  : item.title === "Interview Kit"
+                                    ? "Practice and get prepared"
+                                    : item.title === "Job Finder"
+                                      ? "Find your next opportunity"
+                                      : "Manage your plan & benefits"}
+                        </span>
+                      </span>
+
+                      <span
+                        className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full ${
+                          isDashboard
+                            ? "bg-black text-white"
+                            : "bg-white text-[#07143b] shadow-sm"
+                        }`}
+                      >
+                        <svg
+                          viewBox="0 0 24 24"
+                          className="h-5 w-5"
+                          fill="none"
+                          stroke="currentColor"
+                          strokeWidth="2.8"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        >
+                          <path d="m9 5 7 7-7 7" />
+                        </svg>
+                      </span>
+                    </button>
+                  );
+                })}
+              </nav>
+
+              <div className="mt-5 rounded-2xl border border-white/60 bg-[#07143b]/90 p-4 text-white shadow-xl backdrop-blur-md">
+                <div className="flex items-center gap-3">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-full border border-white/40 bg-black text-lg font-black">
+                    {(user.full_name || "N").charAt(0).toUpperCase()}
+                  </div>
+                  <div className="min-w-0">
+                    <p className="truncate text-sm font-extrabold">
+                      Hi, {user.full_name || "Nirgun"}
+                    </p>
+                    <p className="mt-1 text-xs text-white/70">
+                      Keep Moving Forward
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </aside>
         </div>
