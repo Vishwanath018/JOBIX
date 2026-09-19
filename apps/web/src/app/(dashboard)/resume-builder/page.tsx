@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import Image from "next/image";
 import { useRouter } from "next/navigation";
@@ -7,13 +7,13 @@ export default function ResumeBuilderPage() {
   const router = useRouter();
 
   return (
-    <main className="min-h-screen bg-[#f7faff] text-[#10245b]">
-      <header className="h-[76px] border-b border-[#dfe7f2] bg-white">
-        <div className="mx-auto flex h-full max-w-[1500px] items-center justify-between px-8">
+    <main className="min-h-screen bg-[#edf4ff] text-[#10245b]" style={{ backgroundImage: 'url("/resume1.png")', backgroundSize: "cover", backgroundPosition: "center top", backgroundAttachment: "fixed" }}>
+      <header className="absolute left-0 right-0 top-0 z-30 h-[76px] bg-transparent [&_img]:hidden">
+        <div className="relative z-10 mx-auto flex h-full max-w-[1500px] items-center justify-between px-8">
           <button
             type="button"
             onClick={() => router.push("/home")}
-            className="flex items-center gap-3"
+            className="flex items-center gap-3 rounded-2xl bg-transparent px-2 py-1"
           >
             <Image
               src="/jobix-logo.png"
@@ -21,35 +21,26 @@ export default function ResumeBuilderPage() {
               width={52}
               height={52}
               priority
-              className="h-[46px] w-[46px] rounded-[11px] object-contain"
+              className="h-[46px] w-[46px] rounded-[11px] object-contain drop-shadow-lg"
             />
 
-            <div className="flex flex-col leading-none">
-              <span className="text-[25px] font-extrabold tracking-[-0.04em] text-[#10245b]">
-                JOBIX
-              </span>
-              <span className="mt-[3px] text-[10px] font-semibold tracking-[0.28em] text-[#7183a3]">
-                CAREER
-              </span>
-            </div>
+            
           </button>
 
           <button
             type="button"
             onClick={() => router.push("/home")}
-            className="rounded-xl border border-[#cfdced] bg-white px-5 py-2.5 text-[15px] font-bold text-[#10245b] transition hover:border-[#1768ed] hover:text-[#1768ed]"
+            className="rounded-xl border border-white/60 bg-white/15 px-5 py-2.5 text-[15px] font-bold text-white shadow-lg backdrop-blur-md transition hover:bg-white/25"
           >
             ← Dashboard
           </button>
         </div>
       </header>
 
-      <section className="relative min-h-[calc(100vh-76px)] overflow-hidden">
-        <div className="pointer-events-none absolute -left-28 -top-28 h-72 w-72 rounded-full bg-[#e9f2ff]" />
-        <div className="pointer-events-none absolute -right-36 top-[310px] h-80 w-80 rounded-full bg-[#eef6ff]" />
-        <div className="pointer-events-none absolute -bottom-44 -left-20 h-80 w-80 rounded-full bg-[#edf8f3]" />
+      <section className="relative min-h-[calc(100vh-76px)] overflow-hidden bg-cover bg-center bg-no-repeat">
+        
 
-        <div className="relative mx-auto max-w-[1040px] px-6 pb-8 pt-6">
+        <div className="relative z-10 mx-auto max-w-[1040px] px-6 pb-8 pt-6">
           <div className="text-center">
             <div className="inline-flex rounded-full bg-[#e8f0ff] px-5 py-2 text-[14px] font-bold tracking-[0.08em] text-[#1768ed]">
               RESUME BUILDER
