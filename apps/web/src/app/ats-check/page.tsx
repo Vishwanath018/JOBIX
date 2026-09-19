@@ -533,7 +533,7 @@ export default function AtsCheckPage() {
                 ref={inputRef}
                 type="file"
                 hidden
-                accept=".pdf,.docx,.txt"
+                accept=".pdf,.docx,.txt,.png,.jpg,.jpeg,.zip"
                 onChange={(e) => {
                   e.stopPropagation();
                   selectFile(e.target.files?.[0] || null);

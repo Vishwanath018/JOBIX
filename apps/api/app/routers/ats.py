@@ -1,6 +1,8 @@
+import asyncio
 from typing import Any
 import json
 import re
+from json_repair import repair_json
 from io import BytesIO
 
 import requests
@@ -10,6 +12,7 @@ from pydantic import BaseModel, Field
 from pypdf import PdfReader
 import fitz
 
+from app.services.document_reader import extract_resume_text as extract_uploaded_resume
 from app.core.config import settings
 from app.core.security import get_current_user
 from app.models.user import User
@@ -137,59 +140,26 @@ def extract_txt(file: UploadFile) -> str:
         )
 
 
-def extract_resume_text(file: UploadFile) -> str:
-    filename = (file.filename or "").lower()
-
-    if filename.endswith(".pdf"):
-        text = extract_pdf(file)
-    elif filename.endswith(".docx"):
-        text = extract_docx(file)
-    elif filename.endswith(".txt"):
-        text = extract_txt(file)
-    else:
-        raise HTTPException(
-            status_code=400,
-            detail="Only PDF, DOCX, and TXT resumes are supported.",
-        )
-
-    text = re.sub(r"[ \t]+", " ", text)
-    text = re.sub(r"\n{3,}", "\n\n", text).strip()
-
-    if len(text) < 120:
-        raise HTTPException(
-            status_code=400,
-            detail="The uploaded resume does not contain enough readable text.",
-        )
-
-    return text[:MAX_RESUME_TEXT]
-
 
 def build_schema() -> dict[str, Any]:
     item_schema = {
         "type": "object",
         "properties": {
-            "title": {"type": "string"},
-            "explanation": {"type": "string"},
+            "title": {"type": "string", "maxLength": 80},
+            "explanation": {"type": "string", "maxLength": 180},
         },
-        "required": [
-            "title",
-            "explanation",
-        ],
+        "required": ["title", "explanation"],
         "additionalProperties": False,
     }
 
     improvement_schema = {
         "type": "object",
         "properties": {
-            "title": {"type": "string"},
-            "explanation": {"type": "string"},
-            "priority": {"type": "string"},
+            "title": {"type": "string", "maxLength": 80},
+            "explanation": {"type": "string", "maxLength": 180},
+            "priority": {"type": "string", "maxLength": 20},
         },
-        "required": [
-            "title",
-            "explanation",
-            "priority",
-        ],
+        "required": ["title", "explanation", "priority"],
         "additionalProperties": False,
     }
 
@@ -201,41 +171,69 @@ def build_schema() -> dict[str, Any]:
                 "minimum": 0,
                 "maximum": 100,
             },
-            "score_label": {"type": "string"},
+            "score_label": {
+                "type": "string",
+                "maxLength": 30,
+            },
             "role_match_score": {
                 "type": "integer",
                 "minimum": 0,
                 "maximum": 100,
             },
-            "role": {"type": "string"},
-            "summary": {"type": "string"},
+            "role": {
+                "type": "string",
+                "maxLength": 80,
+            },
+            "summary": {
+                "type": "string",
+                "maxLength": 300,
+            },
             "strengths": {
                 "type": "array",
+                "maxItems": 5,
                 "items": item_schema,
             },
             "missing_fields": {
                 "type": "array",
+                "maxItems": 4,
                 "items": item_schema,
             },
             "improvements": {
                 "type": "array",
+                "maxItems": 6,
                 "items": improvement_schema,
             },
             "keyword_gaps": {
                 "type": "array",
-                "items": {"type": "string"},
+                "maxItems": 6,
+                "items": {
+                    "type": "string",
+                    "maxLength": 50,
+                },
             },
             "matched_keywords": {
                 "type": "array",
-                "items": {"type": "string"},
+                "maxItems": 18,
+                "items": {
+                    "type": "string",
+                    "maxLength": 50,
+                },
             },
             "formatting_issues": {
                 "type": "array",
-                "items": {"type": "string"},
+                "maxItems": 5,
+                "items": {
+                    "type": "string",
+                    "maxLength": 120,
+                },
             },
             "action_plan": {
                 "type": "array",
-                "items": {"type": "string"},
+                "maxItems": 6,
+                "items": {
+                    "type": "string",
+                    "maxLength": 120,
+                },
             },
         },
         "required": [
@@ -255,19 +253,21 @@ def build_schema() -> dict[str, Any]:
         "additionalProperties": False,
     }
 
-
 def build_prompt(
     resume_text: str,
     job_role: str,
     job_description: str,
 ) -> str:
     role = job_role.strip() or "Infer the best target role from the resume."
-    jd = job_description.strip() or "No job description supplied. Evaluate against the target role."
+    jd = (
+        job_description.strip()
+        or "No job description supplied. Evaluate against the target role."
+    )
 
     return f"""
 You are JOBIX ATS.
 
-Analyze this resume for the target role.
+Analyze the resume for the target role.
 
 TARGET ROLE:
 {role}
@@ -277,8 +277,6 @@ JOB DESCRIPTION:
 
 RESUME:
 {resume_text}
-
-Return a realistic ATS dashboard analysis.
 
 Evaluate:
 - ATS readability
@@ -295,31 +293,20 @@ Evaluate:
 - formatting
 - recruiter readability
 
-STRICT OUTPUT LIMITS:
-- strengths: maximum 5
-- missing_fields: maximum 4
-- improvements: maximum 6
-- keyword_gaps: maximum 6
-- matched_keywords: maximum 18
-- formatting_issues: maximum 5
-- action_plan: maximum 6
-- Every explanation must be 20 words or fewer.
-- Every action_plan item must be 18 words or fewer.
-- Every keyword must be short.
-- Keep summary under 45 words.
-
-IMPORTANT:
+Rules:
 - Use only information actually present in the resume.
-- Never invent experience, skills, employers, certifications, metrics or technologies.
+- Never invent employers, experience, skills, certifications, metrics or technologies.
 - matched_keywords must exist in the resume.
-- keyword_gaps must be relevant to the selected role or supplied job description.
+- keyword_gaps must relate to the target role or job description.
 - missing_fields must identify genuinely missing or weak information.
-- strengths must contain evidence from the resume.
+- strengths must be supported by the resume.
 - improvements must be practical.
 - Scores must be realistic.
+- Keep summary concise.
+- Keep explanations concise.
 - Return every required field.
 - Empty arrays are allowed.
-- Return ONLY valid JSON.
+- Return ONLY the requested JSON object.
 """.strip()
 
 def parse_content(content: Any) -> str:
@@ -357,49 +344,57 @@ def parse_json_text(text: str) -> dict[str, Any]:
         raise ValueError("Sarvam returned an empty response.")
 
     if cleaned.startswith("```"):
-        cleaned = cleaned.replace("```json", "", 1).replace("```", "", 1).strip()
+        lines = cleaned.splitlines()
+
+        if lines and lines[0].strip().startswith("```"):
+            lines = lines[1:]
+
+        if lines and lines[-1].strip() == "```":
+            lines = lines[:-1]
+
+        cleaned = "\n".join(lines).strip()
 
     try:
         parsed = json.loads(cleaned)
 
-        if not isinstance(parsed, dict):
-            raise ValueError("Sarvam response JSON is not an object.")
+        if isinstance(parsed, dict):
+            return parsed
+    except json.JSONDecodeError:
+        pass
 
-        return parsed
-    except json.JSONDecodeError as first_error:
-        decoder = json.JSONDecoder()
+    first = cleaned.find("{")
+    last = cleaned.rfind("}")
+
+    if first >= 0 and last > first:
+        candidate = cleaned[first:last + 1]
 
         try:
-            parsed, _ = decoder.raw_decode(cleaned)
+            parsed = json.loads(candidate)
 
             if isinstance(parsed, dict):
                 return parsed
         except json.JSONDecodeError:
             pass
 
-        repaired = cleaned
-
-        if repaired.count("{") > repaired.count("}"):
-            repaired += "}" * (
-                repaired.count("{") - repaired.count("}")
-            )
-
-        if repaired.count("[") > repaired.count("]"):
-            repaired += "]" * (
-                repaired.count("[") - repaired.count("]")
-            )
-
         try:
+            repaired = repair_json(candidate)
             parsed = json.loads(repaired)
 
             if isinstance(parsed, dict):
                 return parsed
-        except json.JSONDecodeError:
+        except Exception:
             pass
 
-        raise ValueError(
-            f"Sarvam returned an ATS response that JOBIX could not parse: {first_error}"
-        )
+    try:
+        repaired = repair_json(cleaned)
+        parsed = json.loads(repaired)
+
+        if isinstance(parsed, dict):
+            return parsed
+    except Exception:
+        pass
+
+    raise ValueError("Sarvam returned malformed JSON.")
 
 def normalize_result(
     data: dict[str, Any],
@@ -643,9 +638,9 @@ def call_sarvam(
                 ),
             },
         ],
-        "temperature": 0.1,
+        "temperature": 0.0,
         "reasoning_effort": None,
-        "max_tokens": 3000,
+        "max_tokens": 4096,
         "response_format": response_format,
     }
 
@@ -734,7 +729,6 @@ def analyze_with_sarvam(
     job_role: str,
     job_description: str,
 ) -> AtsResult:
-
     schema_format = {
         "type": "json_schema",
         "json_schema": {
@@ -751,47 +745,52 @@ def analyze_with_sarvam(
         schema_format,
     )
 
-    if not content:
+    if content:
+        try:
+            data = parse_json_text(content)
 
-        fallback_format = {
-            "type": "json_object",
-        }
+            return normalize_result(
+                data,
+                job_role,
+            )
+        except Exception:
+            pass
 
-        content, metadata = call_sarvam(
-            resume_text,
-            job_role,
-            job_description,
-            fallback_format,
-        )
+    fallback_format = {
+        "type": "json_object",
+    }
 
-    if not content:
+    fallback_content, fallback_metadata = call_sarvam(
+        resume_text,
+        job_role,
+        job_description,
+        fallback_format,
+    )
 
-        raise HTTPException(
-            status_code=502,
-            detail=(
-                "Sarvam returned an empty ATS response. "
-                f"finish_reason="
-                f"{metadata.get('finish_reason') or 'unknown'}."
-            ),
-        )
+    if fallback_content:
+        try:
+            data = parse_json_text(fallback_content)
 
-    try:
-        data = parse_json_text(content)
+            return normalize_result(
+                data,
+                job_role,
+            )
+        except Exception:
+            pass
 
-        return normalize_result(
-            data,
-            job_role,
-        )
+    finish_reason = (
+        fallback_metadata.get("finish_reason")
+        or metadata.get("finish_reason")
+        or "unknown"
+    )
 
-    except Exception as exc:
-
-        raise HTTPException(
-            status_code=502,
-            detail=(
-                "Sarvam returned an ATS response "
-                f"that JOBIX could not parse: {exc}"
-            ),
-        )
+    raise HTTPException(
+        status_code=502,
+        detail=(
+            "JOBIX could not parse the ATS response from Sarvam. "
+            f"finish_reason={finish_reason}."
+        ),
+    )
 
 
 @router.post(
@@ -804,6 +803,27 @@ async def check_resume(
     job_description: str = Form(""),
     current_user: User = Depends(get_current_user),
 ):
+    original_filename = resume.filename or "resume"
+    original_content_type = resume.content_type or ""
+    original_bytes = await resume.read()
+
+    try:
+        extracted_resume_text = await asyncio.to_thread(
+            extract_uploaded_resume,
+            original_filename,
+            original_bytes,
+            original_content_type,
+        )
+    except ValueError as exc:
+        raise HTTPException(
+            status_code=status.HTTP_422_UNPROCESSABLE_ENTITY,
+            detail=str(exc),
+        )
+
+    resume.file = BytesIO(
+        extracted_resume_text.encode("utf-8")
+    )
+    resume.filename = "resume.txt"
 
     if not resume.filename:
         raise HTTPException(
@@ -827,9 +847,7 @@ async def check_resume(
 
     resume.file = BytesIO(file_data)
 
-    resume_text = extract_resume_text(
-        resume,
-    )
+    resume_text = extracted_resume_text
 
     jd = job_description.strip()[:MAX_JOB_DESCRIPTION]
 
