@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 function Arrow() {
   return (
@@ -32,16 +35,14 @@ function Logo() {
 }
 
 export default function Home() {
-  return (
+return (
     <main className="relative min-h-screen overflow-hidden bg-white text-[#07143b]">
 
-      {/* Background decoration */}
       <div className="pointer-events-none absolute -left-[430px] top-[100px] h-[850px] w-[850px] rounded-full bg-[#e5f1ff]" />
       <div className="pointer-events-none absolute -right-[430px] top-[100px] h-[850px] w-[850px] rounded-full bg-[#e5f1ff]" />
       <div className="pointer-events-none absolute -left-[250px] top-[590px] h-[390px] w-[760px] rotate-[19deg] rounded-[50%] bg-[#f1f7ff]" />
       <div className="pointer-events-none absolute -right-[250px] top-[590px] h-[390px] w-[760px] -rotate-[19deg] rounded-[50%] bg-[#f1f7ff]" />
 
-      {/* Header */}
       <header className="relative z-30 border-b border-slate-100 bg-white/95 backdrop-blur">
         <div className="mx-auto flex h-[112px] max-w-[1450px] items-center justify-between px-8 lg:px-12">
 
@@ -49,7 +50,6 @@ export default function Home() {
             <Logo />
           </Link>
 
-          {/* Navigation */}
           <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-10 md:flex">
             <Link
               href="/"
@@ -81,7 +81,6 @@ export default function Home() {
             </a>
           </nav>
 
-          {/* Header buttons Ã¢â‚¬â€ EXACT SAME SIZE */}
           <div className="ml-auto flex items-center gap-4">
 
             <Link
@@ -104,40 +103,40 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero */}
-      <section className="relative z-10 min-h-[calc(100vh-112px)]">
+      <section className="relative z-10 min-h-[calc(100vh-112px)] overflow-hidden">
 
-        <div className="mx-auto flex max-w-[1100px] flex-col items-center px-6 pb-20 pt-[105px] text-center">
+        <div className="absolute inset-0 bg-gradient-to-r from-[#07143b]/85 via-[#07143b]/65 to-[#07143b]/25" />
 
-          <p className="text-[22px] font-medium tracking-tight text-slate-400">
+        <div className="relative z-10 mx-auto flex min-h-[calc(100vh-112px)] max-w-[1100px] flex-col items-center px-6 pb-20 pt-[105px] text-center">
+
+          <p className="text-[22px] font-medium tracking-tight text-white/80">
             Your Career, Smarter.
           </p>
 
           <h1 className="mt-6 text-[55px] font-extrabold leading-[1.06] tracking-[-2.8px] md:text-[68px]">
-            <span className="text-[#07143b]">
+            <span className="text-white">
               Better Resumes.
             </span>
             <br />
-            <span className="text-blue-600">
+            <span className="text-blue-300">
               Brighter
             </span>{" "}
-            <span className="text-[#07143b]">
+            <span className="text-white">
               Opportunities.
             </span>
           </h1>
 
-          <p className="mt-7 max-w-[790px] text-[19px] leading-8 text-slate-500 md:text-[21px]">
+          <p className="mt-7 max-w-[790px] text-[19px] leading-8 text-white/75 md:text-[21px]">
             Analyze your resume, get AI-powered insights, find relevant jobs,
             <br className="hidden md:block" />
             and take the next step in your career with JOBIX.
           </p>
 
-          {/* Middle buttons Ã¢â‚¬â€ EXACT SAME SIZE */}
           <div className="mt-10 flex w-full flex-col items-center justify-center gap-4 sm:flex-row">
 
             <Link
               href="/signup"
-              className="flex h-[64px] w-[225px] min-w-[225px] items-center justify-center gap-4 rounded-2xl bg-blue-600 text-[20px] font-bold text-white shadow-xl shadow-blue-200 transition hover:-translate-y-1 hover:bg-blue-700"
+              className="flex h-[64px] w-[225px] min-w-[225px] items-center justify-center gap-4 rounded-2xl bg-blue-600 text-[20px] font-bold text-white shadow-xl shadow-blue-950/30 transition hover:-translate-y-1 hover:bg-blue-700"
             >
               <Arrow />
               <span>Sign Up</span>
@@ -145,7 +144,7 @@ export default function Home() {
 
             <Link
               href="/login"
-              className="flex h-[64px] w-[225px] min-w-[225px] items-center justify-center gap-4 rounded-2xl border-2 border-blue-600 bg-white text-[20px] font-bold text-blue-600 transition hover:-translate-y-1 hover:bg-blue-50"
+              className="flex h-[64px] w-[225px] min-w-[225px] items-center justify-center gap-4 rounded-2xl border-2 border-white/80 bg-white/10 text-[20px] font-bold text-white backdrop-blur-sm transition hover:-translate-y-1 hover:bg-white/20"
             >
               <Arrow />
               <span>Login</span>
@@ -153,34 +152,33 @@ export default function Home() {
 
           </div>
 
-          {/* Features */}
           <div
             id="features"
             className="mt-20 grid w-full grid-cols-1 gap-8 md:grid-cols-3"
           >
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm">
-              <h2 className="text-xl font-extrabold">
+            <div className="rounded-3xl border border-white/20 bg-white/10 p-6 shadow-sm backdrop-blur-md">
+              <h2 className="text-xl font-extrabold text-white">
                 Smarter Applications
               </h2>
-              <p className="mt-2 text-slate-500">
+              <p className="mt-2 text-white/70">
                 Build stronger applications with intelligent career tools.
               </p>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm">
-              <h2 className="text-xl font-extrabold">
+            <div className="rounded-3xl border border-white/20 bg-white/10 p-6 shadow-sm backdrop-blur-md">
+              <h2 className="text-xl font-extrabold text-white">
                 Career Intelligence
               </h2>
-              <p className="mt-2 text-slate-500">
+              <p className="mt-2 text-white/70">
                 Turn your experience into actionable career insights.
               </p>
             </div>
 
-            <div className="rounded-3xl border border-slate-200 bg-white/80 p-6 shadow-sm">
-              <h2 className="text-xl font-extrabold">
+            <div className="rounded-3xl border border-white/20 bg-white/10 p-6 shadow-sm backdrop-blur-md">
+              <h2 className="text-xl font-extrabold text-white">
                 One Career Workspace
               </h2>
-              <p className="mt-2 text-slate-500">
+              <p className="mt-2 text-white/70">
                 Keep your career journey organized in one place.
               </p>
             </div>
@@ -189,7 +187,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How It Works */}
       <section
         id="how-it-works"
         className="relative z-10 border-t border-slate-100 bg-slate-50 px-6 py-24"
@@ -210,7 +207,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About */}
       <section
         id="about"
         className="relative z-10 bg-white px-6 py-24"

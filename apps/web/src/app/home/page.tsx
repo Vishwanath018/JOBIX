@@ -3,6 +3,13 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 
+const heroImages = [
+  "/hero/1.png",
+  "/hero/2.png",
+  "/hero/3.png",
+  "/hero/4.png",
+];
+
 const navigation = [
   { title: "Dashboard", icon: "⌂" },
   { title: "ATS Check", icon: "✓" },
@@ -18,11 +25,20 @@ export default function HomePage() {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const [profileOpen, setProfileOpen] = useState(false);
   const [search, setSearch] = useState("");
+  const [activeImage, setActiveImage] = useState(0);
 
   const [user, setUser] = useState<{
     full_name?: string;
     email?: string;
   }>({});
+
+  useEffect(() => {
+    const timer = window.setInterval(() => {
+      setActiveImage((current) => (current + 1) % heroImages.length);
+    }, 3000);
+
+    return () => window.clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     try {
@@ -202,20 +218,32 @@ export default function HomePage() {
         </div>
       )}
 
-      <section className="mx-auto max-w-7xl px-5 py-10 md:px-8 md:py-14">
-        <div className="overflow-hidden rounded-[30px] bg-[#07143b] px-7 py-10 text-white shadow-xl md:px-12 md:py-14">
-          <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#7fb0ff]">
-            Welcome to JOBIX
-          </p>
-
-          <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
-            Build your career smarter.
-          </h1>
-
-          <p className="mt-4 max-w-2xl text-base leading-7 text-[#c9d5ea]">
-            Create stronger resumes, improve your applications and prepare for
-            your next opportunity with JOBIX.
-          </p>
+      <section className="mx-auto max-w-[1600px] px-5 py-10 md:px-8 md:py-14">
+        <div className="relative min-h-[360px] overflow-hidden rounded-[30px] bg-[#07143b] text-white shadow-xl">
+          {heroImages.map((image, index) => (
+            <img
+              key={image}
+              src={image}
+              alt=""
+              aria-hidden="true"
+              className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
+                activeImage === index ? "opacity-100" : "opacity-0"
+              }`}
+            />
+          ))}
+          <div className="absolute inset-0 bg-[#07143b]/65" />
+          <div className="relative z-10 px-7 py-10 md:px-12 md:py-14">
+            <p className="text-sm font-bold uppercase tracking-[0.15em] text-[#7fb0ff]">
+              Welcome to JOBIX
+            </p>
+            <h1 className="mt-3 max-w-3xl text-4xl font-extrabold tracking-tight md:text-5xl">
+              Build your career smarter.
+            </h1>
+            <p className="mt-4 max-w-2xl text-base leading-7 text-[#c9d5ea]">
+              Create stronger resumes, improve your applications and prepare for
+              your next opportunity with JOBIX.
+            </p>
+          </div>
         </div>
 
         <div className="mt-10">
