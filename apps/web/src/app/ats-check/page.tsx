@@ -303,12 +303,19 @@ export default function AtsCheckPage() {
 
     const name = file.name.toLowerCase();
 
-    if (
-      !name.endsWith(".pdf") &&
-      !name.endsWith(".docx") &&
-      !name.endsWith(".txt")
-    ) {
-      setError("Please upload a PDF, DOCX, or TXT resume.");
+    const supported =
+      name.endsWith(".pdf") ||
+      name.endsWith(".docx") ||
+      name.endsWith(".txt") ||
+      name.endsWith(".png") ||
+      name.endsWith(".jpg") ||
+      name.endsWith(".jpeg") ||
+      name.endsWith(".zip");
+
+    if (!supported) {
+      setError(
+        "Please upload a PDF, DOCX, TXT, PNG, JPG, JPEG, or ZIP resume."
+      );
       return;
     }
 
@@ -608,7 +615,7 @@ export default function AtsCheckPage() {
                   </button>
 
                   <div className="mt-3 text-[11px] font-semibold text-[#8291a7]">
-                    PDF, DOCX or TXT ? Maximum 10 MB
+                    PDF, DOCX, TXT, PNG, JPG, JPEG or ZIP ? Maximum 10 MB
                   </div>
                 </>
               )}

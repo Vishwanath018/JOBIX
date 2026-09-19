@@ -2745,6 +2745,7 @@ export default function ResumeEditorPage() {
   const [activeSection, setActiveSection] = useState("contacts");
   const [previewZoom, setPreviewZoom] = useState(106);
   const [saved, setSaved] = useState(false);
+  const [exportingPdf, setExportingPdf] = useState(false);
   const [previewOnly, setPreviewOnly] = useState(false);
   const [data, setData] = useState<ResumeData>(defaultData);
 
@@ -2870,6 +2871,70 @@ export default function ResumeEditorPage() {
     router.push(
       `/resume-builder/preview?template=${template}&mode=${mode}`
     );
+  };
+
+  const exportPdf = async () => {
+    if (exportingPdf) return;
+
+    setExportingPdf(true);
+
+    try {
+      sessionStorage.setItem(
+        "jobix_resume_builder_data",
+        JSON.stringify(data)
+      );
+
+      sessionStorage.setItem(
+        "jobix_resume_builder_template",
+        template
+      );
+
+      const response = await fetch("/api/resume-builder/pdf", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          resumeData: data,
+          template,
+          mode
+        })
+      });
+
+      if (!response.ok) {
+        const payload = await response.json().catch(() => null);
+        throw new Error(
+          payload?.message ||
+          payload?.error ||
+          "PDF export failed."
+        );
+      }
+
+      const blob = await response.blob();
+
+      if (!blob.size) {
+        throw new Error("The generated PDF is empty.");
+      }
+
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+
+      link.href = url;
+      link.download = "JOBIX-Resume.pdf";
+      document.body.appendChild(link);
+      link.click();
+      link.remove();
+
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    } catch (error) {
+      window.alert(
+        error instanceof Error
+          ? error.message
+          : "PDF export failed."
+      );
+    } finally {
+      setExportingPdf(false);
+    }
   };
 
   const nextSection = () => {
@@ -4018,6 +4083,15 @@ export default function ResumeEditorPage() {
               }
             >
               Change Template
+            </button>
+
+            <button
+              type="button"
+              className="jb-action"
+              onClick={exportPdf}
+              disabled={exportingPdf}
+            >
+              {exportingPdf ? "Exporting..." : "Export PDF"}
             </button>
 
             <button
