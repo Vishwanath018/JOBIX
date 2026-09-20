@@ -628,3 +628,39 @@ body {
     padding: 0 10px;
   }
 }
+
+/* JOBIX Interview Kit - final positioning override */
+
+.interview-dashboard-button {
+  position: absolute !important;
+  top: 22px !important;
+  right: 28px !important;
+  left: auto !important;
+  z-index: 20 !important;
+}
+
+.interview-hero-progress {
+  position: absolute !important;
+  right: 34px !important;
+  top: 50% !important;
+  bottom: auto !important;
+  transform: translateY(-50%) !important;
+  width: 420px !important;
+  padding: 28px !important;
+}
+
+@media (max-width: 900px) {
+  .interview-dashboard-button {
+    top: 18px !important;
+    right: 18px !important;
+    left: auto !important;
+  }
+
+  .interview-hero-progress {
+    width: 320px !important;
+    top: auto !important;
+    bottom: 18px !important;
+    transform: none !important;
+  }
+}
+
