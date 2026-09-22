@@ -597,7 +597,7 @@ export default function InterviewKitPage() {
                     {company}
                   </p>
                   <p className="mt-1 text-[11px] font-medium text-[#71819b]">
-                    {count} practice questions
+                    DSA Interview Preparation
                   </p>
                 </div>
 

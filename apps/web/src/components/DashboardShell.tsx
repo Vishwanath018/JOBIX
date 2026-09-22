@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { useEffect, useState } from "react";
 import { usePathname, useRouter } from "next/navigation";
@@ -216,10 +216,9 @@ export default function DashboardShell({
                   const dashboard = title === "Dashboard";
 
                   return (
-                    <button
-                      type="button"
+                    <a
+                      href={path}
                       key={title}
-                      onClick={() => navigate(path)}
                       className={`group flex min-h-[72px] w-full items-center gap-4 rounded-2xl px-4 text-left transition ${
                         active
                           ? "bg-black text-white shadow-xl"
@@ -273,7 +272,7 @@ export default function DashboardShell({
                           <path d="m9 5 7 7-7 7" />
                         </svg>
                       </span>
-                    </button>
+                    </a>
                   );
                 })}
               </nav>
