@@ -16,6 +16,7 @@ export type DsaQuestion = {
   tags: string[];
   description: string;
   examples: DsaExample[];
+  constraints?: string[];
   leetcodeUrl: string;
   companies: string[];
 };
