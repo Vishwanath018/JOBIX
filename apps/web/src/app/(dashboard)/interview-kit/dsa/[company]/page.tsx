@@ -4,6 +4,7 @@ import { useMemo, useState } from "react";
 import { ArrowLeft, ArrowRight, Search } from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import CompanyLogo from "../../company-logo";
+import CompanyHero from "../../company-hero";
 import { companies } from "../../companies-data";
 import {
   dsaQuestions,
@@ -226,28 +227,10 @@ export default function CompanyDsaPage() {
           All companies
         </button>
 
-        <section className="rounded-[30px] bg-[#07143b] p-8 text-white shadow-[0_18px_50px_rgba(7,20,59,0.14)]">
-          <div className="flex flex-col gap-5 md:flex-row md:items-center">
-            <CompanyLogo
-              name={company.name}
-              slug={company.logo}
-            />
-
-            <div>
-              <p className="text-[11px] font-black tracking-[0.18em] text-[#71a9ff]">
-                DSA COMPANY PREPARATION
-              </p>
-
-              <h1 className="mt-2 text-3xl font-black md:text-4xl">
-                {company.name} DSA Questions
-              </h1>
-
-              <p className="mt-2 text-sm font-medium text-white/60">
-                Practice DSA questions organized by difficulty and topic.
-              </p>
-            </div>
-          </div>
-        </section>
+        <CompanyHero
+          company={company.name}
+          slug={params.company}
+        />
 
         <section className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {statCards.map(([label, count]) => (
