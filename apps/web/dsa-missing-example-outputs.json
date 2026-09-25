@@ -1,0 +1,1574 @@
+[
+  {
+    "id": "actors-and-directors-who-cooperated-at-least-three-times",
+    "title": "Actors and Directors Who Cooperated At Least Three Times",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| actor_id    | int     |\n| director_id | int     |\n| timestamp   | int     |\n+-------------+---------+\ntimestamp is the primary key (column with unique values) for this table."
+  },
+  {
+    "id": "all-o-one-data-structure",
+    "title": "All O`one Data Structure",
+    "example": 1,
+    "input": "Input\n[\"AllOne\", \"inc\", \"inc\", \"getMaxKey\", \"getMinKey\", \"inc\", \"getMaxKey\", \"getMinKey\"]\n[[], [\"hello\"], [\"hello\"], [], [], [\"leet\"], [], []]\nOutput\n[null, null, null, \"hello\", \"hello\", null, \"hello\", \"leet\"]\nExplanation\nAllOne allOne = new AllOne();\nallOne.inc(\"hello\");\nallOne.inc(\"hello\");\nallOne.getMaxKey(); // return \"hello\"\nallOne.getMinKey(); // return \"hello\"\nallOne.inc(\"leet\");\nallOne.getMaxKey(); // return \"hello\"\nallOne.getMinKey(); // return \"leet\""
+  },
+  {
+    "id": "analyze-organization-hierarchy",
+    "title": "Analyze Organization Hierarchy",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    | \n+----------------+---------+\n| employee_id    | int     |\n| employee_name  | varchar |\n| manager_id     | int     |\n| salary         | int     |\n| department     | varchar |\n+----------------+----------+\nemployee_id is the unique key for this table.\nEach row contains information about an employee, including their ID, name, their manager's ID, salary, and department.\nmanager_id is null for the top-level manager (CEO)."
+  },
+  {
+    "id": "analyze-organization-hierarchy",
+    "title": "Analyze Organization Hierarchy",
+    "example": 2,
+    "input": "+-------------+---------------+------------+--------+-------------+\n| employee_id | employee_name | manager_id | salary | department  |\n+-------------+---------------+------------+--------+-------------+\n| 1           | Alice         | null       | 12000  | Executive   |\n| 2           | Bob           | 1          | 10000  | Sales       |\n| 3           | Charlie       | 1          | 10000  | Engineering |\n| 4           | David         | 2          | 7500   | Sales       |\n| 5           | Eva           | 2          | 7500   | Sales       |\n| 6           | Frank         | 3          | 9000   | Engineering |\n| 7           | Grace         | 3          | 8500   | Engineering |\n| 8           | Hank          | 4          | 6000   | Sales       |\n| 9           | Ivy           | 6          | 7000   | Engineering |\n| 10          | Judy          | 6          | 7000   | Engineering |\n+-------------+---------------+------------+--------+-------------+"
+  },
+  {
+    "id": "analyze-organization-hierarchy",
+    "title": "Analyze Organization Hierarchy",
+    "example": 3,
+    "input": "+-------------+---------------+-------+-----------+--------+\n| employee_id | employee_name | level | team_size | budget |\n+-------------+---------------+-------+-----------+--------+\n| 1           | Alice         | 1     | 9         | 84500  |\n| 3           | Charlie       | 2     | 4         | 41500  |\n| 2           | Bob           | 2     | 3         | 31000  |\n| 6           | Frank         | 3     | 2         | 23000  |\n| 4           | David         | 3     | 1         | 13500  |\n| 7           | Grace         | 3     | 0         | 8500   |\n| 5           | Eva           | 3     | 0         | 7500   |\n| 9           | Ivy           | 4     | 0         | 7000   |\n| 10          | Judy          | 4     | 0         | 7000   |\n| 8           | Hank          | 4     | 0         | 6000   |\n+-------------+---------------+-------+-----------+--------+"
+  },
+  {
+    "id": "analyze-subscription-conversion",
+    "title": "Analyze Subscription Conversion",
+    "example": 1,
+    "input": "+------------------+---------+\n| Column Name      | Type    | \n+------------------+---------+\n| user_id          | int     |\n| activity_date    | date    |\n| activity_type    | varchar |\n| activity_duration| int     |\n+------------------+---------+\n(user_id, activity_date, activity_type) is the unique key for this table.\nactivity_type is one of ('free_trial', 'paid', 'cancelled').\nactivity_duration is the number of minutes the user spent on the platform that day.\nEach row represents a user's activity on a specific date."
+  },
+  {
+    "id": "analyze-subscription-conversion",
+    "title": "Analyze Subscription Conversion",
+    "example": 2,
+    "input": "+---------+---------------+---------------+-------------------+\n| user_id | activity_date | activity_type | activity_duration |\n+---------+---------------+---------------+-------------------+\n| 1       | 2023-01-01    | free_trial    | 45                |\n| 1       | 2023-01-02    | free_trial    | 30                |\n| 1       | 2023-01-05    | free_trial    | 60                |\n| 1       | 2023-01-10    | paid          | 75                |\n| 1       | 2023-01-12    | paid          | 90                |\n| 1       | 2023-01-15    | paid          | 65                |\n| 2       | 2023-02-01    | free_trial    | 55                |\n| 2       | 2023-02-03    | free_trial    | 25                |\n| 2       | 2023-02-07    | free_trial    | 50                |\n| 2       | 2023-02-10    | cancelled     | 0                 |\n| 3       | 2023-03-05    | free_trial    | 70                |\n| 3       | 2023-03-06    | free_trial    | 60                |\n| 3       | 2023-03-08    | free_trial    | 80                |\n| 3       | 2023-03-12    | paid          | 50                |\n| 3       | 2023-03-15    | paid          | 55                |\n| 3       | 2023-03-20    | paid          | 85                |\n| 4       | 2023-04-01    | free_trial    | 40                |\n| 4       | 2023-04-03    | free_trial    | 35                |\n| 4       | 2023-04-05    | paid          | 45                |\n| 4       | 2023-04-07    | cancelled     | 0                 |\n+---------+---------------+---------------+-------------------+"
+  },
+  {
+    "id": "analyze-subscription-conversion",
+    "title": "Analyze Subscription Conversion",
+    "example": 3,
+    "input": "+---------+--------------------+-------------------+\n| user_id | trial_avg_duration | paid_avg_duration |\n+---------+--------------------+-------------------+\n| 1       | 45.00              | 76.67             |\n| 3       | 70.00              | 63.33             |\n| 4       | 37.50              | 45.00             |\n+---------+--------------------+-------------------+"
+  },
+  {
+    "id": "apply-discount-every-n-orders",
+    "title": "Apply Discount Every n Orders",
+    "example": 1,
+    "input": "Input\n[\"Cashier\",\"getBill\",\"getBill\",\"getBill\",\"getBill\",\"getBill\",\"getBill\",\"getBill\"]\n[[3,50,[1,2,3,4,5,6,7],[100,200,300,400,300,200,100]],[[1,2],[1,2]],[[3,7],[10,10]],[[1,2,3,4,5,6,7],[1,1,1,1,1,1,1]],[[4],[10]],[[7,3],[10,10]],[[7,5,3,1,6,4,2],[10,10,10,9,9,9,7]],[[2,3,5],[5,3,2]]]\nOutput\n[null,500.0,4000.0,800.0,4000.0,4000.0,7350.0,2500.0]\nExplanation\nCashier cashier = new Cashier(3,50,[1,2,3,4,5,6,7],[100,200,300,400,300,200,100]);\ncashier.getBill([1,2],[1,2]);                        // return 500.0. 1\nst\ncustomer, no discount.\n                                                     // bill = 1 * 100 + 2 * 200 = 500.\ncashier.getBill([3,7],[10,10]);                      // return 4000.0. 2\nnd\ncustomer, no discount.\n                                                     // bill = 10 * 300 + 10 * 100 = 4000.\ncashier.getBill([1,2,3,4,5,6,7],[1,1,1,1,1,1,1]);    // return 800.0. 3\nrd\ncustomer, 50% discount.\n                                                     // Original bill = 1600\n                                                     // Actual bill = 1600 * ((100 - 50) / 100) = 800.\ncashier.getBill([4],[10]);                           // return 4000.0. 4\nth\ncustomer, no discount.\ncashier.getBill([7,3],[10,10]);                      // return 4000.0. 5\nth\ncustomer, no discount.\ncashier.getBill([7,5,3,1,6,4,2],[10,10,10,9,9,9,7]); // return 7350.0. 6\nth\ncustomer, 50% discount.\n                                                     // Original bill = 14700, but with\n                                                     // Actual bill = 14700 * ((100 - 50) / 100) = 7350.\ncashier.getBill([2,3,5],[5,3,2]);                    // return 2500.0.  7\nth\ncustomer, no discount."
+  },
+  {
+    "id": "arithmetic-subarrays",
+    "title": "Arithmetic Subarrays",
+    "example": 1,
+    "input": "1, 3, 5, 7, 9\n7, 7, 7, 7\n3, -1, -5, -9"
+  },
+  {
+    "id": "arithmetic-subarrays",
+    "title": "Arithmetic Subarrays",
+    "example": 2,
+    "input": "1, 1, 2, 5, 7"
+  },
+  {
+    "id": "article-views-i",
+    "title": "Article Views I",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| article_id    | int     |\n| author_id     | int     |\n| viewer_id     | int     |\n| view_date     | date    |\n+---------------+---------+\nThere is no primary key (column with unique values) for this table, the table may have duplicate rows.\nEach row of this table indicates that some viewer viewed an article (written by some author) on some date. \nNote that equal author_id and viewer_id indicate the same person."
+  },
+  {
+    "id": "average-selling-price",
+    "title": "Average Selling Price",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| product_id    | int     |\n| start_date    | date    |\n| end_date      | date    |\n| price         | int     |\n+---------------+---------+\n(product_id, start_date, end_date) is the primary key (combination of columns with unique values) for this table.\nEach row of this table indicates the price of the product_id in the period from start_date to end_date.\nFor each product_id there will be no two overlapping periods. That means there will be no two intersecting periods for the same product_id."
+  },
+  {
+    "id": "average-selling-price",
+    "title": "Average Selling Price",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| product_id    | int     |\n| purchase_date | date    |\n| units         | int     |\n+---------------+---------+\nThis table may contain duplicate rows.\nEach row of this table indicates the date, units, and product_id of each product sold."
+  },
+  {
+    "id": "average-time-of-process-per-machine",
+    "title": "Average Time of Process per Machine",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| machine_id     | int     |\n| process_id     | int     |\n| activity_type  | enum    |\n| timestamp      | float   |\n+----------------+---------+\nThe table shows the user activities for a factory website.\n(machine_id, process_id, activity_type) is the primary key (combination of columns with unique values) of this table.\nmachine_id is the ID of a machine.\nprocess_id is the ID of a process running on the machine with ID machine_id.\nactivity_type is an ENUM (category) of type ('start', 'end').\ntimestamp is a float representing the current time in seconds.\n'start' means the machine starts the process at the given timestamp and 'end' means the machine ends the process at the given timestamp.\nThe 'start' timestamp will always be before the 'end' timestamp for every (machine_id, process_id) pair.\nIt is guaranteed that each (machine_id, process_id) pair has a 'start' and 'end' timestamp."
+  },
+  {
+    "id": "bank-account-summary-ii",
+    "title": "Bank Account Summary II",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| account      | int     |\n| name         | varchar |\n+--------------+---------+\naccount is the primary key (column with unique values) for this table.\nEach row of this table contains the account number of each user in the bank.\nThere will be no two users having the same name in the table."
+  },
+  {
+    "id": "bank-account-summary-ii",
+    "title": "Bank Account Summary II",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| trans_id      | int     |\n| account       | int     |\n| amount        | int     |\n| transacted_on | date    |\n+---------------+---------+\ntrans_id is the primary key (column with unique values) for this table.\nEach row of this table contains all changes made to all accounts.\namount is positive if the user received money and negative if they transferred money.\nAll accounts start with a balance of 0."
+  },
+  {
+    "id": "big-countries",
+    "title": "Big Countries",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| name        | varchar |\n| continent   | varchar |\n| area        | int     |\n| population  | int     |\n| gdp         | bigint  |\n+-------------+---------+\nname is the primary key (column with unique values) for this table.\nEach row of this table gives information about the name of a country, the continent to which it belongs, its area, the population, and its GDP value."
+  },
+  {
+    "id": "biggest-single-number",
+    "title": "Biggest Single Number",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| num         | int  |\n+-------------+------+\nThis table may contain duplicates (In other words, there is no primary key for this table in SQL).\nEach row of this table contains an integer."
+  },
+  {
+    "id": "binary-search-tree-iterator",
+    "title": "Binary Search Tree Iterator",
+    "example": 1,
+    "input": "Input\n[\"BSTIterator\", \"next\", \"next\", \"hasNext\", \"next\", \"hasNext\", \"next\", \"hasNext\", \"next\", \"hasNext\"]\n[[[7, 3, 15, null, null, 9, 20]], [], [], [], [], [], [], [], [], []]\nOutput\n[null, 3, 7, true, 9, true, 15, true, 20, false]\nExplanation\nBSTIterator bSTIterator = new BSTIterator([7, 3, 15, null, null, 9, 20]);\nbSTIterator.next();    // return 3\nbSTIterator.next();    // return 7\nbSTIterator.hasNext(); // return True\nbSTIterator.next();    // return 9\nbSTIterator.hasNext(); // return True\nbSTIterator.next();    // return 15\nbSTIterator.hasNext(); // return True\nbSTIterator.next();    // return 20\nbSTIterator.hasNext(); // return False"
+  },
+  {
+    "id": "booking-concert-tickets-in-groups",
+    "title": "Booking Concert Tickets in Groups",
+    "example": 1,
+    "input": "Input\n[\"BookMyShow\", \"gather\", \"gather\", \"scatter\", \"scatter\"]\n[[2, 5], [4, 0], [2, 0], [5, 1], [5, 1]]\nOutput\n[null, [0, 0], [], true, false]\nExplanation\nBookMyShow bms = new BookMyShow(2, 5); // There are 2 rows with 5 seats each \nbms.gather(4, 0); // return [0, 0]\n                  // The group books seats [0, 3] of row 0. \nbms.gather(2, 0); // return []\n                  // There is only 1 seat left in row 0,\n                  // so it is not possible to book 2 consecutive seats. \nbms.scatter(5, 1); // return True\n                   // The group books seat 4 of row 0 and seats [0, 3] of row 1. \nbms.scatter(5, 1); // return False\n                   // There is only one seat left in the hall."
+  },
+  {
+    "id": "calculate-special-bonus",
+    "title": "Calculate Special Bonus",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| employee_id | int     |\n| name        | varchar |\n| salary      | int     |\n+-------------+---------+\nemployee_id is the primary key (column with unique values) for this table.\nEach row of this table indicates the employee ID, employee name, and salary."
+  },
+  {
+    "id": "capital-gain-loss",
+    "title": "Capital Gain/Loss",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| stock_name    | varchar |\n| operation     | enum    |\n| operation_day | int     |\n| price         | int     |\n+---------------+---------+\n(stock_name, operation_day) is the primary key (combination of columns with unique values) for this table.\nThe operation column is an ENUM (category) of type ('Sell', 'Buy')\nEach row of this table indicates that the stock which has stock_name had an operation on the day operation_day with the price.\nIt is guaranteed that each 'Sell' operation for a stock has a corresponding 'Buy' operation in a previous day. It is also guaranteed that each 'Buy' operation for a stock has a corresponding 'Sell' operation in an upcoming day."
+  },
+  {
+    "id": "change-data-type",
+    "title": "Change Data Type",
+    "example": 1,
+    "input": "DataFrame\nstudents\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n| grade       | float  |\n+-------------+--------+"
+  },
+  {
+    "id": "clone-graph",
+    "title": "Clone Graph",
+    "example": 1,
+    "input": "class Node {\n    public int val;\n    public List<Node> neighbors;\n}"
+  },
+  {
+    "id": "combine-two-tables",
+    "title": "Combine Two Tables",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| personId    | int     |\n| lastName    | varchar |\n| firstName   | varchar |\n+-------------+---------+\npersonId is the primary key (column with unique values) for this table.\nThis table contains information about the ID of some persons and their first and last names."
+  },
+  {
+    "id": "combine-two-tables",
+    "title": "Combine Two Tables",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| addressId   | int     |\n| personId    | int     |\n| city        | varchar |\n| state       | varchar |\n+-------------+---------+\naddressId is the primary key (column with unique values) for this table.\nEach row of this table contains information about the city and state of one person with ID = PersonId."
+  },
+  {
+    "id": "complete-binary-tree-inserter",
+    "title": "Complete Binary Tree Inserter",
+    "example": 1,
+    "input": "Input\n[\"CBTInserter\", \"insert\", \"insert\", \"get_root\"]\n[[[1, 2]], [3], [4], []]\nOutput\n[null, 1, 2, [1, 2, 3, 4]]\nExplanation\nCBTInserter cBTInserter = new CBTInserter([1, 2]);\ncBTInserter.insert(3);  // return 1\ncBTInserter.insert(4);  // return 2\ncBTInserter.get_root(); // return [1, 2, 3, 4]"
+  },
+  {
+    "id": "confirmation-rate",
+    "title": "Confirmation Rate",
+    "example": 1,
+    "input": "+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n+----------------+----------+\nuser_id is the column of unique values for this table.\nEach row contains information about the signup time for the user with ID user_id."
+  },
+  {
+    "id": "confirmation-rate",
+    "title": "Confirmation Rate",
+    "example": 2,
+    "input": "+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n| action         | ENUM     |\n+----------------+----------+\n(user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.\nuser_id is a foreign key (reference column) to the Signups table.\naction is an ENUM (category) of the type ('confirmed', 'timeout')\nEach row of this table indicates that the user with ID user_id requested a confirmation message at time_stamp and that confirmation message was either confirmed ('confirmed') or expired without confirming ('timeout')."
+  },
+  {
+    "id": "consecutive-numbers",
+    "title": "Consecutive Numbers",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| num         | varchar |\n+-------------+---------+\nIn SQL, id is the primary key for this table.\nid is an autoincrement column starting from 1."
+  },
+  {
+    "id": "construct-quad-tree",
+    "title": "Construct Quad Tree",
+    "example": 1,
+    "input": "class Node {\n    public boolean val;\n    public boolean isLeaf;\n    public Node topLeft;\n    public Node topRight;\n    public Node bottomLeft;\n    public Node bottomRight;\n}"
+  },
+  {
+    "id": "count-and-say",
+    "title": "Count and Say",
+    "example": 1,
+    "input": "countAndSay(1) = \"1\"\ncountAndSay(2) = RLE of \"1\" = \"11\"\ncountAndSay(3) = RLE of \"11\" = \"21\"\ncountAndSay(4) = RLE of \"21\" = \"1211\""
+  },
+  {
+    "id": "count-integers-in-intervals",
+    "title": "Count Integers in Intervals",
+    "example": 1,
+    "input": "Input\n[\"CountIntervals\", \"add\", \"add\", \"count\", \"add\", \"count\"]\n[[], [2, 3], [7, 10], [], [5, 8], []]\nOutput\n[null, null, null, 6, null, 8]\nExplanation\nCountIntervals countIntervals = new CountIntervals(); // initialize the object with an empty set of intervals. \ncountIntervals.add(2, 3);  // add [2, 3] to the set of intervals.\ncountIntervals.add(7, 10); // add [7, 10] to the set of intervals.\ncountIntervals.count();    // return 6\n                           // the integers 2 and 3 are present in the interval [2, 3].\n                           // the integers 7, 8, 9, and 10 are present in the interval [7, 10].\ncountIntervals.add(5, 8);  // add [5, 8] to the set of intervals.\ncountIntervals.count();    // return 8\n                           // the integers 2 and 3 are present in the interval [2, 3].\n                           // the integers 5 and 6 are present in the interval [5, 8].\n                           // the integers 7 and 8 are present in the intervals [5, 8] and [7, 10].\n                           // the integers 9 and 10 are present in the interval [7, 10]."
+  },
+  {
+    "id": "count-salary-categories",
+    "title": "Count Salary Categories",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| account_id  | int  |\n| income      | int  |\n+-------------+------+\naccount_id is the primary key (column with unique values) for this table.\nEach row contains information about the monthly income for one bank account."
+  },
+  {
+    "id": "customer-placing-the-largest-number-of-orders",
+    "title": "Customer Placing the Largest Number of Orders",
+    "example": 1,
+    "input": "+-----------------+----------+\n| Column Name     | Type     |\n+-----------------+----------+\n| order_number    | int      |\n| customer_number | int      |\n+-----------------+----------+\norder_number is the primary key (column with unique values) for this table.\nThis table contains information about the order ID and the customer ID."
+  },
+  {
+    "id": "customer-who-visited-but-did-not-make-any-transactions",
+    "title": "Customer Who Visited but Did Not Make Any Transactions",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| visit_id    | int     |\n| customer_id | int     |\n+-------------+---------+\nvisit_id is the column with unique values for this table.\nThis table contains information about the customers who visited the mall."
+  },
+  {
+    "id": "customer-who-visited-but-did-not-make-any-transactions",
+    "title": "Customer Who Visited but Did Not Make Any Transactions",
+    "example": 2,
+    "input": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| transaction_id | int     |\n| visit_id       | int     |\n| amount         | int     |\n+----------------+---------+\ntransaction_id is column with unique values for this table.\nThis table contains information about the transactions made during the visit_id."
+  },
+  {
+    "id": "customers-who-bought-all-products",
+    "title": "Customers Who Bought All Products",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| customer_id | int     |\n| product_key | int     |\n+-------------+---------+\nThis table may contain duplicates rows.\ncustomer_id\nis not NULL\n.\nproduct_key is a foreign key (reference column) to\nProduct\ntable."
+  },
+  {
+    "id": "customers-who-bought-all-products",
+    "title": "Customers Who Bought All Products",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| product_key | int     |\n+-------------+---------+\nproduct_key is the primary key (column with unique values) for this table."
+  },
+  {
+    "id": "customers-who-never-order",
+    "title": "Customers Who Never Order",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the ID and name of a customer."
+  },
+  {
+    "id": "customers-who-never-order",
+    "title": "Customers Who Never Order",
+    "example": 2,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| customerId  | int  |\n+-------------+------+\nid is the primary key (column with unique values) for this table.\ncustomerId is a foreign key (reference columns) of the ID from the Customers table.\nEach row of this table indicates the ID of an order and the ID of the customer who ordered it."
+  },
+  {
+    "id": "daily-leads-and-partners",
+    "title": "Daily Leads and Partners",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| date_id     | date    |\n| make_name   | varchar |\n| lead_id     | int     |\n| partner_id  | int     |\n+-------------+---------+\nThere is no primary key (column with unique values) for this table. It may contain duplicates.\nThis table contains the date and the name of the product sold and the IDs of the lead and partner it was sold to.\nThe name consists of only lowercase English letters."
+  },
+  {
+    "id": "data-stream-as-disjoint-intervals",
+    "title": "Data Stream as Disjoint Intervals",
+    "example": 1,
+    "input": "Input\n[\"SummaryRanges\", \"addNum\", \"getIntervals\", \"addNum\", \"getIntervals\", \"addNum\", \"getIntervals\", \"addNum\", \"getIntervals\", \"addNum\", \"getIntervals\"]\n[[], [1], [], [3], [], [7], [], [2], [], [6], []]\nOutput\n[null, null, [[1, 1]], null, [[1, 1], [3, 3]], null, [[1, 1], [3, 3], [7, 7]], null, [[1, 3], [7, 7]], null, [[1, 3], [6, 7]]]\nExplanation\nSummaryRanges summaryRanges = new SummaryRanges();\nsummaryRanges.addNum(1);      // arr = [1]\nsummaryRanges.getIntervals(); // return [[1, 1]]\nsummaryRanges.addNum(3);      // arr = [1, 3]\nsummaryRanges.getIntervals(); // return [[1, 1], [3, 3]]\nsummaryRanges.addNum(7);      // arr = [1, 3, 7]\nsummaryRanges.getIntervals(); // return [[1, 1], [3, 3], [7, 7]]\nsummaryRanges.addNum(2);      // arr = [1, 2, 3, 7]\nsummaryRanges.getIntervals(); // return [[1, 3], [7, 7]]\nsummaryRanges.addNum(6);      // arr = [1, 2, 3, 6, 7]\nsummaryRanges.getIntervals(); // return [[1, 3], [6, 7]]"
+  },
+  {
+    "id": "decode-ways-ii",
+    "title": "Decode Ways II",
+    "example": 1,
+    "input": "'A' -> \"1\"\n'B' -> \"2\"\n...\n'Z' -> \"26\""
+  },
+  {
+    "id": "delete-columns-to-make-sorted",
+    "title": "Delete Columns to Make Sorted",
+    "example": 1,
+    "input": "abc\nbce\ncae"
+  },
+  {
+    "id": "delete-duplicate-emails",
+    "title": "Delete Duplicate Emails",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| email       | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains an email. The emails will not contain uppercase letters."
+  },
+  {
+    "id": "department-highest-salary",
+    "title": "Department Highest Salary",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| id           | int     |\n| name         | varchar |\n| salary       | int     |\n| departmentId | int     |\n+--------------+---------+\nid is the primary key (column with unique values) for this table.\ndepartmentId is a foreign key (reference columns) of the ID from the\nDepartment\ntable.\nEach row of this table indicates the ID, name, and salary of an employee. It also contains the ID of their department."
+  },
+  {
+    "id": "department-highest-salary",
+    "title": "Department Highest Salary",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table. It is guaranteed that department name is not\nNULL.\nEach row of this table indicates the ID of a department and its name."
+  },
+  {
+    "id": "department-top-three-salaries",
+    "title": "Department Top Three Salaries",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| id           | int     |\n| name         | varchar |\n| salary       | int     |\n| departmentId | int     |\n+--------------+---------+\nid is the primary key (column with unique values) for this table.\ndepartmentId is a foreign key (reference column) of the ID from the\nDepartment\ntable.\nEach row of this table indicates the ID, name, and salary of an employee. It also contains the ID of their department."
+  },
+  {
+    "id": "department-top-three-salaries",
+    "title": "Department Top Three Salaries",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the ID of a department and its name."
+  },
+  {
+    "id": "design-a-food-rating-system",
+    "title": "Design a Food Rating System",
+    "example": 1,
+    "input": "Input\n[\"FoodRatings\", \"highestRated\", \"highestRated\", \"changeRating\", \"highestRated\", \"changeRating\", \"highestRated\"]\n[[[\"kimchi\", \"miso\", \"sushi\", \"moussaka\", \"ramen\", \"bulgogi\"], [\"korean\", \"japanese\", \"japanese\", \"greek\", \"japanese\", \"korean\"], [9, 12, 8, 15, 14, 7]], [\"korean\"], [\"japanese\"], [\"sushi\", 16], [\"japanese\"], [\"ramen\", 16], [\"japanese\"]]\nOutput\n[null, \"kimchi\", \"ramen\", null, \"sushi\", null, \"ramen\"]\nExplanation\nFoodRatings foodRatings = new FoodRatings([\"kimchi\", \"miso\", \"sushi\", \"moussaka\", \"ramen\", \"bulgogi\"], [\"korean\", \"japanese\", \"japanese\", \"greek\", \"japanese\", \"korean\"], [9, 12, 8, 15, 14, 7]);\nfoodRatings.highestRated(\"korean\"); // return \"kimchi\"\n                                    // \"kimchi\" is the highest rated korean food with a rating of 9.\nfoodRatings.highestRated(\"japanese\"); // return \"ramen\"\n                                      // \"ramen\" is the highest rated japanese food with a rating of 14.\nfoodRatings.changeRating(\"sushi\", 16); // \"sushi\" now has a rating of 16.\nfoodRatings.highestRated(\"japanese\"); // return \"sushi\"\n                                      // \"sushi\" is the highest rated japanese food with a rating of 16.\nfoodRatings.changeRating(\"ramen\", 16); // \"ramen\" now has a rating of 16.\nfoodRatings.highestRated(\"japanese\"); // return \"ramen\"\n                                      // Both \"sushi\" and \"ramen\" have a rating of 16.\n                                      // However, \"ramen\" is lexicographically smaller than \"sushi\"."
+  },
+  {
+    "id": "design-a-number-container-system",
+    "title": "Design a Number Container System",
+    "example": 1,
+    "input": "Input\n[\"NumberContainers\", \"find\", \"change\", \"change\", \"change\", \"change\", \"find\", \"change\", \"find\"]\n[[], [10], [2, 10], [1, 10], [3, 10], [5, 10], [10], [1, 20], [10]]\nOutput\n[null, -1, null, null, null, null, 1, null, 2]\nExplanation\nNumberContainers nc = new NumberContainers();\nnc.find(10); // There is no index that is filled with number 10. Therefore, we return -1.\nnc.change(2, 10); // Your container at index 2 will be filled with number 10.\nnc.change(1, 10); // Your container at index 1 will be filled with number 10.\nnc.change(3, 10); // Your container at index 3 will be filled with number 10.\nnc.change(5, 10); // Your container at index 5 will be filled with number 10.\nnc.find(10); // Number 10 is at the indices 1, 2, 3, and 5. Since the smallest index that is filled with 10 is 1, we return 1.\nnc.change(1, 20); // Your container at index 1 will be filled with number 20. Note that index 1 was filled with 10 and then replaced with 20. \nnc.find(10); // Number 10 is at the indices 2, 3, and 5. The smallest index that is filled with 10 is 2. Therefore, we return 2."
+  },
+  {
+    "id": "design-a-stack-with-increment-operation",
+    "title": "Design a Stack With Increment Operation",
+    "example": 1,
+    "input": "Input\n[\"CustomStack\",\"push\",\"push\",\"pop\",\"push\",\"push\",\"push\",\"increment\",\"increment\",\"pop\",\"pop\",\"pop\",\"pop\"]\n[[3],[1],[2],[],[2],[3],[4],[5,100],[2,100],[],[],[],[]]\nOutput\n[null,null,null,2,null,null,null,null,null,103,202,201,-1]\nExplanation\nCustomStack stk = new CustomStack(3); // Stack is Empty []\nstk.push(1);                          // stack becomes [1]\nstk.push(2);                          // stack becomes [1, 2]\nstk.pop();                            // return 2 --> Return top of the stack 2, stack becomes [1]\nstk.push(2);                          // stack becomes [1, 2]\nstk.push(3);                          // stack becomes [1, 2, 3]\nstk.push(4);                          // stack still [1, 2, 3], Do not add another elements as size is 4\nstk.increment(5, 100);                // stack becomes [101, 102, 103]\nstk.increment(2, 100);                // stack becomes [201, 202, 103]\nstk.pop();                            // return 103 --> Return top of the stack 103, stack becomes [201, 202]\nstk.pop();                            // return 202 --> Return top of the stack 202, stack becomes [201]\nstk.pop();                            // return 201 --> Return top of the stack 201, stack becomes []\nstk.pop();                            // return -1 --> Stack is empty return -1."
+  },
+  {
+    "id": "design-a-text-editor",
+    "title": "Design a Text Editor",
+    "example": 1,
+    "input": "Input\n[\"TextEditor\", \"addText\", \"deleteText\", \"addText\", \"cursorRight\", \"cursorLeft\", \"deleteText\", \"cursorLeft\", \"cursorRight\"]\n[[], [\"leetcode\"], [4], [\"practice\"], [3], [8], [10], [2], [6]]\nOutput\n[null, null, 4, null, \"etpractice\", \"leet\", 4, \"\", \"practi\"]\nExplanation\nTextEditor textEditor = new TextEditor(); // The current text is \"|\". (The '|' character represents the cursor)\ntextEditor.addText(\"leetcode\"); // The current text is \"leetcode|\".\ntextEditor.deleteText(4); // return 4\n                          // The current text is \"leet|\". \n                          // 4 characters were deleted.\ntextEditor.addText(\"practice\"); // The current text is \"leetpractice|\". \ntextEditor.cursorRight(3); // return \"etpractice\"\n                           // The current text is \"leetpractice|\". \n                           // The cursor cannot be moved beyond the actual text and thus did not move.\n                           // \"etpractice\" is the last 10 characters to the left of the cursor.\ntextEditor.cursorLeft(8); // return \"leet\"\n                          // The current text is \"leet|practice\".\n                          // \"leet\" is the last min(10, 4) = 4 characters to the left of the cursor.\ntextEditor.deleteText(10); // return 4\n                           // The current text is \"|practice\".\n                           // Only 4 characters were deleted.\ntextEditor.cursorLeft(2); // return \"\"\n                          // The current text is \"|practice\".\n                          // The cursor cannot be moved beyond the actual text and thus did not move. \n                          // \"\" is the last min(10, 0) = 0 characters to the left of the cursor.\ntextEditor.cursorRight(6); // return \"practi\"\n                           // The current text is \"practi|ce\".\n                           // \"practi\" is the last min(10, 6) = 6 characters to the left of the cursor."
+  },
+  {
+    "id": "design-add-and-search-words-data-structure",
+    "title": "Design Add and Search Words Data Structure",
+    "example": 1,
+    "input": "Input\n[\"WordDictionary\",\"addWord\",\"addWord\",\"addWord\",\"search\",\"search\",\"search\",\"search\"]\n[[],[\"bad\"],[\"dad\"],[\"mad\"],[\"pad\"],[\"bad\"],[\".ad\"],[\"b..\"]]\nOutput\n[null,null,null,null,false,true,true,true]\nExplanation\nWordDictionary wordDictionary = new WordDictionary();\nwordDictionary.addWord(\"bad\");\nwordDictionary.addWord(\"dad\");\nwordDictionary.addWord(\"mad\");\nwordDictionary.search(\"pad\"); // return False\nwordDictionary.search(\"bad\"); // return True\nwordDictionary.search(\".ad\"); // return True\nwordDictionary.search(\"b..\"); // return True"
+  },
+  {
+    "id": "design-an-atm-machine",
+    "title": "Design an ATM Machine",
+    "example": 1,
+    "input": "Input\n[\"ATM\", \"deposit\", \"withdraw\", \"deposit\", \"withdraw\", \"withdraw\"]\n[[], [[0,0,1,2,1]], [600], [[0,1,0,1,1]], [600], [550]]\nOutput\n[null, null, [0,0,1,0,1], null, [-1], [0,1,0,0,1]]\nExplanation\nATM atm = new ATM();\natm.deposit([0,0,1,2,1]); // Deposits 1 $100 banknote, 2 $200 banknotes,\n                          // and 1 $500 banknote.\natm.withdraw(600);        // Returns [0,0,1,0,1]. The machine uses 1 $100 banknote\n                          // and 1 $500 banknote. The banknotes left over in the\n                          // machine are [0,0,0,2,0].\natm.deposit([0,1,0,1,1]); // Deposits 1 $50, $200, and $500 banknote.\n                          // The banknotes in the machine are now [0,1,0,3,1].\natm.withdraw(600);        // Returns [-1]. The machine will try to use a $500 banknote\n                          // and then be unable to complete the remaining $100,\n                          // so the withdraw request will be rejected.\n                          // Since the request is rejected, the number of banknotes\n                          // in the machine is not modified.\natm.withdraw(550);        // Returns [0,1,0,0,1]. The machine uses 1 $50 banknote\n                          // and 1 $500 banknote."
+  },
+  {
+    "id": "design-an-ordered-stream",
+    "title": "Design an Ordered Stream",
+    "example": 1,
+    "input": "Input\n[\"OrderedStream\", \"insert\", \"insert\", \"insert\", \"insert\", \"insert\"]\n[[5], [3, \"ccccc\"], [1, \"aaaaa\"], [2, \"bbbbb\"], [5, \"eeeee\"], [4, \"ddddd\"]]\nOutput\n[null, [], [\"aaaaa\"], [\"bbbbb\", \"ccccc\"], [], [\"ddddd\", \"eeeee\"]]\nExplanation\n// Note that the values ordered by ID is [\"aaaaa\", \"bbbbb\", \"ccccc\", \"ddddd\", \"eeeee\"].\nOrderedStream os = new OrderedStream(5);\nos.insert(3, \"ccccc\"); // Inserts (3, \"ccccc\"), returns [].\nos.insert(1, \"aaaaa\"); // Inserts (1, \"aaaaa\"), returns [\"aaaaa\"].\nos.insert(2, \"bbbbb\"); // Inserts (2, \"bbbbb\"), returns [\"bbbbb\", \"ccccc\"].\nos.insert(5, \"eeeee\"); // Inserts (5, \"eeeee\"), returns [].\nos.insert(4, \"ddddd\"); // Inserts (4, \"ddddd\"), returns [\"ddddd\", \"eeeee\"].\n// Concatentating all the chunks returned:\n// [] + [\"aaaaa\"] + [\"bbbbb\", \"ccccc\"] + [] + [\"ddddd\", \"eeeee\"] = [\"aaaaa\", \"bbbbb\", \"ccccc\", \"ddddd\", \"eeeee\"]\n// The resulting order is the same as the order above."
+  },
+  {
+    "id": "design-authentication-manager",
+    "title": "Design Authentication Manager",
+    "example": 1,
+    "input": "Input\n[\"AuthenticationManager\", \"\nrenew\n\", \"generate\", \"\ncountUnexpiredTokens\n\", \"generate\", \"\nrenew\n\", \"\nrenew\n\", \"\ncountUnexpiredTokens\n\"]\n[[5], [\"aaa\", 1], [\"aaa\", 2], [6], [\"bbb\", 7], [\"aaa\", 8], [\"bbb\", 10], [15]]\nOutput\n[null, null, null, 1, null, null, null, 0]\nExplanation\nAuthenticationManager authenticationManager = new AuthenticationManager(5); // Constructs the AuthenticationManager with\ntimeToLive\n= 5 seconds.\nauthenticationManager.\nrenew\n(\"aaa\", 1); // No token exists with tokenId \"aaa\" at time 1, so nothing happens.\nauthenticationManager.generate(\"aaa\", 2); // Generates a new token with tokenId \"aaa\" at time 2.\nauthenticationManager.\ncountUnexpiredTokens\n(6); // The token with tokenId \"aaa\" is the only unexpired one at time 6, so return 1.\nauthenticationManager.generate(\"bbb\", 7); // Generates a new token with tokenId \"bbb\" at time 7.\nauthenticationManager.\nrenew\n(\"aaa\", 8); // The token with tokenId \"aaa\" expired at time 7, and 8 >= 7, so at time 8 the\nrenew\nrequest is ignored, and nothing happens.\nauthenticationManager.\nrenew\n(\"bbb\", 10); // The token with tokenId \"bbb\" is unexpired at time 10, so the\nrenew\nrequest is fulfilled and now the token will expire at time 15.\nauthenticationManager.\ncountUnexpiredTokens\n(15); // The token with tokenId \"bbb\" expires at time 15, and the token with tokenId \"aaa\" expired at time 7, so currently no token is unexpired, so return 0."
+  },
+  {
+    "id": "design-circular-deque",
+    "title": "Design Circular Deque",
+    "example": 1,
+    "input": "Input\n[\"MyCircularDeque\", \"insertLast\", \"insertLast\", \"insertFront\", \"insertFront\", \"getRear\", \"isFull\", \"deleteLast\", \"insertFront\", \"getFront\"]\n[[3], [1], [2], [3], [4], [], [], [], [4], []]\nOutput\n[null, true, true, true, false, 2, true, true, true, 4]\nExplanation\nMyCircularDeque myCircularDeque = new MyCircularDeque(3);\nmyCircularDeque.insertLast(1);  // return True\nmyCircularDeque.insertLast(2);  // return True\nmyCircularDeque.insertFront(3); // return True\nmyCircularDeque.insertFront(4); // return False, the queue is full.\nmyCircularDeque.getRear();      // return 2\nmyCircularDeque.isFull();       // return True\nmyCircularDeque.deleteLast();   // return True\nmyCircularDeque.insertFront(4); // return True\nmyCircularDeque.getFront();     // return 4"
+  },
+  {
+    "id": "design-circular-queue",
+    "title": "Design Circular Queue",
+    "example": 1,
+    "input": "Input\n[\"MyCircularQueue\", \"enQueue\", \"enQueue\", \"enQueue\", \"enQueue\", \"Rear\", \"isFull\", \"deQueue\", \"enQueue\", \"Rear\"]\n[[3], [1], [2], [3], [4], [], [], [], [4], []]\nOutput\n[null, true, true, true, false, 3, true, true, true, 4]\nExplanation\nMyCircularQueue myCircularQueue = new MyCircularQueue(3);\nmyCircularQueue.enQueue(1); // return True\nmyCircularQueue.enQueue(2); // return True\nmyCircularQueue.enQueue(3); // return True\nmyCircularQueue.enQueue(4); // return False\nmyCircularQueue.Rear();     // return 3\nmyCircularQueue.isFull();   // return True\nmyCircularQueue.deQueue();  // return True\nmyCircularQueue.enQueue(4); // return True\nmyCircularQueue.Rear();     // return 4"
+  },
+  {
+    "id": "design-graph-with-shortest-path-calculator",
+    "title": "Design Graph With Shortest Path Calculator",
+    "example": 1,
+    "input": "Input\n[\"Graph\", \"shortestPath\", \"shortestPath\", \"addEdge\", \"shortestPath\"]\n[[4, [[0, 2, 5], [0, 1, 2], [1, 2, 1], [3, 0, 3]]], [3, 2], [0, 3], [[1, 3, 4]], [0, 3]]\nOutput\n[null, 6, -1, null, 6]\nExplanation\nGraph g = new Graph(4, [[0, 2, 5], [0, 1, 2], [1, 2, 1], [3, 0, 3]]);\ng.shortestPath(3, 2); // return 6. The shortest path from 3 to 2 in the first diagram above is 3 -> 0 -> 1 -> 2 with a total cost of 3 + 2 + 1 = 6.\ng.shortestPath(0, 3); // return -1. There is no path from 0 to 3.\ng.addEdge([1, 3, 4]); // We add an edge from node 1 to node 3, and we get the second diagram above.\ng.shortestPath(0, 3); // return 6. The shortest path from 0 to 3 now is 0 -> 1 -> 3 with a total cost of 2 + 4 = 6."
+  },
+  {
+    "id": "design-hashmap",
+    "title": "Design HashMap",
+    "example": 1,
+    "input": "Input\n[\"MyHashMap\", \"put\", \"put\", \"get\", \"get\", \"put\", \"get\", \"remove\", \"get\"]\n[[], [1, 1], [2, 2], [1], [3], [2, 1], [2], [2], [2]]\nOutput\n[null, null, null, 1, -1, null, 1, null, -1]\nExplanation\nMyHashMap myHashMap = new MyHashMap();\nmyHashMap.put(1, 1); // The map is now [[1,1]]\nmyHashMap.put(2, 2); // The map is now [[1,1], [2,2]]\nmyHashMap.get(1);    // return 1, The map is now [[1,1], [2,2]]\nmyHashMap.get(3);    // return -1 (i.e., not found), The map is now [[1,1], [2,2]]\nmyHashMap.put(2, 1); // The map is now [[1,1], [2,1]] (i.e., update the existing value)\nmyHashMap.get(2);    // return 1, The map is now [[1,1], [2,1]]\nmyHashMap.remove(2); // remove the mapping for 2, The map is now [[1,1]]\nmyHashMap.get(2);    // return -1 (i.e., not found), The map is now [[1,1]]"
+  },
+  {
+    "id": "design-hashset",
+    "title": "Design HashSet",
+    "example": 1,
+    "input": "Input\n[\"MyHashSet\", \"add\", \"add\", \"contains\", \"contains\", \"add\", \"contains\", \"remove\", \"contains\"]\n[[], [1], [2], [1], [3], [2], [2], [2], [2]]\nOutput\n[null, null, null, true, false, null, true, null, false]\nExplanation\nMyHashSet myHashSet = new MyHashSet();\nmyHashSet.add(1);      // set = [1]\nmyHashSet.add(2);      // set = [1, 2]\nmyHashSet.contains(1); // return True\nmyHashSet.contains(3); // return False, (not found)\nmyHashSet.add(2);      // set = [1, 2]\nmyHashSet.contains(2); // return True\nmyHashSet.remove(2);   // set = [1]\nmyHashSet.contains(2); // return False, (already removed)"
+  },
+  {
+    "id": "design-linked-list",
+    "title": "Design Linked List",
+    "example": 1,
+    "input": "Input\n[\"MyLinkedList\", \"addAtHead\", \"addAtTail\", \"addAtIndex\", \"get\", \"deleteAtIndex\", \"get\"]\n[[], [1], [3], [1, 2], [1], [1], [1]]\nOutput\n[null, null, null, null, 2, null, 3]\nExplanation\nMyLinkedList myLinkedList = new MyLinkedList();\nmyLinkedList.addAtHead(1);\nmyLinkedList.addAtTail(3);\nmyLinkedList.addAtIndex(1, 2);    // linked list becomes 1->2->3\nmyLinkedList.get(1);              // return 2\nmyLinkedList.deleteAtIndex(1);    // now the linked list is 1->3\nmyLinkedList.get(1);              // return 3"
+  },
+  {
+    "id": "design-memory-allocator",
+    "title": "Design Memory Allocator",
+    "example": 1,
+    "input": "Input\n[\"Allocator\", \"allocate\", \"allocate\", \"allocate\", \"freeMemory\", \"allocate\", \"allocate\", \"allocate\", \"freeMemory\", \"allocate\", \"freeMemory\"]\n[[10], [1, 1], [1, 2], [1, 3], [2], [3, 4], [1, 1], [1, 1], [1], [10, 2], [7]]\nOutput\n[null, 0, 1, 2, 1, 3, 1, 6, 3, -1, 0]\nExplanation\nAllocator loc = new Allocator(10); // Initialize a memory array of size 10. All memory units are initially free.\nloc.allocate(1, 1); // The leftmost block's first index is 0. The memory array becomes [\n1\n,_,_,_,_,_,_,_,_,_]. We return 0.\nloc.allocate(1, 2); // The leftmost block's first index is 1. The memory array becomes [1,\n2\n,_,_,_,_,_,_,_,_]. We return 1.\nloc.allocate(1, 3); // The leftmost block's first index is 2. The memory array becomes [1,2,\n3\n,_,_,_,_,_,_,_]. We return 2.\nloc.freeMemory(2); // Free all memory units with mID 2. The memory array becomes [1,_, 3,_,_,_,_,_,_,_]. We return 1 since there is only 1 unit with mID 2.\nloc.allocate(3, 4); // The leftmost block's first index is 3. The memory array becomes [1,_,3,\n4\n,\n4\n,\n4\n,_,_,_,_]. We return 3.\nloc.allocate(1, 1); // The leftmost block's first index is 1. The memory array becomes [1,\n1\n,3,4,4,4,_,_,_,_]. We return 1.\nloc.allocate(1, 1); // The leftmost block's first index is 6. The memory array becomes [1,1,3,4,4,4,\n1\n,_,_,_]. We return 6.\nloc.freeMemory(1); // Free all memory units with mID 1. The memory array becomes [_,_,3,4,4,4,_,_,_,_]. We return 3 since there are 3 units with mID 1.\nloc.allocate(10, 2); // We can not find any free block with 10 consecutive free memory units, so we return -1.\nloc.freeMemory(7); // Free all memory units with mID 7. The memory array remains the same since there is no memory unit with mID 7. We return 0."
+  },
+  {
+    "id": "design-movie-rental-system",
+    "title": "Design Movie Rental System",
+    "example": 1,
+    "input": "Input\n[\"MovieRentingSystem\", \"search\", \"rent\", \"rent\", \"report\", \"drop\", \"search\"]\n[[3, [[0, 1, 5], [0, 2, 6], [0, 3, 7], [1, 1, 4], [1, 2, 7], [2, 1, 5]]], [1], [0, 1], [1, 2], [], [1, 2], [2]]\nOutput\n[null, [1, 0, 2], null, null, [[0, 1], [1, 2]], null, [0, 1]]\nExplanation\nMovieRentingSystem movieRentingSystem = new MovieRentingSystem(3, [[0, 1, 5], [0, 2, 6], [0, 3, 7], [1, 1, 4], [1, 2, 7], [2, 1, 5]]);\nmovieRentingSystem.search(1);  // return [1, 0, 2], Movies of ID 1 are unrented at shops 1, 0, and 2. Shop 1 is cheapest; shop 0 and 2 are the same price, so order by shop number.\nmovieRentingSystem.rent(0, 1); // Rent movie 1 from shop 0. Unrented movies at shop 0 are now [2,3].\nmovieRentingSystem.rent(1, 2); // Rent movie 2 from shop 1. Unrented movies at shop 1 are now [1].\nmovieRentingSystem.report();   // return [[0, 1], [1, 2]]. Movie 1 from shop 0 is cheapest, followed by movie 2 from shop 1.\nmovieRentingSystem.drop(1, 2); // Drop off movie 2 at shop 1. Unrented movies at shop 1 are now [1,2].\nmovieRentingSystem.search(2);  // return [0, 1]. Movies of ID 2 are unrented at shops 0 and 1. Shop 0 is cheapest, followed by shop 1."
+  },
+  {
+    "id": "design-parking-system",
+    "title": "Design Parking System",
+    "example": 1,
+    "input": "Input\n[\"ParkingSystem\", \"addCar\", \"addCar\", \"addCar\", \"addCar\"]\n[[1, 1, 0], [1], [2], [3], [1]]\nOutput\n[null, true, true, false, false]\nExplanation\nParkingSystem parkingSystem = new ParkingSystem(1, 1, 0);\nparkingSystem.addCar(1); // return true because there is 1 available slot for a big car\nparkingSystem.addCar(2); // return true because there is 1 available slot for a medium car\nparkingSystem.addCar(3); // return false because there is no available slot for a small car\nparkingSystem.addCar(1); // return false because there is no available slot for a big car. It is already occupied."
+  },
+  {
+    "id": "design-skiplist",
+    "title": "Design Skiplist",
+    "example": 1,
+    "input": "Input\n[\"Skiplist\", \"add\", \"add\", \"add\", \"search\", \"add\", \"search\", \"erase\", \"erase\", \"search\"]\n[[], [1], [2], [3], [0], [4], [1], [0], [1], [1]]\nOutput\n[null, null, null, null, false, null, true, false, true, false]\nExplanation\nSkiplist skiplist = new Skiplist();\nskiplist.add(1);\nskiplist.add(2);\nskiplist.add(3);\nskiplist.search(0); // return False\nskiplist.add(4);\nskiplist.search(1); // return True\nskiplist.erase(0);  // return False, 0 is not in skiplist.\nskiplist.erase(1);  // return True\nskiplist.search(1); // return False, 1 has already been erased."
+  },
+  {
+    "id": "design-twitter",
+    "title": "Design Twitter",
+    "example": 1,
+    "input": "Input\n[\"Twitter\", \"postTweet\", \"getNewsFeed\", \"follow\", \"postTweet\", \"getNewsFeed\", \"unfollow\", \"getNewsFeed\"]\n[[], [1, 5], [1], [1, 2], [2, 6], [1], [1, 2], [1]]\nOutput\n[null, null, [5], null, null, [6, 5], null, [5]]\nExplanation\nTwitter twitter = new Twitter();\ntwitter.postTweet(1, 5); // User 1 posts a new tweet (id = 5).\ntwitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet id -> [5]. return [5]\ntwitter.follow(1, 2);    // User 1 follows user 2.\ntwitter.postTweet(2, 6); // User 2 posts a new tweet (id = 6).\ntwitter.getNewsFeed(1);  // User 1's news feed should return a list with 2 tweet ids -> [6, 5]. Tweet id 6 should precede tweet id 5 because it is posted after tweet id 5.\ntwitter.unfollow(1, 2);  // User 1 unfollows user 2.\ntwitter.getNewsFeed(1);  // User 1's news feed should return a list with 1 tweet id -> [5], since user 1 is no longer following user 2."
+  },
+  {
+    "id": "design-underground-system",
+    "title": "Design Underground System",
+    "example": 1,
+    "input": "Input\n[\"UndergroundSystem\",\"checkIn\",\"checkIn\",\"checkIn\",\"checkOut\",\"checkOut\",\"checkOut\",\"getAverageTime\",\"getAverageTime\",\"checkIn\",\"getAverageTime\",\"checkOut\",\"getAverageTime\"]\n[[],[45,\"Leyton\",3],[32,\"Paradise\",8],[27,\"Leyton\",10],[45,\"Waterloo\",15],[27,\"Waterloo\",20],[32,\"Cambridge\",22],[\"Paradise\",\"Cambridge\"],[\"Leyton\",\"Waterloo\"],[10,\"Leyton\",24],[\"Leyton\",\"Waterloo\"],[10,\"Waterloo\",38],[\"Leyton\",\"Waterloo\"]]\nOutput\n[null,null,null,null,null,null,null,14.00000,11.00000,null,11.00000,null,12.00000]\nExplanation\nUndergroundSystem undergroundSystem = new UndergroundSystem();\nundergroundSystem.checkIn(45, \"Leyton\", 3);\nundergroundSystem.checkIn(32, \"Paradise\", 8);\nundergroundSystem.checkIn(27, \"Leyton\", 10);\nundergroundSystem.checkOut(45, \"Waterloo\", 15);  // Customer 45 \"Leyton\" -> \"Waterloo\" in 15-3 = 12\nundergroundSystem.checkOut(27, \"Waterloo\", 20);  // Customer 27 \"Leyton\" -> \"Waterloo\" in 20-10 = 10\nundergroundSystem.checkOut(32, \"Cambridge\", 22); // Customer 32 \"Paradise\" -> \"Cambridge\" in 22-8 = 14\nundergroundSystem.getAverageTime(\"Paradise\", \"Cambridge\"); // return 14.00000. One trip \"Paradise\" -> \"Cambridge\", (14) / 1 = 14\nundergroundSystem.getAverageTime(\"Leyton\", \"Waterloo\");    // return 11.00000. Two trips \"Leyton\" -> \"Waterloo\", (10 + 12) / 2 = 11\nundergroundSystem.checkIn(10, \"Leyton\", 24);\nundergroundSystem.getAverageTime(\"Leyton\", \"Waterloo\");    // return 11.00000\nundergroundSystem.checkOut(10, \"Waterloo\", 38);  // Customer 10 \"Leyton\" -> \"Waterloo\" in 38-24 = 14\nundergroundSystem.getAverageTime(\"Leyton\", \"Waterloo\");    // return 12.00000. Three trips \"Leyton\" -> \"Waterloo\", (10 + 12 + 14) / 3 = 12"
+  },
+  {
+    "id": "design-underground-system",
+    "title": "Design Underground System",
+    "example": 2,
+    "input": "Input\n[\"UndergroundSystem\",\"checkIn\",\"checkOut\",\"getAverageTime\",\"checkIn\",\"checkOut\",\"getAverageTime\",\"checkIn\",\"checkOut\",\"getAverageTime\"]\n[[],[10,\"Leyton\",3],[10,\"Paradise\",8],[\"Leyton\",\"Paradise\"],[5,\"Leyton\",10],[5,\"Paradise\",16],[\"Leyton\",\"Paradise\"],[2,\"Leyton\",21],[2,\"Paradise\",30],[\"Leyton\",\"Paradise\"]]\nOutput\n[null,null,null,5.00000,null,null,5.50000,null,null,6.66667]\nExplanation\nUndergroundSystem undergroundSystem = new UndergroundSystem();\nundergroundSystem.checkIn(10, \"Leyton\", 3);\nundergroundSystem.checkOut(10, \"Paradise\", 8); // Customer 10 \"Leyton\" -> \"Paradise\" in 8-3 = 5\nundergroundSystem.getAverageTime(\"Leyton\", \"Paradise\"); // return 5.00000, (5) / 1 = 5\nundergroundSystem.checkIn(5, \"Leyton\", 10);\nundergroundSystem.checkOut(5, \"Paradise\", 16); // Customer 5 \"Leyton\" -> \"Paradise\" in 16-10 = 6\nundergroundSystem.getAverageTime(\"Leyton\", \"Paradise\"); // return 5.50000, (5 + 6) / 2 = 5.5\nundergroundSystem.checkIn(2, \"Leyton\", 21);\nundergroundSystem.checkOut(2, \"Paradise\", 30); // Customer 2 \"Leyton\" -> \"Paradise\" in 30-21 = 9\nundergroundSystem.getAverageTime(\"Leyton\", \"Paradise\"); // return 6.66667, (5 + 6 + 9) / 3 = 6.66667"
+  },
+  {
+    "id": "detect-squares",
+    "title": "Detect Squares",
+    "example": 1,
+    "input": "Input\n[\"DetectSquares\", \"add\", \"add\", \"add\", \"count\", \"count\", \"add\", \"count\"]\n[[], [[3, 10]], [[11, 2]], [[3, 2]], [[11, 10]], [[14, 8]], [[11, 2]], [[11, 10]]]\nOutput\n[null, null, null, null, 1, 0, null, 2]\nExplanation\nDetectSquares detectSquares = new DetectSquares();\ndetectSquares.add([3, 10]);\ndetectSquares.add([11, 2]);\ndetectSquares.add([3, 2]);\ndetectSquares.count([11, 10]); // return 1. You can choose:\n                               //   - The first, second, and third points\ndetectSquares.count([14, 8]);  // return 0. The query point cannot form a square with any points in the data structure.\ndetectSquares.add([11, 2]);    // Adding duplicate points is allowed.\ndetectSquares.count([11, 10]); // return 2. You can choose:\n                               //   - The first, second, and third points\n                               //   - The first, third, and fourth points"
+  },
+  {
+    "id": "dinner-plate-stacks",
+    "title": "Dinner Plate Stacks",
+    "example": 1,
+    "input": "Input\n[\"DinnerPlates\", \"push\", \"push\", \"push\", \"push\", \"push\", \"popAtStack\", \"push\", \"push\", \"popAtStack\", \"popAtStack\", \"pop\", \"pop\", \"pop\", \"pop\", \"pop\"]\n[[2], [1], [2], [3], [4], [5], [0], [20], [21], [0], [2], [], [], [], [], []]\nOutput\n[null, null, null, null, null, null, 2, null, null, 20, 21, 5, 4, 3, 1, -1]\nExplanation:\nDinnerPlates D = DinnerPlates(2);  // Initialize with capacity = 2\nD.push(1);\nD.push(2);\nD.push(3);\nD.push(4);\nD.push(5);         // The stacks are now:  2  4\n                                           1  3  5\n                                           ﹈ ﹈ ﹈\nD.popAtStack(0);   // Returns 2.  The stacks are now:     4\n                                                       1  3  5\n                                                       ﹈ ﹈ ﹈\nD.push(20);        // The stacks are now: 20  4\n                                           1  3  5\n                                           ﹈ ﹈ ﹈\nD.push(21);        // The stacks are now: 20  4 21\n                                           1  3  5\n                                           ﹈ ﹈ ﹈\nD.popAtStack(0);   // Returns 20.  The stacks are now:     4 21\n                                                        1  3  5\n                                                        ﹈ ﹈ ﹈\nD.popAtStack(2);   // Returns 21.  The stacks are now:     4\n                                                        1  3  5\n                                                        ﹈ ﹈ ﹈ \nD.pop()            // Returns 5.  The stacks are now:      4\n                                                        1  3 \n                                                        ﹈ ﹈  \nD.pop()            // Returns 4.  The stacks are now:   1  3 \n                                                        ﹈ ﹈   \nD.pop()            // Returns 3.  The stacks are now:   1 \n                                                        ﹈   \nD.pop()            // Returns 1.  There are no stacks.\nD.pop()            // Returns -1.  There are still no stacks."
+  },
+  {
+    "id": "display-the-first-three-rows",
+    "title": "Display the First Three Rows",
+    "example": 1,
+    "input": "DataFrame:\nemployees\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| employee_id | int    |\n| name        | object |\n| department  | object |\n| salary      | int    |\n+-------------+--------+"
+  },
+  {
+    "id": "dna-pattern-recognition",
+    "title": "DNA Pattern Recognition",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    | \n+----------------+---------+\n| sample_id      | int     |\n| dna_sequence   | varchar |\n| species        | varchar |\n+----------------+---------+\nsample_id is the unique key for this table.\nEach row contains a DNA sequence represented as a string of characters (A, T, G, C) and the species it was collected from."
+  },
+  {
+    "id": "dna-pattern-recognition",
+    "title": "DNA Pattern Recognition",
+    "example": 2,
+    "input": "+-----------+------------------+-----------+\n| sample_id | dna_sequence     | species   |\n+-----------+------------------+-----------+\n| 1         | ATGCTAGCTAGCTAA  | Human     |\n| 2         | GGGTCAATCATC     | Human     |\n| 3         | ATATATCGTAGCTA   | Human     |\n| 4         | ATGGGGTCATCATAA  | Mouse     |\n| 5         | TCAGTCAGTCAG     | Mouse     |\n| 6         | ATATCGCGCTAG     | Zebrafish |\n| 7         | CGTATGCGTCGTA    | Zebrafish |\n+-----------+------------------+-----------+"
+  },
+  {
+    "id": "dna-pattern-recognition",
+    "title": "DNA Pattern Recognition",
+    "example": 3,
+    "input": "+-----------+------------------+-------------+-------------+------------+------------+------------+\n| sample_id | dna_sequence     | species     | has_start   | has_stop   | has_atat   | has_ggg    |\n+-----------+------------------+-------------+-------------+------------+------------+------------+\n| 1         | ATGCTAGCTAGCTAA  | Human       | 1           | 1          | 0          | 0          |\n| 2         | GGGTCAATCATC     | Human       | 0           | 0          | 0          | 1          |\n| 3         | ATATATCGTAGCTA   | Human       | 0           | 0          | 1          | 0          |\n| 4         | ATGGGGTCATCATAA  | Mouse       | 1           | 1          | 0          | 1          |\n| 5         | TCAGTCAGTCAG     | Mouse       | 0           | 0          | 0          | 0          |\n| 6         | ATATCGCGCTAG     | Zebrafish   | 0           | 1          | 1          | 0          |\n| 7         | CGTATGCGTCGTA    | Zebrafish   | 0           | 0          | 0          | 0          |\n+-----------+------------------+-------------+-------------+------------+------------+------------+"
+  },
+  {
+    "id": "duplicate-emails",
+    "title": "Duplicate Emails",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| email       | varchar |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains an email. The emails will not contain uppercase letters."
+  },
+  {
+    "id": "employee-bonus",
+    "title": "Employee Bonus",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| empId       | int     |\n| name        | varchar |\n| supervisor  | int     |\n| salary      | int     |\n+-------------+---------+\nempId is the column with unique values for this table.\nEach row of this table indicates the name and the ID of an employee in addition to their salary and the id of their manager."
+  },
+  {
+    "id": "employee-bonus",
+    "title": "Employee Bonus",
+    "example": 2,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| empId       | int  |\n| bonus       | int  |\n+-------------+------+\nempId is the column of unique values for this table.\nempId is a foreign key (reference column) to empId from the Employee table.\nEach row of this table contains the id of an employee and their respective bonus."
+  },
+  {
+    "id": "employees-earning-more-than-their-managers",
+    "title": "Employees Earning More Than Their Managers",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| salary      | int     |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the ID of an employee, their name, salary, and the ID of their manager."
+  },
+  {
+    "id": "employees-whose-manager-left-the-company",
+    "title": "Employees Whose Manager Left the Company",
+    "example": 1,
+    "input": "+-------------+----------+\n| Column Name | Type     |\n+-------------+----------+\n| employee_id | int      |\n| name        | varchar  |\n| manager_id  | int      |\n| salary      | int      |\n+-------------+----------+\nIn SQL, employee_id is the primary key for this table.\nThis table contains information about the employees, their salary, and the ID of their manager. Some employees do not have a manager (manager_id is null)."
+  },
+  {
+    "id": "encrypt-and-decrypt-strings",
+    "title": "Encrypt and Decrypt Strings",
+    "example": 1,
+    "input": "Input\n[\"Encrypter\", \"encrypt\", \"decrypt\"]\n[[['a', 'b', 'c', 'd'], [\"ei\", \"zf\", \"ei\", \"am\"], [\"abcd\", \"acbd\", \"adbc\", \"badc\", \"dacb\", \"cadb\", \"cbda\", \"abad\"]], [\"abcd\"], [\"eizfeiam\"]]\nOutput\n[null, \"eizfeiam\", 2]\nExplanation\nEncrypter encrypter = new Encrypter([['a', 'b', 'c', 'd'], [\"ei\", \"zf\", \"ei\", \"am\"], [\"abcd\", \"acbd\", \"adbc\", \"badc\", \"dacb\", \"cadb\", \"cbda\", \"abad\"]);\nencrypter.encrypt(\"abcd\"); // return \"eizfeiam\". \n                           // 'a' maps to \"ei\", 'b' maps to \"zf\", 'c' maps to \"ei\", and 'd' maps to \"am\".\nencrypter.decrypt(\"eizfeiam\"); // return 2. \n                              // \"ei\" can map to 'a' or 'c', \"zf\" maps to 'b', and \"am\" maps to 'd'. \n                              // Thus, the possible strings after decryption are \"abad\", \"cbad\", \"abcd\", and \"cbcd\". \n                              // 2 of those strings, \"abad\" and \"abcd\", appear in dictionary, so the answer is 2."
+  },
+  {
+    "id": "exam-room",
+    "title": "Exam Room",
+    "example": 1,
+    "input": "Input\n[\"ExamRoom\", \"seat\", \"seat\", \"seat\", \"seat\", \"leave\", \"seat\"]\n[[10], [], [], [], [], [4], []]\nOutput\n[null, 0, 9, 4, 2, null, 5]\nExplanation\nExamRoom examRoom = new ExamRoom(10);\nexamRoom.seat(); // return 0, no one is in the room, then the student sits at seat number 0.\nexamRoom.seat(); // return 9, the student sits at the last seat number 9.\nexamRoom.seat(); // return 4, the student sits at the last seat number 4.\nexamRoom.seat(); // return 2, the student sits at the last seat number 2.\nexamRoom.leave(4);\nexamRoom.seat(); // return 5, the student sits at the last seat number 5."
+  },
+  {
+    "id": "excel-sheet-column-number",
+    "title": "Excel Sheet Column Number",
+    "example": 1,
+    "input": "A -> 1\nB -> 2\nC -> 3\n...\nZ -> 26\nAA -> 27\nAB -> 28 \n..."
+  },
+  {
+    "id": "excel-sheet-column-title",
+    "title": "Excel Sheet Column Title",
+    "example": 1,
+    "input": "A -> 1\nB -> 2\nC -> 3\n...\nZ -> 26\nAA -> 27\nAB -> 28 \n..."
+  },
+  {
+    "id": "exchange-seats",
+    "title": "Exchange Seats",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| student     | varchar |\n+-------------+---------+\nid is the primary key (unique value) column for this table.\nEach row of this table indicates the name and the ID of a student.\nThe ID sequence always starts from 1 and increments continuously."
+  },
+  {
+    "id": "fancy-sequence",
+    "title": "Fancy Sequence",
+    "example": 1,
+    "input": "Input\n[\"Fancy\", \"append\", \"addAll\", \"append\", \"multAll\", \"getIndex\", \"addAll\", \"append\", \"multAll\", \"getIndex\", \"getIndex\", \"getIndex\"]\n[[], [2], [3], [7], [2], [0], [3], [10], [2], [0], [1], [2]]\nOutput\n[null, null, null, null, null, 10, null, null, null, 26, 34, 20]\nExplanation\nFancy fancy = new Fancy();\nfancy.append(2);   // fancy sequence: [2]\nfancy.addAll(3);   // fancy sequence: [2+3] -> [5]\nfancy.append(7);   // fancy sequence: [5, 7]\nfancy.multAll(2);  // fancy sequence: [5*2, 7*2] -> [10, 14]\nfancy.getIndex(0); // return 10\nfancy.addAll(3);   // fancy sequence: [10+3, 14+3] -> [13, 17]\nfancy.append(10);  // fancy sequence: [13, 17, 10]\nfancy.multAll(2);  // fancy sequence: [13*2, 17*2, 10*2] -> [26, 34, 20]\nfancy.getIndex(0); // return 26\nfancy.getIndex(1); // return 34\nfancy.getIndex(2); // return 20"
+  },
+  {
+    "id": "fibonacci-number",
+    "title": "Fibonacci Number",
+    "example": 1,
+    "input": "F(0) = 0, F(1) = 1\nF(n) = F(n - 1) + F(n - 2), for n > 1."
+  },
+  {
+    "id": "fill-missing-data",
+    "title": "Fill Missing Data",
+    "example": 1,
+    "input": "DataFrame\nproducts\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| name        | object |\n| quantity    | int    |\n| price       | int    |\n+-------------+--------+"
+  },
+  {
+    "id": "find-consecutive-integers-from-a-data-stream",
+    "title": "Find Consecutive Integers from a Data Stream",
+    "example": 1,
+    "input": "Input\n[\"DataStream\", \"consec\", \"consec\", \"consec\", \"consec\"]\n[[4, 3], [4], [4], [4], [3]]\nOutput\n[null, false, false, true, false]\nExplanation\nDataStream dataStream = new DataStream(4, 3); //value = 4, k = 3 \ndataStream.consec(4); // Only 1 integer is parsed, so returns False. \ndataStream.consec(4); // Only 2 integers are parsed.\n                      // Since 2 is less than k, returns False. \ndataStream.consec(4); // The 3 integers parsed are all equal to value, so returns True. \ndataStream.consec(3); // The last k integers parsed in the stream are [4,4,3].\n                      // Since 3 is not equal to value, it returns False."
+  },
+  {
+    "id": "find-customer-referee",
+    "title": "Find Customer Referee",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| referee_id  | int     |\n+-------------+---------+\nIn SQL, id is the primary key column for this table.\nEach row of this table indicates the id of a customer, their name, and the id of the customer who referred them."
+  },
+  {
+    "id": "find-elements-in-a-contaminated-binary-tree",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "example": 1,
+    "input": "Input\n[\"FindElements\",\"find\",\"find\"]\n[[[-1,null,-1]],[1],[2]]\nOutput\n[null,false,true]\nExplanation\nFindElements findElements = new FindElements([-1,null,-1]); \nfindElements.find(1); // return False \nfindElements.find(2); // return True"
+  },
+  {
+    "id": "find-elements-in-a-contaminated-binary-tree",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "example": 2,
+    "input": "Input\n[\"FindElements\",\"find\",\"find\",\"find\"]\n[[[-1,-1,-1,-1,-1]],[1],[3],[5]]\nOutput\n[null,true,true,false]\nExplanation\nFindElements findElements = new FindElements([-1,-1,-1,-1,-1]);\nfindElements.find(1); // return True\nfindElements.find(3); // return True\nfindElements.find(5); // return False"
+  },
+  {
+    "id": "find-elements-in-a-contaminated-binary-tree",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "example": 3,
+    "input": "Input\n[\"FindElements\",\"find\",\"find\",\"find\",\"find\"]\n[[[-1,null,-1,-1,null,-1]],[2],[3],[4],[5]]\nOutput\n[null,true,false,false,true]\nExplanation\nFindElements findElements = new FindElements([-1,null,-1,-1,null,-1]);\nfindElements.find(2); // return True\nfindElements.find(3); // return False\nfindElements.find(4); // return False\nfindElements.find(5); // return True"
+  },
+  {
+    "id": "find-followers-count",
+    "title": "Find Followers Count",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| user_id     | int  |\n| follower_id | int  |\n+-------------+------+\n(user_id, follower_id) is the primary key (combination of columns with unique values) for this table.\nThis table contains the IDs of a user and a follower in a social media app where the follower follows the user."
+  },
+  {
+    "id": "find-median-from-data-stream",
+    "title": "Find Median from Data Stream",
+    "example": 1,
+    "input": "Input\n[\"MedianFinder\", \"addNum\", \"addNum\", \"findMedian\", \"addNum\", \"findMedian\"]\n[[], [1], [2], [], [3], []]\nOutput\n[null, null, null, 1.5, null, 2.0]\nExplanation\nMedianFinder medianFinder = new MedianFinder();\nmedianFinder.addNum(1);    // arr = [1]\nmedianFinder.addNum(2);    // arr = [1, 2]\nmedianFinder.findMedian(); // return 1.5 (i.e., (1 + 2) / 2)\nmedianFinder.addNum(3);    // arr[1, 2, 3]\nmedianFinder.findMedian(); // return 2.0"
+  },
+  {
+    "id": "find-positive-integer-solution-for-a-given-equation",
+    "title": "Find Positive Integer Solution for a Given Equation",
+    "example": 1,
+    "input": "interface CustomFunction {\npublic:\n  // Returns some positive integer f(x, y) for two positive integers x and y based on a formula.\n  int f(int x, int y);\n};"
+  },
+  {
+    "id": "find-students-who-improved",
+    "title": "Find Students Who Improved",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| student_id  | int     |\n| subject     | varchar |\n| score       | int     |\n| exam_date   | varchar |\n+-------------+---------+\n(student_id, subject, exam_date) is the primary key for this table.\nEach row contains information about a student's score in a specific subject on a particular exam date. score is between 0 and 100 (inclusive)."
+  },
+  {
+    "id": "find-students-who-improved",
+    "title": "Find Students Who Improved",
+    "example": 2,
+    "input": "+------------+----------+-------+------------+\n| student_id | subject  | score | exam_date  |\n+------------+----------+-------+------------+\n| 101        | Math     | 70    | 2023-01-15 |\n| 101        | Math     | 85    | 2023-02-15 |\n| 101        | Physics  | 65    | 2023-01-15 |\n| 101        | Physics  | 60    | 2023-02-15 |\n| 102        | Math     | 80    | 2023-01-15 |\n| 102        | Math     | 85    | 2023-02-15 |\n| 103        | Math     | 90    | 2023-01-15 |\n| 104        | Physics  | 75    | 2023-01-15 |\n| 104        | Physics  | 85    | 2023-02-15 |\n+------------+----------+-------+------------+"
+  },
+  {
+    "id": "find-students-who-improved",
+    "title": "Find Students Who Improved",
+    "example": 3,
+    "input": "+------------+----------+-------------+--------------+\n| student_id | subject  | first_score | latest_score |\n+------------+----------+-------------+--------------+\n| 101        | Math     | 70          | 85           |\n| 102        | Math     | 80          | 85           |\n| 104        | Physics  | 75          | 85           |\n+------------+----------+-------------+--------------+"
+  },
+  {
+    "id": "find-total-time-spent-by-each-employee",
+    "title": "Find Total Time Spent by Each Employee",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| emp_id      | int  |\n| event_day   | date |\n| in_time     | int  |\n| out_time    | int  |\n+-------------+------+\n(emp_id, event_day, in_time) is the primary key (combinations of columns with unique values) of this table.\nThe table shows the employees' entries and exits in an office.\nevent_day is the day at which this event happened, in_time is the minute at which the employee entered the office, and out_time is the minute at which they left the office.\nin_time and out_time are between 1 and 1440.\nIt is guaranteed that no two events on the same day intersect in time, and in_time < out_time."
+  },
+  {
+    "id": "find-users-with-valid-e-mails",
+    "title": "Find Users With Valid E-Mails",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| name          | varchar |\n| mail          | varchar |\n+---------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nThis table contains information of the users signed up in a website. Some e-mails are invalid."
+  },
+  {
+    "id": "finding-mk-average",
+    "title": "Finding MK Average",
+    "example": 1,
+    "input": "Input\n[\"MKAverage\", \"addElement\", \"addElement\", \"calculateMKAverage\", \"addElement\", \"calculateMKAverage\", \"addElement\", \"addElement\", \"addElement\", \"calculateMKAverage\"]\n[[3, 1], [3], [1], [], [10], [], [5], [5], [5], []]\nOutput\n[null, null, null, -1, null, 3, null, null, null, 5]\nExplanation\nMKAverage obj = new MKAverage(3, 1); \nobj.addElement(3);        // current elements are [3]\nobj.addElement(1);        // current elements are [3,1]\nobj.calculateMKAverage(); // return -1, because m = 3 and only 2 elements exist.\nobj.addElement(10);       // current elements are [3,1,10]\nobj.calculateMKAverage(); // The last 3 elements are [3,1,10].\n                          // After removing smallest and largest 1 element the container will be [3].\n                          // The average of [3] equals 3/1 = 3, return 3\nobj.addElement(5);        // current elements are [3,1,10,5]\nobj.addElement(5);        // current elements are [3,1,10,5,5]\nobj.addElement(5);        // current elements are [3,1,10,5,5,5]\nobj.calculateMKAverage(); // The last 3 elements are [5,5,5].\n                          // After removing smallest and largest 1 element the container will be [5].\n                          // The average of [5] equals 5/1 = 5, return 5"
+  },
+  {
+    "id": "finding-pairs-with-a-certain-sum",
+    "title": "Finding Pairs With a Certain Sum",
+    "example": 1,
+    "input": "Input\n[\"FindSumPairs\", \"count\", \"add\", \"count\", \"count\", \"add\", \"add\", \"count\"]\n[[[1, 1, 2, 2, 2, 3], [1, 4, 5, 2, 5, 4]], [7], [3, 2], [8], [4], [0, 1], [1, 1], [7]]\nOutput\n[null, 8, null, 2, 1, null, null, 11]\nExplanation\nFindSumPairs findSumPairs = new FindSumPairs([1, 1, 2, 2, 2, 3], [1, 4, 5, 2, 5, 4]);\nfindSumPairs.count(7);  // return 8; pairs (2,2), (3,2), (4,2), (2,4), (3,4), (4,4) make 2 + 5 and pairs (5,1), (5,5) make 3 + 4\nfindSumPairs.add(3, 2); // now nums2 = [1,4,5,\n4\n,5,4\n]\nfindSumPairs.count(8);  // return 2; pairs (5,2), (5,4) make 3 + 5\nfindSumPairs.count(4);  // return 1; pair (5,0) makes 3 + 1\nfindSumPairs.add(0, 1); // now nums2 = [\n2\n,4,5,4\n,5,4\n]\nfindSumPairs.add(1, 1); // now nums2 = [\n2\n,\n5\n,5,4\n,5,4\n]\nfindSumPairs.count(7);  // return 11; pairs (2,1), (2,2), (2,4), (3,1), (3,2), (3,4), (4,1), (4,2), (4,4) make 2 + 5 and pairs (5,3), (5,5) make 3 + 4"
+  },
+  {
+    "id": "fix-names-in-a-table",
+    "title": "Fix Names in a Table",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| user_id        | int     |\n| name           | varchar |\n+----------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nThis table contains the ID and the name of the user. The name consists of only lowercase and uppercase characters."
+  },
+  {
+    "id": "flatten-deeply-nested-array",
+    "title": "Flatten Deeply Nested Array",
+    "example": 1,
+    "input": "Input\narr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]]\nn = 0\nOutput\n[1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]]\nExplanation\nPassing a depth of n=0 will always result in the original array. This is because the smallest possible depth of a subarray (0) is not less than n=0. Thus, no subarray should be flattened."
+  },
+  {
+    "id": "flatten-deeply-nested-array",
+    "title": "Flatten Deeply Nested Array",
+    "example": 2,
+    "input": "Input\narr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]]\nn = 1\nOutput\n[1, 2, 3, 4, 5, 6, 7, 8, [9, 10, 11], 12, 13, 14, 15]\nExplanation\nThe subarrays starting with 4, 7, and 13 are all flattened. This is because their depth of 0 is less than 1. However [9, 10, 11] remains unflattened because its depth is 1."
+  },
+  {
+    "id": "flatten-deeply-nested-array",
+    "title": "Flatten Deeply Nested Array",
+    "example": 3,
+    "input": "Input\narr = [[1, 2, 3], [4, 5, 6], [7, 8, [9, 10, 11], 12], [13, 14, 15]]\nn = 2\nOutput\n[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]\nExplanation\nThe maximum depth of any subarray is 1. Thus, all of them are flattened."
+  },
+  {
+    "id": "flatten-nested-list-iterator",
+    "title": "Flatten Nested List Iterator",
+    "example": 1,
+    "input": "initialize iterator with nestedList\nres = []\nwhile iterator.hasNext()\n    append iterator.next() to the end of res\nreturn res"
+  },
+  {
+    "id": "friend-requests-ii-who-has-the-most-friends",
+    "title": "Friend Requests II: Who Has the Most Friends",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| requester_id   | int     |\n| accepter_id    | int     |\n| accept_date    | date    |\n+----------------+---------+\n(requester_id, accepter_id) is the primary key (combination of columns with unique values) for this table.\nThis table contains the ID of the user who sent the request, the ID of the user who received the request, and the date when the request was accepted."
+  },
+  {
+    "id": "game-play-analysis-i",
+    "title": "Game Play Analysis I",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| player_id    | int     |\n| device_id    | int     |\n| event_date   | date    |\n| games_played | int     |\n+--------------+---------+\n(player_id, event_date) is the primary key (combination of columns with unique values) of this table.\nThis table shows the activity of players of some games.\nEach row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device."
+  },
+  {
+    "id": "game-play-analysis-iv",
+    "title": "Game Play Analysis IV",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| player_id    | int     |\n| device_id    | int     |\n| event_date   | date    |\n| games_played | int     |\n+--------------+---------+\n(player_id, event_date) is the primary key (combination of columns with unique values) of this table.\nThis table shows the activity of players of some games.\nEach row is a record of a player who logged in and played a number of games (possibly 0) before logging out on someday using some device."
+  },
+  {
+    "id": "generate-random-point-in-a-circle",
+    "title": "Generate Random Point in a Circle",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"randPoint\", \"randPoint\", \"randPoint\"]\n[[1.0, 0.0, 0.0], [], [], []]\nOutput\n[null, [-0.02493, -0.38077], [0.82314, 0.38945], [0.36572, 0.17248]]\nExplanation\nSolution solution = new Solution(1.0, 0.0, 0.0);\nsolution.randPoint(); // return [-0.02493, -0.38077]\nsolution.randPoint(); // return [0.82314, 0.38945]\nsolution.randPoint(); // return [0.36572, 0.17248]"
+  },
+  {
+    "id": "get-the-size-of-a-dataframe",
+    "title": "Get the Size of a DataFrame",
+    "example": 1,
+    "input": "DataFrame\nplayers:\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| player_id   | int    |\n| name        | object |\n| age         | int    |\n| position    | object |\n| ...         | ...    |\n+-------------+--------+"
+  },
+  {
+    "id": "group-sold-products-by-the-date",
+    "title": "Group Sold Products By The Date",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| sell_date   | date    |\n| product     | varchar |\n+-------------+---------+\nThere is no primary key (column with unique values) for this table. It may contain duplicates.\nEach row of this table contains the product name and the date it was sold in a market."
+  },
+  {
+    "id": "human-traffic-of-stadium",
+    "title": "Human Traffic of Stadium",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| visit_date    | date    |\n| people        | int     |\n+---------------+---------+\nvisit_date is the column with unique values for this table.\nEach row of this table contains the visit date and visit id to the stadium with the number of people during the visit.\nAs the id increases, the date increases as well."
+  },
+  {
+    "id": "immediate-food-delivery-ii",
+    "title": "Immediate Food Delivery II",
+    "example": 1,
+    "input": "+-----------------------------+---------+\n| Column Name                 | Type    |\n+-----------------------------+---------+\n| delivery_id                 | int     |\n| customer_id                 | int     |\n| order_date                  | date    |\n| customer_pref_delivery_date | date    |\n+-----------------------------+---------+\ndelivery_id is the column of unique values of this table.\nThe table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it)."
+  },
+  {
+    "id": "implement-magic-dictionary",
+    "title": "Implement Magic Dictionary",
+    "example": 1,
+    "input": "Input\n[\"MagicDictionary\", \"buildDict\", \"search\", \"search\", \"search\", \"search\"]\n[[], [[\"hello\", \"leetcode\"]], [\"hello\"], [\"hhllo\"], [\"hell\"], [\"leetcoded\"]]\nOutput\n[null, null, false, true, false, false]\nExplanation\nMagicDictionary magicDictionary = new MagicDictionary();\nmagicDictionary.buildDict([\"hello\", \"leetcode\"]);\nmagicDictionary.search(\"hello\"); // return False\nmagicDictionary.search(\"hhllo\"); // We can change the second 'h' to 'e' to match \"hello\" so we return True\nmagicDictionary.search(\"hell\"); // return False\nmagicDictionary.search(\"leetcoded\"); // return False"
+  },
+  {
+    "id": "implement-queue-using-stacks",
+    "title": "Implement Queue using Stacks",
+    "example": 1,
+    "input": "Input\n[\"MyQueue\", \"push\", \"push\", \"peek\", \"pop\", \"empty\"]\n[[], [1], [2], [], [], []]\nOutput\n[null, null, null, 1, 1, false]\nExplanation\nMyQueue myQueue = new MyQueue();\nmyQueue.push(1); // queue is: [1]\nmyQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)\nmyQueue.peek(); // return 1\nmyQueue.pop(); // return 1, queue is [2]\nmyQueue.empty(); // return false"
+  },
+  {
+    "id": "implement-stack-using-queues",
+    "title": "Implement Stack using Queues",
+    "example": 1,
+    "input": "Input\n[\"MyStack\", \"push\", \"push\", \"top\", \"pop\", \"empty\"]\n[[], [1], [2], [], [], []]\nOutput\n[null, null, null, 2, 2, false]\nExplanation\nMyStack myStack = new MyStack();\nmyStack.push(1);\nmyStack.push(2);\nmyStack.top(); // return 2\nmyStack.pop(); // return 2\nmyStack.empty(); // return False"
+  },
+  {
+    "id": "implement-trie-prefix-tree",
+    "title": "Implement Trie (Prefix Tree)",
+    "example": 1,
+    "input": "Input\n[\"Trie\", \"insert\", \"search\", \"search\", \"startsWith\", \"insert\", \"search\"]\n[[], [\"apple\"], [\"apple\"], [\"app\"], [\"app\"], [\"app\"], [\"app\"]]\nOutput\n[null, null, true, false, true, null, true]\nExplanation\nTrie trie = new Trie();\ntrie.insert(\"apple\");\ntrie.search(\"apple\");   // return True\ntrie.search(\"app\");     // return False\ntrie.startsWith(\"app\"); // return True\ntrie.insert(\"app\");\ntrie.search(\"app\");     // return True"
+  },
+  {
+    "id": "insert-delete-getrandom-o-1",
+    "title": "Insert Delete GetRandom O(1)",
+    "example": 1,
+    "input": "Input\n[\"RandomizedSet\", \"insert\", \"remove\", \"insert\", \"getRandom\", \"remove\", \"insert\", \"getRandom\"]\n[[], [1], [2], [2], [], [1], [2], []]\nOutput\n[null, true, false, true, 2, true, false, 2]\nExplanation\nRandomizedSet randomizedSet = new RandomizedSet();\nrandomizedSet.insert(1); // Inserts 1 to the set. Returns true as 1 was inserted successfully.\nrandomizedSet.remove(2); // Returns false as 2 does not exist in the set.\nrandomizedSet.insert(2); // Inserts 2 to the set, returns true. Set now contains [1,2].\nrandomizedSet.getRandom(); // getRandom() should return either 1 or 2 randomly.\nrandomizedSet.remove(1); // Removes 1 from the set, returns true. Set now contains [2].\nrandomizedSet.insert(2); // 2 was already in the set, so return false.\nrandomizedSet.getRandom(); // Since 2 is the only number in the set, getRandom() will always return 2."
+  },
+  {
+    "id": "insert-delete-getrandom-o-1-duplicates-allowed",
+    "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+    "example": 1,
+    "input": "Input\n[\"RandomizedCollection\", \"insert\", \"insert\", \"insert\", \"getRandom\", \"remove\", \"getRandom\"]\n[[], [1], [1], [2], [], [1], []]\nOutput\n[null, true, false, true, 2, true, 1]\nExplanation\nRandomizedCollection randomizedCollection = new RandomizedCollection();\nrandomizedCollection.insert(1);   // return true since the collection does not contain 1.\n                                  // Inserts 1 into the collection.\nrandomizedCollection.insert(1);   // return false since the collection contains 1.\n                                  // Inserts another 1 into the collection. Collection now contains [1,1].\nrandomizedCollection.insert(2);   // return true since the collection does not contain 2.\n                                  // Inserts 2 into the collection. Collection now contains [1,1,2].\nrandomizedCollection.getRandom(); // getRandom should:\n                                  // - return 1 with probability 2/3, or\n                                  // - return 2 with probability 1/3.\nrandomizedCollection.remove(1);   // return true since the collection contains 1.\n                                  // Removes 1 from the collection. Collection now contains [1,2].\nrandomizedCollection.getRandom(); // getRandom should return 1 or 2, both equally likely."
+  },
+  {
+    "id": "integer-to-roman",
+    "title": "Integer to Roman",
+    "example": 1,
+    "input": "3000 = MMM as 1000 (M) + 1000 (M) + 1000 (M)\n 700 = DCC as 500 (D) + 100 (C) + 100 (C)\n  40 = XL as 10 (X) less of 50 (L)\n   9 = IX as 1 (I) less of 10 (X)\nNote: 49 is not 1 (I) less of 50 (L) because the conversion is based on decimal places"
+  },
+  {
+    "id": "integer-to-roman",
+    "title": "Integer to Roman",
+    "example": 2,
+    "input": "50 = L\n 8 = VIII"
+  },
+  {
+    "id": "integer-to-roman",
+    "title": "Integer to Roman",
+    "example": 3,
+    "input": "1000 = M\n 900 = CM\n  90 = XC\n   4 = IV"
+  },
+  {
+    "id": "invalid-tweets",
+    "title": "Invalid Tweets",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| tweet_id       | int     |\n| content        | varchar |\n+----------------+---------+\ntweet_id is the primary key (column with unique values) for this table.\ncontent consists of alphanumeric characters, '!', or ' ' and no other special characters.\nThis table contains all the tweets in a social media app."
+  },
+  {
+    "id": "investments-in-2016",
+    "title": "Investments in 2016",
+    "example": 1,
+    "input": "+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| pid         | int   |\n| tiv_2015    | float |\n| tiv_2016    | float |\n| lat         | float |\n| lon         | float |\n+-------------+-------+\npid is the primary key (column with unique values) for this table.\nEach row of this table contains information about one policy where:\npid is the policyholder's policy ID.\ntiv_2015 is the total investment value in 2015 and tiv_2016 is the total investment value in 2016.\nlat is the latitude of the policy holder's city. It's guaranteed that lat is not NULL.\nlon is the longitude of the policy holder's city. It's guaranteed that lon is not NULL."
+  },
+  {
+    "id": "iterator-for-combination",
+    "title": "Iterator for Combination",
+    "example": 1,
+    "input": "Input\n[\"CombinationIterator\", \"next\", \"hasNext\", \"next\", \"hasNext\", \"next\", \"hasNext\"]\n[[\"abc\", 2], [], [], [], [], [], []]\nOutput\n[null, \"ab\", true, \"ac\", true, \"bc\", false]\nExplanation\nCombinationIterator itr = new CombinationIterator(\"abc\", 2);\nitr.next();    // return \"ab\"\nitr.hasNext(); // return True\nitr.next();    // return \"ac\"\nitr.hasNext(); // return True\nitr.next();    // return \"bc\"\nitr.hasNext(); // return False"
+  },
+  {
+    "id": "kth-ancestor-of-a-tree-node",
+    "title": "Kth Ancestor of a Tree Node",
+    "example": 1,
+    "input": "Input\n[\"TreeAncestor\", \"getKthAncestor\", \"getKthAncestor\", \"getKthAncestor\"]\n[[7, [-1, 0, 0, 1, 1, 2, 2]], [3, 1], [5, 2], [6, 3]]\nOutput\n[null, 1, 0, -1]\nExplanation\nTreeAncestor treeAncestor = new TreeAncestor(7, [-1, 0, 0, 1, 1, 2, 2]);\ntreeAncestor.getKthAncestor(3, 1); // returns 1 which is the parent of 3\ntreeAncestor.getKthAncestor(5, 2); // returns 0 which is the grandparent of 5\ntreeAncestor.getKthAncestor(6, 3); // returns -1 because there is no such ancestor"
+  },
+  {
+    "id": "last-person-to-fit-in-the-bus",
+    "title": "Last Person to Fit in the Bus",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| person_id   | int     |\n| person_name | varchar |\n| weight      | int     |\n| turn        | int     |\n+-------------+---------+\nperson_id column contains unique values.\nThis table has the information about all people waiting for a bus.\nThe person_id and turn columns will contain all numbers from 1 to n, where n is the number of rows in the table.\nturn determines the order of which the people will board the bus, where turn=1 denotes the first person to board and turn=n denotes the last person to board.\nweight is the weight of the person in kilograms."
+  },
+  {
+    "id": "lfu-cache",
+    "title": "LFU Cache",
+    "example": 1,
+    "input": "Input\n[\"LFUCache\", \"put\", \"put\", \"get\", \"put\", \"get\", \"get\", \"put\", \"get\", \"get\", \"get\"]\n[[2], [1, 1], [2, 2], [1], [3, 3], [2], [3], [4, 4], [1], [3], [4]]\nOutput\n[null, null, null, 1, null, -1, 3, null, -1, 3, 4]\nExplanation\n// cnt(x) = the use counter for key x\n// cache=[] will show the last used order for tiebreakers (leftmost element is  most recent)\nLFUCache lfu = new LFUCache(2);\nlfu.put(1, 1);   // cache=[1,_], cnt(1)=1\nlfu.put(2, 2);   // cache=[2,1], cnt(2)=1, cnt(1)=1\nlfu.get(1);      // return 1\n                 // cache=[1,2], cnt(2)=1, cnt(1)=2\nlfu.put(3, 3);   // 2 is the LFU key because cnt(2)=1 is the smallest, invalidate 2.\n                 // cache=[3,1], cnt(3)=1, cnt(1)=2\nlfu.get(2);      // return -1 (not found)\nlfu.get(3);      // return 3\n                 // cache=[3,1], cnt(3)=2, cnt(1)=2\nlfu.put(4, 4);   // Both 1 and 3 have the same cnt, but 1 is LRU, invalidate 1.\n                 // cache=[4,3], cnt(4)=1, cnt(3)=2\nlfu.get(1);      // return -1 (not found)\nlfu.get(3);      // return 3\n                 // cache=[3,4], cnt(4)=1, cnt(3)=3\nlfu.get(4);      // return 4\n                 // cache=[4,3], cnt(4)=2, cnt(3)=3"
+  },
+  {
+    "id": "linked-list-random-node",
+    "title": "Linked List Random Node",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"getRandom\", \"getRandom\", \"getRandom\", \"getRandom\", \"getRandom\"]\n[[[1, 2, 3]], [], [], [], [], []]\nOutput\n[null, 1, 3, 2, 2, 3]\nExplanation\nSolution solution = new Solution([1, 2, 3]);\nsolution.getRandom(); // return 1\nsolution.getRandom(); // return 3\nsolution.getRandom(); // return 2\nsolution.getRandom(); // return 2\nsolution.getRandom(); // return 3\n// getRandom() should return either 1, 2, or 3 randomly. Each element should have equal probability of returning."
+  },
+  {
+    "id": "list-the-products-ordered-in-a-period",
+    "title": "List the Products Ordered in a Period",
+    "example": 1,
+    "input": "+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| product_id       | int     |\n| product_name     | varchar |\n| product_category | varchar |\n+------------------+---------+\nproduct_id is the primary key (column with unique values) for this table.\nThis table contains data about the company's products."
+  },
+  {
+    "id": "list-the-products-ordered-in-a-period",
+    "title": "List the Products Ordered in a Period",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| product_id    | int     |\n| order_date    | date    |\n| unit          | int     |\n+---------------+---------+\nThis table may have duplicate rows.\nproduct_id is a foreign key (reference column) to the Products table.\nunit is the number of products ordered in order_date."
+  },
+  {
+    "id": "longest-absolute-file-path",
+    "title": "Longest Absolute File Path",
+    "example": 1,
+    "input": "dir\n⟶ subdir1\n⟶ ⟶ file1.ext\n⟶ ⟶ subsubdir1\n⟶ subdir2\n⟶ ⟶ subsubdir2\n⟶ ⟶ ⟶ file2.ext"
+  },
+  {
+    "id": "longest-uploaded-prefix",
+    "title": "Longest Uploaded Prefix",
+    "example": 1,
+    "input": "Input\n[\"LUPrefix\", \"upload\", \"longest\", \"upload\", \"longest\", \"upload\", \"longest\"]\n[[4], [3], [], [1], [], [2], []]\nOutput\n[null, null, 0, null, 1, null, 3]\nExplanation\nLUPrefix server = new LUPrefix(4);   // Initialize a stream of 4 videos.\nserver.upload(3);                    // Upload video 3.\nserver.longest();                    // Since video 1 has not been uploaded yet, there is no prefix.\n                                     // So, we return 0.\nserver.upload(1);                    // Upload video 1.\nserver.longest();                    // The prefix [1] is the longest uploaded prefix, so we return 1.\nserver.upload(2);                    // Upload video 2.\nserver.longest();                    // The prefix [1,2,3] is the longest uploaded prefix, so we return 3."
+  },
+  {
+    "id": "lru-cache",
+    "title": "LRU Cache",
+    "example": 1,
+    "input": "Input\n[\"LRUCache\", \"put\", \"put\", \"get\", \"put\", \"get\", \"put\", \"get\", \"get\", \"get\"]\n[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]\nOutput\n[null, null, null, 1, null, -1, null, -1, 3, 4]\nExplanation\nLRUCache lRUCache = new LRUCache(2);\nlRUCache.put(1, 1); // cache is {1=1}\nlRUCache.put(2, 2); // cache is {1=1, 2=2}\nlRUCache.get(1);    // return 1\nlRUCache.put(3, 3); // LRU key was 2, evicts key 2, cache is {1=1, 3=3}\nlRUCache.get(2);    // returns -1 (not found)\nlRUCache.put(4, 4); // LRU key was 1, evicts key 1, cache is {4=4, 3=3}\nlRUCache.get(1);    // return -1 (not found)\nlRUCache.get(3);    // return 3\nlRUCache.get(4);    // return 4"
+  },
+  {
+    "id": "managers-with-at-least-5-direct-reports",
+    "title": "Managers with at Least 5 Direct Reports",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| name        | varchar |\n| department  | varchar |\n| managerId   | int     |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table indicates the name of an employee, their department, and the id of their manager.\nIf managerId is null, then the employee does not have a manager.\nNo employee will be the manager of themself."
+  },
+  {
+    "id": "map-sum-pairs",
+    "title": "Map Sum Pairs",
+    "example": 1,
+    "input": "Input\n[\"MapSum\", \"insert\", \"sum\", \"insert\", \"sum\"]\n[[], [\"apple\", 3], [\"ap\"], [\"app\", 2], [\"ap\"]]\nOutput\n[null, null, 3, null, 5]\nExplanation\nMapSum mapSum = new MapSum();\nmapSum.insert(\"apple\", 3);  \nmapSum.sum(\"ap\");           // return 3 (\nap\nple = 3)\nmapSum.insert(\"app\", 2);    \nmapSum.sum(\"ap\");           // return 5 (\nap\nple +\nap\np = 3 + 2 = 5)"
+  },
+  {
+    "id": "market-analysis-i",
+    "title": "Market Analysis I",
+    "example": 1,
+    "input": "+----------------+---------+\n| Column Name    | Type    |\n+----------------+---------+\n| user_id        | int     |\n| join_date      | date    |\n| favorite_brand | varchar |\n+----------------+---------+\nuser_id is the primary key (column with unique values) of this table.\nThis table has the info of the users of an online shopping website where users can sell and buy items."
+  },
+  {
+    "id": "market-analysis-i",
+    "title": "Market Analysis I",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| order_id      | int     |\n| order_date    | date    |\n| item_id       | int     |\n| buyer_id      | int     |\n| seller_id     | int     |\n+---------------+---------+\norder_id is the primary key (column with unique values) of this table.\nitem_id is a foreign key (reference column) to the Items table.\nbuyer_id and seller_id are foreign keys to the Users table."
+  },
+  {
+    "id": "market-analysis-i",
+    "title": "Market Analysis I",
+    "example": 3,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| item_id       | int     |\n| item_brand    | varchar |\n+---------------+---------+\nitem_id is the primary key (column with unique values) of this table."
+  },
+  {
+    "id": "maximum-frequency-stack",
+    "title": "Maximum Frequency Stack",
+    "example": 1,
+    "input": "Input\n[\"FreqStack\", \"push\", \"push\", \"push\", \"push\", \"push\", \"push\", \"pop\", \"pop\", \"pop\", \"pop\"]\n[[], [5], [7], [5], [7], [4], [5], [], [], [], []]\nOutput\n[null, null, null, null, null, null, null, 5, 7, 5, 4]\nExplanation\nFreqStack freqStack = new FreqStack();\nfreqStack.push(5); // The stack is [5]\nfreqStack.push(7); // The stack is [5,7]\nfreqStack.push(5); // The stack is [5,7,5]\nfreqStack.push(7); // The stack is [5,7,5,7]\nfreqStack.push(4); // The stack is [5,7,5,7,4]\nfreqStack.push(5); // The stack is [5,7,5,7,4,5]\nfreqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,5,7,4].\nfreqStack.pop();   // return 7, as 5 and 7 is the most frequent, but 7 is closest to the top. The stack becomes [5,7,5,4].\nfreqStack.pop();   // return 5, as 5 is the most frequent. The stack becomes [5,7,4].\nfreqStack.pop();   // return 4, as 4, 5 and 7 is the most frequent, but 4 is closest to the top. The stack becomes [5,7]."
+  },
+  {
+    "id": "min-stack",
+    "title": "Min Stack",
+    "example": 1,
+    "input": "Input\n[\"MinStack\",\"push\",\"push\",\"push\",\"getMin\",\"pop\",\"top\",\"getMin\"]\n[[],[-2],[0],[-3],[],[],[],[]]\nOutput\n[null,null,null,null,-3,null,0,-2]\nExplanation\nMinStack minStack = new MinStack();\nminStack.push(-2);\nminStack.push(0);\nminStack.push(-3);\nminStack.getMin(); // return -3\nminStack.pop();\nminStack.top();    // return 0\nminStack.getMin(); // return -2"
+  },
+  {
+    "id": "monthly-transactions-i",
+    "title": "Monthly Transactions I",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| country       | varchar |\n| state         | enum    |\n| amount        | int     |\n| trans_date    | date    |\n+---------------+---------+\nid is the primary key of this table.\nThe table has information about incoming transactions.\nThe state column is an enum of type [\"approved\", \"declined\"]."
+  },
+  {
+    "id": "movie-rating",
+    "title": "Movie Rating",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| movie_id      | int     |\n| title         | varchar |\n+---------------+---------+\nmovie_id is the primary key (column with unique values) for this table.\ntitle is the name of the movie."
+  },
+  {
+    "id": "movie-rating",
+    "title": "Movie Rating",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| name          | varchar |\n+---------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nThe column 'name' has unique values."
+  },
+  {
+    "id": "movie-rating",
+    "title": "Movie Rating",
+    "example": 3,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| movie_id      | int     |\n| user_id       | int     |\n| rating        | int     |\n| created_at    | date    |\n+---------------+---------+\n(movie_id, user_id) is the primary key (column with unique values) for this table.\nThis table contains the rating of a movie by a user in their review.\ncreated_at is the user's review date."
+  },
+  {
+    "id": "my-calendar-i",
+    "title": "My Calendar I",
+    "example": 1,
+    "input": "Input\n[\"MyCalendar\", \"book\", \"book\", \"book\"]\n[[], [10, 20], [15, 25], [20, 30]]\nOutput\n[null, true, false, true]\nExplanation\nMyCalendar myCalendar = new MyCalendar();\nmyCalendar.book(10, 20); // return True\nmyCalendar.book(15, 25); // return False, It can not be booked because time 15 is already booked by another event.\nmyCalendar.book(20, 30); // return True, The event can be booked, as the first event takes every time less than 20, but not including 20."
+  },
+  {
+    "id": "my-calendar-ii",
+    "title": "My Calendar II",
+    "example": 1,
+    "input": "Input\n[\"MyCalendarTwo\", \"book\", \"book\", \"book\", \"book\", \"book\", \"book\"]\n[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]\nOutput\n[null, true, true, true, false, true, true]\nExplanation\nMyCalendarTwo myCalendarTwo = new MyCalendarTwo();\nmyCalendarTwo.book(10, 20); // return True, The event can be booked. \nmyCalendarTwo.book(50, 60); // return True, The event can be booked. \nmyCalendarTwo.book(10, 40); // return True, The event can be double booked. \nmyCalendarTwo.book(5, 15);  // return False, The event cannot be booked, because it would result in a triple booking.\nmyCalendarTwo.book(5, 10); // return True, The event can be booked, as it does not use time 10 which is already double booked.\nmyCalendarTwo.book(25, 55); // return True, The event can be booked, as the time in [25, 40) will be double booked with the third event, the time [40, 50) will be single booked, and the time [50, 55) will be double booked with the second event."
+  },
+  {
+    "id": "my-calendar-iii",
+    "title": "My Calendar III",
+    "example": 1,
+    "input": "Input\n[\"MyCalendarThree\", \"book\", \"book\", \"book\", \"book\", \"book\", \"book\"]\n[[], [10, 20], [50, 60], [10, 40], [5, 15], [5, 10], [25, 55]]\nOutput\n[null, 1, 1, 2, 3, 3, 3]\nExplanation\nMyCalendarThree myCalendarThree = new MyCalendarThree();\nmyCalendarThree.book(10, 20); // return 1\nmyCalendarThree.book(50, 60); // return 1\nmyCalendarThree.book(10, 40); // return 2\nmyCalendarThree.book(5, 15); // return 3\nmyCalendarThree.book(5, 10); // return 3\nmyCalendarThree.book(25, 55); // return 3"
+  },
+  {
+    "id": "not-boring-movies",
+    "title": "Not Boring Movies",
+    "example": 1,
+    "input": "+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| id             | int      |\n| movie          | varchar  |\n| description    | varchar  |\n| rating         | float    |\n+----------------+----------+\nid is the primary key (column with unique values) for this table.\nEach row contains information about the name of a movie, its genre, and its rating.\nrating is a 2 decimal places float in the range [0, 10]"
+  },
+  {
+    "id": "nth-highest-salary",
+    "title": "Nth Highest Salary",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| salary      | int  |\n+-------------+------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains information about the salary of an employee."
+  },
+  {
+    "id": "number-of-recent-calls",
+    "title": "Number of Recent Calls",
+    "example": 1,
+    "input": "Input\n[\"RecentCounter\", \"ping\", \"ping\", \"ping\", \"ping\"]\n[[], [1], [100], [3001], [3002]]\nOutput\n[null, 1, 2, 3, 3]\nExplanation\nRecentCounter recentCounter = new RecentCounter();\nrecentCounter.ping(1);     // requests = [\n1\n], range is [-2999,1], return 1\nrecentCounter.ping(100);   // requests = [\n1\n,\n100\n], range is [-2900,100], return 2\nrecentCounter.ping(3001);  // requests = [\n1\n,\n100\n,\n3001\n], range is [1,3001], return 3\nrecentCounter.ping(3002);  // requests = [1,\n100\n,\n3001\n,\n3002\n], range is [2,3002], return 3"
+  },
+  {
+    "id": "number-of-unique-subjects-taught-by-each-teacher",
+    "title": "Number of Unique Subjects Taught by Each Teacher",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| teacher_id  | int  |\n| subject_id  | int  |\n| dept_id     | int  |\n+-------------+------+\n(subject_id, dept_id) is the primary key (combinations of columns with unique values) of this table.\nEach row in this table indicates that the teacher with teacher_id teaches the subject subject_id in the department dept_id."
+  },
+  {
+    "id": "odd-and-even-transactions",
+    "title": "Odd and Even Transactions",
+    "example": 1,
+    "input": "+------------------+------+\n| Column Name      | Type | \n+------------------+------+\n| transaction_id   | int  |\n| amount           | int  |\n| transaction_date | date |\n+------------------+------+\nThe transactions_id column uniquely identifies each row in this table.\nEach row of this table contains the transaction id, amount and transaction date."
+  },
+  {
+    "id": "odd-and-even-transactions",
+    "title": "Odd and Even Transactions",
+    "example": 2,
+    "input": "+----------------+--------+------------------+\n| transaction_id | amount | transaction_date |\n+----------------+--------+------------------+\n| 1              | 150    | 2024-07-01       |\n| 2              | 200    | 2024-07-01       |\n| 3              | 75     | 2024-07-01       |\n| 4              | 300    | 2024-07-02       |\n| 5              | 50     | 2024-07-02       |\n| 6              | 120    | 2024-07-03       |\n+----------------+--------+------------------+"
+  },
+  {
+    "id": "odd-and-even-transactions",
+    "title": "Odd and Even Transactions",
+    "example": 3,
+    "input": "+------------------+---------+----------+\n| transaction_date | odd_sum | even_sum |\n+------------------+---------+----------+\n| 2024-07-01       | 75      | 350      |\n| 2024-07-02       | 0       | 350      |\n| 2024-07-03       | 0       | 120      |\n+------------------+---------+----------+"
+  },
+  {
+    "id": "online-election",
+    "title": "Online Election",
+    "example": 1,
+    "input": "Input\n[\"TopVotedCandidate\", \"q\", \"q\", \"q\", \"q\", \"q\", \"q\"]\n[[[0, 1, 1, 0, 0, 1, 0], [0, 5, 10, 15, 20, 25, 30]], [3], [12], [25], [15], [24], [8]]\nOutput\n[null, 0, 1, 1, 0, 0, 1]\nExplanation\nTopVotedCandidate topVotedCandidate = new TopVotedCandidate([0, 1, 1, 0, 0, 1, 0], [0, 5, 10, 15, 20, 25, 30]);\ntopVotedCandidate.q(3); // return 0, At time 3, the votes are [0], and 0 is leading.\ntopVotedCandidate.q(12); // return 1, At time 12, the votes are [0,1,1], and 1 is leading.\ntopVotedCandidate.q(25); // return 1, At time 25, the votes are [0,1,1,0,0,1], and 1 is leading (as ties go to the most recent vote.)\ntopVotedCandidate.q(15); // return 0\ntopVotedCandidate.q(24); // return 0\ntopVotedCandidate.q(8); // return 1"
+  },
+  {
+    "id": "online-majority-element-in-subarray",
+    "title": "Online Majority Element In Subarray",
+    "example": 1,
+    "input": "Input\n[\"MajorityChecker\", \"query\", \"query\", \"query\"]\n[[[1, 1, 2, 2, 1, 1]], [0, 5, 4], [0, 3, 3], [2, 3, 2]]\nOutput\n[null, 1, -1, 2]\nExplanation\nMajorityChecker majorityChecker = new MajorityChecker([1, 1, 2, 2, 1, 1]);\nmajorityChecker.query(0, 5, 4); // return 1\nmajorityChecker.query(0, 3, 3); // return -1\nmajorityChecker.query(2, 3, 2); // return 2"
+  },
+  {
+    "id": "online-stock-span",
+    "title": "Online Stock Span",
+    "example": 1,
+    "input": "Input\n[\"StockSpanner\", \"next\", \"next\", \"next\", \"next\", \"next\", \"next\", \"next\"]\n[[], [100], [80], [60], [70], [60], [75], [85]]\nOutput\n[null, 1, 1, 1, 2, 1, 4, 6]\nExplanation\nStockSpanner stockSpanner = new StockSpanner();\nstockSpanner.next(100); // return 1\nstockSpanner.next(80);  // return 1\nstockSpanner.next(60);  // return 1\nstockSpanner.next(70);  // return 2\nstockSpanner.next(60);  // return 1\nstockSpanner.next(75);  // return 4, because the last 4 prices (including today's price of 75) were less than or equal to today's price.\nstockSpanner.next(85);  // return 6"
+  },
+  {
+    "id": "operations-on-tree",
+    "title": "Operations on Tree",
+    "example": 1,
+    "input": "Input\n[\"LockingTree\", \"lock\", \"unlock\", \"unlock\", \"lock\", \"upgrade\", \"lock\"]\n[[[-1, 0, 0, 1, 1, 2, 2]], [2, 2], [2, 3], [2, 2], [4, 5], [0, 1], [0, 1]]\nOutput\n[null, true, false, true, true, true, false]\nExplanation\nLockingTree lockingTree = new LockingTree([-1, 0, 0, 1, 1, 2, 2]);\nlockingTree.lock(2, 2);    // return true because node 2 is unlocked.\n                           // Node 2 will now be locked by user 2.\nlockingTree.unlock(2, 3);  // return false because user 3 cannot unlock a node locked by user 2.\nlockingTree.unlock(2, 2);  // return true because node 2 was previously locked by user 2.\n                           // Node 2 will now be unlocked.\nlockingTree.lock(4, 5);    // return true because node 4 is unlocked.\n                           // Node 4 will now be locked by user 5.\nlockingTree.upgrade(0, 1); // return true because node 0 is unlocked and has at least one locked descendant (node 4).\n                           // Node 0 will now be locked by user 1 and node 4 will now be unlocked.\nlockingTree.lock(0, 1);    // return false because node 0 is already locked."
+  },
+  {
+    "id": "patients-with-a-condition",
+    "title": "Patients With a Condition",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| patient_id   | int     |\n| patient_name | varchar |\n| conditions   | varchar |\n+--------------+---------+\npatient_id is the primary key (column with unique values) for this table.\n'conditions' contains 0 or more code separated by spaces. \nThis table contains information of the patients in the hospital."
+  },
+  {
+    "id": "peeking-iterator",
+    "title": "Peeking Iterator",
+    "example": 1,
+    "input": "Input\n[\"PeekingIterator\", \"next\", \"peek\", \"next\", \"next\", \"hasNext\"]\n[[[1, 2, 3]], [], [], [], [], []]\nOutput\n[null, 1, 2, 2, 3, false]\nExplanation\nPeekingIterator peekingIterator = new PeekingIterator([1, 2, 3]); // [\n1\n,2,3]\npeekingIterator.next();    // return 1, the pointer moves to the next element [1,\n2\n,3].\npeekingIterator.peek();    // return 2, the pointer does not move [1,\n2\n,3].\npeekingIterator.next();    // return 2, the pointer moves to the next element [1,2,\n3\n]\npeekingIterator.next();    // return 3, the pointer moves to the next element [1,2,3]\npeekingIterator.hasNext(); // return False"
+  },
+  {
+    "id": "percentage-of-users-attended-a-contest",
+    "title": "Percentage of Users Attended a Contest",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| user_id     | int     |\n| user_name   | varchar |\n+-------------+---------+\nuser_id is the primary key (column with unique values) for this table.\nEach row of this table contains the name and the id of a user."
+  },
+  {
+    "id": "percentage-of-users-attended-a-contest",
+    "title": "Percentage of Users Attended a Contest",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| contest_id  | int     |\n| user_id     | int     |\n+-------------+---------+\n(contest_id, user_id) is the primary key (combination of columns with unique values) for this table.\nEach row of this table contains the id of a user and the contest they registered into."
+  },
+  {
+    "id": "populating-next-right-pointers-in-each-node",
+    "title": "Populating Next Right Pointers in Each Node",
+    "example": 1,
+    "input": "struct Node {\n  int val;\n  Node *left;\n  Node *right;\n  Node *next;\n}"
+  },
+  {
+    "id": "populating-next-right-pointers-in-each-node-ii",
+    "title": "Populating Next Right Pointers in Each Node II",
+    "example": 1,
+    "input": "struct Node {\n  int val;\n  Node *left;\n  Node *right;\n  Node *next;\n}"
+  },
+  {
+    "id": "prefix-and-suffix-search",
+    "title": "Prefix and Suffix Search",
+    "example": 1,
+    "input": "Input\n[\"WordFilter\", \"f\"]\n[[[\"apple\"]], [\"a\", \"e\"]]\nOutput\n[null, 0]\nExplanation\nWordFilter wordFilter = new WordFilter([\"apple\"]);\nwordFilter.f(\"a\", \"e\"); // return 0, because the word at index 0 has prefix = \"a\" and suffix = \"e\"."
+  },
+  {
+    "id": "primary-department-for-each-employee",
+    "title": "Primary Department for Each Employee",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   |  Type   |\n+---------------+---------+\n| employee_id   | int     |\n| department_id | int     |\n| primary_flag  | varchar |\n+---------------+---------+\n(employee_id, department_id) is the primary key (combination of columns with unique values) for this table.\nemployee_id is the id of the employee.\ndepartment_id is the id of the department to which the employee belongs.\nprimary_flag is an ENUM (category) of type ('Y', 'N'). If the flag is 'Y', the department is the primary department for the employee. If the flag is 'N', the department is not the primary."
+  },
+  {
+    "id": "print-in-order",
+    "title": "Print in Order",
+    "example": 1,
+    "input": "public class Foo {\n  public void first() { print(\"first\"); }\n  public void second() { print(\"second\"); }\n  public void third() { print(\"third\"); }\n}"
+  },
+  {
+    "id": "product-of-the-last-k-numbers",
+    "title": "Product of the Last K Numbers",
+    "example": 1,
+    "input": "Input\n[\"ProductOfNumbers\",\"add\",\"add\",\"add\",\"add\",\"add\",\"getProduct\",\"getProduct\",\"getProduct\",\"add\",\"getProduct\"]\n[[],[3],[0],[2],[5],[4],[2],[3],[4],[8],[2]]\nOutput\n[null,null,null,null,null,null,20,40,0,null,32]\nExplanation\nProductOfNumbers productOfNumbers = new ProductOfNumbers();\nproductOfNumbers.add(3);        // [3]\nproductOfNumbers.add(0);        // [3,0]\nproductOfNumbers.add(2);        // [3,0,2]\nproductOfNumbers.add(5);        // [3,0,2,5]\nproductOfNumbers.add(4);        // [3,0,2,5,4]\nproductOfNumbers.getProduct(2); // return 20. The product of the last 2 numbers is 5 * 4 = 20\nproductOfNumbers.getProduct(3); // return 40. The product of the last 3 numbers is 2 * 5 * 4 = 40\nproductOfNumbers.getProduct(4); // return 0. The product of the last 4 numbers is 0 * 2 * 5 * 4 = 0\nproductOfNumbers.add(8);        // [3,0,2,5,4,8]\nproductOfNumbers.getProduct(2); // return 32. The product of the last 2 numbers is 4 * 8 = 32"
+  },
+  {
+    "id": "product-price-at-a-given-date",
+    "title": "Product Price at a Given Date",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| product_id    | int     |\n| new_price     | int     |\n| change_date   | date    |\n+---------------+---------+\n(product_id, change_date) is the primary key (combination of columns with unique values) of this table.\nEach row of this table indicates that the price of some product was changed to a new price at some date."
+  },
+  {
+    "id": "product-sales-analysis-i",
+    "title": "Product Sales Analysis I",
+    "example": 1,
+    "input": "+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| sale_id     | int   |\n| product_id  | int   |\n| year        | int   |\n| quantity    | int   |\n| price       | int   |\n+-------------+-------+\n(sale_id, year) is the primary key (combination of columns with unique values) of this table.\nproduct_id is a foreign key (reference column) to\nProduct\ntable.\nEach row of this table shows a sale on the product product_id in a certain year.\nNote that the price is per unit."
+  },
+  {
+    "id": "product-sales-analysis-i",
+    "title": "Product Sales Analysis I",
+    "example": 2,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| product_id   | int     |\n| product_name | varchar |\n+--------------+---------+\nproduct_id is the primary key (column with unique values) of this table.\nEach row of this table indicates the product name of each product."
+  },
+  {
+    "id": "product-sales-analysis-iii",
+    "title": "Product Sales Analysis III",
+    "example": 1,
+    "input": "+-------------+-------+\n| Column Name | Type  |\n+-------------+-------+\n| sale_id     | int   |\n| product_id  | int   |\n| year        | int   |\n| quantity    | int   |\n| price       | int   |\n+-------------+-------+\n(sale_id, year) is the primary key (combination of columns with unique values) of this table.\nproduct_id is a foreign key (reference column) to\nProduct\ntable.\nEach row of this table shows a sale on the product product_id in a certain year.\nNote that the price is per unit."
+  },
+  {
+    "id": "product-sales-analysis-iii",
+    "title": "Product Sales Analysis III",
+    "example": 2,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| product_id   | int     |\n| product_name | varchar |\n+--------------+---------+\nproduct_id is the primary key (column with unique values) of this table.\nEach row of this table indicates the product name of each product."
+  },
+  {
+    "id": "project-employees-i",
+    "title": "Project Employees I",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| project_id  | int     |\n| employee_id | int     |\n+-------------+---------+\n(project_id, employee_id) is the primary key of this table.\nemployee_id is a foreign key to\nEmployee\ntable.\nEach row of this table indicates that the employee with employee_id is working on the project with project_id."
+  },
+  {
+    "id": "project-employees-i",
+    "title": "Project Employees I",
+    "example": 2,
+    "input": "+------------------+---------+\n| Column Name      | Type    |\n+------------------+---------+\n| employee_id      | int     |\n| name             | varchar |\n| experience_years | int     |\n+------------------+---------+\nemployee_id is the primary key of this table. It's guaranteed that experience_years is not NULL.\nEach row of this table contains information about one employee."
+  },
+  {
+    "id": "queries-quality-and-percentage",
+    "title": "Queries Quality and Percentage",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| query_name  | varchar |\n| result      | varchar |\n| position    | int     |\n| rating      | int     |\n+-------------+---------+\nThis table may have duplicate rows.\nThis table contains information collected from some queries on a database.\nThe\nposition\ncolumn has a value from\n1\nto\n500\n.\nThe\nrating\ncolumn has a value from\n1\nto\n5\n. Query with\nrating\nless than 3 is a poor query."
+  },
+  {
+    "id": "random-flip-matrix",
+    "title": "Random Flip Matrix",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"flip\", \"flip\", \"flip\", \"reset\", \"flip\"]\n[[3, 1], [], [], [], [], []]\nOutput\n[null, [1, 0], [2, 0], [0, 0], null, [2, 0]]\nExplanation\nSolution solution = new Solution(3, 1);\nsolution.flip();  // return [1, 0], [0,0], [1,0], and [2,0] should be equally likely to be returned.\nsolution.flip();  // return [2, 0], Since [1,0] was returned, [2,0] and [0,0]\nsolution.flip();  // return [0, 0], Based on the previously returned indices, only [0,0] can be returned.\nsolution.reset(); // All the values are reset to 0 and can be returned.\nsolution.flip();  // return [2, 0], [0,0], [1,0], and [2,0] should be equally likely to be returned."
+  },
+  {
+    "id": "random-pick-index",
+    "title": "Random Pick Index",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"pick\", \"pick\", \"pick\"]\n[[[1, 2, 3, 3, 3]], [3], [1], [3]]\nOutput\n[null, 4, 0, 2]\nExplanation\nSolution solution = new Solution([1, 2, 3, 3, 3]);\nsolution.pick(3); // It should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning.\nsolution.pick(1); // It should return 0. Since in the array only nums[0] is equal to 1.\nsolution.pick(3); // It should return either index 2, 3, or 4 randomly. Each index should have equal probability of returning."
+  },
+  {
+    "id": "random-pick-with-blacklist",
+    "title": "Random Pick with Blacklist",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\"]\n[[7, [2, 3, 5]], [], [], [], [], [], [], []]\nOutput\n[null, 0, 4, 1, 6, 1, 0, 4]\nExplanation\nSolution solution = new Solution(7, [2, 3, 5]);\nsolution.pick(); // return 0, any integer from [0,1,4,6] should be ok. Note that for every call of pick,\n                 // 0, 1, 4, and 6 must be equally likely to be returned (i.e., with probability 1/4).\nsolution.pick(); // return 4\nsolution.pick(); // return 1\nsolution.pick(); // return 6\nsolution.pick(); // return 1\nsolution.pick(); // return 0\nsolution.pick(); // return 4"
+  },
+  {
+    "id": "random-pick-with-weight",
+    "title": "Random Pick with Weight",
+    "example": 1,
+    "input": "Input\n[\"Solution\",\"pickIndex\"]\n[[[1]],[]]\nOutput\n[null,0]\nExplanation\nSolution solution = new Solution([1]);\nsolution.pickIndex(); // return 0. The only option is to return 0 since there is only one element in w."
+  },
+  {
+    "id": "random-pick-with-weight",
+    "title": "Random Pick with Weight",
+    "example": 2,
+    "input": "Input\n[\"Solution\",\"pickIndex\",\"pickIndex\",\"pickIndex\",\"pickIndex\",\"pickIndex\"]\n[[[1,3]],[],[],[],[],[]]\nOutput\n[null,1,1,1,1,0]\nExplanation\nSolution solution = new Solution([1, 3]);\nsolution.pickIndex(); // return 1. It is returning the second element (index = 1) that has a probability of 3/4.\nsolution.pickIndex(); // return 1\nsolution.pickIndex(); // return 1\nsolution.pickIndex(); // return 1\nsolution.pickIndex(); // return 0. It is returning the first element (index = 0) that has a probability of 1/4.\n\nSince this is a randomization problem, multiple answers are allowed.\nAll of the following outputs can be considered correct:\n[null,1,1,1,1,0]\n[null,1,1,1,1,1]\n[null,1,1,1,0,0]\n[null,1,1,1,0,1]\n[null,1,0,1,0,0]\n......\nand so on."
+  },
+  {
+    "id": "random-point-in-non-overlapping-rectangles",
+    "title": "Random Point in Non-overlapping Rectangles",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"pick\", \"pick\", \"pick\", \"pick\", \"pick\"]\n[[[[-2, -2, 1, 1], [2, 2, 4, 6]]], [], [], [], [], []]\nOutput\n[null, [1, -2], [1, -1], [-1, -2], [-2, -2], [0, 0]]\nExplanation\nSolution solution = new Solution([[-2, -2, 1, 1], [2, 2, 4, 6]]);\nsolution.pick(); // return [1, -2]\nsolution.pick(); // return [1, -1]\nsolution.pick(); // return [-1, -2]\nsolution.pick(); // return [-2, -2]\nsolution.pick(); // return [0, 0]"
+  },
+  {
+    "id": "range-frequency-queries",
+    "title": "Range Frequency Queries",
+    "example": 1,
+    "input": "Input\n[\"RangeFreqQuery\", \"query\", \"query\"]\n[[[12, 33, 4, 56, 22, 2, 34, 33, 22, 12, 34, 56]], [1, 2, 4], [0, 11, 33]]\nOutput\n[null, 1, 2]\nExplanation\nRangeFreqQuery rangeFreqQuery = new RangeFreqQuery([12, 33, 4, 56, 22, 2, 34, 33, 22, 12, 34, 56]);\nrangeFreqQuery.query(1, 2, 4); // return 1. The value 4 occurs 1 time in the subarray [33, 4]\nrangeFreqQuery.query(0, 11, 33); // return 2. The value 33 occurs 2 times in the whole array."
+  },
+  {
+    "id": "range-module",
+    "title": "Range Module",
+    "example": 1,
+    "input": "Input\n[\"RangeModule\", \"addRange\", \"removeRange\", \"queryRange\", \"queryRange\", \"queryRange\"]\n[[], [10, 20], [14, 16], [10, 14], [13, 15], [16, 17]]\nOutput\n[null, null, null, true, false, true]\nExplanation\nRangeModule rangeModule = new RangeModule();\nrangeModule.addRange(10, 20);\nrangeModule.removeRange(14, 16);\nrangeModule.queryRange(10, 14); // return True,(Every number in [10, 14) is being tracked)\nrangeModule.queryRange(13, 15); // return False,(Numbers like 14, 14.03, 14.17 in [13, 15) are not being tracked)\nrangeModule.queryRange(16, 17); // return True, (The number 16 in [16, 17) is still being tracked, despite the remove operation)"
+  },
+  {
+    "id": "range-sum-query-immutable",
+    "title": "Range Sum Query - Immutable",
+    "example": 1,
+    "input": "Input\n[\"NumArray\", \"sumRange\", \"sumRange\", \"sumRange\"]\n[[[-2, 0, 3, -5, 2, -1]], [0, 2], [2, 5], [0, 5]]\nOutput\n[null, 1, -1, -3]\nExplanation\nNumArray numArray = new NumArray([-2, 0, 3, -5, 2, -1]);\nnumArray.sumRange(0, 2); // return (-2) + 0 + 3 = 1\nnumArray.sumRange(2, 5); // return 3 + (-5) + 2 + (-1) = -1\nnumArray.sumRange(0, 5); // return (-2) + 0 + 3 + (-5) + 2 + (-1) = -3"
+  },
+  {
+    "id": "range-sum-query-mutable",
+    "title": "Range Sum Query - Mutable",
+    "example": 1,
+    "input": "Input\n[\"NumArray\", \"sumRange\", \"update\", \"sumRange\"]\n[[[1, 3, 5]], [0, 2], [1, 2], [0, 2]]\nOutput\n[null, 9, null, 8]\nExplanation\nNumArray numArray = new NumArray([1, 3, 5]);\nnumArray.sumRange(0, 2); // return 1 + 3 + 5 = 9\nnumArray.update(1, 2);   // nums = [1, 2, 5]\nnumArray.sumRange(0, 2); // return 1 + 2 + 5 = 8"
+  },
+  {
+    "id": "range-sum-query-2d-immutable",
+    "title": "Range Sum Query 2D - Immutable",
+    "example": 1,
+    "input": "Input\n[\"NumMatrix\", \"sumRegion\", \"sumRegion\", \"sumRegion\"]\n[[[[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]], [2, 1, 4, 3], [1, 1, 2, 2], [1, 2, 2, 4]]\nOutput\n[null, 8, 11, 12]\nExplanation\nNumMatrix numMatrix = new NumMatrix([[3, 0, 1, 4, 2], [5, 6, 3, 2, 1], [1, 2, 0, 1, 5], [4, 1, 0, 1, 7], [1, 0, 3, 0, 5]]);\nnumMatrix.sumRegion(2, 1, 4, 3); // return 8 (i.e sum of the red rectangle)\nnumMatrix.sumRegion(1, 1, 2, 2); // return 11 (i.e sum of the green rectangle)\nnumMatrix.sumRegion(1, 2, 2, 4); // return 12 (i.e sum of the blue rectangle)"
+  },
+  {
+    "id": "rank-scores",
+    "title": "Rank Scores",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| score       | decimal |\n+-------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains the score of a game. Score is a floating point value with two decimal places."
+  },
+  {
+    "id": "rearrange-products-table",
+    "title": "Rearrange Products Table",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| product_id  | int     |\n| store1      | int     |\n| store2      | int     |\n| store3      | int     |\n+-------------+---------+\nproduct_id is the primary key (column with unique values) for this table.\nEach row in this table indicates the product's price in 3 different stores: store1, store2, and store3.\nIf the product is not available in a store, the price will be null in that store's column."
+  },
+  {
+    "id": "recyclable-and-low-fat-products",
+    "title": "Recyclable and Low Fat Products",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| product_id  | int     |\n| low_fats    | enum    |\n| recyclable  | enum    |\n+-------------+---------+\nproduct_id is the primary key (column with unique values) for this table.\nlow_fats is an ENUM (category) of type ('Y', 'N') where 'Y' means this product is low fat and 'N' means it is not.\nrecyclable is an ENUM (category) of types ('Y', 'N') where 'Y' means this product is recyclable and 'N' means it is not."
+  },
+  {
+    "id": "reformat-department-table",
+    "title": "Reformat Department Table",
+    "example": 1,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| id          | int     |\n| revenue     | int     |\n| month       | varchar |\n+-------------+---------+\nIn SQL,(id, month) is the primary key of this table.\nThe table has information about the revenue of each department per month.\nThe month has values in [\"Jan\",\"Feb\",\"Mar\",\"Apr\",\"May\",\"Jun\",\"Jul\",\"Aug\",\"Sep\",\"Oct\",\"Nov\",\"Dec\"]."
+  },
+  {
+    "id": "remove-duplicates-from-sorted-array",
+    "title": "Remove Duplicates from Sorted Array",
+    "example": 1,
+    "input": "int[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}"
+  },
+  {
+    "id": "remove-duplicates-from-sorted-array-ii",
+    "title": "Remove Duplicates from Sorted Array II",
+    "example": 1,
+    "input": "int[] nums = [...]; // Input array\nint[] expectedNums = [...]; // The expected answer with correct length\n\nint k = removeDuplicates(nums); // Calls your implementation\n\nassert k == expectedNums.length;\nfor (int i = 0; i < k; i++) {\n    assert nums[i] == expectedNums[i];\n}"
+  },
+  {
+    "id": "remove-element",
+    "title": "Remove Element",
+    "example": 1,
+    "input": "int[] nums = [...]; // Input array\nint val = ...; // Value to remove\nint[] expectedNums = [...]; // The expected answer with correct length.\n                            // It is sorted with no values equaling val.\n\nint k = removeElement(nums, val); // Calls your implementation\n\nassert k == expectedNums.length;\nsort(nums, 0, k); // Sort the first k elements of nums\nfor (int i = 0; i < actualLength; i++) {\n    assert nums[i] == expectedNums[i];\n}"
+  },
+  {
+    "id": "reorder-list",
+    "title": "Reorder List",
+    "example": 1,
+    "input": "L\n0\n→ L\n1\n→ … → L\nn - 1\n→ L\nn"
+  },
+  {
+    "id": "reorder-list",
+    "title": "Reorder List",
+    "example": 2,
+    "input": "L\n0\n→ L\nn\n→ L\n1\n→ L\nn - 1\n→ L\n2\n→ L\nn - 2\n→ …"
+  },
+  {
+    "id": "replace-employee-id-with-the-unique-identifier",
+    "title": "Replace Employee ID With The Unique Identifier",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| name          | varchar |\n+---------------+---------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains the id and the name of an employee in a company."
+  },
+  {
+    "id": "replace-employee-id-with-the-unique-identifier",
+    "title": "Replace Employee ID With The Unique Identifier",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| unique_id     | int     |\n+---------------+---------+\n(id, unique_id) is the primary key (combination of columns with unique values) for this table.\nEach row of this table contains the id and the corresponding unique id of an employee in the company."
+  },
+  {
+    "id": "reshape-data-concatenate",
+    "title": "Reshape Data: Concatenate",
+    "example": 1,
+    "input": "DataFrame\ndf1\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+\n\nDataFrame\ndf2\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+"
+  },
+  {
+    "id": "reshape-data-melt",
+    "title": "Reshape Data: Melt",
+    "example": 1,
+    "input": "DataFrame\nreport\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| product     | object |\n| quarter_1   | int    |\n| quarter_2   | int    |\n| quarter_3   | int    |\n| quarter_4   | int    |\n+-------------+--------+"
+  },
+  {
+    "id": "reshape-data-pivot",
+    "title": "Reshape Data: Pivot",
+    "example": 1,
+    "input": "DataFrame\nweather\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| city        | object |\n| month       | object |\n| temperature | int    |\n+-------------+--------+"
+  },
+  {
+    "id": "restaurant-growth",
+    "title": "Restaurant Growth",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| customer_id   | int     |\n| name          | varchar |\n| visited_on    | date    |\n| amount        | int     |\n+---------------+---------+\nIn SQL,(customer_id, visited_on) is the primary key for this table.\nThis table contains data about customer transactions in a restaurant.\nvisited_on is the date on which the customer with ID (customer_id) has visited the restaurant.\namount is the total paid by a customer."
+  },
+  {
+    "id": "rising-temperature",
+    "title": "Rising Temperature",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| recordDate    | date    |\n| temperature   | int     |\n+---------------+---------+\nid is the column with unique values for this table.\nThere are no different rows with the same recordDate.\nThis table contains information about the temperature on a certain day."
+  },
+  {
+    "id": "rle-iterator",
+    "title": "RLE Iterator",
+    "example": 1,
+    "input": "Input\n[\"RLEIterator\", \"next\", \"next\", \"next\", \"next\"]\n[[[3, 8, 0, 9, 2, 5]], [2], [1], [1], [2]]\nOutput\n[null, 8, 8, 5, -1]\nExplanation\nRLEIterator rLEIterator = new RLEIterator([3, 8, 0, 9, 2, 5]); // This maps to the sequence [8,8,8,5,5].\nrLEIterator.next(2); // exhausts 2 terms of the sequence, returning 8. The remaining sequence is now [8, 5, 5].\nrLEIterator.next(1); // exhausts 1 term of the sequence, returning 8. The remaining sequence is now [5, 5].\nrLEIterator.next(1); // exhausts 1 term of the sequence, returning 5. The remaining sequence is now [5].\nrLEIterator.next(2); // exhausts 2 terms, returning -1. This is because the first term exhausted was 5,\nbut the second term did not exist. Since the last term exhausted does not exist, we return -1."
+  },
+  {
+    "id": "roman-to-integer",
+    "title": "Roman to Integer",
+    "example": 1,
+    "input": "Symbol\nValue\nI             1\nV             5\nX             10\nL             50\nC             100\nD             500\nM             1000"
+  },
+  {
+    "id": "sales-analysis-iii",
+    "title": "Sales Analysis III",
+    "example": 1,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| product_id   | int     |\n| product_name | varchar |\n| unit_price   | int     |\n+--------------+---------+\nproduct_id is the primary key (column with unique values) of this table.\nEach row of this table indicates the name and the price of each product."
+  },
+  {
+    "id": "sales-analysis-iii",
+    "title": "Sales Analysis III",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| seller_id   | int     |\n| product_id  | int     |\n| buyer_id    | int     |\n| sale_date   | date    |\n| quantity    | int     |\n| price       | int     |\n+-------------+---------+\nThis table can have duplicate rows.\nproduct_id is a foreign key (reference column) to the Product table.\nEach row of this table contains some information about one sale."
+  },
+  {
+    "id": "sales-person",
+    "title": "Sales Person",
+    "example": 1,
+    "input": "+-----------------+---------+\n| Column Name     | Type    |\n+-----------------+---------+\n| sales_id        | int     |\n| name            | varchar |\n| salary          | int     |\n| commission_rate | int     |\n| hire_date       | date    |\n+-----------------+---------+\nsales_id is the primary key (column with unique values) for this table.\nEach row of this table indicates the name and the ID of a salesperson alongside their salary, commission rate, and hire date."
+  },
+  {
+    "id": "sales-person",
+    "title": "Sales Person",
+    "example": 2,
+    "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| com_id      | int     |\n| name        | varchar |\n| city        | varchar |\n+-------------+---------+\ncom_id is the primary key (column with unique values) for this table.\nEach row of this table indicates the name and the ID of a company and the city in which the company is located."
+  },
+  {
+    "id": "sales-person",
+    "title": "Sales Person",
+    "example": 3,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| order_id    | int  |\n| order_date  | date |\n| com_id      | int  |\n| sales_id    | int  |\n| amount      | int  |\n+-------------+------+\norder_id is the primary key (column with unique values) for this table.\ncom_id is a foreign key (reference column) to com_id from the Company table.\nsales_id is a foreign key (reference column) to sales_id from the SalesPerson table.\nEach row of this table contains information about one order. This includes the ID of the company, the ID of the salesperson, the date of the order, and the amount paid."
+  },
+  {
+    "id": "seat-reservation-manager",
+    "title": "Seat Reservation Manager",
+    "example": 1,
+    "input": "Input\n[\"SeatManager\", \"reserve\", \"reserve\", \"unreserve\", \"reserve\", \"reserve\", \"reserve\", \"reserve\", \"unreserve\"]\n[[5], [], [], [2], [], [], [], [], [5]]\nOutput\n[null, 1, 2, null, 2, 3, 4, 5, null]\nExplanation\nSeatManager seatManager = new SeatManager(5); // Initializes a SeatManager with 5 seats.\nseatManager.reserve();    // All seats are available, so return the lowest numbered seat, which is 1.\nseatManager.reserve();    // The available seats are [2,3,4,5], so return the lowest of them, which is 2.\nseatManager.unreserve(2); // Unreserve seat 2, so now the available seats are [2,3,4,5].\nseatManager.reserve();    // The available seats are [2,3,4,5], so return the lowest of them, which is 2.\nseatManager.reserve();    // The available seats are [3,4,5], so return the lowest of them, which is 3.\nseatManager.reserve();    // The available seats are [4,5], so return the lowest of them, which is 4.\nseatManager.reserve();    // The only available seat is seat 5, so return 5.\nseatManager.unreserve(5); // Unreserve seat 5, so now the available seats are [5]."
+  },
+  {
+    "id": "second-highest-salary",
+    "title": "Second Highest Salary",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| salary      | int  |\n+-------------+------+\nid is the primary key (column with unique values) for this table.\nEach row of this table contains information about the salary of an employee."
+  },
+  {
+    "id": "select-data",
+    "title": "Select Data",
+    "example": 1,
+    "input": "DataFrame students\n+-------------+--------+\n| Column Name | Type   |\n+-------------+--------+\n| student_id  | int    |\n| name        | object |\n| age         | int    |\n+-------------+--------+"
+  },
+  {
+    "id": "sequentially-ordinal-rank-tracker",
+    "title": "Sequentially Ordinal Rank Tracker",
+    "example": 1,
+    "input": "Input\n[\"SORTracker\", \"add\", \"add\", \"get\", \"add\", \"get\", \"add\", \"get\", \"add\", \"get\", \"add\", \"get\", \"get\"]\n[[], [\"bradford\", 2], [\"branford\", 3], [], [\"alps\", 2], [], [\"orland\", 2], [], [\"orlando\", 3], [], [\"alpine\", 2], [], []]\nOutput\n[null, null, null, \"branford\", null, \"alps\", null, \"bradford\", null, \"bradford\", null, \"bradford\", \"orland\"]\nExplanation\nSORTracker tracker = new SORTracker(); // Initialize the tracker system.\ntracker.add(\"bradford\", 2); // Add location with name=\"bradford\" and score=2 to the system.\ntracker.add(\"branford\", 3); // Add location with name=\"branford\" and score=3 to the system.\ntracker.get();              // The sorted locations, from best to worst, are: branford, bradford.\n                            // Note that branford precedes bradford due to its\nhigher score\n(3 > 2).\n                            // This is the 1\nst\ntime get() is called, so return the best location: \"branford\".\ntracker.add(\"alps\", 2);     // Add location with name=\"alps\" and score=2 to the system.\ntracker.get();              // Sorted locations: branford, alps, bradford.\n                            // Note that alps precedes bradford even though they have the same score (2).\n                            // This is because \"alps\" is\nlexicographically smaller\nthan \"bradford\".\n                            // Return the 2\nnd\nbest location \"alps\", as it is the 2\nnd\ntime get() is called.\ntracker.add(\"orland\", 2);   // Add location with name=\"orland\" and score=2 to the system.\ntracker.get();              // Sorted locations: branford, alps, bradford, orland.\n                            // Return \"bradford\", as it is the 3\nrd\ntime get() is called.\ntracker.add(\"orlando\", 3);  // Add location with name=\"orlando\" and score=3 to the system.\ntracker.get();              // Sorted locations: branford, orlando, alps, bradford, orland.\n                            // Return \"bradford\".\ntracker.add(\"alpine\", 2);   // Add location with name=\"alpine\" and score=2 to the system.\ntracker.get();              // Sorted locations: branford, orlando, alpine, alps, bradford, orland.\n                            // Return \"bradford\".\ntracker.get();              // Sorted locations: branford, orlando, alpine, alps, bradford, orland.\n                            // Return \"orland\"."
+  },
+  {
+    "id": "shuffle-an-array",
+    "title": "Shuffle an Array",
+    "example": 1,
+    "input": "Input\n[\"Solution\", \"shuffle\", \"reset\", \"shuffle\"]\n[[[1, 2, 3]], [], [], []]\nOutput\n[null, [3, 1, 2], [1, 2, 3], [1, 3, 2]]\nExplanation\nSolution solution = new Solution([1, 2, 3]);\nsolution.shuffle();    // Shuffle the array [1,2,3] and return its result.\n                       // Any permutation of [1,2,3] must be equally likely to be returned.\n                       // Example: return [3, 1, 2]\nsolution.reset();      // Resets the array back to its original configuration [1,2,3]. Return [1, 2, 3]\nsolution.shuffle();    // Returns the random shuffling of array [1,2,3]. Example: return [1, 3, 2]"
+  },
+  {
+    "id": "simple-bank-system",
+    "title": "Simple Bank System",
+    "example": 1,
+    "input": "Input\n[\"Bank\", \"withdraw\", \"transfer\", \"deposit\", \"transfer\", \"withdraw\"]\n[[[10, 100, 20, 50, 30]], [3, 10], [5, 1, 20], [5, 20], [3, 4, 15], [10, 50]]\nOutput\n[null, true, true, true, false, false]\nExplanation\nBank bank = new Bank([10, 100, 20, 50, 30]);\nbank.withdraw(3, 10);    // return true, account 3 has a balance of $20, so it is valid to withdraw $10.\n                         // Account 3 has $20 - $10 = $10.\nbank.transfer(5, 1, 20); // return true, account 5 has a balance of $30, so it is valid to transfer $20.\n                         // Account 5 has $30 - $20 = $10, and account 1 has $10 + $20 = $30.\nbank.deposit(5, 20);     // return true, it is valid to deposit $20 to account 5.\n                         // Account 5 has $10 + $20 = $30.\nbank.transfer(3, 4, 15); // return false, the current balance of account 3 is $10,\n                         // so it is invalid to transfer $15 from it.\nbank.withdraw(10, 50);   // return false, it is invalid because account 10 does not exist."
+  },
+  {
+    "id": "smallest-number-in-infinite-set",
+    "title": "Smallest Number in Infinite Set",
+    "example": 1,
+    "input": "Input\n[\"SmallestInfiniteSet\", \"addBack\", \"popSmallest\", \"popSmallest\", \"popSmallest\", \"addBack\", \"popSmallest\", \"popSmallest\", \"popSmallest\"]\n[[], [2], [], [], [], [1], [], [], []]\nOutput\n[null, null, 1, 2, 3, null, 1, 4, 5]\nExplanation\nSmallestInfiniteSet smallestInfiniteSet = new SmallestInfiniteSet();\nsmallestInfiniteSet.addBack(2);    // 2 is already in the set, so no change is made.\nsmallestInfiniteSet.popSmallest(); // return 1, since 1 is the smallest number, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 2, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 3, and remove it from the set.\nsmallestInfiniteSet.addBack(1);    // 1 is added back to the set.\nsmallestInfiniteSet.popSmallest(); // return 1, since 1 was added back to the set and\n                                   // is the smallest number, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 4, and remove it from the set.\nsmallestInfiniteSet.popSmallest(); // return 5, and remove it from the set."
+  },
+  {
+    "id": "stock-price-fluctuation",
+    "title": "Stock Price Fluctuation",
+    "example": 1,
+    "input": "Input\n[\"StockPrice\", \"update\", \"update\", \"current\", \"maximum\", \"update\", \"maximum\", \"update\", \"minimum\"]\n[[], [1, 10], [2, 5], [], [], [1, 3], [], [4, 2], []]\nOutput\n[null, null, null, 5, 10, null, 5, null, 2]\nExplanation\nStockPrice stockPrice = new StockPrice();\nstockPrice.update(1, 10); // Timestamps are [1] with corresponding prices [10].\nstockPrice.update(2, 5);  // Timestamps are [1,2] with corresponding prices [10,5].\nstockPrice.current();     // return 5, the latest timestamp is 2 with the price being 5.\nstockPrice.maximum();     // return 10, the maximum price is 10 at timestamp 1.\nstockPrice.update(1, 3);  // The previous timestamp 1 had the wrong price, so it is updated to 3.\n                          // Timestamps are [1,2] with corresponding prices [3,5].\nstockPrice.maximum();     // return 5, the maximum price is 5 after the correction.\nstockPrice.update(4, 2);  // Timestamps are [1,2,4] with corresponding prices [3,5,2].\nstockPrice.minimum();     // return 2, the minimum price is 2 at timestamp 4."
+  },
+  {
+    "id": "stream-of-characters",
+    "title": "Stream of Characters",
+    "example": 1,
+    "input": "Input\n[\"StreamChecker\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\", \"query\"]\n[[[\"cd\", \"f\", \"kl\"]], [\"a\"], [\"b\"], [\"c\"], [\"d\"], [\"e\"], [\"f\"], [\"g\"], [\"h\"], [\"i\"], [\"j\"], [\"k\"], [\"l\"]]\nOutput\n[null, false, false, false, true, false, true, false, false, false, false, false, true]\nExplanation\nStreamChecker streamChecker = new StreamChecker([\"cd\", \"f\", \"kl\"]);\nstreamChecker.query(\"a\"); // return False\nstreamChecker.query(\"b\"); // return False\nstreamChecker.query(\"c\"); // return False\nstreamChecker.query(\"d\"); // return True, because 'cd' is in the wordlist\nstreamChecker.query(\"e\"); // return False\nstreamChecker.query(\"f\"); // return True, because 'f' is in the wordlist\nstreamChecker.query(\"g\"); // return False\nstreamChecker.query(\"h\"); // return False\nstreamChecker.query(\"i\"); // return False\nstreamChecker.query(\"j\"); // return False\nstreamChecker.query(\"k\"); // return False\nstreamChecker.query(\"l\"); // return True, because 'kl' is in the wordlist"
+  },
+  {
+    "id": "string-to-integer-atoi",
+    "title": "String to Integer (atoi)",
+    "example": 1,
+    "input": "The underlined characters are what is read in and the caret is the current reader position.\nStep 1: \"42\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"42\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"\n42\n\" (\"42\" is read in)\n           ^"
+  },
+  {
+    "id": "string-to-integer-atoi",
+    "title": "String to Integer (atoi)",
+    "example": 2,
+    "input": "Step 1: \"\n-042\" (leading whitespace is read and ignored)\n            ^\nStep 2: \"\n-\n042\" ('-' is read, so the result should be negative)\n             ^\nStep 3: \"   -\n042\n\" (\"042\" is read in, leading zeros ignored in the result)\n               ^"
+  },
+  {
+    "id": "string-to-integer-atoi",
+    "title": "String to Integer (atoi)",
+    "example": 3,
+    "input": "Step 1: \"1337c0d3\" (no characters read because there is no leading whitespace)\n         ^\nStep 2: \"1337c0d3\" (no characters read because there is neither a '-' nor '+')\n         ^\nStep 3: \"\n1337\nc0d3\" (\"1337\" is read in; reading stops because the next character is a non-digit)\n             ^"
+  },
+  {
+    "id": "students-and-examinations",
+    "title": "Students and Examinations",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| student_id    | int     |\n| student_name  | varchar |\n+---------------+---------+\nstudent_id is the primary key (column with unique values) for this table.\nEach row of this table contains the ID and the name of one student in the school."
+  },
+  {
+    "id": "students-and-examinations",
+    "title": "Students and Examinations",
+    "example": 2,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| subject_name | varchar |\n+--------------+---------+\nsubject_name is the primary key (column with unique values) for this table.\nEach row of this table contains the name of one subject in the school."
+  },
+  {
+    "id": "students-and-examinations",
+    "title": "Students and Examinations",
+    "example": 3,
+    "input": "+--------------+---------+\n| Column Name  | Type    |\n+--------------+---------+\n| student_id   | int     |\n| subject_name | varchar |\n+--------------+---------+\nThere is no primary key (column with unique values) for this table. It may contain duplicates.\nEach student from the Students table takes every course from the Subjects table.\nEach row of this table indicates that a student with ID student_id attended the exam of subject_name."
+  },
+  {
+    "id": "subrectangle-queries",
+    "title": "Subrectangle Queries",
+    "example": 1,
+    "input": "Input\n[\"SubrectangleQueries\",\"getValue\",\"updateSubrectangle\",\"getValue\",\"getValue\",\"updateSubrectangle\",\"getValue\",\"getValue\"]\n[[[[1,2,1],[4,3,4],[3,2,1],[1,1,1]]],[0,2],[0,0,3,2,5],[0,2],[3,1],[3,0,3,2,10],[3,1],[0,2]]\nOutput\n[null,1,null,5,5,null,10,5]\nExplanation\nSubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,2,1],[4,3,4],[3,2,1],[1,1,1]]);  \n// The initial rectangle (4x3) looks like:\n// 1 2 1\n// 4 3 4\n// 3 2 1\n// 1 1 1\nsubrectangleQueries.getValue(0, 2); // return 1\nsubrectangleQueries.updateSubrectangle(0, 0, 3, 2, 5);\n// After this update the rectangle looks like:\n// 5 5 5\n// 5 5 5\n// 5 5 5\n// 5 5 5 \nsubrectangleQueries.getValue(0, 2); // return 5\nsubrectangleQueries.getValue(3, 1); // return 5\nsubrectangleQueries.updateSubrectangle(3, 0, 3, 2, 10);\n// After this update the rectangle looks like:\n// 5   5   5\n// 5   5   5\n// 5   5   5\n// 10  10  10 \nsubrectangleQueries.getValue(3, 1); // return 10\nsubrectangleQueries.getValue(0, 2); // return 5"
+  },
+  {
+    "id": "subrectangle-queries",
+    "title": "Subrectangle Queries",
+    "example": 2,
+    "input": "Input\n[\"SubrectangleQueries\",\"getValue\",\"updateSubrectangle\",\"getValue\",\"getValue\",\"updateSubrectangle\",\"getValue\"]\n[[[[1,1,1],[2,2,2],[3,3,3]]],[0,0],[0,0,2,2,100],[0,0],[2,2],[1,1,2,2,20],[2,2]]\nOutput\n[null,1,null,100,100,null,20]\nExplanation\nSubrectangleQueries subrectangleQueries = new SubrectangleQueries([[1,1,1],[2,2,2],[3,3,3]]);\nsubrectangleQueries.getValue(0, 0); // return 1\nsubrectangleQueries.updateSubrectangle(0, 0, 2, 2, 100);\nsubrectangleQueries.getValue(0, 0); // return 100\nsubrectangleQueries.getValue(2, 2); // return 100\nsubrectangleQueries.updateSubrectangle(1, 1, 2, 2, 20);\nsubrectangleQueries.getValue(2, 2); // return 20"
+  },
+  {
+    "id": "tenth-line",
+    "title": "Tenth Line",
+    "example": 1,
+    "input": "Line 1\nLine 2\nLine 3\nLine 4\nLine 5\nLine 6\nLine 7\nLine 8\nLine 9\nLine 10"
+  },
+  {
+    "id": "tenth-line",
+    "title": "Tenth Line",
+    "example": 2,
+    "input": "Line 10"
+  },
+  {
+    "id": "the-latest-login-in-2020",
+    "title": "The Latest Login in 2020",
+    "example": 1,
+    "input": "+----------------+----------+\n| Column Name    | Type     |\n+----------------+----------+\n| user_id        | int      |\n| time_stamp     | datetime |\n+----------------+----------+\n(user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.\nEach row contains information about the login time for the user with ID user_id."
+  },
+  {
+    "id": "the-number-of-employees-which-report-to-each-employee",
+    "title": "The Number of Employees Which Report to Each Employee",
+    "example": 1,
+    "input": "+-------------+----------+\n| Column Name | Type     |\n+-------------+----------+\n| employee_id | int      |\n| name        | varchar  |\n| reports_to  | int      |\n| age         | int      |\n+-------------+----------+\nemployee_id is the column with unique values for this table.\nThis table contains information about the employees and the id of the manager they report to. Some employees do not report to anyone (reports_to is null)."
+  },
+  {
+    "id": "throne-inheritance",
+    "title": "Throne Inheritance",
+    "example": 1,
+    "input": "Successor(x, curOrder):\n    if x has no children or all of x's children are in curOrder:\n        if x is the king return null\n        else return Successor(x's parent, curOrder)\n    else return x's oldest child who's not in curOrder"
+  },
+  {
+    "id": "throne-inheritance",
+    "title": "Throne Inheritance",
+    "example": 2,
+    "input": "Input\n[\"ThroneInheritance\", \"birth\", \"birth\", \"birth\", \"birth\", \"birth\", \"birth\", \"getInheritanceOrder\", \"death\", \"getInheritanceOrder\"]\n[[\"king\"], [\"king\", \"andy\"], [\"king\", \"bob\"], [\"king\", \"catherine\"], [\"andy\", \"matthew\"], [\"bob\", \"alex\"], [\"bob\", \"asha\"], [null], [\"bob\"], [null]]\nOutput\n[null, null, null, null, null, null, null, [\"king\", \"andy\", \"matthew\", \"bob\", \"alex\", \"asha\", \"catherine\"], null, [\"king\", \"andy\", \"matthew\", \"alex\", \"asha\", \"catherine\"]]\nExplanation\nThroneInheritance t= new ThroneInheritance(\"king\"); // order:\nking\nt.birth(\"king\", \"andy\"); // order: king >\nandy\nt.birth(\"king\", \"bob\"); // order: king > andy >\nbob\nt.birth(\"king\", \"catherine\"); // order: king > andy > bob >\ncatherine\nt.birth(\"andy\", \"matthew\"); // order: king > andy >\nmatthew\n> bob > catherine\nt.birth(\"bob\", \"alex\"); // order: king > andy > matthew > bob >\nalex\n> catherine\nt.birth(\"bob\", \"asha\"); // order: king > andy > matthew > bob > alex >\nasha\n> catherine\nt.getInheritanceOrder(); // return [\"king\", \"andy\", \"matthew\", \"bob\", \"alex\", \"asha\", \"catherine\"]\nt.death(\"bob\"); // order: king > andy > matthew >\nbob\n> alex > asha > catherine\nt.getInheritanceOrder(); // return [\"king\", \"andy\", \"matthew\", \"alex\", \"asha\", \"catherine\"]"
+  },
+  {
+    "id": "time-based-key-value-store",
+    "title": "Time Based Key-Value Store",
+    "example": 1,
+    "input": "Input\n[\"TimeMap\", \"set\", \"get\", \"get\", \"set\", \"get\", \"get\"]\n[[], [\"foo\", \"bar\", 1], [\"foo\", 1], [\"foo\", 3], [\"foo\", \"bar2\", 4], [\"foo\", 4], [\"foo\", 5]]\nOutput\n[null, null, \"bar\", \"bar\", null, \"bar2\", \"bar2\"]\nExplanation\nTimeMap timeMap = new TimeMap();\ntimeMap.set(\"foo\", \"bar\", 1);  // store the key \"foo\" and value \"bar\" along with timestamp = 1.\ntimeMap.get(\"foo\", 1);         // return \"bar\"\ntimeMap.get(\"foo\", 3);         // return \"bar\", since there is no value corresponding to foo at timestamp 3 and timestamp 2, then the only value is at timestamp 1 is \"bar\".\ntimeMap.set(\"foo\", \"bar2\", 4); // store the key \"foo\" and value \"bar2\" along with timestamp = 4.\ntimeMap.get(\"foo\", 4);         // return \"bar2\"\ntimeMap.get(\"foo\", 5);         // return \"bar2\""
+  },
+  {
+    "id": "time-to-cross-a-bridge",
+    "title": "Time to Cross a Bridge",
+    "example": 1,
+    "input": "From 0 to 1 minutes: worker 2 crosses the bridge to the right.\nFrom 1 to 2 minutes: worker 2 picks up a box from the right warehouse.\nFrom 2 to 6 minutes: worker 2 crosses the bridge to the left.\nFrom 6 to 7 minutes: worker 2 puts a box at the left warehouse.\nThe whole process ends after 7 minutes. We return 6 because the problem asks for the instance of time at which the last worker reaches the left side of the bridge."
+  },
+  {
+    "id": "timeout-cancellation",
+    "title": "Timeout Cancellation",
+    "example": 1,
+    "input": "setTimeout(cancelFn, cancelTimeMs)"
+  },
+  {
+    "id": "top-travellers",
+    "title": "Top Travellers",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| name          | varchar |\n+---------------+---------+\nid is the column with unique values for this table.\nname is the name of the user."
+  },
+  {
+    "id": "top-travellers",
+    "title": "Top Travellers",
+    "example": 2,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| id            | int     |\n| user_id       | int     |\n| distance      | int     |\n+---------------+---------+\nid is the column with unique values for this table.\nuser_id is the id of the user who traveled the distance \"distance\"."
+  },
+  {
+    "id": "transpose-file",
+    "title": "Transpose File",
+    "example": 1,
+    "input": "name age\nalice 21\nryan 30"
+  },
+  {
+    "id": "transpose-file",
+    "title": "Transpose File",
+    "example": 2,
+    "input": "name alice ryan\nage 21 30"
+  },
+  {
+    "id": "tree-node",
+    "title": "Tree Node",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| id          | int  |\n| p_id        | int  |\n+-------------+------+\nid is the column with unique values for this table.\nEach row of this table contains information about the id of a node and the id of its parent node in a tree.\nThe given structure is always a valid tree."
+  },
+  {
+    "id": "triangle-judgement",
+    "title": "Triangle Judgement",
+    "example": 1,
+    "input": "+-------------+------+\n| Column Name | Type |\n+-------------+------+\n| x           | int  |\n| y           | int  |\n| z           | int  |\n+-------------+------+\nIn SQL, (x, y, z) is the primary key column for this table.\nEach row of this table contains the lengths of three line segments."
+  },
+  {
+    "id": "trips-and-users",
+    "title": "Trips and Users",
+    "example": 1,
+    "input": "+-------------+----------+\n| Column Name | Type     |\n+-------------+----------+\n| id          | int      |\n| client_id   | int      |\n| driver_id   | int      |\n| city_id     | int      |\n| status      | enum     |\n| request_at  | varchar  |     \n+-------------+----------+\nid is the primary key (column with unique values) for this table.\nThe table holds all taxi trips. Each trip has a unique id, while client_id and driver_id are foreign keys to the users_id at the Users table.\nStatus is an ENUM (category) type of ('completed', 'cancelled_by_driver', 'cancelled_by_client')."
+  },
+  {
+    "id": "trips-and-users",
+    "title": "Trips and Users",
+    "example": 2,
+    "input": "+-------------+----------+\n| Column Name | Type     |\n+-------------+----------+\n| users_id    | int      |\n| banned      | enum     |\n| role        | enum     |\n+-------------+----------+\nusers_id is the primary key (column with unique values) for this table.\nThe table holds all users. Each user has a unique users_id, and role is an ENUM type of ('client', 'driver', 'partner').\nbanned is an ENUM (category) type of ('Yes', 'No')."
+  },
+  {
+    "id": "tweet-counts-per-frequency",
+    "title": "Tweet Counts Per Frequency",
+    "example": 1,
+    "input": "Input\n[\"TweetCounts\",\"recordTweet\",\"recordTweet\",\"recordTweet\",\"getTweetCountsPerFrequency\",\"getTweetCountsPerFrequency\",\"recordTweet\",\"getTweetCountsPerFrequency\"]\n[[],[\"tweet3\",0],[\"tweet3\",60],[\"tweet3\",10],[\"minute\",\"tweet3\",0,59],[\"minute\",\"tweet3\",0,60],[\"tweet3\",120],[\"hour\",\"tweet3\",0,210]]\nOutput\n[null,null,null,null,[2],[2,1],null,[4]]\nExplanation\nTweetCounts tweetCounts = new TweetCounts();\ntweetCounts.recordTweet(\"tweet3\", 0);                              // New tweet \"tweet3\" at time 0\ntweetCounts.recordTweet(\"tweet3\", 60);                             // New tweet \"tweet3\" at time 60\ntweetCounts.recordTweet(\"tweet3\", 10);                             // New tweet \"tweet3\" at time 10\ntweetCounts.getTweetCountsPerFrequency(\"minute\", \"tweet3\", 0, 59); // return [2]; chunk [0,59] had 2 tweets\ntweetCounts.getTweetCountsPerFrequency(\"minute\", \"tweet3\", 0, 60); // return [2,1]; chunk [0,59] had 2 tweets, chunk [60,60] had 1 tweet\ntweetCounts.recordTweet(\"tweet3\", 120);                            // New tweet \"tweet3\" at time 120\ntweetCounts.getTweetCountsPerFrequency(\"hour\", \"tweet3\", 0, 210);  // return [4]; chunk [0,210] had 4 tweets"
+  },
+  {
+    "id": "unique-morse-code-words",
+    "title": "Unique Morse Code Words",
+    "example": 1,
+    "input": "[\".-\",\"-...\",\"-.-.\",\"-..\",\".\",\"..-.\",\"--.\",\"....\",\"..\",\".---\",\"-.-\",\".-..\",\"--\",\"-.\",\"---\",\".--.\",\"--.-\",\".-.\",\"...\",\"-\",\"..-\",\"...-\",\".--\",\"-..-\",\"-.--\",\"--..\"]"
+  },
+  {
+    "id": "user-activity-for-the-past-30-days-i",
+    "title": "User Activity for the Past 30 Days I",
+    "example": 1,
+    "input": "+---------------+---------+\n| Column Name   | Type    |\n+---------------+---------+\n| user_id       | int     |\n| session_id    | int     |\n| activity_date | date    |\n| activity_type | enum    |\n+---------------+---------+\nThis table may have duplicate rows.\nThe activity_type column is an ENUM (category) of type ('open_session', 'end_session', 'scroll_down', 'send_message').\nThe table shows the user activities for a social media website. \nNote that each session belongs to exactly one user."
+  },
+  {
+    "id": "utf-8-validation",
+    "title": "UTF-8 Validation",
+    "example": 1,
+    "input": "Number of Bytes   |        UTF-8 Octet Sequence\n                       |              (binary)\n   --------------------+-----------------------------------------\n            1          |   0xxxxxxx\n            2          |   110xxxxx 10xxxxxx\n            3          |   1110xxxx 10xxxxxx 10xxxxxx\n            4          |   11110xxx 10xxxxxx 10xxxxxx 10xxxxxx"
+  },
+  {
+    "id": "valid-phone-numbers",
+    "title": "Valid Phone Numbers",
+    "example": 1,
+    "input": "987-123-4567\n123 456 7890\n(123) 456-7890"
+  },
+  {
+    "id": "valid-phone-numbers",
+    "title": "Valid Phone Numbers",
+    "example": 2,
+    "input": "987-123-4567\n(123) 456-7890"
+  },
+  {
+    "id": "walking-robot-simulation-ii",
+    "title": "Walking Robot Simulation II",
+    "example": 1,
+    "input": "Input\n[\"Robot\", \"step\", \"step\", \"getPos\", \"getDir\", \"step\", \"step\", \"step\", \"getPos\", \"getDir\"]\n[[6, 3], [2], [2], [], [], [2], [1], [4], [], []]\nOutput\n[null, null, null, [4, 0], \"East\", null, null, null, [1, 2], \"West\"]\nExplanation\nRobot robot = new Robot(6, 3); // Initialize the grid and the robot at (0, 0) facing East.\nrobot.step(2);  // It moves two steps East to (2, 0), and faces East.\nrobot.step(2);  // It moves two steps East to (4, 0), and faces East.\nrobot.getPos(); // return [4, 0]\nrobot.getDir(); // return \"East\"\nrobot.step(2);  // It moves one step East to (5, 0), and faces East.\n                // Moving the next step East would be out of bounds, so it turns and faces North.\n                // Then, it moves one step North to (5, 1), and faces North.\nrobot.step(1);  // It moves one step North to (5, 2), and faces\nNorth\n(not West).\nrobot.step(4);  // Moving the next step North would be out of bounds, so it turns and faces West.\n                // Then, it moves four steps West to (1, 2), and faces West.\nrobot.getPos(); // return [1, 2]\nrobot.getDir(); // return \"West\""
+  },
+  {
+    "id": "word-frequency",
+    "title": "Word Frequency",
+    "example": 1,
+    "input": "the day is sunny the the\nthe sunny is is"
+  },
+  {
+    "id": "word-frequency",
+    "title": "Word Frequency",
+    "example": 2,
+    "input": "the 4\nis 3\nsunny 2\nday 1"
+  },
+  {
+    "id": "zigzag-conversion",
+    "title": "Zigzag Conversion",
+    "example": 1,
+    "input": "P   A   H   N\nA P L S I I G\nY   I   R"
+  },
+  {
+    "id": "zigzag-conversion",
+    "title": "Zigzag Conversion",
+    "example": 2,
+    "input": "string convert(string s, int numRows);"
+  }
+]

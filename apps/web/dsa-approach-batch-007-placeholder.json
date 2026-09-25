@@ -1,0 +1,1329 @@
+[
+  {
+    "id": "total-waviness-of-numbers-in-range-i",
+    "title": "Total Waviness of Numbers in Range I",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Total Waviness of Numbers in Range I problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "total-waviness-of-numbers-in-range-ii",
+    "title": "Total Waviness of Numbers in Range II",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the Total Waviness of Numbers in Range II problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "tournament-winners",
+    "title": "Tournament Winners",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the Tournament Winners problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "traffic-signal-color",
+    "title": "Traffic Signal Color",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the Traffic Signal Color problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "transform-array-by-parity",
+    "title": "Transform Array by Parity",
+    "difficulty": "Easy",
+    "topic": "Array",
+    "description": "You are given an integer array\nnums\n. Transform\nnums\nby performing the following operations in the\nexact\norder specified:\nReplace each even number with 0.\nReplace each odd numbers with 1.\nSort the modified array in\nnon-decreasing\norder.\nReturn the resulting array after performing these operations.\nExample 1:\nInput:\nnums = [4,3,2,1]\nOutput:\n[0,0,1,1]\nExplanation:\nReplace the even numbers (4 and 2) with 0 and the odd numbers (3 and 1) with 1. Now,\nnums = [0, 1, 0, 1]\n.\nAfter sorting\nnums\nin non-descending order,\nnums = [0, 0, 1, 1]\n.\nExample 2:\nInput:\nnums = [1,5,1,4,2]\nOutput:\n[0,0,1,1,1]\nExplanation:\nReplace the even numbers (4 and 2) with 0 and the odd numbers (1, 5 and 1) with 1. Now,\nnums = [1, 1, 1, 0, 0]\n.\nAfter sorting\nnums\nin non-descending order,\nnums = [0, 0, 1, 1, 1]\n.\nConstraints:\n1 <= nums.length <= 100\n1 <= nums[i] <= 1000",
+    "problemStatement": "You are given an integer array\nnums\n. Transform\nnums\nby performing the following operations in the\nexact\norder specified:\nReplace each even number with 0.\nReplace each odd numbers with 1.\nSort the modified array in\nnon-decreasing\norder.\nReturn the resulting array after performing these operations.\nExample 1:\nInput:\nnums = [4,3,2,1]\nOutput:\n[0,0,1,1]\nExplanation:\nReplace the even numbers (4 and 2) with 0 and the odd numbers (3 and 1) with 1. Now,\nnums = [0, 1, 0, 1]\n.\nAfter sorting\nnums\nin non-descending order,\nnums = [0, 0, 1, 1]\n.\nExample 2:\nInput:\nnums = [1,5,1,4,2]\nOutput:\n[0,0,1,1,1]\nExplanation:\nReplace the even numbers (4 and 2) with 0 and the odd numbers (1, 5 and 1) with 1. Now,\nnums = [1, 1, 1, 0, 0]\n.\nAfter sorting\nnums\nin non-descending order,\nnums = [0, 0, 1, 1, 1]\n.\nConstraints:\n1 <= nums.length <= 100\n1 <= nums[i] <= 1000",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [4,3,2,1]",
+        "output": "[0,0,1,1]"
+      },
+      {
+        "input": "nums = [1,5,1,4,2]",
+        "output": "[0,0,1,1,1]"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "transform-array-to-all-equal-elements",
+    "title": "Transform Array to All Equal Elements",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an array of values, solve the Transform Array to All Equal Elements problem by processing the elements according to the stated conditions and return the required result.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "transformed-array",
+    "title": "Transformed Array",
+    "difficulty": "Easy",
+    "topic": "Array",
+    "description": "You are given an integer array\nnums\nthat represents a circular array. Your task is to create a new array\nresult\nof the\nsame\nsize, following these rules:\nFor each index\ni\n(where\n0 <= i < nums.length\n), perform the following\nindependent\nactions:\nIf\nnums[i] > 0\n: Start at index\ni\nand move\nnums[i]\nsteps to the\nright\nin the circular array. Set\nresult[i]\nto the value of the index where you land.\nIf\nnums[i] < 0\n: Start at index\ni\nand move\nabs(nums[i])\nsteps to the\nleft\nin the circular array. Set\nresult[i]\nto the value of the index where you land.\nIf\nnums[i] == 0\n: Set\nresult[i]\nto\nnums[i]\n.\nReturn the new array\nresult\n.\nNote:\nSince\nnums\nis circular, moving past the last element wraps around to the beginning, and moving before the first element wraps back to the end.\nExample 1:\nInput:\nnums = [3,-2,1,1]\nOutput:\n[1,1,1,3]\nExplanation:\nFor\nnums[0]\nthat is equal to 3, If we move 3 steps to right, we reach\nnums[3]\n. So\nresult[0]\nshould be 1.\nFor\nnums[1]\nthat is equal to -2, If we move 2 steps to left, we reach\nnums[3]\n. So\nresult[1]\nshould be 1.\nFor\nnums[2]\nthat is equal to 1, If we move 1 step to right, we reach\nnums[3]\n. So\nresult[2]\nshould be 1.\nFor\nnums[3]\nthat is equal to 1, If we move 1 s",
+    "problemStatement": "You are given an integer array\nnums\nthat represents a circular array. Your task is to create a new array\nresult\nof the\nsame\nsize, following these rules:\nFor each index\ni\n(where\n0 <= i < nums.length\n), perform the following\nindependent\nactions:\nIf\nnums[i] > 0\n: Start at index\ni\nand move\nnums[i]\nsteps to the\nright\nin the circular array. Set\nresult[i]\nto the value of the index where you land.\nIf\nnums[i] < 0\n: Start at index\ni\nand move\nabs(nums[i])\nsteps to the\nleft\nin the circular array. Set\nresult[i]\nto the value of the index where you land.\nIf\nnums[i] == 0\n: Set\nresult[i]\nto\nnums[i]\n.\nReturn the new array\nresult\n.\nNote:\nSince\nnums\nis circular, moving past the last element wraps around to the beginning, and moving before the first element wraps back to the end.\nExample 1:\nInput:\nnums = [3,-2,1,1]\nOutput:\n[1,1,1,3]\nExplanation:\nFor\nnums[0]\nthat is equal to 3, If we move 3 steps to right, we reach\nnums[3]\n. So\nresult[0]\nshould be 1.\nFor\nnums[1]\nthat is equal to -2, If we move 2 steps to left, we reach\nnums[3]\n. So\nresult[1]\nshould be 1.\nFor\nnums[2]\nthat is equal to 1, If we move 1 step to right, we reach\nnums[3]\n. So\nresult[2]\nshould be 1.\nFor\nnums[3]\nthat is equal to 1, If we move 1 step to right, we reach\nnums[0]\n. So\nresult[3]\nshould be 3.\nExample 2:\nInput:\nnums = [-1,4,-1]\nOutput:\n[-1,-1,4]\nExplanation:\nFor\nnums[0]\nthat is equal to -1, If we move 1 step to left, we reach\nnums[2]\n. So\nresult[0]\nshould be -1.\nFor\nnums[1]\nthat is equal to 4, If we move 4 steps to right, we reach\nnums[2]\n. So\nresult[1]\nshould be -1.\nFor\nnums[2]\nthat is equal to -1, If we move 1 step to left, we reach\nnums[1]\n. So\nresult[2]\nshould be 4.\nConstraints:\n1 <= nums.length <= 100\n-100 <= nums[i] <= 100",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [3,-2,1,1]",
+        "output": "[1,1,1,3]"
+      },
+      {
+        "input": "nums = [-1,4,-1]",
+        "output": "[-1,-1,4]"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "trionic-array-i",
+    "title": "Trionic Array I",
+    "difficulty": "Easy",
+    "topic": "Array",
+    "description": "Given an array of values, solve the Trionic Array I problem by processing the elements according to the stated conditions and return the required result.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "trionic-array-ii",
+    "title": "Trionic Array II",
+    "difficulty": "Hard",
+    "topic": "Array",
+    "description": "Given an array of values, solve the Trionic Array II problem by processing the elements according to the stated conditions and return the required result.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "twisted-mirror-path-count",
+    "title": "Twisted Mirror Path Count",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Twisted Mirror Path Count problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "two-letter-card-game",
+    "title": "Two-Letter Card Game",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Two-Letter Card Game problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "uncommon-words-from-two-sentences",
+    "title": "Uncommon Words from Two Sentences",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "A\nsentence\nis a string of single-space separated words where each word consists only of lowercase letters.\nA word is\nuncommon\nif it appears exactly once in one of the sentences, and\ndoes not appear\nin the other sentence.\nGiven two\nsentences\ns1\nand\ns2\n, return\na list of all the\nuncommon words\n. You may return the answer in\nany order\n.\nExample 1:\nInput:\ns1 = \"this apple is sweet\", s2 = \"this apple is sour\"\nOutput:\n[\"sweet\",\"sour\"]\nExplanation:\nThe word\n\"sweet\"\nappears only in\ns1\n, while the word\n\"sour\"\nappears only in\ns2\n.\nExample 2:\nInput:\ns1 = \"apple apple\", s2 = \"banana\"\nOutput:\n[\"banana\"]\nConstraints:\n1 <= s1.length, s2.length <= 200\ns1\nand\ns2\nconsist of lowercase English letters and spaces.\ns1\nand\ns2\ndo not have leading or trailing spaces.\nAll the words in\ns1\nand\ns2\nare separated by a single space.",
+    "problemStatement": "A\nsentence\nis a string of single-space separated words where each word consists only of lowercase letters.\nA word is\nuncommon\nif it appears exactly once in one of the sentences, and\ndoes not appear\nin the other sentence.\nGiven two\nsentences\ns1\nand\ns2\n, return\na list of all the\nuncommon words\n. You may return the answer in\nany order\n.\nExample 1:\nInput:\ns1 = \"this apple is sweet\", s2 = \"this apple is sour\"\nOutput:\n[\"sweet\",\"sour\"]\nExplanation:\nThe word\n\"sweet\"\nappears only in\ns1\n, while the word\n\"sour\"\nappears only in\ns2\n.\nExample 2:\nInput:\ns1 = \"apple apple\", s2 = \"banana\"\nOutput:\n[\"banana\"]\nConstraints:\n1 <= s1.length, s2.length <= 200\ns1\nand\ns2\nconsist of lowercase English letters and spaces.\ns1\nand\ns2\ndo not have leading or trailing spaces.\nAll the words in\ns1\nand\ns2\nare separated by a single space.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "s1 = \"this apple is sweet\", s2 = \"this apple is sour\"",
+        "output": "[\"sweet\",\"sour\"]"
+      },
+      {
+        "input": "s1 = \"apple apple\", s2 = \"banana\"",
+        "output": "[\"banana\"]"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "unique-3-digit-even-numbers",
+    "title": "Unique 3-Digit Even Numbers",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "You are given an array of digits called\ndigits\n. Your task is to determine the number of\ndistinct\nthree-digit even numbers that can be formed using these digits.\nNote\n: Each\ncopy\nof a digit can only be used\nonce per number\n, and there may\nnot\nbe leading zeros.\nExample 1:\nInput:\ndigits = [1,2,3,4]\nOutput:\n12\nExplanation:\nThe 12 distinct 3-digit even numbers that can be formed are 124, 132, 134, 142, 214, 234, 312, 314, 324, 342, 412, and 432. Note that 222 cannot be formed because there is only 1 copy of the digit 2.\nExample 2:\nInput:\ndigits = [0,2,2]\nOutput:\n2\nExplanation:\nThe only 3-digit even numbers that can be formed are 202 and 220. Note that the digit 2 can be used twice because it appears twice in the array.\nExample 3:\nInput:\ndigits = [6,6,6]\nOutput:\n1\nExplanation:\nOnly 666 can be formed.\nExample 4:\nInput:\ndigits = [1,3,5]\nOutput:\n0\nExplanation:\nNo even 3-digit numbers can be formed.\nConstraints:\n3 <= digits.length <= 10\n0 <= digits[i] <= 9",
+    "problemStatement": "You are given an array of digits called\ndigits\n. Your task is to determine the number of\ndistinct\nthree-digit even numbers that can be formed using these digits.\nNote\n: Each\ncopy\nof a digit can only be used\nonce per number\n, and there may\nnot\nbe leading zeros.\nExample 1:\nInput:\ndigits = [1,2,3,4]\nOutput:\n12\nExplanation:\nThe 12 distinct 3-digit even numbers that can be formed are 124, 132, 134, 142, 214, 234, 312, 314, 324, 342, 412, and 432. Note that 222 cannot be formed because there is only 1 copy of the digit 2.\nExample 2:\nInput:\ndigits = [0,2,2]\nOutput:\n2\nExplanation:\nThe only 3-digit even numbers that can be formed are 202 and 220. Note that the digit 2 can be used twice because it appears twice in the array.\nExample 3:\nInput:\ndigits = [6,6,6]\nOutput:\n1\nExplanation:\nOnly 666 can be formed.\nExample 4:\nInput:\ndigits = [1,3,5]\nOutput:\n0\nExplanation:\nNo even 3-digit numbers can be formed.\nConstraints:\n3 <= digits.length <= 10\n0 <= digits[i] <= 9",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "digits = [1,2,3,4]",
+        "output": "12"
+      },
+      {
+        "input": "digits = [0,2,2]",
+        "output": "2"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "unique-substrings-with-equal-digit-frequency",
+    "title": "Unique Substrings With Equal Digit Frequency",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "Given a string, solve the Unique Substrings With Equal Digit Frequency problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "unique-word-abbreviation",
+    "title": "Unique Word Abbreviation",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "Given a string, solve the Unique Word Abbreviation problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "unit-conversion-i",
+    "title": "Unit Conversion I",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Unit Conversion I problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "unit-conversion-ii",
+    "title": "Unit Conversion II",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Unit Conversion II problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "unpopular-books",
+    "title": "Unpopular Books",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Unpopular Books problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "user-activity-for-the-past-30-days-ii",
+    "title": "User Activity for the Past 30 Days II",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the User Activity for the Past 30 Days II problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "user-purchase-platform",
+    "title": "User Purchase Platform",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the User Purchase Platform problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "users-with-two-purchases-within-seven-days",
+    "title": "Users With Two Purchases Within Seven Days",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Users With Two Purchases Within Seven Days problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "valid-anagram",
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given two strings\ns\nand\nt\n, return\ntrue\nif\nt\nis an\nanagram\nof\ns\n, and\nfalse\notherwise.\nExample 1:\nInput:\ns = \"anagram\", t = \"nagaram\"\nOutput:\ntrue\nExample 2:\nInput:\ns = \"rat\", t = \"car\"\nOutput:\nfalse\nConstraints:\n1 <= s.length, t.length <= 5 * 10\n4\ns\nand\nt\nconsist of lowercase English letters.\nFollow up:\nWhat if the inputs contain Unicode characters? How would you adapt your solution to such a case?",
+    "problemStatement": "Given two strings\ns\nand\nt\n, return\ntrue\nif\nt\nis an\nanagram\nof\ns\n, and\nfalse\notherwise.\nExample 1:\nInput:\ns = \"anagram\", t = \"nagaram\"\nOutput:\ntrue\nExample 2:\nInput:\ns = \"rat\", t = \"car\"\nOutput:\nfalse\nConstraints:\n1 <= s.length, t.length <= 5 * 10\n4\ns\nand\nt\nconsist of lowercase English letters.\nFollow up:\nWhat if the inputs contain Unicode characters? How would you adapt your solution to such a case?",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "s = \"anagram\", t = \"nagaram\"",
+        "output": "true"
+      },
+      {
+        "input": "s = \"rat\", t = \"car\"",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "1 <= s.length, t.length <= 5 * 10",
+      "4",
+      "s",
+      "and",
+      "t",
+      "consist of lowercase English letters."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "valid-number",
+    "title": "Valid Number",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given a string\ns\n, return whether\ns\nis a\nvalid number\n.\nFor example, all the following are valid numbers:\n\"2\", \"0089\", \"-0.1\", \"+3.14\", \"4.\", \"-.9\", \"2e10\", \"-90E3\", \"3e+7\", \"+6e-1\", \"53.5e93\", \"-123.456e789\"\n, while the following are not valid numbers:\n\"abc\", \"1a\", \"1e\", \"e3\", \"99e2.5\", \"--6\", \"-+3\", \"95a54e53\"\n.\nFormally, a\nvalid number\nis defined using one of the following definitions:\nAn\ninteger number\nfollowed by an\noptional exponent\n.\nA\ndecimal number\nfollowed by an\noptional exponent\n.\nAn\ninteger number\nis defined with an\noptional sign\n'-'\nor\n'+'\nfollowed by\ndigits\n.\nA\ndecimal number\nis defined with an\noptional sign\n'-'\nor\n'+'\nfollowed by one of the following definitions:\nDigits\nfollowed by a\ndot\n'.'\n.\nDigits\nfollowed by a\ndot\n'.'\nfollowed by\ndigits\n.\nA\ndot\n'.'\nfollowed by\ndigits\n.\nAn\nexponent\nis defined with an\nexponent notation\n'e'\nor\n'E'\nfollowed by an\ninteger number\n.\nThe\ndigits\nare defined as one or more digits.\nExample 1:\nInput:\ns = \"0\"\nOutput:\ntrue\nExample 2:\nInput:\ns = \"e\"\nOutput:\nfalse\nExample 3:\nInput:\ns = \".\"\nOutput:\nfalse\nConstraints:\n1 <= s.length <= 20\ns\nconsists of only English letters (both uppercase and lowercase), digits (\n0-9\n), plus\n'+'\n, minus\n'-'\n, or do",
+    "problemStatement": "Given a string\ns\n, return whether\ns\nis a\nvalid number\n.\nFor example, all the following are valid numbers:\n\"2\", \"0089\", \"-0.1\", \"+3.14\", \"4.\", \"-.9\", \"2e10\", \"-90E3\", \"3e+7\", \"+6e-1\", \"53.5e93\", \"-123.456e789\"\n, while the following are not valid numbers:\n\"abc\", \"1a\", \"1e\", \"e3\", \"99e2.5\", \"--6\", \"-+3\", \"95a54e53\"\n.\nFormally, a\nvalid number\nis defined using one of the following definitions:\nAn\ninteger number\nfollowed by an\noptional exponent\n.\nA\ndecimal number\nfollowed by an\noptional exponent\n.\nAn\ninteger number\nis defined with an\noptional sign\n'-'\nor\n'+'\nfollowed by\ndigits\n.\nA\ndecimal number\nis defined with an\noptional sign\n'-'\nor\n'+'\nfollowed by one of the following definitions:\nDigits\nfollowed by a\ndot\n'.'\n.\nDigits\nfollowed by a\ndot\n'.'\nfollowed by\ndigits\n.\nA\ndot\n'.'\nfollowed by\ndigits\n.\nAn\nexponent\nis defined with an\nexponent notation\n'e'\nor\n'E'\nfollowed by an\ninteger number\n.\nThe\ndigits\nare defined as one or more digits.\nExample 1:\nInput:\ns = \"0\"\nOutput:\ntrue\nExample 2:\nInput:\ns = \"e\"\nOutput:\nfalse\nExample 3:\nInput:\ns = \".\"\nOutput:\nfalse\nConstraints:\n1 <= s.length <= 20\ns\nconsists of only English letters (both uppercase and lowercase), digits (\n0-9\n), plus\n'+'\n, minus\n'-'\n, or dot\n'.'\n.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "s = \"0\"",
+        "output": "true"
+      },
+      {
+        "input": "s = \"e\"",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "valid-subarrays-with-matching-sum-digits-i",
+    "title": "Valid Subarrays With Matching Sum Digits I",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an array of values, solve the Valid Subarrays With Matching Sum Digits I problem by processing the elements according to the stated conditions and return the required result.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "valid-word",
+    "title": "Valid Word",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "A word is considered\nvalid\nif:\nIt contains a\nminimum\nof 3 characters.\nIt contains only digits (0-9), and English letters (uppercase and lowercase).\nIt includes\nat least\none\nvowel\n.\nIt includes\nat least\none\nconsonant\n.\nYou are given a string\nword\n.\nReturn\ntrue\nif\nword\nis valid, otherwise, return\nfalse\n.\nNotes:\n'a'\n,\n'e'\n,\n'i'\n,\n'o'\n,\n'u'\n, and their uppercases are\nvowels\n.\nA\nconsonant\nis an English letter that is not a vowel.\nExample 1:\nInput:\nword = \"234Adas\"\nOutput:\ntrue\nExplanation:\nThis word satisfies the conditions.\nExample 2:\nInput:\nword = \"b3\"\nOutput:\nfalse\nExplanation:\nThe length of this word is fewer than 3, and does not have a vowel.\nExample 3:\nInput:\nword = \"a3$e\"\nOutput:\nfalse\nExplanation:\nThis word contains a\n'$'\ncharacter and does not have a consonant.\nConstraints:\n1 <= word.length <= 20\nword\nconsists of English uppercase and lowercase letters, digits,\n'@'\n,\n'#'\n, and\n'$'\n.",
+    "problemStatement": "A word is considered\nvalid\nif:\nIt contains a\nminimum\nof 3 characters.\nIt contains only digits (0-9), and English letters (uppercase and lowercase).\nIt includes\nat least\none\nvowel\n.\nIt includes\nat least\none\nconsonant\n.\nYou are given a string\nword\n.\nReturn\ntrue\nif\nword\nis valid, otherwise, return\nfalse\n.\nNotes:\n'a'\n,\n'e'\n,\n'i'\n,\n'o'\n,\n'u'\n, and their uppercases are\nvowels\n.\nA\nconsonant\nis an English letter that is not a vowel.\nExample 1:\nInput:\nword = \"234Adas\"\nOutput:\ntrue\nExplanation:\nThis word satisfies the conditions.\nExample 2:\nInput:\nword = \"b3\"\nOutput:\nfalse\nExplanation:\nThe length of this word is fewer than 3, and does not have a vowel.\nExample 3:\nInput:\nword = \"a3$e\"\nOutput:\nfalse\nExplanation:\nThis word contains a\n'$'\ncharacter and does not have a consonant.\nConstraints:\n1 <= word.length <= 20\nword\nconsists of English uppercase and lowercase letters, digits,\n'@'\n,\n'#'\n, and\n'$'\n.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "word = \"234Adas\"",
+        "output": "true"
+      },
+      {
+        "input": "word = \"b3\"",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "valid-word-abbreviation",
+    "title": "Valid Word Abbreviation",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "Given a string, solve the Valid Word Abbreviation problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "valid-word-square",
+    "title": "Valid Word Square",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "Given a string, solve the Valid Word Square problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "viewers-turned-streamers",
+    "title": "Viewers Turned Streamers",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the Viewers Turned Streamers problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "vowels-game-in-a-string",
+    "title": "Vowels Game in a String",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "Alice and Bob are playing a game on a string.\nYou are given a string\ns\n, Alice and Bob will take turns playing the following game where Alice starts\nfirst\n:\nOn Alice's turn, she has to remove any\nnon-empty\nsubstring\nfrom\ns\nthat contains an\nodd\nnumber of vowels.\nOn Bob's turn, he has to remove any\nnon-empty\nsubstring\nfrom\ns\nthat contains an\neven\nnumber of vowels.\nThe first player who cannot make a move on their turn loses the game. We assume that both Alice and Bob play\noptimally\n.\nReturn\ntrue\nif Alice wins the game, and\nfalse\notherwise.\nThe English vowels are:\na\n,\ne\n,\ni\n,\no\n, and\nu\n.\nExample 1:\nInput:\ns = \"leetcoder\"\nOutput:\ntrue\nExplanation:\nAlice can win the game as follows:\nAlice plays first, she can delete the underlined substring in\ns = \"\nleetco\nder\"\nwhich contains 3 vowels. The resulting string is\ns = \"der\"\n.\nBob plays second, he can delete the underlined substring in\ns = \"\nd\ner\"\nwhich contains 0 vowels. The resulting string is\ns = \"er\"\n.\nAlice plays third, she can delete the whole string\ns = \"\ner\n\"\nwhich contains 1 vowel.\nBob plays fourth, since the string is empty, there is no valid play for Bob. So Alice wins the game.\nExample 2:\nInput:\ns = \"bbcd\"\nOutput:\nfalse\nExplanation",
+    "problemStatement": "Alice and Bob are playing a game on a string.\nYou are given a string\ns\n, Alice and Bob will take turns playing the following game where Alice starts\nfirst\n:\nOn Alice's turn, she has to remove any\nnon-empty\nsubstring\nfrom\ns\nthat contains an\nodd\nnumber of vowels.\nOn Bob's turn, he has to remove any\nnon-empty\nsubstring\nfrom\ns\nthat contains an\neven\nnumber of vowels.\nThe first player who cannot make a move on their turn loses the game. We assume that both Alice and Bob play\noptimally\n.\nReturn\ntrue\nif Alice wins the game, and\nfalse\notherwise.\nThe English vowels are:\na\n,\ne\n,\ni\n,\no\n, and\nu\n.\nExample 1:\nInput:\ns = \"leetcoder\"\nOutput:\ntrue\nExplanation:\nAlice can win the game as follows:\nAlice plays first, she can delete the underlined substring in\ns = \"\nleetco\nder\"\nwhich contains 3 vowels. The resulting string is\ns = \"der\"\n.\nBob plays second, he can delete the underlined substring in\ns = \"\nd\ner\"\nwhich contains 0 vowels. The resulting string is\ns = \"er\"\n.\nAlice plays third, she can delete the whole string\ns = \"\ner\n\"\nwhich contains 1 vowel.\nBob plays fourth, since the string is empty, there is no valid play for Bob. So Alice wins the game.\nExample 2:\nInput:\ns = \"bbcd\"\nOutput:\nfalse\nExplanation:\nThere is no valid play for Alice in her first turn, so Alice loses the game.\nConstraints:\n1 <= s.length <= 10\n5\ns\nconsists only of lowercase English letters.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "s = \"leetcoder\"",
+        "output": "true"
+      },
+      {
+        "input": "s = \"bbcd\"",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "walking-robot-simulation",
+    "title": "Walking Robot Simulation",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "A robot on an infinite XY-plane starts at point\n(0, 0)\nfacing north. The robot receives an array of integers\ncommands\n, which represents a sequence of moves that it needs to execute. There are only three possible types of instructions the robot can receive:\n-2\n: Turn left\n90\ndegrees.\n-1\n: Turn right\n90\ndegrees.\n1 <= k <= 9\n: Move forward\nk\nunits, one unit at a time.\nSome of the grid squares are\nobstacles\n. The\ni\nth\nobstacle is at grid point\nobstacles[i] = (x\ni\n, y\ni\n)\n. If the robot runs into an obstacle, it will stay in its current location (on the block adjacent to the obstacle) and move onto the next command.\nReturn the\nmaximum squared Euclidean distance\nthat the robot reaches at any point in its path (i.e. if the distance is\n5\n, return\n25\n).\nNote:\nThere can be an obstacle at\n(0, 0)\n. If this happens, the robot will ignore the obstacle until it has moved off the origin. However, it will be unable to return to\n(0, 0)\ndue to the obstacle.\nNorth means +Y direction.\nEast means +X direction.\nSouth means -Y direction.\nWest means -X direction.\nExample 1:\nInput:\ncommands = [4,-1,3], obstacles = []\nOutput:\n25\nExplanation:\nThe robot starts at\n(0, 0)\n:\nMove north 4 units to\n(0, 4)\n.\nTurn r",
+    "problemStatement": "A robot on an infinite XY-plane starts at point\n(0, 0)\nfacing north. The robot receives an array of integers\ncommands\n, which represents a sequence of moves that it needs to execute. There are only three possible types of instructions the robot can receive:\n-2\n: Turn left\n90\ndegrees.\n-1\n: Turn right\n90\ndegrees.\n1 <= k <= 9\n: Move forward\nk\nunits, one unit at a time.\nSome of the grid squares are\nobstacles\n. The\ni\nth\nobstacle is at grid point\nobstacles[i] = (x\ni\n, y\ni\n)\n. If the robot runs into an obstacle, it will stay in its current location (on the block adjacent to the obstacle) and move onto the next command.\nReturn the\nmaximum squared Euclidean distance\nthat the robot reaches at any point in its path (i.e. if the distance is\n5\n, return\n25\n).\nNote:\nThere can be an obstacle at\n(0, 0)\n. If this happens, the robot will ignore the obstacle until it has moved off the origin. However, it will be unable to return to\n(0, 0)\ndue to the obstacle.\nNorth means +Y direction.\nEast means +X direction.\nSouth means -Y direction.\nWest means -X direction.\nExample 1:\nInput:\ncommands = [4,-1,3], obstacles = []\nOutput:\n25\nExplanation:\nThe robot starts at\n(0, 0)\n:\nMove north 4 units to\n(0, 4)\n.\nTurn right.\nMove east 3 units to\n(3, 4)\n.\nThe furthest point the robot ever gets from the origin is\n(3, 4)\n, which squared is\n3\n2\n+ 4\n2\n= 25\nunits away.\nExample 2:\nInput:\ncommands = [4,-1,4,-2,4], obstacles = [[2,4]]\nOutput:\n65\nExplanation:\nThe robot starts at\n(0, 0)\n:\nMove north 4 units to\n(0, 4)\n.\nTurn right.\nMove east 1 unit and get blocked by the obstacle at\n(2, 4)\n, robot is at\n(1, 4)\n.\nTurn left.\nMove north 4 units to\n(1, 8)\n.\nThe furthest point the robot ever gets from the origin is\n(1, 8)\n, which squared is\n1\n2\n+ 8\n2\n= 65\nunits away.\nExample 3:\nInput:\ncommands = [6,-1,-1,6], obstacles = [[0,0]]\nOutput:\n36\nExplanation:\nThe robot starts at\n(0, 0)\n:\nMove north 6 units to\n(0, 6)\n.\nTurn right.\nTurn right.\nMove south 5 units and get blocked by the obstacle at\n(0,0)\n, robot is at\n(0, 1)\n.\nThe furthest point the robot ever gets from the origin is\n(0, 6)\n, which squared is\n6\n2\n= 36\nunits away.\nConstraints:\n1 <= commands.length <= 10\n4\ncommands[i]\nis either\n-2\n,\n-1\n, or an integer in the range\n[1, 9]\n.\n0 <= obstacles.length <= 10\n4\n-3 * 10\n4\n<= x\ni\n, y\ni\n<= 3 * 10\n4\nThe answer is guaranteed to be less than\n2\n31\n.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "commands = [4,-1,3], obstacles = []",
+        "output": "25"
+      },
+      {
+        "input": "commands = [4,-1,4,-2,4], obstacles = [[2,4]]",
+        "output": "65"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "walls-and-gates",
+    "title": "Walls and Gates",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Walls and Gates problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "warehouse-manager",
+    "title": "Warehouse Manager",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the Warehouse Manager problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "water-and-jug-problem",
+    "title": "Water and Jug Problem",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "You are given two jugs with capacities\nx\nliters and\ny\nliters. You have an infinite water supply. Return whether the total amount of water in both jugs may reach\ntarget\nusing the following operations:\nFill either jug completely with water.\nCompletely empty either jug.\nPour water from one jug into another until the receiving jug is full, or the transferring jug is empty.\nExample 1:\nInput:\nx = 3, y = 5, target = 4\nOutput:\ntrue\nExplanation:\nFollow these steps to reach a total of 4 liters:\nFill the 5-liter jug (0, 5).\nPour from the 5-liter jug into the 3-liter jug, leaving 2 liters (3, 2).\nEmpty the 3-liter jug (0, 2).\nTransfer the 2 liters from the 5-liter jug to the 3-liter jug (2, 0).\nFill the 5-liter jug again (2, 5).\nPour from the 5-liter jug into the 3-liter jug until the 3-liter jug is full. This leaves 4 liters in the 5-liter jug (3, 4).\nEmpty the 3-liter jug. Now, you have exactly 4 liters in the 5-liter jug (0, 4).\nReference: The\nDie Hard\nexample.\nExample 2:\nInput:\nx = 2, y = 6, target = 5\nOutput:\nfalse\nExample 3:\nInput:\nx = 1, y = 2, target = 3\nOutput:\ntrue\nExplanation:\nFill both jugs. The total amount of water in both jugs is equal to 3 now.\nConstraints:\n1 <= x, y, target <=",
+    "problemStatement": "You are given two jugs with capacities\nx\nliters and\ny\nliters. You have an infinite water supply. Return whether the total amount of water in both jugs may reach\ntarget\nusing the following operations:\nFill either jug completely with water.\nCompletely empty either jug.\nPour water from one jug into another until the receiving jug is full, or the transferring jug is empty.\nExample 1:\nInput:\nx = 3, y = 5, target = 4\nOutput:\ntrue\nExplanation:\nFollow these steps to reach a total of 4 liters:\nFill the 5-liter jug (0, 5).\nPour from the 5-liter jug into the 3-liter jug, leaving 2 liters (3, 2).\nEmpty the 3-liter jug (0, 2).\nTransfer the 2 liters from the 5-liter jug to the 3-liter jug (2, 0).\nFill the 5-liter jug again (2, 5).\nPour from the 5-liter jug into the 3-liter jug until the 3-liter jug is full. This leaves 4 liters in the 5-liter jug (3, 4).\nEmpty the 3-liter jug. Now, you have exactly 4 liters in the 5-liter jug (0, 4).\nReference: The\nDie Hard\nexample.\nExample 2:\nInput:\nx = 2, y = 6, target = 5\nOutput:\nfalse\nExample 3:\nInput:\nx = 1, y = 2, target = 3\nOutput:\ntrue\nExplanation:\nFill both jugs. The total amount of water in both jugs is equal to 3 now.\nConstraints:\n1 <= x, y, target <= 10\n3",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "x = 3, y = 5, target = 4",
+        "output": "true"
+      },
+      {
+        "input": "x = 2, y = 6, target = 5",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "weather-type-in-each-country",
+    "title": "Weather Type in Each Country",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the Weather Type in Each Country problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "web-crawler",
+    "title": "Web Crawler",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Web Crawler problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "web-crawler-multithreaded",
+    "title": "Web Crawler Multithreaded",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Web Crawler Multithreaded problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "weighted-word-mapping",
+    "title": "Weighted Word Mapping",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "Given a string, solve the Weighted Word Mapping problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "widest-pair-of-indices-with-equal-range-sum",
+    "title": "Widest Pair of Indices With Equal Range Sum",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an array of values, solve the Widest Pair of Indices With Equal Range Sum problem by processing the elements according to the stated conditions and return the required result.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "wiggle-sort",
+    "title": "Wiggle Sort",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given an array or collection related to Wiggle Sort, process its elements according to the required ordering and return the result while satisfying the problem requirements.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "word-abbreviation",
+    "title": "Word Abbreviation",
+    "difficulty": "Hard",
+    "topic": "String",
+    "description": "Given a string, solve the Word Abbreviation problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "word-pattern",
+    "title": "Word Pattern",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "Given a\npattern\nand a string\ns\n, find if\ns\nfollows the same pattern.\nHere\nfollow\nmeans a full match, such that there is a bijection between a letter in\npattern\nand a\nnon-empty\nword in\ns\n. Specifically:\nEach letter in\npattern\nmaps to\nexactly\none unique word in\ns\n.\nEach unique word in\ns\nmaps to\nexactly\none letter in\npattern\n.\nNo two letters map to the same word, and no two words map to the same letter.\nExample 1:\nInput:\npattern = \"abba\", s = \"dog cat cat dog\"\nOutput:\ntrue\nExplanation:\nThe bijection can be established as:\n'a'\nmaps to\n\"dog\"\n.\n'b'\nmaps to\n\"cat\"\n.\nExample 2:\nInput:\npattern = \"abba\", s = \"dog cat cat fish\"\nOutput:\nfalse\nExample 3:\nInput:\npattern = \"aaaa\", s = \"dog cat cat dog\"\nOutput:\nfalse\nConstraints:\n1 <= pattern.length <= 300\npattern\ncontains only lower-case English letters.\n1 <= s.length <= 3000\ns\ncontains only lowercase English letters and spaces\n' '\n.\ns\ndoes not contain\nany leading or trailing spaces.\nAll the words in\ns\nare separated by a\nsingle space\n.",
+    "problemStatement": "Given a\npattern\nand a string\ns\n, find if\ns\nfollows the same pattern.\nHere\nfollow\nmeans a full match, such that there is a bijection between a letter in\npattern\nand a\nnon-empty\nword in\ns\n. Specifically:\nEach letter in\npattern\nmaps to\nexactly\none unique word in\ns\n.\nEach unique word in\ns\nmaps to\nexactly\none letter in\npattern\n.\nNo two letters map to the same word, and no two words map to the same letter.\nExample 1:\nInput:\npattern = \"abba\", s = \"dog cat cat dog\"\nOutput:\ntrue\nExplanation:\nThe bijection can be established as:\n'a'\nmaps to\n\"dog\"\n.\n'b'\nmaps to\n\"cat\"\n.\nExample 2:\nInput:\npattern = \"abba\", s = \"dog cat cat fish\"\nOutput:\nfalse\nExample 3:\nInput:\npattern = \"aaaa\", s = \"dog cat cat dog\"\nOutput:\nfalse\nConstraints:\n1 <= pattern.length <= 300\npattern\ncontains only lower-case English letters.\n1 <= s.length <= 3000\ns\ncontains only lowercase English letters and spaces\n' '\n.\ns\ndoes not contain\nany leading or trailing spaces.\nAll the words in\ns\nare separated by a\nsingle space\n.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "pattern = \"abba\", s = \"dog cat cat dog\"",
+        "output": "true"
+      },
+      {
+        "input": "pattern = \"abba\", s = \"dog cat cat fish\"",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "word-pattern-ii",
+    "title": "Word Pattern II",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "Given a string, solve the Word Pattern II problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "word-squares",
+    "title": "Word Squares",
+    "difficulty": "Hard",
+    "topic": "String",
+    "description": "Given a string, solve the Word Squares problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "word-squares-ii",
+    "title": "Word Squares II",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "Given a string, solve the Word Squares II problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "word-subsets",
+    "title": "Word Subsets",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "You are given two string arrays\nwords1\nand\nwords2\n.\nA string\nb\nis a\nsubset\nof string\na\nif every letter in\nb\noccurs in\na\nincluding multiplicity.\nFor example,\n\"wrr\"\nis a subset of\n\"warrior\"\nbut is not a subset of\n\"world\"\n.\nA string\na\nfrom\nwords1\nis\nuniversal\nif for every string\nb\nin\nwords2\n,\nb\nis a subset of\na\n.\nReturn an array of all the\nuniversal\nstrings in\nwords1\n. You may return the answer in\nany order\n.\nExample 1:\nInput:\nwords1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"e\",\"o\"]\nOutput:\n[\"facebook\",\"google\",\"leetcode\"]\nExample 2:\nInput:\nwords1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"lc\",\"eo\"]\nOutput:\n[\"leetcode\"]\nExample 3:\nInput:\nwords1 = [\"acaac\",\"cccbb\",\"aacbb\",\"caacc\",\"bcbbb\"], words2 = [\"c\",\"cc\",\"b\"]\nOutput:\n[\"cccbb\"]\nConstraints:\n1 <= words1.length, words2.length <= 10\n4\n1 <= words1[i].length, words2[i].length <= 10\nwords1[i]\nand\nwords2[i]\nconsist only of lowercase English letters.\nAll the strings of\nwords1\nare\nunique\n.",
+    "problemStatement": "You are given two string arrays\nwords1\nand\nwords2\n.\nA string\nb\nis a\nsubset\nof string\na\nif every letter in\nb\noccurs in\na\nincluding multiplicity.\nFor example,\n\"wrr\"\nis a subset of\n\"warrior\"\nbut is not a subset of\n\"world\"\n.\nA string\na\nfrom\nwords1\nis\nuniversal\nif for every string\nb\nin\nwords2\n,\nb\nis a subset of\na\n.\nReturn an array of all the\nuniversal\nstrings in\nwords1\n. You may return the answer in\nany order\n.\nExample 1:\nInput:\nwords1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"e\",\"o\"]\nOutput:\n[\"facebook\",\"google\",\"leetcode\"]\nExample 2:\nInput:\nwords1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"lc\",\"eo\"]\nOutput:\n[\"leetcode\"]\nExample 3:\nInput:\nwords1 = [\"acaac\",\"cccbb\",\"aacbb\",\"caacc\",\"bcbbb\"], words2 = [\"c\",\"cc\",\"b\"]\nOutput:\n[\"cccbb\"]\nConstraints:\n1 <= words1.length, words2.length <= 10\n4\n1 <= words1[i].length, words2[i].length <= 10\nwords1[i]\nand\nwords2[i]\nconsist only of lowercase English letters.\nAll the strings of\nwords1\nare\nunique\n.",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "words1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"e\",\"o\"]",
+        "output": "[\"facebook\",\"google\",\"leetcode\"]"
+      },
+      {
+        "input": "words1 = [\"amazon\",\"apple\",\"facebook\",\"google\",\"leetcode\"], words2 = [\"lc\",\"eo\"]",
+        "output": "[\"leetcode\"]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "xor-after-range-multiplication-queries-i",
+    "title": "XOR After Range Multiplication Queries I",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the XOR After Range Multiplication Queries I problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "xor-after-range-multiplication-queries-ii",
+    "title": "XOR After Range Multiplication Queries II",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the XOR After Range Multiplication Queries II problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "year-on-year-growth-rate",
+    "title": "Year on Year Growth Rate",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the Year on Year Growth Rate problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "zero-array-transformation-i",
+    "title": "Zero Array Transformation I",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\n, where\nqueries[i] = [l\ni\n, r\ni\n]\n.\nFor each\nqueries[i]\n:\nSelect a\nsubset\nof indices within the range\n[l\ni\n, r\ni\n]\nin\nnums\n.\nDecrement the values at the selected indices by 1.\nA\nZero Array\nis an array where all elements are equal to 0.\nReturn\ntrue\nif it is\npossible\nto transform\nnums\ninto a\nZero Array\nafter processing all the queries sequentially, otherwise return\nfalse\n.\nExample 1:\nInput:\nnums = [1,0,1], queries = [[0,2]]\nOutput:\ntrue\nExplanation:\nFor i = 0:\nSelect the subset of indices as\n[0, 2]\nand decrement the values at these indices by 1.\nThe array will become\n[0, 0, 0]\n, which is a Zero Array.\nExample 2:\nInput:\nnums = [4,3,2,1], queries = [[1,3],[0,2]]\nOutput:\nfalse\nExplanation:\nFor i = 0:\nSelect the subset of indices as\n[1, 2, 3]\nand decrement the values at these indices by 1.\nThe array will become\n[4, 2, 1, 0]\n.\nFor i = 1:\nSelect the subset of indices as\n[0, 1, 2]\nand decrement the values at these indices by 1.\nThe array will become\n[3, 1, 0, 0]\n, which is not a Zero Array.\nConstraints:\n1 <= nums.length <= 10\n5\n0 <= nums[i] <= 10\n5\n1 <= queries.length <= 10\n5\nqueries[i].length == 2\n0 <= l\ni\n<= r\ni\n< nums",
+    "problemStatement": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\n, where\nqueries[i] = [l\ni\n, r\ni\n]\n.\nFor each\nqueries[i]\n:\nSelect a\nsubset\nof indices within the range\n[l\ni\n, r\ni\n]\nin\nnums\n.\nDecrement the values at the selected indices by 1.\nA\nZero Array\nis an array where all elements are equal to 0.\nReturn\ntrue\nif it is\npossible\nto transform\nnums\ninto a\nZero Array\nafter processing all the queries sequentially, otherwise return\nfalse\n.\nExample 1:\nInput:\nnums = [1,0,1], queries = [[0,2]]\nOutput:\ntrue\nExplanation:\nFor i = 0:\nSelect the subset of indices as\n[0, 2]\nand decrement the values at these indices by 1.\nThe array will become\n[0, 0, 0]\n, which is a Zero Array.\nExample 2:\nInput:\nnums = [4,3,2,1], queries = [[1,3],[0,2]]\nOutput:\nfalse\nExplanation:\nFor i = 0:\nSelect the subset of indices as\n[1, 2, 3]\nand decrement the values at these indices by 1.\nThe array will become\n[4, 2, 1, 0]\n.\nFor i = 1:\nSelect the subset of indices as\n[0, 1, 2]\nand decrement the values at these indices by 1.\nThe array will become\n[3, 1, 0, 0]\n, which is not a Zero Array.\nConstraints:\n1 <= nums.length <= 10\n5\n0 <= nums[i] <= 10\n5\n1 <= queries.length <= 10\n5\nqueries[i].length == 2\n0 <= l\ni\n<= r\ni\n< nums.length",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [1,0,1], queries = [[0,2]]",
+        "output": "true"
+      },
+      {
+        "input": "nums = [4,3,2,1], queries = [[1,3],[0,2]]",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "zero-array-transformation-ii",
+    "title": "Zero Array Transformation II",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\nwhere\nqueries[i] = [l\ni\n, r\ni\n, val\ni\n]\n.\nEach\nqueries[i]\nrepresents the following action on\nnums\n:\nDecrement the value at each index in the range\n[l\ni\n, r\ni\n]\nin\nnums\nby\nat most\nval\ni\n.\nThe amount by which each value is decremented\ncan be chosen\nindependently\nfor each index.\nA\nZero Array\nis an array with all its elements equal to 0.\nReturn the\nminimum\npossible\nnon-negative\nvalue of\nk\n, such that after processing the first\nk\nqueries in\nsequence\n,\nnums\nbecomes a\nZero Array\n. If no such\nk\nexists, return -1.\nExample 1:\nInput:\nnums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\nOutput:\n2\nExplanation:\nFor i = 0 (l = 0, r = 2, val = 1):\nDecrement values at indices\n[0, 1, 2]\nby\n[1, 0, 1]\nrespectively.\nThe array will become\n[1, 0, 1]\n.\nFor i = 1 (l = 0, r = 2, val = 1):\nDecrement values at indices\n[0, 1, 2]\nby\n[1, 0, 1]\nrespectively.\nThe array will become\n[0, 0, 0]\n, which is a Zero Array. Therefore, the minimum value of\nk\nis 2.\nExample 2:\nInput:\nnums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]\nOutput:\n-1\nExplanation:\nFor i = 0 (l = 1, r = 3, val = 2):\nDecrement values at indices\n[1, 2, 3]\nby\n[2, 2, 1]\nrespectively.\nThe ar",
+    "problemStatement": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\nwhere\nqueries[i] = [l\ni\n, r\ni\n, val\ni\n]\n.\nEach\nqueries[i]\nrepresents the following action on\nnums\n:\nDecrement the value at each index in the range\n[l\ni\n, r\ni\n]\nin\nnums\nby\nat most\nval\ni\n.\nThe amount by which each value is decremented\ncan be chosen\nindependently\nfor each index.\nA\nZero Array\nis an array with all its elements equal to 0.\nReturn the\nminimum\npossible\nnon-negative\nvalue of\nk\n, such that after processing the first\nk\nqueries in\nsequence\n,\nnums\nbecomes a\nZero Array\n. If no such\nk\nexists, return -1.\nExample 1:\nInput:\nnums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\nOutput:\n2\nExplanation:\nFor i = 0 (l = 0, r = 2, val = 1):\nDecrement values at indices\n[0, 1, 2]\nby\n[1, 0, 1]\nrespectively.\nThe array will become\n[1, 0, 1]\n.\nFor i = 1 (l = 0, r = 2, val = 1):\nDecrement values at indices\n[0, 1, 2]\nby\n[1, 0, 1]\nrespectively.\nThe array will become\n[0, 0, 0]\n, which is a Zero Array. Therefore, the minimum value of\nk\nis 2.\nExample 2:\nInput:\nnums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]\nOutput:\n-1\nExplanation:\nFor i = 0 (l = 1, r = 3, val = 2):\nDecrement values at indices\n[1, 2, 3]\nby\n[2, 2, 1]\nrespectively.\nThe array will become\n[4, 1, 0, 0]\n.\nFor i = 1 (l = 0, r = 2, val\n= 1):\nDecrement values at indices\n[0, 1, 2]\nby\n[1, 1, 0]\nrespectively.\nThe array will become\n[3, 0, 0, 0]\n, which is not a Zero Array.\nConstraints:\n1 <= nums.length <= 10\n5\n0 <= nums[i] <= 5 * 10\n5\n1 <= queries.length <= 10\n5\nqueries[i].length == 3\n0 <= l\ni\n<= r\ni\n< nums.length\n1 <= val\ni\n<= 5",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]",
+        "output": "2"
+      },
+      {
+        "input": "nums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]",
+        "output": "-1"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "zero-array-transformation-iii",
+    "title": "Zero Array Transformation III",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\nwhere\nqueries[i] = [l\ni\n, r\ni\n]\n.\nEach\nqueries[i]\nrepresents the following action on\nnums\n:\nDecrement the value at each index in the range\n[l\ni\n, r\ni\n]\nin\nnums\nby\nat most\n1.\nThe amount by which the value is decremented can be chosen\nindependently\nfor each index.\nA\nZero Array\nis an array with all its elements equal to 0.\nReturn the\nmaximum\nnumber of elements that can be removed from\nqueries\n, such that\nnums\ncan still be converted to a\nzero array\nusing the\nremaining\nqueries. If it is not possible to convert\nnums\nto a\nzero array\n, return -1.\nExample 1:\nInput:\nnums = [2,0,2], queries = [[0,2],[0,2],[1,1]]\nOutput:\n1\nExplanation:\nAfter removing\nqueries[2]\n,\nnums\ncan still be converted to a zero array.\nUsing\nqueries[0]\n, decrement\nnums[0]\nand\nnums[2]\nby 1 and\nnums[1]\nby 0.\nUsing\nqueries[1]\n, decrement\nnums[0]\nand\nnums[2]\nby 1 and\nnums[1]\nby 0.\nExample 2:\nInput:\nnums = [1,1,1,1], queries = [[1,3],[0,2],[1,3],[1,2]]\nOutput:\n2\nExplanation:\nWe can remove\nqueries[2]\nand\nqueries[3]\n.\nExample 3:\nInput:\nnums = [1,2,3,4], queries = [[0,3]]\nOutput:\n-1\nExplanation:\nnums\ncannot be converted to a zero array even after using all the",
+    "problemStatement": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\nwhere\nqueries[i] = [l\ni\n, r\ni\n]\n.\nEach\nqueries[i]\nrepresents the following action on\nnums\n:\nDecrement the value at each index in the range\n[l\ni\n, r\ni\n]\nin\nnums\nby\nat most\n1.\nThe amount by which the value is decremented can be chosen\nindependently\nfor each index.\nA\nZero Array\nis an array with all its elements equal to 0.\nReturn the\nmaximum\nnumber of elements that can be removed from\nqueries\n, such that\nnums\ncan still be converted to a\nzero array\nusing the\nremaining\nqueries. If it is not possible to convert\nnums\nto a\nzero array\n, return -1.\nExample 1:\nInput:\nnums = [2,0,2], queries = [[0,2],[0,2],[1,1]]\nOutput:\n1\nExplanation:\nAfter removing\nqueries[2]\n,\nnums\ncan still be converted to a zero array.\nUsing\nqueries[0]\n, decrement\nnums[0]\nand\nnums[2]\nby 1 and\nnums[1]\nby 0.\nUsing\nqueries[1]\n, decrement\nnums[0]\nand\nnums[2]\nby 1 and\nnums[1]\nby 0.\nExample 2:\nInput:\nnums = [1,1,1,1], queries = [[1,3],[0,2],[1,3],[1,2]]\nOutput:\n2\nExplanation:\nWe can remove\nqueries[2]\nand\nqueries[3]\n.\nExample 3:\nInput:\nnums = [1,2,3,4], queries = [[0,3]]\nOutput:\n-1\nExplanation:\nnums\ncannot be converted to a zero array even after using all the queries.\nConstraints:\n1 <= nums.length <= 10\n5\n0 <= nums[i] <= 10\n5\n1 <= queries.length <= 10\n5\nqueries[i].length == 2\n0 <= l\ni\n<= r\ni\n< nums.length",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [2,0,2], queries = [[0,2],[0,2],[1,1]]",
+        "output": "1"
+      },
+      {
+        "input": "nums = [1,1,1,1], queries = [[1,3],[0,2],[1,3],[1,2]]",
+        "output": "2"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "zero-array-transformation-iv",
+    "title": "Zero Array Transformation IV",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\n, where\nqueries[i] = [l\ni\n, r\ni\n, val\ni\n]\n.\nEach\nqueries[i]\nrepresents the following action on\nnums\n:\nSelect a\nsubset\nof indices in the range\n[l\ni\n, r\ni\n]\nfrom\nnums\n.\nDecrement the value at each selected index by\nexactly\nval\ni\n.\nA\nZero Array\nis an array with all its elements equal to 0.\nReturn the\nminimum\npossible\nnon-negative\nvalue of\nk\n, such that after processing the first\nk\nqueries in\nsequence\n,\nnums\nbecomes a\nZero Array\n. If no such\nk\nexists, return -1.\nExample 1:\nInput:\nnums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\nOutput:\n2\nExplanation:\nFor query 0 (l = 0, r = 2, val = 1):\nDecrement the values at indices\n[0, 2]\nby 1.\nThe array will become\n[1, 0, 1]\n.\nFor query 1 (l = 0, r = 2, val = 1):\nDecrement the values at indices\n[0, 2]\nby 1.\nThe array will become\n[0, 0, 0]\n, which is a Zero Array. Therefore, the minimum value of\nk\nis 2.\nExample 2:\nInput:\nnums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]\nOutput:\n-1\nExplanation:\nIt is impossible to make nums a Zero Array even after all the queries.\nExample 3:\nInput:\nnums = [1,2,3,2,1], queries = [[0,1,1],[1,2,1],[2,3,2],[3,4,1],[4,4,1]]\nOutput:\n4\nExplanation:\nFor qu",
+    "problemStatement": "You are given an integer array\nnums\nof length\nn\nand a 2D array\nqueries\n, where\nqueries[i] = [l\ni\n, r\ni\n, val\ni\n]\n.\nEach\nqueries[i]\nrepresents the following action on\nnums\n:\nSelect a\nsubset\nof indices in the range\n[l\ni\n, r\ni\n]\nfrom\nnums\n.\nDecrement the value at each selected index by\nexactly\nval\ni\n.\nA\nZero Array\nis an array with all its elements equal to 0.\nReturn the\nminimum\npossible\nnon-negative\nvalue of\nk\n, such that after processing the first\nk\nqueries in\nsequence\n,\nnums\nbecomes a\nZero Array\n. If no such\nk\nexists, return -1.\nExample 1:\nInput:\nnums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]\nOutput:\n2\nExplanation:\nFor query 0 (l = 0, r = 2, val = 1):\nDecrement the values at indices\n[0, 2]\nby 1.\nThe array will become\n[1, 0, 1]\n.\nFor query 1 (l = 0, r = 2, val = 1):\nDecrement the values at indices\n[0, 2]\nby 1.\nThe array will become\n[0, 0, 0]\n, which is a Zero Array. Therefore, the minimum value of\nk\nis 2.\nExample 2:\nInput:\nnums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]\nOutput:\n-1\nExplanation:\nIt is impossible to make nums a Zero Array even after all the queries.\nExample 3:\nInput:\nnums = [1,2,3,2,1], queries = [[0,1,1],[1,2,1],[2,3,2],[3,4,1],[4,4,1]]\nOutput:\n4\nExplanation:\nFor query 0 (l = 0, r = 1, val = 1):\nDecrement the values at indices\n[0, 1]\nby\n1\n.\nThe array will become\n[0, 1, 3, 2, 1]\n.\nFor query 1 (l = 1, r = 2, val = 1):\nDecrement the values at indices\n[1, 2]\nby 1.\nThe array will become\n[0, 0, 2, 2, 1]\n.\nFor query 2 (l = 2, r = 3, val = 2):\nDecrement the values at indices\n[2, 3]\nby 2.\nThe array will become\n[0, 0, 0, 0, 1]\n.\nFor query 3 (l = 3, r = 4, val = 1):\nDecrement the value at index 4 by 1.\nThe array will become\n[0, 0, 0, 0, 0]\n. Therefore, the minimum value of\nk\nis 4.\nExample 4:\nInput:\nnums = [1,2,3,2,6], queries = [[0,1,1],[0,2,1],[1,4,2],[4,4,4],[3,4,1],[4,4,5]]\nOutput:\n4\nConstraints:\n1 <= nums.length <= 10\n0 <= nums[i] <= 1000\n1 <= queries.length <= 1000\nqueries[i] = [l\ni\n, r\ni\n, val\ni\n]\n0 <= l\ni\n<= r\ni\n< nums.length\n1 <= val\ni\n<= 10",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [2,0,2], queries = [[0,2,1],[0,2,1],[1,1,3]]",
+        "output": "2"
+      },
+      {
+        "input": "nums = [4,3,2,1], queries = [[1,3,2],[0,2,1]]",
+        "output": "-1"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "zigzag-grid-traversal-with-skip",
+    "title": "Zigzag Grid Traversal With Skip",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "You are given an\nm x n\n2D array\ngrid\nof\npositive\nintegers.\nYour task is to traverse\ngrid\nin a\nzigzag\npattern while skipping every\nalternate\ncell.\nZigzag pattern traversal is defined as following the below actions:\nStart at the top-left cell\n(0, 0)\n.\nMove\nright\nwithin a row until the end of the row is reached.\nDrop down to the next row, then traverse\nleft\nuntil the beginning of the row is reached.\nContinue\nalternating\nbetween right and left traversal until every row has been traversed.\nNote\nthat you\nmust skip\nevery\nalternate\ncell during the traversal.\nReturn an array of integers\nresult\ncontaining,\nin order\n, the value of the cells visited during the zigzag traversal with skips.\nExample 1:\nInput:\ngrid = [[1,2],[3,4]]\nOutput:\n[1,4]\nExplanation:\nExample 2:\nInput:\ngrid = [[2,1],[2,1],[2,1]]\nOutput:\n[2,1,2]\nExplanation:\nExample 3:\nInput:\ngrid = [[1,2,3],[4,5,6],[7,8,9]]\nOutput:\n[1,3,5,7,9]\nExplanation:\nConstraints:\n2 <= n == grid.length <= 50\n2 <= m == grid[i].length <= 50\n1 <= grid[i][j] <= 2500",
+    "problemStatement": "You are given an\nm x n\n2D array\ngrid\nof\npositive\nintegers.\nYour task is to traverse\ngrid\nin a\nzigzag\npattern while skipping every\nalternate\ncell.\nZigzag pattern traversal is defined as following the below actions:\nStart at the top-left cell\n(0, 0)\n.\nMove\nright\nwithin a row until the end of the row is reached.\nDrop down to the next row, then traverse\nleft\nuntil the beginning of the row is reached.\nContinue\nalternating\nbetween right and left traversal until every row has been traversed.\nNote\nthat you\nmust skip\nevery\nalternate\ncell during the traversal.\nReturn an array of integers\nresult\ncontaining,\nin order\n, the value of the cells visited during the zigzag traversal with skips.\nExample 1:\nInput:\ngrid = [[1,2],[3,4]]\nOutput:\n[1,4]\nExplanation:\nExample 2:\nInput:\ngrid = [[2,1],[2,1],[2,1]]\nOutput:\n[2,1,2]\nExplanation:\nExample 3:\nInput:\ngrid = [[1,2,3],[4,5,6],[7,8,9]]\nOutput:\n[1,3,5,7,9]\nExplanation:\nConstraints:\n2 <= n == grid.length <= 50\n2 <= m == grid[i].length <= 50\n1 <= grid[i][j] <= 2500",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "grid = [[1,2],[3,4]]",
+        "output": "[1,4]"
+      },
+      {
+        "input": "grid = [[2,1],[2,1],[2,1]]",
+        "output": "[2,1,2]"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "zigzag-iterator",
+    "title": "Zigzag Iterator",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Zigzag Iterator problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  }
+]

@@ -1,0 +1,303 @@
+[
+  {
+    "id": "people-whose-list-of-favorite-companies-is-not-a-subset-of-another-list",
+    "title": "People Whose List of Favorite Companies Is Not a Subset of Another List",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-by",
+    "title": "Sort By",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-characters-by-frequency",
+    "title": "Sort Characters By Frequency",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-colors",
+    "title": "Sort Colors",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-even-and-odd-indices-independently",
+    "title": "Sort Even and Odd Indices Independently",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-integers-by-the-number-of-1-bits",
+    "title": "Sort Integers by The Number of 1 Bits",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-integers-by-the-power-value",
+    "title": "Sort Integers by The Power Value",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-items-by-groups-respecting-dependencies",
+    "title": "Sort Items by Groups Respecting Dependencies",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-list",
+    "title": "Sort List",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-the-jumbled-numbers",
+    "title": "Sort the Jumbled Numbers",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-the-people",
+    "title": "Sort the People",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-the-students-by-their-kth-score",
+    "title": "Sort the Students by Their Kth Score",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sort-vowels-in-a-string",
+    "title": "Sort Vowels in a String",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sorting-the-sentence",
+    "title": "Sorting the Sentence",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "split-array-into-consecutive-subsequences",
+    "title": "Split Array into Consecutive Subsequences",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "squares-of-a-sorted-array",
+    "title": "Squares of a Sorted Array",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "statistics-from-a-large-sample",
+    "title": "Statistics from a Large Sample",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sum-of-absolute-differences-in-a-sorted-array",
+    "title": "Sum of Absolute Differences in a Sorted Array",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sum-of-imbalance-numbers-of-all-subarrays",
+    "title": "Sum of Imbalance Numbers of All Subarrays",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "summary-ranges",
+    "title": "Summary Ranges",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "super-ugly-number",
+    "title": "Super Ugly Number",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "teemo-attacking",
+    "title": "Teemo Attacking",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-earliest-and-latest-rounds-where-players-compete",
+    "title": "The Earliest and Latest Rounds Where Players Compete",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-employee-that-worked-on-the-longest-task",
+    "title": "The Employee That Worked on the Longest Task",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-k-strongest-values-in-an-array",
+    "title": "The k Strongest Values in an Array",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-k-th-lexicographical-string-of-all-happy-strings-of-length-n",
+    "title": "The k-th Lexicographical String of All Happy Strings of Length n",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach",
+      "graph approach mismatch"
+    ]
+  },
+  {
+    "id": "the-kth-factor-of-n",
+    "title": "The kth Factor of n",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-latest-time-to-catch-a-bus",
+    "title": "The Latest Time to Catch a Bus",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-skyline-problem",
+    "title": "The Skyline Problem",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "verifying-an-alien-dictionary",
+    "title": "Verifying an Alien Dictionary",
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "errors": [
+      "generic approach"
+    ]
+  }
+]

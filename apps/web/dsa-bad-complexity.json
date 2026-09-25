@@ -1,0 +1,434 @@
+[
+  {
+    "id": "01-matrix",
+    "title": "01 Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Use multi-source BFS. Start by placing every cell containing 0 into the queue with distance 0. Then expand outward in four directions. The first time a 1-cell is reached, the BFS distance is the minimum distance to its nearest 0."
+  },
+  {
+    "id": "big-countries",
+    "title": "Big Countries",
+    "topic": "Trie",
+    "timeComplexity": "O(n ? L)",
+    "spaceComplexity": "O(n ? L)",
+    "approach": "Analyze the trie structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "build-a-matrix-with-conditions",
+    "title": "Build a Matrix With Conditions",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "cells-with-odd-values-in-a-matrix",
+    "title": "Cells with Odd Values in a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "check-if-matrix-is-x-matrix",
+    "title": "Check if Matrix Is X-Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "construct-product-matrix",
+    "title": "Construct Product Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "count-negative-numbers-in-a-sorted-matrix",
+    "title": "Count Negative Numbers in a Sorted Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "design-a-3d-binary-matrix-with-efficient-layer-tracking",
+    "title": "Design a 3D Binary Matrix with Efficient Layer Tracking",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "determine-whether-matrix-can-be-obtained-by-rotation",
+    "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
+    "title": "Disconnect Path in a Binary Matrix by at Most One Flip",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows",
+    "title": "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "find-valid-matrix-given-row-and-column-sums",
+    "title": "Find Valid Matrix Given Row and Column Sums",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "flip-square-submatrix-vertically",
+    "title": "Flip Square Submatrix Vertically",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "kth-smallest-element-in-a-sorted-matrix",
+    "title": "Kth Smallest Element in a Sorted Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "largest-local-values-in-a-matrix",
+    "title": "Largest Local Values in a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "largest-submatrix-with-rearrangements",
+    "title": "Largest Submatrix With Rearrangements",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "longest-increasing-path-in-a-matrix",
+    "title": "Longest Increasing Path in a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "longest-line-of-consecutive-one-in-matrix",
+    "title": "Longest Line of Consecutive One in Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "lucky-numbers-in-a-matrix",
+    "title": "Lucky Numbers in a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "match-alphanumerical-pattern-in-matrix-i",
+    "title": "Match Alphanumerical Pattern in Matrix I",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "matrix-block-sum",
+    "title": "Matrix Block Sum",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "matrix-cells-in-distance-order",
+    "title": "Matrix Cells in Distance Order",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "matrix-diagonal-sum",
+    "title": "Matrix Diagonal Sum",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "matrix-similarity-after-cyclic-shifts",
+    "title": "Matrix Similarity After Cyclic Shifts",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "maximum-matrix-sum",
+    "title": "Maximum Matrix Sum",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "maximum-non-negative-product-in-a-matrix",
+    "title": "Maximum Non Negative Product in a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "median-of-a-row-wise-sorted-matrix",
+    "title": "Median of a Row Wise Sorted Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "minimum-absolute-difference-in-sliding-submatrix",
+    "title": "Minimum Absolute Difference in Sliding Submatrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+    "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "minimum-operations-to-remove-adjacent-ones-in-matrix",
+    "title": "Minimum Operations to Remove Adjacent Ones in Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "modify-the-matrix",
+    "title": "Modify the Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "paths-in-matrix-whose-sum-is-divisible-by-k",
+    "title": "Paths in Matrix Whose Sum Is Divisible by K",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "pyramid-transition-matrix",
+    "title": "Pyramid Transition Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "random-flip-matrix",
+    "title": "Random Flip Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "rank-transform-of-a-matrix",
+    "title": "Rank Transform of a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "reconstruct-a-2-row-binary-matrix",
+    "title": "Reconstruct a 2-Row Binary Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "reshape-the-matrix",
+    "title": "Reshape the Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "score-after-flipping-matrix",
+    "title": "Score After Flipping Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "search-a-2d-matrix-ii",
+    "title": "Search a 2D Matrix II",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "set-matrix-zeroes",
+    "title": "Set Matrix Zeroes",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "shortest-path-in-binary-matrix",
+    "title": "Shortest Path in Binary Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "snake-in-matrix",
+    "title": "Snake in Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "sort-matrix-by-diagonals",
+    "title": "Sort Matrix by Diagonals",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "sort-the-matrix-diagonally",
+    "title": "Sort the Matrix Diagonally",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "sparse-matrix-multiplication",
+    "title": "Sparse Matrix Multiplication",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "special-positions-in-a-binary-matrix",
+    "title": "Special Positions in a Binary Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "spiral-matrix-ii",
+    "title": "Spiral Matrix II",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "spiral-matrix-iii",
+    "title": "Spiral Matrix III",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "spiral-matrix-iv",
+    "title": "Spiral Matrix IV",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "the-k-weakest-rows-in-a-matrix",
+    "title": "The K Weakest Rows in a Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "toeplitz-matrix",
+    "title": "Toeplitz Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  },
+  {
+    "id": "transpose-matrix",
+    "title": "Transpose Matrix",
+    "topic": "Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem."
+  }
+]

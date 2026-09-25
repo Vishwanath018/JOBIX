@@ -1,0 +1,1602 @@
+[
+  {
+    "id": "add-edges-to-make-degrees-of-all-nodes-even",
+    "title": "Add Edges to Make Degrees of All Nodes Even",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "all-paths-from-source-to-target",
+    "title": "All Paths From Source to Target",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "available-captures-for-rook",
+    "title": "Available Captures for Rook",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "binary-tree-maximum-path-sum",
+    "title": "Binary Tree Maximum Path Sum",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "break-a-palindrome",
+    "title": "Break a Palindrome",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "brick-wall",
+    "title": "Brick Wall",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "cat-and-mouse",
+    "title": "Cat and Mouse",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "cheapest-flights-within-k-stops",
+    "title": "Cheapest Flights Within K Stops",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "checking-existence-of-edge-length-limited-paths",
+    "title": "Checking Existence of Edge Length Limited Paths",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "circular-array-loop",
+    "title": "Circular Array Loop",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "clone-graph",
+    "title": "Clone Graph",
+    "approach": "Represent the relationships as a graph and traverse or relax the relevant vertices and edges while maintaining the state required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "collect-coins-in-a-tree",
+    "title": "Collect Coins in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "compare-strings-by-frequency-of-the-smallest-character",
+    "title": "Compare Strings by Frequency of the Smallest Character",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "construct-smallest-number-from-di-string",
+    "title": "Construct Smallest Number From DI String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "construct-string-with-repeat-limit",
+    "title": "Construct String With Repeat Limit",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "construct-the-lexicographically-largest-valid-sequence",
+    "title": "Construct the Lexicographically Largest Valid Sequence",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "coordinate-with-maximum-network-quality",
+    "title": "Coordinate With Maximum Network Quality",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-nodes-with-the-highest-score",
+    "title": "Count Nodes With the Highest Score",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-number-of-rectangles-containing-each-point",
+    "title": "Count Number of Rectangles Containing Each Point",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-pairs-of-connectable-servers-in-a-weighted-tree-network",
+    "title": "Count Pairs of Connectable Servers in a Weighted Tree Network",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-pairs-of-nodes",
+    "title": "Count Pairs Of Nodes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-paths-that-can-form-a-palindrome-in-a-tree",
+    "title": "Count Paths That Can Form a Palindrome in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-the-number-of-complete-components",
+    "title": "Count the Number of Complete Components",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-unreachable-pairs-of-nodes-in-an-undirected-graph",
+    "title": "Count Unreachable Pairs of Nodes in an Undirected Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-valid-paths-in-a-tree",
+    "title": "Count Valid Paths in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "count-visited-nodes-in-a-directed-graph",
+    "title": "Count Visited Nodes in a Directed Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "cousins-in-binary-tree-ii",
+    "title": "Cousins in Binary Tree II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "create-components-with-same-value",
+    "title": "Create Components With Same Value",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "cycle-length-queries-in-a-tree",
+    "title": "Cycle Length Queries in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "delete-columns-to-make-sorted-ii",
+    "title": "Delete Columns to Make Sorted II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "destination-city",
+    "title": "Destination City",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "diameter-of-binary-tree",
+    "title": "Diameter of Binary Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "difference-between-maximum-and-minimum-price-sum",
+    "title": "Difference Between Maximum and Minimum Price Sum",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "distribute-coins-in-binary-tree",
+    "title": "Distribute Coins in Binary Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "divide-nodes-into-the-maximum-number-of-groups",
+    "title": "Divide Nodes Into the Maximum Number of Groups",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "evaluate-the-bracket-pairs-of-a-string",
+    "title": "Evaluate the Bracket Pairs of a String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "falling-squares",
+    "title": "Falling Squares",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-center-of-star-graph",
+    "title": "Find Center of Star Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-champion-ii",
+    "title": "Find Champion II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-closest-node-to-given-two-nodes",
+    "title": "Find Closest Node to Given Two Nodes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-critical-and-pseudo-critical-edges-in-minimum-spanning-tree",
+    "title": "Find Critical and Pseudo-Critical Edges in Minimum Spanning Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-edges-in-shortest-paths",
+    "title": "Find Edges in Shortest Paths",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-if-path-exists-in-graph",
+    "title": "Find if Path Exists in Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-minimum-diameter-after-merging-two-trees",
+    "title": "Find Minimum Diameter After Merging Two Trees",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-number-of-coins-to-place-in-tree-nodes",
+    "title": "Find Number of Coins to Place in Tree Nodes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-pivot-index",
+    "title": "Find Pivot Index",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-the-city-with-the-smallest-number-of-neighbors-at-a-threshold-distance",
+    "title": "Find the City With the Smallest Number of Neighbors at a Threshold Distance",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-the-grid-of-region-average",
+    "title": "Find the Grid of Region Average",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-the-largest-area-of-square-inside-two-rectangles",
+    "title": "Find the Largest Area of Square Inside Two Rectangles",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-the-lexicographically-largest-string-from-the-box-i",
+    "title": "Find the Lexicographically Largest String From the Box I",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-the-maximum-sum-of-node-values",
+    "title": "Find the Maximum Sum of Node Values",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "find-the-string-with-lcp",
+    "title": "Find the String with LCP",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "frog-position-after-t-seconds",
+    "title": "Frog Position After T Seconds",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "height-of-binary-tree-after-subtree-removal-queries",
+    "title": "Height of Binary Tree After Subtree Removal Queries",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "insert-greatest-common-divisors-in-linked-list",
+    "title": "Insert Greatest Common Divisors in Linked List",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "is-graph-bipartite",
+    "title": "Is Graph Bipartite?",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "k-th-smallest-in-lexicographical-order",
+    "title": "K-th Smallest in Lexicographical Order",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "largest-color-value-in-a-directed-graph",
+    "title": "Largest Color Value in a Directed Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "largest-component-size-by-common-factor",
+    "title": "Largest Component Size by Common Factor",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "largest-merge-of-two-strings",
+    "title": "Largest Merge Of Two Strings",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "last-substring-in-lexicographical-order",
+    "title": "Last Substring in Lexicographical Order",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-minimum-string-after-removing-stars",
+    "title": "Lexicographically Minimum String After Removing Stars",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-beautiful-string",
+    "title": "Lexicographically Smallest Beautiful String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-generated-string",
+    "title": "Lexicographically Smallest Generated String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-palindrome",
+    "title": "Lexicographically Smallest Palindrome",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-string-after-a-swap",
+    "title": "Lexicographically Smallest String After a Swap",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-string-after-applying-operations",
+    "title": "Lexicographically Smallest String After Applying Operations",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-string-after-operations-with-constraint",
+    "title": "Lexicographically Smallest String After Operations With Constraint",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "lexicographically-smallest-string-after-substring-operation",
+    "title": "Lexicographically Smallest String After Substring Operation",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-cycle-in-a-graph",
+    "title": "Longest Cycle in a Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-path-with-different-adjacent-characters",
+    "title": "Longest Path With Different Adjacent Characters",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-special-path-ii",
+    "title": "Longest Special Path II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-subsequence-repeated-k-times",
+    "title": "Longest Subsequence Repeated k Times",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-univalue-path",
+    "title": "Longest Univalue Path",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-word-in-dictionary",
+    "title": "Longest Word in Dictionary",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "longest-word-in-dictionary-through-deleting",
+    "title": "Longest Word in Dictionary through Deleting",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "make-lexicographically-smallest-array-by-swapping-elements",
+    "title": "Make Lexicographically Smallest Array by Swapping Elements",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "max-area-of-island",
+    "title": "Max Area of Island",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximize-amount-after-two-days-of-conversions",
+    "title": "Maximize Amount After Two Days of Conversions",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximize-sum-of-weights-after-edge-removals",
+    "title": "Maximize Sum of Weights after Edge Removals",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximize-the-distance-between-points-on-a-square",
+    "title": "Maximize the Distance Between Points on a Square",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximize-the-number-of-target-nodes-after-connecting-trees-i",
+    "title": "Maximize the Number of Target Nodes After Connecting Trees I",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximize-the-number-of-target-nodes-after-connecting-trees-ii",
+    "title": "Maximize the Number of Target Nodes After Connecting Trees II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-area-rectangle-with-point-constraints-i",
+    "title": "Maximum Area Rectangle With Point Constraints I",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-area-rectangle-with-point-constraints-ii",
+    "title": "Maximum Area Rectangle With Point Constraints II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-number-of-k-divisible-components",
+    "title": "Maximum Number of K-Divisible Components",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-path-quality-of-a-graph",
+    "title": "Maximum Path Quality of a Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-points-after-collecting-coins-from-all-nodes",
+    "title": "Maximum Points After Collecting Coins From All Nodes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-points-inside-the-square",
+    "title": "Maximum Points Inside the Square",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-product-of-splitted-binary-tree",
+    "title": "Maximum Product of Splitted Binary Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-score-after-applying-operations-on-a-tree",
+    "title": "Maximum Score After Applying Operations on a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-score-of-a-node-sequence",
+    "title": "Maximum Score of a Node Sequence",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-star-sum-of-a-graph",
+    "title": "Maximum Star Sum of a Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "maximum-sum-of-3-non-overlapping-subarrays",
+    "title": "Maximum Sum of 3 Non-Overlapping Subarrays",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "merge-in-between-linked-lists",
+    "title": "Merge In Between Linked Lists",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimize-malware-spread",
+    "title": "Minimize Malware Spread",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimize-malware-spread-ii",
+    "title": "Minimize Malware Spread II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimize-the-maximum-edge-weight-of-graph",
+    "title": "Minimize the Maximum Edge Weight of Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-cost-good-caption",
+    "title": "Minimum Cost Good Caption",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-cuts-to-divide-a-circle",
+    "title": "Minimum Cuts to Divide a Circle",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-degree-of-a-connected-trio-in-a-graph",
+    "title": "Minimum Degree of a Connected Trio in a Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-edge-reversals-so-every-node-is-reachable",
+    "title": "Minimum Edge Reversals So Every Node Is Reachable",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-edge-weight-equilibrium-queries-in-a-tree",
+    "title": "Minimum Edge Weight Equilibrium Queries in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-fuel-cost-to-report-to-the-capital",
+    "title": "Minimum Fuel Cost to Report to the Capital",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-height-trees",
+    "title": "Minimum Height Trees",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-number-of-vertices-to-reach-all-nodes",
+    "title": "Minimum Number of Vertices to Reach All Nodes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-score-after-removals-on-a-tree",
+    "title": "Minimum Score After Removals on a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-score-of-a-path-between-two-cities",
+    "title": "Minimum Score of a Path Between Two Cities",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-score-triangulation-of-polygon",
+    "title": "Minimum Score Triangulation of Polygon",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-time-to-collect-all-apples-in-a-tree",
+    "title": "Minimum Time to Collect All Apples in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "minimum-weighted-subgraph-with-the-required-paths",
+    "title": "Minimum Weighted Subgraph With the Required Paths",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "modify-graph-edge-weights",
+    "title": "Modify Graph Edge Weights",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "most-common-word",
+    "title": "Most Common Word",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "most-popular-video-creator",
+    "title": "Most Popular Video Creator",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "most-profitable-path-in-a-tree",
+    "title": "Most Profitable Path in a Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "movie-rating",
+    "title": "Movie Rating",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "network-delay-time",
+    "title": "Network Delay Time",
+    "approach": "Represent the relationships as a graph and traverse or relax the relevant vertices and edges while maintaining the state required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "node-with-highest-edge-score",
+    "title": "Node With Highest Edge Score",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "number-of-good-paths",
+    "title": "Number of Good Paths",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "number-of-nodes-in-the-sub-tree-with-the-same-label",
+    "title": "Number of Nodes in the Sub-Tree With the Same Label",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "number-of-restricted-paths-from-first-to-last-node",
+    "title": "Number of Restricted Paths From First to Last Node",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "number-of-ways-to-reconstruct-a-tree",
+    "title": "Number Of Ways To Reconstruct A Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "orderly-queue",
+    "title": "Orderly Queue",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "pacific-atlantic-water-flow",
+    "title": "Pacific Atlantic Water Flow",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "parallel-courses-ii",
+    "title": "Parallel Courses II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "parallel-courses-iii",
+    "title": "Parallel Courses III",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "path-with-maximum-probability",
+    "title": "Path with Maximum Probability",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "properties-graph",
+    "title": "Properties Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "reachable-nodes-in-subdivided-graph",
+    "title": "Reachable Nodes In Subdivided Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "reachable-nodes-with-restrictions",
+    "title": "Reachable Nodes With Restrictions",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "rectangle-overlap",
+    "title": "Rectangle Overlap",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "redundant-connection",
+    "title": "Redundant Connection",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "redundant-connection-ii",
+    "title": "Redundant Connection II",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "remove-colored-pieces-if-both-neighbors-are-the-same-color",
+    "title": "Remove Colored Pieces if Both Neighbors are the Same Color",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "remove-duplicate-letters",
+    "title": "Remove Duplicate Letters",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "remove-max-number-of-edges-to-keep-graph-fully-traversable",
+    "title": "Remove Max Number of Edges to Keep Graph Fully Traversable",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "reorder-routes-to-make-all-paths-lead-to-the-city-zero",
+    "title": "Reorder Routes to Make All Paths Lead to the City Zero",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "replace-question-marks-in-string-to-minimize-its-value",
+    "title": "Replace Question Marks in String to Minimize Its Value",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "reverse-odd-levels-of-binary-tree",
+    "title": "Reverse Odd Levels of Binary Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "second-minimum-time-to-reach-destination",
+    "title": "Second Minimum Time to Reach Destination",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sender-with-largest-word-count",
+    "title": "Sender With Largest Word Count",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "shortest-and-lexicographically-smallest-beautiful-string",
+    "title": "Shortest and Lexicographically Smallest Beautiful String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "shortest-cycle-in-a-graph",
+    "title": "Shortest Cycle in a Graph",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "shortest-path-visiting-all-nodes",
+    "title": "Shortest Path Visiting All Nodes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "shortest-path-with-alternating-colors",
+    "title": "Shortest Path with Alternating Colors",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "shortest-string-that-contains-three-strings",
+    "title": "Shortest String That Contains Three Strings",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "shortest-uncommon-substring-in-an-array",
+    "title": "Shortest Uncommon Substring in an Array",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "smallest-k-length-subsequence-with-occurrences-of-a-letter",
+    "title": "Smallest K-Length Subsequence With Occurrences of a Letter",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "smallest-string-starting-from-leaf",
+    "title": "Smallest String Starting From Leaf",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "smallest-string-with-a-given-numeric-value",
+    "title": "Smallest String With A Given Numeric Value",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "smallest-string-with-swaps",
+    "title": "Smallest String With Swaps",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "smallest-subsequence-of-distinct-characters",
+    "title": "Smallest Subsequence of Distinct Characters",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "special-binary-string",
+    "title": "Special Binary String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "sum-of-distances-in-tree",
+    "title": "Sum of Distances in Tree",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "surrounded-regions",
+    "title": "Surrounded Regions",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "swap-nodes-in-pairs",
+    "title": "Swap Nodes in Pairs",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "the-time-when-the-network-becomes-idle",
+    "title": "The Time When the Network Becomes Idle",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "tree-of-coprimes",
+    "title": "Tree of Coprimes",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "using-a-robot-to-print-the-lexicographically-smallest-string",
+    "title": "Using a Robot to Print the Lexicographically Smallest String",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  },
+  {
+    "id": "widest-vertical-area-between-two-points-containing-no-points",
+    "title": "Widest Vertical Area Between Two Points Containing No Points",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges using the graph technique required by the problem.",
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "errors": [
+      "generic approach"
+    ]
+  }
+]

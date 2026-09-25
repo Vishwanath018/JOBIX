@@ -1,739 +1,682 @@
 "use client";
 
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
-import {
-  CheckCircle2,
-  Clock3,
-  Play,
-  RotateCcw,
-  Send,
-  Moon,
-} from "lucide-react";
-import { getDsaQuestion } from "@/app/(dashboard)/interview-kit/dsa-questions";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import questionsData from "../../../dsa-questions.json";
 
-const Editor = dynamic(
-  () => import("@monaco-editor/react"),
-  { ssr: false }
-);
-
-const TOTAL_SECONDS = 100 * 60;
-
-const starterCode = (title: string, language: string) => {
-  if (language === "python") {
-    return `class Solution:
-    def solution(self):
-        # ${title}
-        pass
-`;
-  }
-
-  if (language === "cpp") {
-    return `#include <bits/stdc++.h>
-using namespace std;
-
-class Solution {
-public:
-    // ${title}
-
-};
-`;
-  }
-
-  return `class Solution {
-public:
-    // ${title}
-
-};
-`;
+type Example = {
+  input?: string;
+  output?: string;
+  explanation?: string;
 };
 
-const formatTime = (seconds: number) => {
-  const minutes = Math.floor(seconds / 60);
-  const remainingSeconds = seconds % 60;
-
-  return `${String(minutes).padStart(2, "0")}:${String(
-    remainingSeconds
-  ).padStart(2, "0")}`;
+type Question = {
+  id: string;
+  title: string;
+  difficulty?: string;
+  topic?: string;
+  tags?: string[];
+  description?: string;
+  problemStatement?: string;
+  examples?: Example[];
+  constraints?: string[];
+  approach?: string;
+  timeComplexity?: string;
+  spaceComplexity?: string;
+  leetcodeUrl?: string;
 };
 
-type TestCase = {
-  id: number;
-  input: string;
-  output: string;
-};
+function renderInline(text: string) {
+  const parts = text.split(/(`[^`]+`|\b(?:0|1|10|11)\b)/);
 
-export default function DsaQuestionPage() {
-  const params = useParams<{
-    company: string;
-    question: string;
-  }>();
-
-  const company = decodeURIComponent(params.company || "");
-  const questionId = decodeURIComponent(params.question || "");
-
-  const question = useMemo(
-    () => getDsaQuestion(questionId),
-    [questionId]
-  );
-
-  const [language, setLanguage] = useState("java");
-  const [lightMode, setLightMode] = useState(false);
-  const [code, setCode] = useState("");
-  const [timeLeft, setTimeLeft] = useState(TOTAL_SECONDS);
-  const [started, setStarted] = useState(false);
-  const [activeTestCase, setActiveTestCase] = useState(0);
-  const [running, setRunning] = useState(false);
-  const [submitted, setSubmitted] = useState(false);
-  const [testResults, setTestResults] = useState<
-    ("pending" | "passed" | "failed")[]
-  >(["pending", "pending", "pending"]);
-
-  useEffect(() => {
-    if (!question) return;
-
-    setCode(starterCode(question.title, "java"));
-  }, [question]);
-
-  useEffect(() => {
-    if (!started || timeLeft <= 0) return;
-
-    const timer = window.setInterval(() => {
-      setTimeLeft((current) => {
-        if (current <= 1) {
-          window.clearInterval(timer);
-          return 0;
-        }
-
-        return current - 1;
-      });
-    }, 1000);
-
-    return () => window.clearInterval(timer);
-  }, [started, timeLeft]);
-
-  const testCases = useMemo<TestCase[]>(() => {
-    if (!question) {
-      return [];
+  return parts.map((part, index) => {
+    if (/^`[^`]+`$/.test(part) || /^(0|1|10|11)$/.test(part)) {
+      return (
+        <code
+          key={index}
+          className="rounded-md bg-[#202020] px-1.5 py-0.5 font-mono text-[13px] text-white"
+        >
+          {part.replace(/^`|`$/g, "")}
+        </code>
+      );
     }
 
-    const examples = question.examples || [];
+    return <span key={index}>{part}</span>;
+  });
+}
 
-    return [0, 1, 2].map((index) => {
-      const example = examples[index] || examples[0];
+function cleanConstraintText(text: string) {
+  let value = text
+    .replace(/\\-/g, "-")
+    .replace(/`/g, "")
+    .replace(/\u00a0/g, " ")
+    .replace(/\r\n/g, " ")
+    .replace(/\r/g, " ")
+    .replace(/\n/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 
-      return {
-        id: index + 1,
-        input:
-          example?.input &&
-          example.input !== "See the original LeetCode problem"
-            ? example.input
-            : "See the original problem",
-        output:
-          example?.output &&
-          example.output !== "See the original LeetCode problem"
-            ? example.output
-            : "See expected output",
-      };
+  value = value
+    .replace(/\bn\s+u\s+m\s+s\b/gi, "nums")
+    .replace(/\bnums\s*\.\s*length\b/gi, "nums.length")
+    .replace(/\bnums\s*\[\s*i\s*\]/gi, "nums[i]");
+
+  for (let i = 0; i < 5; i++) {
+    value = value.replace(/(-?\d)\s+(?=\d)/g, "$1");
+  }
+
+  value = value
+    .replace(/\b(\d+)\s+4\b/g, "$1^4")
+    .replace(/\b(\d+)\s+3\b/g, "$1^3")
+    .replace(/\b(\d+)\s+2\b/g, "$1^2");
+
+  value = value
+    .replace(/\s*<=\s*/g, " <= ")
+    .replace(/\s*>=\s*/g, " >= ")
+    .replace(/\s*<\s*/g, " < ")
+    .replace(/\s*>\s*/g, " > ")
+    .replace(/\s*=\s*/g, " = ")
+    .replace(/\s*-\s*/g, " - ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  value = value
+    .replace(/^\s*-\s+/, "-")
+    .replace(/\(\s+/g, "(")
+    .replace(/\s+\)/g, ")")
+    .replace(/\[\s+/g, "[")
+    .replace(/\s+\]/g, "]")
+    .replace(/\s*,\s*/g, ", ")
+    .trim();
+
+  return value;
+}
+
+function cleanProblemText(text: string) {
+  return text
+    .replace(/\r\n/g, "\n")
+    .replace(/\r/g, "\n")
+    .replace(/\u00a0/g, " ")
+    .replace(/`([^`]+)`/g, "$1")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function renderProblem(text: string) {
+  const normalized = cleanProblemText(text);
+
+  const constraintMatch = normalized.match(
+    /(?:^|\s)Constraints?\s*:\s*(.*)$/i
+  );
+
+  let mainText = normalized;
+  let constraintsText = "";
+
+  if (constraintMatch) {
+    mainText = normalized
+      .slice(0, constraintMatch.index)
+      .trim();
+
+    constraintsText = constraintMatch[1].trim();
+  }
+
+  const exampleMatches = [
+    ...mainText.matchAll(
+      /(?:^|\s)(Example\s+\d+)\s*:/gi
+    ),
+  ];
+
+  const sections: {
+    title?: string;
+    content: string;
+  }[] = [];
+
+  if (exampleMatches.length > 0) {
+    const firstExampleIndex = exampleMatches[0].index ?? mainText.length;
+
+    const intro = mainText
+      .slice(0, firstExampleIndex)
+      .trim();
+
+    if (intro) {
+      sections.push({
+        content: intro,
+      });
+    }
+
+    exampleMatches.forEach((match, index) => {
+      const startIndex =
+        (match.index ?? 0) + match[0].length;
+
+      const endIndex =
+        index + 1 < exampleMatches.length
+          ? exampleMatches[index + 1].index ?? mainText.length
+          : mainText.length;
+
+      const content = mainText
+        .slice(startIndex, endIndex)
+        .trim();
+
+      sections.push({
+        title: match[1],
+        content,
+      });
     });
+  } else {
+    sections.push({
+      content: mainText,
+    });
+  }
+
+  return (
+    <div className="space-y-8">
+      {sections.map((section, sectionIndex) => {
+        if (section.title) {
+          const exampleText = section.content
+            .replace(/\s+(Input\s*:)/i, "\n$1")
+            .replace(/\s+(Output\s*:)/i, "\n$1")
+            .replace(/\s+(Explanation\s*:)/i, "\n$1")
+            .trim();
+
+          const exampleLines = exampleText
+            .split("\n")
+            .map((line) => line.trim())
+            .filter(Boolean);
+
+          return (
+            <div key={sectionIndex}>
+              <h3 className="mb-4 text-[15px] font-black text-white">
+                {section.title}
+              </h3>
+
+              <div className="ml-4 space-y-4 border-l border-[#303030] pl-5">
+                {exampleLines.map((line, index) => {
+                  const match = line.match(
+                    /^(Input|Output|Explanation)\s*:\s*(.*)$/i
+                  );
+
+                  if (!match) {
+                    return (
+                      <p
+                        key={index}
+                        className="text-[15px] leading-7 text-[#c7c7c7]"
+                      >
+                        {renderInline(line)}
+                      </p>
+                    );
+                  }
+
+                  const label = match[1];
+                  const value = match[2];
+
+                  if (
+                    label.toLowerCase() === "explanation"
+                  ) {
+                    return (
+                      <div key={index}>
+                        <div className="mb-1 text-xs font-black uppercase tracking-wide text-[#777]">
+                          Explanation
+                        </div>
+
+                        <p className="text-[15px] leading-7 text-[#c7c7c7]">
+                          {renderInline(value)}
+                        </p>
+                      </div>
+                    );
+                  }
+
+                  return (
+                    <div key={index}>
+                      <div className="mb-1 text-xs font-black uppercase tracking-wide text-[#777]">
+                        {label}
+                      </div>
+
+                      <pre className="overflow-x-auto rounded-lg border border-[#292929] bg-[#181818] px-4 py-3 font-mono text-sm leading-6 text-[#d7d7d7]">
+                        {value}
+                      </pre>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          );
+        }
+
+        return (
+          <div key={sectionIndex}>
+            {section.content
+              .split(/(?<=[.!?])\s+(?=[A-Z])/)
+              .map((paragraph, index) => (
+                <p
+                  key={index}
+                  className="mb-4 text-[15px] leading-7 text-[#c7c7c7]"
+                >
+                  {renderInline(paragraph.trim())}
+                </p>
+              ))}
+          </div>
+        );
+      })}
+
+      {constraintsText && (
+        <div>
+          <h3 className="mb-4 text-[15px] font-black text-white">
+            Constraints
+          </h3>
+
+          <div className="ml-4 space-y-3 border-l border-[#303030] pl-5">
+            {constraintsText
+              .split(/(?=-?\d+\s*<=)|(?=-?\d+\s*>=)/)
+              .map((constraint) =>
+                cleanConstraintText(constraint)
+              )
+              .filter(Boolean)
+              .map((constraint, index) => (
+                <div
+                  key={index}
+                  className="flex items-start gap-3 text-[15px] leading-7 text-[#c7c7c7]"
+                >
+                  <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#777]" />
+
+                  <code className="font-mono text-[14px] text-[#d7d7d7]">
+                    {constraint}
+                  </code>
+                </div>
+              ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+export default function DsaQuestionPage() {
+  const params = useParams();
+
+  const company = decodeURIComponent(String(params.company ?? ""));
+  const questionId = decodeURIComponent(String(params.question ?? ""));
+
+  const [solvedCount, setSolvedCount] = useState(0);
+  const [problemImages, setProblemImages] = useState<string[]>([]);
+
+  useEffect(() => {
+    try {
+      const stored = localStorage.getItem("jobix_dsa_solved_questions");
+      const solved: string[] = stored ? JSON.parse(stored) : [];
+
+      setSolvedCount(Math.min(solved.length, 100));
+    } catch {
+      setSolvedCount(0);
+    }
+  }, []);
+  const question = useMemo(() => {
+    return (questionsData as Question[]).find(
+      (item) =>
+        item.id === questionId ||
+        item.id === decodeURIComponent(questionId)
+    );
+  }, [questionId]);
+  useEffect(() => {
+    if (!question?.leetcodeUrl) {
+      setProblemImages([]);
+      return;
+    }
+
+    const match = question.leetcodeUrl.match(
+      /\/problems\/([^/?#]+)/
+    );
+
+    if (!match) {
+      setProblemImages([]);
+      return;
+    }
+
+    const slug = match[1];
+
+    let cancelled = false;
+
+    const loadProblemImages = async () => {
+      try {
+        const response = await fetch(
+          `/api/dsa/leetcode-images?slug=${encodeURIComponent(slug)}`,
+          {
+            cache: "no-store",
+          }
+        );
+
+        if (!response.ok) {
+          throw new Error("Image request failed");
+        }
+
+        const data = await response.json();
+
+        if (!cancelled) {
+          setProblemImages(
+            Array.isArray(data?.images)
+              ? data.images
+              : []
+          );
+        }
+      } catch {
+        if (!cancelled) {
+          setProblemImages([]);
+        }
+      }
+    };
+
+    loadProblemImages();
+
+    return () => {
+      cancelled = true;
+    };
   }, [question]);
 
+
+
+
+  const handleSolve = () => {
+    if (!question?.leetcodeUrl) return;
+
+    try {
+      const stored = localStorage.getItem("jobix_dsa_solved_questions");
+      const solved: string[] = stored ? JSON.parse(stored) : [];
+
+      if (!solved.includes(question.id) && solved.length < 100) {
+        const updated = [...solved, question.id];
+
+        localStorage.setItem(
+          "jobix_dsa_solved_questions",
+          JSON.stringify(updated)
+        );
+
+        setSolvedCount(updated.length);
+      }
+
+      if (solved.length >= 100 && !solved.includes(question.id)) {
+        return;
+      }
+
+      window.open(
+        question.leetcodeUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    } catch {
+      window.open(
+        question.leetcodeUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+  };
   if (!question) {
     return (
-      <main className="min-h-screen bg-[#090909] p-8 text-white">
-        <div className="mx-auto max-w-4xl rounded-2xl border border-[#252525] bg-[#111111] p-8">
-          <h1 className="text-xl font-black">
-            Question not found
-          </h1>
-
-          <p className="mt-2 text-sm text-[#8d8d8d]">
-            The requested DSA question could not be found.
-          </p>
-
+      <main className="min-h-screen bg-[#080808] px-6 py-12 text-white">
+        <div className="mx-auto max-w-4xl">
           <Link
-            href={`/interview-kit/dsa/${company}`}
-            className="mt-6 inline-flex items-center rounded-xl bg-white px-5 py-3 text-sm font-black text-black"
+            href={`/interview-kit/dsa/${encodeURIComponent(company)}`}
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#999] hover:text-white"
           >
-            Back to Questions
+            <ArrowLeft className="h-4 w-4" />
+            Back to DSA
           </Link>
+
+          <div className="mt-12 rounded-2xl border border-[#292929] bg-[#111] p-8">
+            <h1 className="text-2xl font-black">Question not found</h1>
+          </div>
         </div>
       </main>
     );
   }
 
-  const startSolving = () => {
-    if (!started) {
-      setStarted(true);
-    }
-  };
+  const examples = Array.isArray(question.examples)
+    ? question.examples.slice(0, 3)
+    : [];
 
-  const changeLanguage = (nextLanguage: string) => {
-    startSolving();
-    setLanguage(nextLanguage);
-    setCode(starterCode(question.title, nextLanguage));
-    setSubmitted(false);
-    setTestResults(["pending", "pending", "pending"]);
-  };
-
-  const resetCode = () => {
-    setCode(starterCode(question.title, language));
-    setStarted(false);
-    setTimeLeft(TOTAL_SECONDS);
-    setSubmitted(false);
-    setRunning(false);
-    setTestResults(["pending", "pending", "pending"]);
-    setActiveTestCase(0);
-  };
-
-  const runCode = async () => {
-    startSolving();
-    setRunning(true);
-    setSubmitted(false);
-
-    setTestResults(["pending", "pending", "pending"]);
-
-    try {
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/code/run`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            language,
-            code,
-            input: testCases[0]?.input || "",
-          }),
-        }
-      );
-
-      if (!response.ok) {
-        throw new Error("Code execution failed");
-      }
-
-      await response.json();
-
-      setTestResults(["passed", "pending", "pending"]);
-    } catch {
-      setTestResults(["failed", "pending", "pending"]);
-    } finally {
-      setRunning(false);
-    }
-  };
-
-  const submitCode = async () => {
-    startSolving();
-    setRunning(true);
-    setSubmitted(false);
-
-    try {
-      const results: ("pending" | "passed" | "failed")[] = [
-        "pending",
-        "pending",
-        "pending",
-      ];
-
-      for (let index = 0; index < 3; index += 1) {
-        try {
-          const response = await fetch(
-            `${process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000"}/api/code/run`,
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                language,
-                code,
-                input: testCases[index]?.input || "",
-              }),
-            }
-          );
-
-          results[index] = response.ok ? "passed" : "failed";
-        } catch {
-          results[index] = "failed";
-        }
-
-        setTestResults([...results]);
-      }
-
-      setSubmitted(true);
-    } finally {
-      setRunning(false);
-    }
-  };
-
-  const editorLanguage =
-    language === "python"
-      ? "python"
-      : language === "cpp"
-        ? "cpp"
-        : "java";
-
-  const allPassed =
-    testResults.length === 3 &&
-    testResults.every((result) => result === "passed");
+  const constraints = Array.isArray(question.constraints)
+    ? question.constraints
+    : [];
 
   return (
-    <main className={`min-h-screen text-white transition-colors duration-200 ${lightMode ? "jobix-light-mode" : "bg-[#080808]"}`}>
-      <div className="min-h-screen">
+    <main className="min-h-screen bg-[#080808] text-white">
+      <header className="sticky top-0 z-30 border-b border-[#242424] bg-[#080808]/95 backdrop-blur">
+        <div className="flex h-[72px] items-center justify-between px-5 md:px-8">
+          <Link
+            href={`/interview-kit/dsa/${encodeURIComponent(company)}`}
+            className="flex items-center gap-3 text-sm font-bold text-[#999] transition hover:text-white"
+          >
+            <ArrowLeft className="h-4 w-4" />
+            <span>DSA</span>
+            <span className="text-[#555]">/</span>
+            <span className="capitalize text-white">{company}</span>
+          </Link>
 
-        <header className="sticky top-0 z-30 border-b border-[#242424] bg-[#090909]">
-          <div className="flex h-[76px] items-center justify-between px-5 md:px-7">
+          <div className="flex items-center gap-2">
+            <div className="hidden items-center gap-2 rounded-xl border border-[#292929] bg-[#111111] px-4 py-2.5 sm:flex">
+              <span className="text-xs font-bold text-[#777]">
+                Solved
+              </span>
 
-            <Link
-              href="/interview-kit"
-              className="flex items-center gap-3"
+              <span className="text-sm font-black text-white">
+                {solvedCount}/100
+              </span>
+
+              <span className="text-[10px] font-bold text-[#666]">
+                FREE
+              </span>
+            </div>
+
+            <button
+              type="button"
+              onClick={handleSolve}
+              disabled={solvedCount >= 100}
+              className="inline-flex items-center gap-2 rounded-xl border border-[#303030] bg-[#151515] px-5 py-2.5 text-sm font-black text-white transition hover:bg-[#202020] disabled:cursor-not-allowed disabled:opacity-40"
             >
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-white">
-                <Image
-                  src="/jobix-symbol.svg"
-                  alt="JOBIX"
-                  width={25}
-                  height={25}
-                />
-              </div>
+              {solvedCount >= 100
+                ? "Free Limit Reached"
+                : "Solve with LeetCode"}
 
-              <div className="hidden sm:block">
-                <div className="text-xl font-black tracking-tight">
-                  JOBIX
-                </div>
-                <div className="text-[10px] font-bold text-[#777]">
-                  Your Career, Smarter.
-                </div>
-              </div>
-            </Link>
+              {solvedCount < 100 && (
+                <ExternalLink className="h-4 w-4" />
+              )}
+            </button>
 
-            <div className="flex items-center gap-2 md:gap-3">
+            <Image
+              src="/jobix-symbol.svg"
+              alt="JOBIX"
+              width={32}
+              height={32}
+              className="h-8 w-8"
+            />
+          </div>
+        </div>
+      </header>
+
+      <div className="mx-auto max-w-5xl px-5 py-8 md:px-8 md:py-10">
+        <article>
+          <div className="mb-8 flex flex-wrap items-center gap-2">
+            {question.difficulty && (
+              <span className="rounded-full bg-[#2b2412] px-3 py-1.5 text-xs font-black text-[#d4a72c]">
+                {question.difficulty}
+              </span>
+            )}
+
+            {question.topic && (
+              <span className="rounded-full bg-[#181818] px-3 py-1.5 text-xs font-bold text-[#999]">
+                {question.topic}
+              </span>
+            )}
+
+            {(question.tags || []).slice(0, 4).map((tag) => (
+              <span
+                key={tag}
+                className="rounded-full bg-[#181818] px-3 py-1.5 text-xs font-bold text-[#888]"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+
+          <h1 className="text-3xl font-black tracking-tight md:text-4xl">
+            {question.title}
+          </h1>
+
+          <div className="mt-8 border-t border-[#292929] pt-8">
+            <h2 className="mb-5 text-xl font-black">Problem</h2>
+
+            <div className="rounded-2xl border border-[#292929] bg-[#0d0d0d] p-6 md:p-8">
+              {renderProblem(
+                question.problemStatement ||
+                  question.description ||
+                  ""
+              )}
+            </div>
+          </div>
+
+          {examples.length > 0 && (
+            <section className="mt-10">
+              <h2 className="mb-5 text-xl font-black">Examples</h2>
+
+              <div className="space-y-4">
+                {examples.map((example, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl border border-[#292929] bg-[#111111] p-5 md:p-6"
+                  >
+                    <h3 className="text-base font-black">
+                      Example {index + 1}
+                    </h3>
+
+                    <div className="mt-5 space-y-4">
+                      {example.input && (
+                        <div>
+                          <div className="mb-2 text-xs font-black uppercase tracking-wide text-[#777]">
+                            Input
+                          </div>
+
+                          <pre className="overflow-x-auto rounded-lg border border-[#292929] bg-[#181818] p-4 font-mono text-sm leading-6 text-[#d7d7d7]">
+                            {example.input}
+                          </pre>
+                        </div>
+                      )}
+
+                      {example.output && (
+                        <div>
+                          <div className="mb-2 text-xs font-black uppercase tracking-wide text-[#777]">
+                            Output
+                          </div>
+
+                          <pre className="overflow-x-auto rounded-lg border border-[#292929] bg-[#181818] p-4 font-mono text-sm leading-6 text-[#d7d7d7]">
+                            {example.output}
+                          </pre>
+                        </div>
+                      )}
+
+                      {example.explanation && (
+                        <div>
+                          <div className="mb-2 text-xs font-black uppercase tracking-wide text-[#777]">
+                            Explanation
+                          </div>
+
+                          <p className="text-sm leading-7 text-[#c7c7c7]">
+                            {example.explanation}
+                          </p>
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {constraints.length > 0 && (
+            <section className="mt-10">
+              <h2 className="mb-5 text-xl font-black">Constraints</h2>
+
+              <div className="rounded-2xl border border-[#292929] bg-[#111111] p-6 md:p-8">
+                <ul className="space-y-3">
+                  {constraints.map((constraint, index) => (
+                    <li
+                      key={index}
+                      className="flex items-start gap-3 text-sm leading-7 text-[#c7c7c7]"
+                    >
+                      <span className="mt-3 h-1.5 w-1.5 shrink-0 rounded-full bg-[#777]" />
+                      <span>{constraint}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </section>
+          )}
+
+          {question.approach && (
+            <section className="mt-10">
+              <h2 className="mb-5 text-xl font-black">Approach</h2>
+
+              <div className="rounded-2xl border border-[#292929] bg-[#111111] p-6 md:p-8">
+                <p className="whitespace-pre-wrap text-sm leading-7 text-[#c7c7c7]">
+                  {question.approach}
+                </p>
+              </div>
+            </section>
+          )}
+
+          {(question.timeComplexity || question.spaceComplexity) && (
+            <section className="mt-10">
+              <h2 className="mb-5 text-xl font-black">Complexity</h2>
+
+              <div className="grid gap-4 md:grid-cols-2">
+                {question.timeComplexity && (
+                  <div className="rounded-2xl border border-[#292929] bg-[#111111] p-5">
+                    <div className="text-xs font-black uppercase tracking-wide text-[#777]">
+                      Time Complexity
+                    </div>
+
+                    <div className="mt-3 font-mono text-sm text-white">
+                      {question.timeComplexity}
+                    </div>
+                  </div>
+                )}
+
+                {question.spaceComplexity && (
+                  <div className="rounded-2xl border border-[#292929] bg-[#111111] p-5">
+                    <div className="text-xs font-black uppercase tracking-wide text-[#777]">
+                      Space Complexity
+                    </div>
+
+                    <div className="mt-3 font-mono text-sm text-white">
+                      {question.spaceComplexity}
+                    </div>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
+
+          <section className="mt-12 border-t border-[#292929] pt-10">
+            <div className="flex flex-col items-center rounded-2xl border border-[#292929] bg-[#111111] px-6 py-10 text-center">
+              <h2 className="text-xl font-black">Ready to solve?</h2>
+
+              <p className="mt-2 max-w-lg text-sm leading-6 text-[#777]">
+                Open the original problem on LeetCode and solve it there.
+              </p>
 
               <a
                 href={question.leetcodeUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex h-[43px] items-center gap-2 rounded-xl border border-[#303030] bg-[#151515] px-4 text-sm font-semibold text-[#e5e5e5] transition hover:border-[#444] hover:bg-[#1c1c1c] hover:text-white"
+                className="mt-6 inline-flex items-center gap-2 rounded-xl bg-white px-7 py-3.5 text-sm font-black text-black transition hover:bg-[#e5e5e5]"
               >
-                <span>Solve with LeetCode</span>
-                <span className="text-base font-semibold leading-none">&#8594;</span>
+                Solve
+                <ExternalLink className="h-4 w-4" />
               </a>
-
-              <button
-                type="button"
-                aria-label="Change appearance mode"
-                title={lightMode ? "Switch to dark mode" : "Switch to light mode"}
-                onClick={() => setLightMode((current) => !current)}
-                className="flex h-[43px] w-[43px] items-center justify-center rounded-xl border border-[#282828] bg-[#121212] text-[#a8a8a8] transition hover:bg-[#1b1b1b] hover:text-white"
-              >
-                <Moon
-                  className={`h-[18px] w-[18px] transition-transform ${
-                    lightMode ? "rotate-180" : ""
-                  }`}
-                />
-              </button>
-
-              <div
-                className={`flex items-center gap-2 rounded-xl border px-4 py-2.5 text-sm font-black ${
-                  timeLeft <= 300
-                    ? "border-[#6b2525] bg-[#1b0c0c] text-[#ff7777]"
-                    : "border-[#282828] bg-[#121212] text-[#d2d2d2]"
-                }`}
-              >
-                <Clock3 className="h-4 w-4" />
-                {formatTime(timeLeft)}
-              </div>
-
-              <select
-                value={language}
-                onChange={(event) =>
-                  changeLanguage(event.target.value)
-                }
-                className="h-[43px] rounded-xl border border-[#2a2a2a] bg-[#151515] px-4 text-sm font-black text-white outline-none"
-              >
-                <option value="java">Java</option>
-                <option value="python">Python</option>
-                <option value="cpp">C++</option>
-              </select>
-
-              <button
-                onClick={resetCode}
-                className="hidden h-[43px] items-center gap-2 rounded-xl border border-[#2a2a2a] bg-[#151515] px-4 text-sm font-black text-white transition hover:bg-[#202020] md:flex"
-              >
-                <RotateCcw className="h-4 w-4" />
-                Reset
-              </button>
-
-              <button
-                onClick={runCode}
-                disabled={running}
-                className="flex h-[43px] items-center gap-2 rounded-xl bg-[#151515] px-5 text-sm font-black text-[#e5e5e5] ring-1 ring-[#303030] transition hover:bg-[#1d1d1d] disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                <Play className="h-4 w-4 fill-current" />
-                {running ? "Running..." : "Run Code"}
-              </button>
-
-              <button
-                onClick={submitCode}
-                disabled={running}
-                className="flex h-[43px] items-center gap-2 rounded-xl bg-[#d5d7db] px-5 text-sm font-black text-[#171717] transition hover:bg-[#c5c7cb] disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                <Send className="h-4 w-4" />
-                Submit
-              </button>
-
-            </div>
-          </div>
-        </header>
-
-        <div className="grid min-h-[calc(100vh-76px)] lg:grid-cols-[42%_58%]">
-
-          <section className="overflow-y-auto border-r border-[#252525] bg-[#0c0c0c]">
-            <div className="mx-auto max-w-[720px] p-6 md:p-7">
-
-              <div className="mb-5 flex flex-wrap items-center gap-2">
-                <span className="rounded-full bg-[#2b2412] px-3 py-1.5 text-xs font-black text-[#d4a72c]">
-                  {question.difficulty}
-                </span>
-
-                <span className="rounded-full bg-[#181818] px-3 py-1.5 text-xs font-bold text-[#999999]">
-                  {question.topic}
-                </span>
-
-                {question.tags.slice(0, 2).map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-full bg-[#181818] px-3 py-1.5 text-xs font-bold text-[#888888]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-
-              <h1 className="text-2xl font-black tracking-tight text-white md:text-3xl">
-                {question.title}
-              </h1>
-
-              <div className="mt-6 border-b border-[#292929] pb-6">
-                <p className="text-sm leading-6 text-[#bdbdbd]">
-                  {question.description}
-                </p>
-              </div>
-
-              <section className="mt-7">
-                <h2 className="text-sm font-black text-white">
-                  Examples
-                </h2>
-
-                <div className="mt-4 space-y-4">
-                  {question.examples.map((example, index) => (
-                    <div
-                      key={index}
-                      className="rounded-xl border border-[#292929] bg-[#121212] p-4"
-                    >
-                      <p className="text-sm font-black text-white">
-                        Example {index + 1}
-                      </p>
-
-                      <div className="mt-4 space-y-3 font-mono text-sm">
-                        <div>
-                          <span className="font-bold text-[#999]">
-                            Input:
-                          </span>{" "}
-                          <span className="text-[#dedede]">
-                            {example.input}
-                          </span>
-                        </div>
-
-                        <div>
-                          <span className="font-bold text-[#999]">
-                            Output:
-                          </span>{" "}
-                          <span className="text-[#dedede]">
-                            {example.output}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              {question.constraints && question.constraints.length > 0 && (
-                <section className="mt-8 border-t border-[#292929] pt-7">
-                  <h2 className="text-sm font-black text-white">
-                    Constraints
-                  </h2>
-
-                  <ul className="mt-4 space-y-2">
-                    {question.constraints.map((constraint, index) => (
-                      <li
-                        key={index}
-                        className="flex gap-3 text-sm leading-6 text-[#bdbdbd]"
-                      >
-                        <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#777]" />
-                        <span>{constraint}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </section>
-              )}
-
-              {question.tags.length > 0 && (
-                <section className="mt-8 border-t border-[#292929] pt-7">
-                  <h2 className="text-sm font-black text-white">
-                    Topics
-                  </h2>
-
-                  <div className="mt-4 flex flex-wrap gap-2">
-                    {question.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-lg border border-[#303030] bg-[#151515] px-3 py-2 text-xs font-bold text-[#aaa]"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-                </section>
-              )}
-
             </div>
           </section>
-
-          <section className="flex min-h-[calc(100vh-76px)] flex-col bg-[#0a0a0a]">
-
-            <div className="flex min-h-0 flex-1 flex-col p-4 md:p-5">
-
-              <div className="flex min-h-[480px] flex-1 flex-col overflow-hidden rounded-xl border border-[#292929] bg-[#101010]">
-
-                <div className="flex h-[54px] items-center justify-between border-b border-[#292929] bg-[#141414] px-5">
-
-                  <div className="flex items-center gap-3">
-                    <span className="text-sm font-black text-white">
-                      Code Editor
-                    </span>
-
-                    <span className="rounded-md bg-[#242424] px-2.5 py-1 text-[11px] font-bold text-[#aaa]">
-                      {language === "java"
-                        ? "Java"
-                        : language === "python"
-                          ? "Python"
-                          : "C++"}
-                    </span>
-                  </div>
-
-                  {started && (
-                    <span className="text-[11px] font-bold text-[#777]">
-                      Solving
-                    </span>
-                  )}
-
-                </div>
-
-                <div className="min-h-0 flex-1">
-                  <Editor
-                    height="100%"
-                    language={editorLanguage}
-                    theme={lightMode ? "vs" : "vs-dark"}
-                    value={code}
-                    onChange={(value) => {
-                      startSolving();
-                      setCode(value || "");
-                    }}
-                    options={{
-                      minimap: {
-                        enabled: false,
-                      },
-                      fontSize: 14,
-                      lineNumbers: "on",
-                      automaticLayout: true,
-                      tabSize: 4,
-                      padding: {
-                        top: 18,
-                      },
-                      scrollBeyondLastLine: false,
-                      smoothScrolling: true,
-                      cursorBlinking: "smooth",
-                      wordWrap: "on",
-                      renderWhitespace: "selection",
-                    }}
-                  />
-                </div>
-
-              </div>
-
-              <div className="mt-4 overflow-hidden rounded-xl border border-[#292929] bg-[#101010]">
-
-                <div className="flex items-center justify-between border-b border-[#292929] px-5 py-4">
-
-                  <div className="flex items-center gap-6">
-                    <button className="border-b-2 border-white pb-3 text-sm font-black text-white">
-                      Testcase
-                    </button>
-
-                    <button className="pb-3 text-sm font-bold text-[#777]">
-                      Test Result
-                    </button>
-                  </div>
-
-                  {allPassed && (
-                    <div className="flex items-center gap-2 text-xs font-black text-[#4ade80]">
-                      <CheckCircle2 className="h-4 w-4" />
-                      All testcases (3/3)
-                    </div>
-                  )}
-
-                </div>
-
-                <div className="grid min-h-[245px] grid-cols-[145px_minmax(0,1fr)]">
-
-                  <div className="border-r border-[#292929] p-3">
-
-                    {[0, 1, 2].map((index) => {
-                      const result = testResults[index];
-
-                      return (
-                        <button
-                          key={index}
-                          onClick={() => setActiveTestCase(index)}
-                          className={`mb-2 flex w-full items-center justify-between rounded-lg px-4 py-3 text-left text-sm font-bold transition ${
-                            activeTestCase === index
-                              ? "bg-[#1d1d1d] text-white"
-                              : "text-[#888] hover:bg-[#171717]"
-                          }`}
-                        >
-                          <span>
-                            Testcase {index + 1}
-                          </span>
-
-                          {result === "passed" && (
-                            <CheckCircle2 className="h-4 w-4 text-[#4ade80]" />
-                          )}
-
-                          {result === "failed" && (
-                            <span className="text-xs font-black text-[#f87171]">
-                              ?
-                            </span>
-                          )}
-                        </button>
-                      );
-                    })}
-
-                  </div>
-
-                  <div className="p-5">
-
-                    <div className="mb-5">
-                      <p className="mb-2 text-sm font-black text-white">
-                        Input
-                      </p>
-
-                      <div className="rounded-lg border border-[#292929] bg-[#181818] p-4 font-mono text-sm text-[#cfcfcf]">
-                        {testCases[activeTestCase]?.input}
-                      </div>
-                    </div>
-
-                    <div>
-                      <p className="mb-2 text-sm font-black text-white">
-                        Expected Output
-                      </p>
-
-                      <div className="rounded-lg border border-[#292929] bg-[#181818] p-4 font-mono text-sm text-[#cfcfcf]">
-                        {testCases[activeTestCase]?.output}
-                      </div>
-                    </div>
-
-                    {submitted && (
-                      <div className="mt-4 rounded-lg border border-[#214d31] bg-[#102117] px-4 py-3 text-sm font-bold text-[#6ee7a0]">
-                        Submission checked against the available testcases.
-                      </div>
-                    )}
-
-                  </div>
-
-                </div>
-              </div>
-
-            </div>
-          </section>
-
-        </div>
+        </article>
       </div>
-      <style jsx global>{`
-        .jobix-light-mode {
-          background: #f4f5f7 !important;
-          color: #171717 !important;
-        }
-
-        .jobix-light-mode header {
-          background: #ffffff !important;
-          border-color: #dedede !important;
-        }
-
-        .jobix-light-mode header a,
-        .jobix-light-mode header button,
-        .jobix-light-mode header select {
-          color: #202020 !important;
-        }
-
-        .jobix-light-mode section {
-          background-color: #ffffff;
-        }
-
-        .jobix-light-mode .bg-[#0c0c0c] {
-          background-color: #f4f5f7 !important;
-        }
-
-        .jobix-light-mode .bg-[#0a0a0a],
-        .jobix-light-mode .bg-[#101010],
-        .jobix-light-mode .bg-[#121212],
-        .jobix-light-mode .bg-[#141414],
-        .jobix-light-mode .bg-[#151515],
-        .jobix-light-mode .bg-[#181818],
-        .jobix-light-mode .bg-[#1b1b1b] {
-          background-color: #ffffff !important;
-        }
-
-        .jobix-light-mode .text-white {
-          color: #171717 !important;
-        }
-
-        .jobix-light-mode .text-[#d0d0d0],
-        .jobix-light-mode .text-[#dedede],
-        .jobix-light-mode .text-[#bdbdbd],
-        .jobix-light-mode .text-[#cfcfcf],
-        .jobix-light-mode .text-[#aaa],
-        .jobix-light-mode .text-[#999],
-        .jobix-light-mode .text-[#888],
-        .jobix-light-mode .text-[#777] {
-          color: #555555 !important;
-        }
-
-        .jobix-light-mode .border-[#292929],
-        .jobix-light-mode .border-[#282828],
-        .jobix-light-mode .border-[#2a2a2a],
-        .jobix-light-mode .border-[#303030] {
-          border-color: #dddddd !important;
-        }
-
-        .jobix-light-mode .ring-[#303030] {
-          --tw-ring-color: #d5d5d5 !important;
-        }
-
-        .jobix-light-mode .bg-black {
-          background-color: #eeeeee !important;
-          color: #171717 !important;
-        }
-
-        .jobix-light-mode .bg-[#d5d7db] {
-          background-color: #171717 !important;
-          color: #ffffff !important;
-        }
-      `}</style>
-
     </main>
   );
 }

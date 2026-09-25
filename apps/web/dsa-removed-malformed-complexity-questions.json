@@ -1,0 +1,254 @@
+[
+  {
+    "id": "01-matrix",
+    "title": "01 Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "check-if-matrix-is-x-matrix",
+    "title": "Check if Matrix Is X-Matrix",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "construct-product-matrix",
+    "title": "Construct Product Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "design-a-3d-binary-matrix-with-efficient-layer-tracking",
+    "title": "Design a 3D Binary Matrix with Efficient Layer Tracking",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O(n?)"
+  },
+  {
+    "id": "determine-whether-matrix-can-be-obtained-by-rotation",
+    "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
+    "title": "Disconnect Path in a Binary Matrix by at Most One Flip",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows",
+    "title": "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
+    "timeComplexity": "O(m ? n ? k log k)",
+    "spaceComplexity": "O(k)"
+  },
+  {
+    "id": "find-valid-matrix-given-row-and-column-sums",
+    "title": "Find Valid Matrix Given Row and Column Sums",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "flip-square-submatrix-vertically",
+    "title": "Flip Square Submatrix Vertically",
+    "timeComplexity": "O(k?)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "largest-local-values-in-a-matrix",
+    "title": "Largest Local Values in a Matrix",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O((n - 2)?)"
+  },
+  {
+    "id": "largest-submatrix-with-rearrangements",
+    "title": "Largest Submatrix With Rearrangements",
+    "timeComplexity": "O(m ? n log n)",
+    "spaceComplexity": "O(n)"
+  },
+  {
+    "id": "longest-increasing-path-in-a-matrix",
+    "title": "Longest Increasing Path in a Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "longest-line-of-consecutive-one-in-matrix",
+    "title": "Longest Line of Consecutive One in Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(n)"
+  },
+  {
+    "id": "lucky-numbers-in-a-matrix",
+    "title": "Lucky Numbers in a Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m + n)"
+  },
+  {
+    "id": "match-alphanumerical-pattern-in-matrix-i",
+    "title": "Match Alphanumerical Pattern in Matrix I",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "matrix-block-sum",
+    "title": "Matrix Block Sum",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "matrix-cells-in-distance-order",
+    "title": "Matrix Cells in Distance Order",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "matrix-similarity-after-cyclic-shifts",
+    "title": "Matrix Similarity After Cyclic Shifts",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "maximum-matrix-sum",
+    "title": "Maximum Matrix Sum",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "maximum-non-negative-product-in-a-matrix",
+    "title": "Maximum Non Negative Product in a Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "minimum-absolute-difference-in-sliding-submatrix",
+    "title": "Minimum Absolute Difference in Sliding Submatrix",
+    "timeComplexity": "O(m ? n ? k?)",
+    "spaceComplexity": "O(k?)"
+  },
+  {
+    "id": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+    "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+    "timeComplexity": "O(2^(m?n) ? m ? n)",
+    "spaceComplexity": "O(2^(m?n))"
+  },
+  {
+    "id": "minimum-operations-to-remove-adjacent-ones-in-matrix",
+    "title": "Minimum Operations to Remove Adjacent Ones in Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "modify-the-matrix",
+    "title": "Modify the Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "paths-in-matrix-whose-sum-is-divisible-by-k",
+    "title": "Paths in Matrix Whose Sum Is Divisible by K",
+    "timeComplexity": "O(m ? n ? k)",
+    "spaceComplexity": "O(m ? n ? k)"
+  },
+  {
+    "id": "pyramid-transition-matrix",
+    "title": "Pyramid Transition Matrix",
+    "timeComplexity": "O(7^n)",
+    "spaceComplexity": "O(n?)"
+  },
+  {
+    "id": "rank-transform-of-a-matrix",
+    "title": "Rank Transform of a Matrix",
+    "timeComplexity": "O(m ? n log(m ? n))",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "reshape-the-matrix",
+    "title": "Reshape the Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "score-after-flipping-matrix",
+    "title": "Score After Flipping Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "timeComplexity": "O(log(m ? n))",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "set-matrix-zeroes",
+    "title": "Set Matrix Zeroes",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "shortest-path-in-binary-matrix",
+    "title": "Shortest Path in Binary Matrix",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O(n?)"
+  },
+  {
+    "id": "sort-matrix-by-diagonals",
+    "title": "Sort Matrix by Diagonals",
+    "timeComplexity": "O(n? log n)",
+    "spaceComplexity": "O(n)"
+  },
+  {
+    "id": "sort-the-matrix-diagonally",
+    "title": "Sort the Matrix Diagonally",
+    "timeComplexity": "O(m ? n log(min(m,n)))",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "sparse-matrix-multiplication",
+    "title": "Sparse Matrix Multiplication",
+    "timeComplexity": "O(m ? n ? p)",
+    "spaceComplexity": "O(m ? p)"
+  },
+  {
+    "id": "special-positions-in-a-binary-matrix",
+    "title": "Special Positions in a Binary Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m + n)"
+  },
+  {
+    "id": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(1) extra"
+  },
+  {
+    "id": "spiral-matrix-ii",
+    "title": "Spiral Matrix II",
+    "timeComplexity": "O(n?)",
+    "spaceComplexity": "O(n?)"
+  },
+  {
+    "id": "spiral-matrix-iii",
+    "title": "Spiral Matrix III",
+    "timeComplexity": "O(rows ? cols)",
+    "spaceComplexity": "O(rows ? cols)"
+  },
+  {
+    "id": "spiral-matrix-iv",
+    "title": "Spiral Matrix IV",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  },
+  {
+    "id": "toeplitz-matrix",
+    "title": "Toeplitz Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(1)"
+  },
+  {
+    "id": "transpose-matrix",
+    "title": "Transpose Matrix",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)"
+  }
+]

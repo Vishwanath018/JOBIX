@@ -1,0 +1,542 @@
+[
+  {
+    "id": "01-matrix",
+    "title": "01 Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nbinary matrix\nmat\n, return\nthe distance of the nearest\n0\nfor each cell\n.\nThe distance between two cells sharing a common edge is\n1\n.\nExample 1:\nInput:\nmat = [[0,0,0],[0,1,0],[0,0,0]]\nOutput:\n[[0,0,0],[0,1,0],[0,0,0]]\nExample 2:\nInput:\nmat = [[0,0,0],[0,1,0],[1,1,1]]\nOutput:\n[[0,0,0],[0,1,0],[1,2,1]]\nConstraints:\nm == mat.length\nn == mat[i].length\n1 <= m, n <= 10\n4\n1 <= m * n <= 10\n4\nmat[i][j]\nis either\n0\nor\n1\n.\nThere is at least one\n0\nin\nmat\n.\nNote:\nThis question is the same as 17",
+    "approach": "Use multi-source BFS. Start by placing every cell containing 0 into the queue with distance 0. Then expand outward in four directions. The first time a 1-cell is reached, the BFS distance is the minimum distance to its nearest 0.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "big-countries",
+    "title": "Big Countries",
+    "topic": "Trie",
+    "description": "Table:\nWorld\n+-------------+---------+\n| Column Name | Type |\n+-------------+---------+\n| name | varchar |\n| continent | varchar |\n| area | int |\n| population | int |\n| gdp | bigint |\n+-------------+---------+\nname is the primary key (column with unique values) for this table.\nEach row of this table gives information about the name of a country, the continent to which it belongs, its area, the population, and its GDP value.\nA country is\nbig\nif:\nit has an area of at least three million (i.e.,\n300",
+    "approach": "Analyze the trie structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "timeComplexity": "O(n ? L)",
+    "spaceComplexity": "O(n ? L)",
+    "complexity": "Time Complexity: O(n ? L)\nSpace Complexity: O(n ? L)"
+  },
+  {
+    "id": "build-a-matrix-with-conditions",
+    "title": "Build a Matrix With Conditions",
+    "topic": "Matrix",
+    "description": "You are given a\npositive\ninteger\nk\n. You are also given:\na 2D integer array\nrowConditions\nof size\nn\nwhere\nrowConditions[i] = [above\ni\n, below\ni\n]\n, and\na 2D integer array\ncolConditions\nof size\nm\nwhere\ncolConditions[i] = [left\ni\n, right\ni\n]\n.\nThe two arrays contain integers from\n1\nto\nk\n.\nYou have to build a\nk x k\nmatrix that contains each of the numbers from\n1\nto\nk\nexactly once\n. The remaining cells should have the value\n0\n.\nThe matrix should also satisfy the following conditions:\nThe number\nabov",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "cells-with-odd-values-in-a-matrix",
+    "title": "Cells with Odd Values in a Matrix",
+    "topic": "Matrix",
+    "description": "There is an\nm x n\nmatrix that is initialized to all\n0\n's. There is also a 2D array\nindices\nwhere each\nindices[i] = [r\ni\n, c\ni\n]\nrepresents a\n0-indexed location\nto perform some increment operations on the matrix.\nFor each location\nindices[i]\n, do\nboth\nof the following:\nIncrement\nall\nthe cells on row\nr\ni\n.\nIncrement\nall\nthe cells on column\nc\ni\n.\nGiven\nm\n,\nn\n, and\nindices\n, return\nthe\nnumber of odd-valued cells\nin the matrix after applying the increment to all locations in\nindices\n.\nExample 1:\nInpu",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "check-if-matrix-is-x-matrix",
+    "title": "Check if Matrix Is X-Matrix",
+    "topic": "Matrix",
+    "description": "A square matrix is said to be an\nX-Matrix\nif\nboth\nof the following conditions hold:\nAll the elements in the diagonals of the matrix are\nnon-zero\n.\nAll other elements are 0.\nGiven a 2D integer array\ngrid\nof size\nn x n\nrepresenting a square matrix, return\ntrue\nif\ngrid\nis an X-Matrix\n. Otherwise, return\nfalse\n.\nExample 1:\nInput:\ngrid = [[2,0,0,1],[0,3,1,0],[0,5,2,0],[4,0,0,2]]\nOutput:\ntrue\nExplanation:\nRefer to the diagram above.\nAn X-Matrix should have the green elements (diagonals) be non-zero an",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "construct-product-matrix",
+    "title": "Construct Product Matrix",
+    "topic": "Matrix",
+    "description": "Given a\n0-indexed\n2D integer matrix\ngrid\nof size\nn * m\n, we define a\n0-indexed\n2D matrix\np\nof size\nn * m\nas the\nproduct\nmatrix of\ngrid\nif the following condition is met:\nEach element\np[i][j]\nis calculated as the product of all elements in\ngrid\nexcept for the element\ngrid[i][j]\n. This product is then taken modulo\n12345\n.\nReturn\nthe product matrix of\ngrid\n.\nExample 1:\nInput:\ngrid = [[1,2],[3,4]]\nOutput:\n[[24,12],[8,6]]\nExplanation:\np[0][0] = grid[0][1] * grid[1][0] * grid[1][1] = 2 * 3 * 4 = 24\np[",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "count-negative-numbers-in-a-sorted-matrix",
+    "title": "Count Negative Numbers in a Sorted Matrix",
+    "topic": "Matrix",
+    "description": "Given a\nm x n\nmatrix\ngrid\nwhich is sorted in non-increasing order both row-wise and column-wise, return\nthe number of\nnegative\nnumbers in\ngrid\n.\nExample 1:\nInput:\ngrid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]]\nOutput:\n8\nExplanation:\nThere are 8 negatives number in the matrix.\nExample 2:\nInput:\ngrid = [[3,2],[1,0]]\nOutput:\n0\nConstraints:\nm == grid.length\nn == grid[i].length\n1 <= m, n <= 100\n-100 <= grid[i][j] <= 100\nFollow up:\nCould you find an\nO(n + m)\nsolution?",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "design-a-3d-binary-matrix-with-efficient-layer-tracking",
+    "title": "Design a 3D Binary Matrix with Efficient Layer Tracking",
+    "topic": "Matrix",
+    "description": "Given the input for the Design a 3D Binary Matrix with Efficient Layer Tracking problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "determine-whether-matrix-can-be-obtained-by-rotation",
+    "title": "Determine Whether Matrix Can Be Obtained By Rotation",
+    "topic": "Matrix",
+    "description": "Given two\nn x n\nbinary matrices\nmat\nand\ntarget\n, return\ntrue\nif it is possible to make\nmat\nequal to\ntarget\nby\nrotating\nmat\nin\n90-degree increments\n, or\nfalse\notherwise.\nExample 1:\nInput:\nmat = [[0,1],[1,0]], target = [[1,0],[0,1]]\nOutput:\ntrue\nExplanation:\nWe can rotate mat 90 degrees clockwise to make mat equal target.\nExample 2:\nInput:\nmat = [[0,1],[1,1]], target = [[1,0],[0,1]]\nOutput:\nfalse\nExplanation:\nIt is impossible to make mat equal to target by rotating mat.\nExample 3:\nInput:\nmat = [[0",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "disconnect-path-in-a-binary-matrix-by-at-most-one-flip",
+    "title": "Disconnect Path in a Binary Matrix by at Most One Flip",
+    "topic": "Matrix",
+    "description": "You are given a\n0-indexed\nm x n\nbinary\nmatrix\ngrid\n. You can move from a cell\n(row, col)\nto any of the cells\n(row + 1, col)\nor\n(row, col + 1)\nthat has the value\n1\n. The matrix is\ndisconnected\nif there is no path from\n(0, 0)\nto\n(m - 1, n - 1)\n.\nYou can flip the value of\nat most one\n(possibly none) cell. You\ncannot flip\nthe cells\n(0, 0)\nand\n(m - 1, n - 1)\n.\nReturn\ntrue\nif it is possible to make the matrix disconnect or\nfalse\notherwise\n.\nNote\nthat flipping a cell changes its value from\n0\nto\n1\nor fr",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "find-the-kth-smallest-sum-of-a-matrix-with-sorted-rows",
+    "title": "Find the Kth Smallest Sum of a Matrix With Sorted Rows",
+    "topic": "Matrix",
+    "description": "You are given an\nm x n\nmatrix\nmat\nthat has its rows sorted in non-decreasing order and an integer\nk\n.\nYou are allowed to choose\nexactly one element\nfrom each row to form an array.\nReturn\nthe\nk\nth\nsmallest array sum among all possible arrays\n.\nExample 1:\nInput:\nmat = [[1,3,11],[2,4,6]], k = 5\nOutput:\n7\nExplanation:\nChoosing one element from each row, the first k smallest sum are:\n[1,2], [1,4], [3,2], [3,4], [1,6]. Where the 5th sum is 7.\nExample 2:\nInput:\nmat = [[1,3,11],[2,4,6]], k = 9\nOutput:\n1",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "find-valid-matrix-given-row-and-column-sums",
+    "title": "Find Valid Matrix Given Row and Column Sums",
+    "topic": "Matrix",
+    "description": "You are given two arrays\nrowSum\nand\ncolSum\nof non-negative integers where\nrowSum[i]\nis the sum of the elements in the\ni\nth\nrow and\ncolSum[j]\nis the sum of the elements of the\nj\nth\ncolumn of a 2D matrix. In other words, you do not know the elements of the matrix, but you do know the sums of each row and column.\nFind any matrix of\nnon-negative\nintegers of size\nrowSum.length x colSum.length\nthat satisfies the\nrowSum\nand\ncolSum\nrequirements.\nReturn\na 2D array representing\nany\nmatrix that fulfills th",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "flip-square-submatrix-vertically",
+    "title": "Flip Square Submatrix Vertically",
+    "topic": "Matrix",
+    "description": "Given the input for the Flip Square Submatrix Vertically problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "kth-smallest-element-in-a-sorted-matrix",
+    "title": "Kth Smallest Element in a Sorted Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nn x n\nmatrix\nwhere each of the rows and columns is sorted in ascending order, return\nthe\nk\nth\nsmallest element in the matrix\n.\nNote that it is the\nk\nth\nsmallest element\nin the sorted order\n, not the\nk\nth\ndistinct\nelement.\nYou must find a solution with a memory complexity better than\nO(n\n2\n)\n.\nExample 1:\nInput:\nmatrix = [[1,5,9],[10,11,13],[12,13,15]], k = 8\nOutput:\n13\nExplanation:\nThe elements in the matrix are [1,5,9,10,11,12,13,\n13\n,15], and the 8\nth\nsmallest number is 13\nExample 2:\nI",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "largest-local-values-in-a-matrix",
+    "title": "Largest Local Values in a Matrix",
+    "topic": "Matrix",
+    "description": "You are given an\nn x n\ninteger matrix\ngrid\n.\nGenerate an integer matrix\nmaxLocal\nof size\n(n - 2) x (n - 2)\nsuch that:\nmaxLocal[i][j]\nis equal to the\nlargest\nvalue of the\n3 x 3\nmatrix in\ngrid\ncentered around row\ni + 1\nand column\nj + 1\n.\nIn other words, we want to find the largest value in every contiguous\n3 x 3\nmatrix in\ngrid\n.\nReturn\nthe generated matrix\n.\nExample 1:\nInput:\ngrid = [[9,9,8,1],[5,6,2,6],[8,2,6,4],[6,2,2,2]]\nOutput:\n[[9,9],[8,6]]\nExplanation:\nThe diagram above shows the original ma",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "largest-submatrix-with-rearrangements",
+    "title": "Largest Submatrix With Rearrangements",
+    "topic": "Matrix",
+    "description": "You are given a binary matrix\nmatrix\nof size\nm x n\n, and you are allowed to rearrange the\ncolumns\nof the\nmatrix\nin any order.\nReturn\nthe area of the largest submatrix within\nmatrix\nwhere\nevery\nelement of the submatrix is\n1\nafter reordering the columns optimally.\nExample 1:\nInput:\nmatrix = [[0,0,1],[1,1,1],[1,0,1]]\nOutput:\n4\nExplanation:\nYou can rearrange the columns as shown above.\nThe largest submatrix of 1s, in bold, has an area of 4.\nExample 2:\nInput:\nmatrix = [[1,0,1,0,1]]\nOutput:\n3\nExplanat",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "longest-increasing-path-in-a-matrix",
+    "title": "Longest Increasing Path in a Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nintegers\nmatrix\n, return\nthe length of the longest increasing path in\nmatrix\n.\nFrom each cell, you can either move in four directions: left, right, up, or down. You\nmay not\nmove\ndiagonally\nor move\noutside the boundary\n(i.e., wrap-around is not allowed).\nExample 1:\nInput:\nmatrix = [[9,9,4],[6,6,8],[2,1,1]]\nOutput:\n4\nExplanation:\nThe longest increasing path is\n[1, 2, 6, 9]\n.\nExample 2:\nInput:\nmatrix = [[3,4,5],[3,2,6],[2,2,1]]\nOutput:\n4\nExplanation:\nThe longest increasing path is\n[3",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "longest-line-of-consecutive-one-in-matrix",
+    "title": "Longest Line of Consecutive One in Matrix",
+    "topic": "Matrix",
+    "description": "Given the input for the Longest Line of Consecutive One in Matrix problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "lucky-numbers-in-a-matrix",
+    "title": "Lucky Numbers in a Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nmatrix of\ndistinct\nnumbers, return\nall\nlucky numbers\nin the matrix in\nany\norder\n.\nA\nlucky number\nis an element of the matrix such that it is the minimum element in its row and maximum in its column.\nExample 1:\nInput:\nmatrix = [[3,7,8],[9,11,13],[15,16,17]]\nOutput:\n[15]\nExplanation:\n15 is the only lucky number since it is the minimum in its row and the maximum in its column.\nExample 2:\nInput:\nmatrix = [[1,10,4,2],[9,3,8,7],[15,16,17,12]]\nOutput:\n[12]\nExplanation:\n12 is the only luc",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "match-alphanumerical-pattern-in-matrix-i",
+    "title": "Match Alphanumerical Pattern in Matrix I",
+    "topic": "Matrix",
+    "description": "Given the input for the Match Alphanumerical Pattern in Matrix I problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "matrix-block-sum",
+    "title": "Matrix Block Sum",
+    "topic": "Matrix",
+    "description": "Given a\nm x n\nmatrix\nmat\nand an integer\nk\n, return\na matrix\nanswer\nwhere each\nanswer[i][j]\nis the sum of all elements\nmat[r][c]\nfor\n:\ni - k <= r <= i + k,\nj - k <= c <= j + k\n, and\n(r, c)\nis a valid position in the matrix.\nExample 1:\nInput:\nmat = [[1,2,3],[4,5,6],[7,8,9]], k = 1\nOutput:\n[[12,21,16],[27,45,33],[24,39,28]]\nExample 2:\nInput:\nmat = [[1,2,3],[4,5,6],[7,8,9]], k = 2\nOutput:\n[[45,45,45],[45,45,45],[45,45,45]]\nConstraints:\nm == mat.length\nn == mat[i].length\n1 <= m, n, k <= 100\n1 <= mat[",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "matrix-cells-in-distance-order",
+    "title": "Matrix Cells in Distance Order",
+    "topic": "Matrix",
+    "description": "You are given four integers\nrow\n,\ncols\n,\nrCenter\n, and\ncCenter\n. There is a\nrows x cols\nmatrix and you are on the cell with the coordinates\n(rCenter, cCenter)\n.\nReturn\nthe coordinates of all cells in the matrix, sorted by their\ndistance\nfrom\n(rCenter, cCenter)\nfrom the smallest distance to the largest distance\n. You may return the answer in\nany order\nthat satisfies this condition.\nThe\ndistance\nbetween two cells\n(r\n1\n, c\n1\n)\nand\n(r\n2\n, c\n2\n)\nis\n|r\n1\n- r\n2\n| + |c\n1\n- c\n2\n|\n.\nExample 1:\nInput:\nrows",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "matrix-diagonal-sum",
+    "title": "Matrix Diagonal Sum",
+    "topic": "Matrix",
+    "description": "Given a square matrix\nmat\n, return the sum of the matrix diagonals.\nOnly include the sum of all the elements on the primary diagonal and all the elements on the secondary diagonal that are not part of the primary diagonal.\nExample 1:\nInput:\nmat = [[\n1\n,2,\n3\n],\n[4,\n5\n,6],\n[\n7\n,8,\n9\n]]\nOutput:\n25\nExplanation:\nDiagonals sum: 1 + 5 + 9 + 3 + 7 = 25\nNotice that element mat[1][1] = 5 is counted only once.\nExample 2:\nInput:\nmat = [[\n1\n,1,1,\n1\n],\n[1,\n1\n,\n1\n,1],\n[1,\n1\n,\n1\n,1],\n[\n1\n,1,1,\n1\n]]\nOutput:\n8\nEx",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "matrix-similarity-after-cyclic-shifts",
+    "title": "Matrix Similarity After Cyclic Shifts",
+    "topic": "Matrix",
+    "description": "You are given an\nm x n\ninteger matrix\nmat\nand an integer\nk\n. The matrix rows are 0-indexed.\nThe following proccess happens\nk\ntimes:\nEven-indexed\nrows (0, 2, 4, ...) are cyclically shifted to the left.\nOdd-indexed\nrows (1, 3, 5, ...) are cyclically shifted to the right.\nReturn\ntrue\nif the final modified matrix after\nk\nsteps is identical to the original matrix, and\nfalse\notherwise.\nExample 1:\nInput:\nmat = [[1,2,3],[4,5,6],[7,8,9]], k = 4\nOutput:\nfalse\nExplanation:\nIn each step left shift is applie",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "maximum-matrix-sum",
+    "title": "Maximum Matrix Sum",
+    "topic": "Matrix",
+    "description": "You are given an\nn x n\ninteger\nmatrix\n. You can do the following operation\nany\nnumber of times:\nChoose any two\nadjacent\nelements of\nmatrix\nand\nmultiply\neach of them by\n-1\n.\nTwo elements are considered\nadjacent\nif and only if they share a\nborder\n.\nYour goal is to\nmaximize\nthe summation of the matrix's elements. Return\nthe\nmaximum\nsum of the matrix's elements using the operation mentioned above.\nExample 1:\nInput:\nmatrix = [[1,-1],[-1,1]]\nOutput:\n4\nExplanation:\nWe can follow the following steps to ",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "maximum-non-negative-product-in-a-matrix",
+    "title": "Maximum Non Negative Product in a Matrix",
+    "topic": "Matrix",
+    "description": "You are given a\nm x n\nmatrix\ngrid\n. Initially, you are located at the top-left corner\n(0, 0)\n, and in each step, you can only\nmove right or down\nin the matrix.\nAmong all possible paths starting from the top-left corner\n(0, 0)\nand ending in the bottom-right corner\n(m - 1, n - 1)\n, find the path with the\nmaximum non-negative product\n. The product of a path is the product of all integers in the grid cells visited along the path.\nReturn the\nmaximum non-negative product\nmodulo\n10\n9\n+ 7\n.\nIf the maxim",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "median-of-a-row-wise-sorted-matrix",
+    "title": "Median of a Row Wise Sorted Matrix",
+    "topic": "Matrix",
+    "description": "Given an array or collection related to Median of a Row Wise Sorted Matrix, process its elements according to the required ordering and return the result while satisfying the problem requirements.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "minimum-absolute-difference-in-sliding-submatrix",
+    "title": "Minimum Absolute Difference in Sliding Submatrix",
+    "topic": "Matrix",
+    "description": "Given the input for the Minimum Absolute Difference in Sliding Submatrix problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "minimum-number-of-flips-to-convert-binary-matrix-to-zero-matrix",
+    "title": "Minimum Number of Flips to Convert Binary Matrix to Zero Matrix",
+    "topic": "Matrix",
+    "description": "Given a\nm x n\nbinary matrix\nmat\n. In one step, you can choose one cell and flip it and all the four neighbors of it if they exist (Flip is changing\n1\nto\n0\nand\n0\nto\n1\n). A pair of cells are called neighbors if they share one edge.\nReturn the\nminimum number of steps\nrequired to convert\nmat\nto a zero matrix or\n-1\nif you cannot.\nA\nbinary matrix\nis a matrix with all cells equal to\n0\nor\n1\nonly.\nA\nzero matrix\nis a matrix with all cells equal to\n0\n.\nExample 1:\nInput:\nmat = [[0,0],[0,1]]\nOutput:\n3\nExplan",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "minimum-operations-to-remove-adjacent-ones-in-matrix",
+    "title": "Minimum Operations to Remove Adjacent Ones in Matrix",
+    "topic": "Matrix",
+    "description": "Given the input for the Minimum Operations to Remove Adjacent Ones in Matrix problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "modify-the-matrix",
+    "title": "Modify the Matrix",
+    "topic": "Matrix",
+    "description": "Given a\n0-indexed\nm x n\ninteger matrix\nmatrix\n, create a new\n0-indexed\nmatrix called\nanswer\n. Make\nanswer\nequal to\nmatrix\n, then replace each element with the value\n-1\nwith the\nmaximum\nelement in its respective column.\nReturn\nthe matrix\nanswer\n.\nExample 1:\nInput:\nmatrix = [[1,2,-1],[4,-1,6],[7,8,9]]\nOutput:\n[[1,2,9],[4,8,6],[7,8,9]]\nExplanation:\nThe diagram above shows the elements that are changed (in blue).\n- We replace the value in the cell [1][1] with the maximum value in the column 1, that ",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "paths-in-matrix-whose-sum-is-divisible-by-k",
+    "title": "Paths in Matrix Whose Sum Is Divisible by K",
+    "topic": "Matrix",
+    "description": "You are given a\n0-indexed\nm x n\ninteger matrix\ngrid\nand an integer\nk\n. You are currently at position\n(0, 0)\nand you want to reach position\n(m - 1, n - 1)\nmoving only\ndown\nor\nright\n.\nReturn\nthe number of paths where the sum of the elements on the path is divisible by\nk\n. Since the answer may be very large, return it\nmodulo\n10\n9\n+ 7\n.\nExample 1:\nInput:\ngrid = [[5,2,4],[3,0,5],[0,7,2]], k = 3\nOutput:\n2\nExplanation:\nThere are two paths where the sum of the elements on the path is divisible by k.\nThe",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "pyramid-transition-matrix",
+    "title": "Pyramid Transition Matrix",
+    "topic": "Matrix",
+    "description": "You are stacking blocks to form a pyramid. Each block has a color, which is represented by a single letter. Each row of blocks contains\none less block\nthan the row beneath it and is centered on top.\nTo make the pyramid aesthetically pleasing, there are only specific\ntriangular patterns\nthat are allowed. A triangular pattern consists of a\nsingle block\nstacked on top of\ntwo blocks\n. The patterns are given as a list of three-letter strings\nallowed\n, where the first two characters of a pattern repre",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "random-flip-matrix",
+    "title": "Random Flip Matrix",
+    "topic": "Matrix",
+    "description": "There is an\nm x n\nbinary grid\nmatrix\nwith all the values set\n0\ninitially. Design an algorithm to randomly pick an index\n(i, j)\nwhere\nmatrix[i][j] == 0\nand flips it to\n1\n. All the indices\n(i, j)\nwhere\nmatrix[i][j] == 0\nshould be equally likely to be returned.\nOptimize your algorithm to minimize the number of calls made to the\nbuilt-in\nrandom function of your language and optimize the time and space complexity.\nImplement the\nSolution\nclass:\nSolution(int m, int n)\nInitializes the object with the si",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "rank-transform-of-a-matrix",
+    "title": "Rank Transform of a Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nmatrix\n, return\na new matrix\nanswer\nwhere\nanswer[row][col]\nis the\nrank\nof\nmatrix[row][col]\n.\nThe\nrank\nis an\ninteger\nthat represents how large an element is compared to other elements. It is calculated using the following rules:\nThe rank is an integer starting from\n1\n.\nIf two elements\np\nand\nq\nare in the\nsame row or column\n, then:\nIf\np < q\nthen\nrank(p) < rank(q)\nIf\np == q\nthen\nrank(p) == rank(q)\nIf\np > q\nthen\nrank(p) > rank(q)\nThe\nrank\nshould be as\nsmall\nas possible.\nThe test cases ",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "reconstruct-a-2-row-binary-matrix",
+    "title": "Reconstruct a 2-Row Binary Matrix",
+    "topic": "Matrix",
+    "description": "Given the following details of a matrix with\nn\ncolumns and\n2\nrows :\nThe matrix is a binary matrix, which means each element in the matrix can be\n0\nor\n1\n.\nThe sum of elements of the 0-th(upper) row is given as\nupper\n.\nThe sum of elements of the 1-st(lower) row is given as\nlower\n.\nThe sum of elements in the i-th column(0-indexed) is\ncolsum[i]\n, where\ncolsum\nis given as an integer array with length\nn\n.\nYour task is to reconstruct the matrix with\nupper\n,\nlower\nand\ncolsum\n.\nReturn it as a 2-D integer",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "reshape-the-matrix",
+    "title": "Reshape the Matrix",
+    "topic": "Matrix",
+    "description": "In MATLAB, there is a handy function called\nreshape\nwhich can reshape an\nm x n\nmatrix into a new one with a different size\nr x c\nkeeping its original data.\nYou are given an\nm x n\nmatrix\nmat\nand two integers\nr\nand\nc\nrepresenting the number of rows and the number of columns of the wanted reshaped matrix.\nThe reshaped matrix should be filled with all the elements of the original matrix in the same row-traversing order as they were.\nIf the\nreshape\noperation with given parameters is possible and lega",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "score-after-flipping-matrix",
+    "title": "Score After Flipping Matrix",
+    "topic": "Matrix",
+    "description": "You are given an\nm x n\nbinary matrix\ngrid\n.\nA\nmove\nconsists of choosing any row or column and toggling each value in that row or column (i.e., changing all\n0\n's to\n1\n's, and all\n1\n's to\n0\n's).\nEvery row of the matrix is interpreted as a binary number, and the\nscore\nof the matrix is the sum of these numbers.\nReturn\nthe highest possible\nscore\nafter making any number of\nmoves\n(including zero moves)\n.\nExample 1:\nInput:\ngrid = [[0,0,1,1],[1,0,1,0],[1,1,0,0]]\nOutput:\n39\nExplanation:\n0b1111 + 0b1001 + ",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "search-a-2d-matrix",
+    "title": "Search a 2D Matrix",
+    "topic": "Matrix",
+    "description": "You are given an\nm x n\ninteger matrix\nmatrix\nwith the following two properties:\nEach row is sorted in non-decreasing order.\nThe first integer of each row is greater than the last integer of the previous row.\nGiven an integer\ntarget\n, return\ntrue\nif\ntarget\nis in\nmatrix\nor\nfalse\notherwise\n.\nYou must write a solution in\nO(log(m * n))\ntime complexity.\nExample 1:\nInput:\nmatrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3\nOutput:\ntrue\nExample 2:\nInput:\nmatrix = [[1,3,5,7],[10,11,16,20],[23,30",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "search-a-2d-matrix-ii",
+    "title": "Search a 2D Matrix II",
+    "topic": "Matrix",
+    "description": "Write an efficient algorithm that searches for a value\ntarget\nin an\nm x n\ninteger matrix\nmatrix\n. This matrix has the following properties:\nIntegers in each row are sorted in ascending from left to right.\nIntegers in each column are sorted in ascending from top to bottom.\nExample 1:\nInput:\nmatrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,26,30]], target = 5\nOutput:\ntrue\nExample 2:\nInput:\nmatrix = [[1,4,7,11,15],[2,5,8,12,19],[3,6,9,16,22],[10,13,14,17,24],[18,21,23,",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "set-matrix-zeroes",
+    "title": "Set Matrix Zeroes",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\ninteger matrix\nmatrix\n, if an element is\n0\n, set its entire row and column to\n0\n's.\nYou must do it\nin place\n.\nExample 1:\nInput:\nmatrix = [[1,1,1],[1,0,1],[1,1,1]]\nOutput:\n[[1,0,1],[0,0,0],[1,0,1]]\nExample 2:\nInput:\nmatrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]\nOutput:\n[[0,0,0,0],[0,4,5,0],[0,3,1,0]]\nConstraints:\nm == matrix.length\nn == matrix[0].length\n1 <= m, n <= 200\n-2\n31\n<= matrix[i][j] <= 2\n31\n- 1\nFollow up:\nA straightforward solution using\nO(mn)\nspace is probably a bad idea.\nA si",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "shortest-path-in-binary-matrix",
+    "title": "Shortest Path in Binary Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nn x n\nbinary matrix\ngrid\n, return\nthe length of the shortest\nclear path\nin the matrix\n. If there is no clear path, return\n-1\n.\nA\nclear path\nin a binary matrix is a path from the\ntop-left\ncell (i.e.,\n(0, 0)\n) to the\nbottom-right\ncell (i.e.,\n(n - 1, n - 1)\n) such that:\nAll the visited cells of the path are\n0\n.\nAll the adjacent cells of the path are\n8-directionally\nconnected (i.e., they are different and they share an edge or a corner).\nThe\nlength of a clear path\nis the number of visited c",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "snake-in-matrix",
+    "title": "Snake in Matrix",
+    "topic": "Matrix",
+    "description": "There is a snake in an\nn x n\nmatrix\ngrid\nand can move in\nfour possible directions\n. Each cell in the\ngrid\nis identified by the position:\ngrid[i][j] = (i * n) + j\n.\nThe snake starts at cell 0 and follows a sequence of commands.\nYou are given an integer\nn\nrepresenting the size of the\ngrid\nand an array of strings\ncommands\nwhere each\ncommand[i]\nis either\n\"UP\"\n,\n\"RIGHT\"\n,\n\"DOWN\"\n, and\n\"LEFT\"\n. It's guaranteed that the snake will remain within the\ngrid\nboundaries throughout its movement.\nReturn the po",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "sort-matrix-by-diagonals",
+    "title": "Sort Matrix by Diagonals",
+    "topic": "Matrix",
+    "description": "You are given an\nn x n\nsquare matrix of integers\ngrid\n. Return the matrix such that:\nThe diagonals in the\nbottom-left triangle\n(including the middle diagonal) are sorted in\nnon-increasing order\n.\nThe diagonals in the\ntop-right triangle\nare sorted in\nnon-decreasing order\n.\nExample 1:\nInput:\ngrid = [[1,7,3],[9,8,2],[4,5,6]]\nOutput:\n[[8,2,3],[9,6,7],[4,5,1]]\nExplanation:\nThe diagonals with a black arrow (bottom-left triangle) should be sorted in non-increasing order:\n[1, 8, 6]\nbecomes\n[8, 6, 1]\n.\n[",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "sort-the-matrix-diagonally",
+    "title": "Sort the Matrix Diagonally",
+    "topic": "Matrix",
+    "description": "A\nmatrix diagonal\nis a diagonal line of cells starting from some cell in either the topmost row or leftmost column and going in the bottom-right direction until reaching the matrix's end. For example, the\nmatrix diagonal\nstarting from\nmat[2][0]\n, where\nmat\nis a\n6 x 3\nmatrix, includes cells\nmat[2][0]\n,\nmat[3][1]\n, and\nmat[4][2]\n.\nGiven an\nm x n\nmatrix\nmat\nof integers, sort each\nmatrix diagonal\nin ascending order and return\nthe resulting matrix\n.\nExample 1:\nInput:\nmat = [[3,3,1,1],[2,2,1,2],[1,1,1",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "sparse-matrix-multiplication",
+    "title": "Sparse Matrix Multiplication",
+    "topic": "Matrix",
+    "description": "Given the input for the Sparse Matrix Multiplication problem, determine the required result while satisfying all conditions specified by the problem.",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "special-positions-in-a-binary-matrix",
+    "title": "Special Positions in a Binary Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nbinary matrix\nmat\n, return\nthe number of special positions in\nmat\n.\nA position\n(i, j)\nis called\nspecial\nif\nmat[i][j] == 1\nand all other elements in row\ni\nand column\nj\nare\n0\n(rows and columns are\n0-indexed\n).\nExample 1:\nInput:\nmat = [[1,0,0],[0,0,1],[1,0,0]]\nOutput:\n1\nExplanation:\n(1, 2) is a special position because mat[1][2] == 1 and all other elements in row 1 and column 2 are 0.\nExample 2:\nInput:\nmat = [[1,0,0],[0,1,0],[0,0,1]]\nOutput:\n3\nExplanation:\n(0, 0), (1, 1) and (2, 2) a",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "spiral-matrix",
+    "title": "Spiral Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nmatrix\n, return\nall elements of the\nmatrix\nin spiral order\n.\nExample 1:\nInput:\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput:\n[1,2,3,6,9,8,7,4,5]\nExample 2:\nInput:\nmatrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]\nOutput:\n[1,2,3,4,8,12,11,10,9,5,6,7]\nConstraints:\nm == matrix.length\nn == matrix[i].length\n1 <= m, n <= 10\n-100 <= matrix[i][j] <= 100",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "spiral-matrix-ii",
+    "title": "Spiral Matrix II",
+    "topic": "Matrix",
+    "description": "Given a positive integer\nn\n, generate an\nn x n\nmatrix\nfilled with elements from\n1\nto\nn\n2\nin spiral order.\nExample 1:\nInput:\nn = 3\nOutput:\n[[1,2,3],[8,9,4],[7,6,5]]\nExample 2:\nInput:\nn = 1\nOutput:\n[[1]]\nConstraints:\n1 <= n <= 20",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "spiral-matrix-iii",
+    "title": "Spiral Matrix III",
+    "topic": "Matrix",
+    "description": "You start at the cell\n(rStart, cStart)\nof an\nrows x cols\ngrid facing east. The northwest corner is at the first row and column in the grid, and the southeast corner is at the last row and column.\nYou will walk in a clockwise spiral shape to visit every position in this grid. Whenever you move outside the grid's boundary, we continue our walk outside the grid (but may return to the grid boundary later.). Eventually, we reach all\nrows * cols\nspaces of the grid.\nReturn\nan array of coordinates repre",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "spiral-matrix-iv",
+    "title": "Spiral Matrix IV",
+    "topic": "Matrix",
+    "description": "You are given two integers\nm\nand\nn\n, which represent the dimensions of a matrix.\nYou are also given the\nhead\nof a linked list of integers.\nGenerate an\nm x n\nmatrix that contains the integers in the linked list presented in\nspiral\norder\n(clockwise)\n, starting from the\ntop-left\nof the matrix. If there are remaining empty spaces, fill them with\n-1\n.\nReturn\nthe generated matrix\n.\nExample 1:\nInput:\nm = 3, n = 5, head = [3,0,2,6,8,1,7,9,4,2,5,5,0]\nOutput:\n[[3,0,2,6,8],[5,0,-1,-1,1],[5,2,4,9,7]]\nExplan",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "the-k-weakest-rows-in-a-matrix",
+    "title": "The K Weakest Rows in a Matrix",
+    "topic": "Matrix",
+    "description": "You are given an\nm x n\nbinary matrix\nmat\nof\n1\n's (representing soldiers) and\n0\n's (representing civilians). The soldiers are positioned\nin front\nof the civilians. That is, all the\n1\n's will appear to the\nleft\nof all the\n0\n's in each row.\nA row\ni\nis\nweaker\nthan a row\nj\nif one of the following is true:\nThe number of soldiers in row\ni\nis less than the number of soldiers in row\nj\n.\nBoth rows have the same number of soldiers and\ni < j\n.\nReturn\nthe indices of the\nk\nweakest\nrows in the matrix ordered f",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "toeplitz-matrix",
+    "title": "Toeplitz Matrix",
+    "topic": "Matrix",
+    "description": "Given an\nm x n\nmatrix\n, return\ntrue\nif the matrix is Toeplitz. Otherwise, return\nfalse\n.\nA matrix is\nToeplitz\nif every diagonal from top-left to bottom-right has the same elements.\nExample 1:\nInput:\nmatrix = [[1,2,3,4],[5,1,2,3],[9,5,1,2]]\nOutput:\ntrue\nExplanation:\nIn the above grid, the diagonals are:\n\"[9]\", \"[5, 5]\", \"[1, 1, 1]\", \"[2, 2, 2]\", \"[3, 3]\", \"[4]\".\nIn each diagonal all elements are the same, so the answer is True.\nExample 2:\nInput:\nmatrix = [[1,2],[2,2]]\nOutput:\nfalse\nExplanation:\nT",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  },
+  {
+    "id": "transpose-matrix",
+    "title": "Transpose Matrix",
+    "topic": "Matrix",
+    "description": "Given a 2D integer array\nmatrix\n, return\nthe\ntranspose\nof\nmatrix\n.\nThe\ntranspose\nof a matrix is the matrix flipped over its main diagonal, switching the matrix's row and column indices.\nExample 1:\nInput:\nmatrix = [[1,2,3],[4,5,6],[7,8,9]]\nOutput:\n[[1,4,7],[2,5,8],[3,6,9]]\nExample 2:\nInput:\nmatrix = [[1,2,3],[4,5,6]]\nOutput:\n[[1,4],[2,5],[3,6]]\nConstraints:\nm == matrix.length\nn == matrix[i].length\n1 <= m, n <= 1000\n1 <= m * n <= 10\n5\n-10\n9\n<= matrix[i][j] <= 10\n9",
+    "approach": "Traverse the matrix systematically and process each cell using the neighboring cells or state information required by the problem.",
+    "timeComplexity": "O(m ? n)",
+    "spaceComplexity": "O(m ? n)",
+    "complexity": "Time Complexity: O(m ? n)\nSpace Complexity: O(m ? n)"
+  }
+]

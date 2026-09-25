@@ -1,0 +1,312 @@
+[
+  {
+    "id": "two-city-scheduling",
+    "title": "Two City Scheduling",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "A company is planning to interview\n2n\npeople. Given the array\ncosts\nwhere\ncosts[i] = [aCost\ni\n, bCost\ni\n]\n, the cost of flying the\ni\nth\nperson to city\na\nis\naCost\ni\n, and the cost of flying the\ni\nth\nperson to city\nb\nis\nbCost\ni\n.\nReturn\nthe minimum cost to fly every person to a city\nsuch that exactly\nn\npeople arrive in each city.\nExample 1:\nInput:\ncosts = [[10,20],[30,200],[400,50],[30,20]]\nOutput:\n110\nExplanation:\nThe first person goes to city A for a cost of 10.\nThe second person goes to city A for a cost of 30.\nThe third person goes to city B for a cost of 50.\nThe fourth person goes to city B for a cost of 20.",
+    "problemStatement": "A company is planning to interview\n2n\npeople. Given the array\ncosts\nwhere\ncosts[i] = [aCost\ni\n, bCost\ni\n]\n, the cost of flying the\ni\nth\nperson to city\na\nis\naCost\ni\n, and the cost of flying the\ni\nth\nperson to city\nb\nis\nbCost\ni\n.\nReturn\nthe minimum cost to fly every person to a city\nsuch that exactly\nn\npeople arrive in each city.\nExample 1:\nInput:\ncosts = [[10,20],[30,200],[400,50],[30,20]]\nOutput:\n110\nExplanation:\nThe first person goes to city A for a cost of 10.\nThe second person goes to city A for a cost of 30.\nThe third person goes to city B for a cost of 50.\nThe fourth person goes to city B for a cost of 20.\n\nThe total minimum cost is 10 + 30 + 50 + 20 = 110 to have half the people interviewing in each city.\nExample 2:\nInput:\ncosts = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]\nOutput:\n1859\nExample 3:\nInput:\ncosts = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]\nOutput:\n3086\nConstraints:\n2 * n == costs.length\n2 <= costs.length <= 100\ncosts.length\nis even.\n1 <= aCost\ni\n, bCost\ni\n<= 1000",
+    "examples": [
+      {
+        "input": "costs = [[10,20],[30,200],[400,50],[30,20]]",
+        "output": "110"
+      },
+      {
+        "input": "costs = [[259,770],[448,54],[926,667],[184,139],[840,118],[577,469]]",
+        "output": "1859"
+      },
+      {
+        "input": "costs = [[515,563],[451,713],[537,709],[343,819],[855,779],[457,60],[650,359],[631,42]]",
+        "output": "3086"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Define states for smaller subproblems, derive each state from previously computed states, and use the final state to obtain the requested result.",
+    "complexity": "Time Complexity: O(n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "two-furthest-houses-with-different-colors",
+    "title": "Two Furthest Houses With Different Colors",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "There are\nn\nhouses evenly lined up on the street, and each house is beautifully painted. You are given a\n0-indexed\ninteger array\ncolors\nof length\nn\n, where\ncolors[i]\nrepresents the color of the\ni\nth\nhouse.\nReturn\nthe\nmaximum\ndistance between\ntwo\nhouses with\ndifferent\ncolors\n.\nThe distance between the\ni\nth\nand\nj\nth\nhouses is\nabs(i - j)\n, where\nabs(x)\nis the\nabsolute value\nof\nx\n.\nExample 1:\nInput:\ncolors = [\n1\n,1,1,\n6\n,1,1,1]\nOutput:\n3\nExplanation:\nIn the above image, color 1 is blue, and color 6 is red.\nThe furthest two houses with different colors are house 0 and house 3.\nHouse 0 has color 1, and house 3 has color 6. The distance between them is abs(0 - 3) = 3.\nNote that houses 3 and 6 can also produce the optimal answer.\nExample 2:\nInput:\ncolors = [\n1\n,8,3,8,\n3\n]\nOutput:\n4\nExplanation:\nIn the above image, color 1 is blue, color 8 is yellow, and color 3 is green.\nThe furthest two houses with different colors are house 0 and house 4.\nHouse 0 has color 1, and house 4 has color 3. The distance between them is abs(0 - 4) = 4.\nExample 3:\nInput:\ncolors = [\n0\n,\n1\n]\nOutput:\n1\nExplanation:\nThe furthest two houses with different colors are house 0 and house 1.\nHouse 0 has color 0, and house ",
+    "problemStatement": "There are\nn\nhouses evenly lined up on the street, and each house is beautifully painted. You are given a\n0-indexed\ninteger array\ncolors\nof length\nn\n, where\ncolors[i]\nrepresents the color of the\ni\nth\nhouse.\nReturn\nthe\nmaximum\ndistance between\ntwo\nhouses with\ndifferent\ncolors\n.\nThe distance between the\ni\nth\nand\nj\nth\nhouses is\nabs(i - j)\n, where\nabs(x)\nis the\nabsolute value\nof\nx\n.\nExample 1:\nInput:\ncolors = [\n1\n,1,1,\n6\n,1,1,1]\nOutput:\n3\nExplanation:\nIn the above image, color 1 is blue, and color 6 is red.\nThe furthest two houses with different colors are house 0 and house 3.\nHouse 0 has color 1, and house 3 has color 6. The distance between them is abs(0 - 3) = 3.\nNote that houses 3 and 6 can also produce the optimal answer.\nExample 2:\nInput:\ncolors = [\n1\n,8,3,8,\n3\n]\nOutput:\n4\nExplanation:\nIn the above image, color 1 is blue, color 8 is yellow, and color 3 is green.\nThe furthest two houses with different colors are house 0 and house 4.\nHouse 0 has color 1, and house 4 has color 3. The distance between them is abs(0 - 4) = 4.\nExample 3:\nInput:\ncolors = [\n0\n,\n1\n]\nOutput:\n1\nExplanation:\nThe furthest two houses with different colors are house 0 and house 1.\nHouse 0 has color 0, and house 1 has color 1. The distance between them is abs(0 - 1) = 1.\nConstraints:\nn == colors.length\n2 <= n <= 100\n0 <= colors[i] <= 100\nTest data are generated such that\nat least\ntwo houses have different colors.",
+    "examples": [
+      {
+        "input": "colors = [\n1\n,1,1,\n6\n,1,1,1]",
+        "output": "3"
+      },
+      {
+        "input": "colors = [\n1\n,8,3,8,\n3\n]",
+        "output": "4"
+      },
+      {
+        "input": "colors = [\n0\n,\n1\n]",
+        "output": "1"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Traverse the tree and combine information from child subtrees to compute the required result for each relevant node.",
+    "complexity": "Time Complexity: O(n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "using-a-robot-to-print-the-lexicographically-smallest-string",
+    "title": "Using a Robot to Print the Lexicographically Smallest String",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "You are given a string\ns\nand a robot that currently holds an empty string\nt\n. Apply one of the following operations until\ns\nand\nt\nare both empty\n:\nRemove the\nfirst\ncharacter of a string\ns\nand give it to the robot. The robot will append this character to the string\nt\n.\nRemove the\nlast\ncharacter of a string\nt\nand give it to the robot. The robot will write this character on paper.\nReturn\nthe lexicographically smallest string that can be written on the paper.\nExample 1:\nInput:\ns = \"zza\"\nOutput:\n\"azz\"\nExplanation:\nLet p denote the written string.\nInitially p=\"\", s=\"zza\", t=\"\".\nPerform first operation three times p=\"\", s=\"\", t=\"zza\".\nPerform second operation three times p=\"azz\", s=\"\", t=\"\".\nExample 2:\nInput:\ns = \"bac\"\nOutput:\n\"abc\"\nExplanation:\nLet p denote the written string.\nPerform first operation twice p=\"\", s=\"c\", t=\"ba\".\nPerform second operation twice p=\"ab\", s=\"c\", t=\"\".\nPerform first operation p=\"ab\", s=\"\", t=\"c\".\nPerform second operation p=\"abc\", s=\"\", t=\"\".\nExample 3:\nInput:\ns = \"bdda\"\nOutput:\n\"addb\"\nExplanation:\nLet p denote the written string.\nInitially p=\"\", s=\"bdda\", t=\"\".\nPerform first operation four times p=\"\", s=\"\", t=\"bdda\".\nPerform second operation four times p=\"addb\",",
+    "problemStatement": "You are given a string\ns\nand a robot that currently holds an empty string\nt\n. Apply one of the following operations until\ns\nand\nt\nare both empty\n:\nRemove the\nfirst\ncharacter of a string\ns\nand give it to the robot. The robot will append this character to the string\nt\n.\nRemove the\nlast\ncharacter of a string\nt\nand give it to the robot. The robot will write this character on paper.\nReturn\nthe lexicographically smallest string that can be written on the paper.\nExample 1:\nInput:\ns = \"zza\"\nOutput:\n\"azz\"\nExplanation:\nLet p denote the written string.\nInitially p=\"\", s=\"zza\", t=\"\".\nPerform first operation three times p=\"\", s=\"\", t=\"zza\".\nPerform second operation three times p=\"azz\", s=\"\", t=\"\".\nExample 2:\nInput:\ns = \"bac\"\nOutput:\n\"abc\"\nExplanation:\nLet p denote the written string.\nPerform first operation twice p=\"\", s=\"c\", t=\"ba\".\nPerform second operation twice p=\"ab\", s=\"c\", t=\"\".\nPerform first operation p=\"ab\", s=\"\", t=\"c\".\nPerform second operation p=\"abc\", s=\"\", t=\"\".\nExample 3:\nInput:\ns = \"bdda\"\nOutput:\n\"addb\"\nExplanation:\nLet p denote the written string.\nInitially p=\"\", s=\"bdda\", t=\"\".\nPerform first operation four times p=\"\", s=\"\", t=\"bdda\".\nPerform second operation four times p=\"addb\", s=\"\", t=\"\".\nConstraints:\n1 <= s.length <= 10\n5\ns\nconsists of only English lowercase letters.",
+    "examples": [
+      {
+        "input": "s = \"zza\"",
+        "output": "\"azz\""
+      },
+      {
+        "input": "s = \"bac\"",
+        "output": "\"abc\""
+      },
+      {
+        "input": "s = \"bdda\"",
+        "output": "\"addb\""
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges with the graph algorithm required by the stated constraints.",
+    "complexity": "Time Complexity: O(V+E)\nSpace Complexity: O(V+E)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "valid-sudoku",
+    "title": "Valid Sudoku",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Determine if a\n9 x 9\nSudoku board is valid. Only the filled cells need to be validated\naccording to the following rules\n:\nEach row must contain the digits\n1-9\nwithout repetition.\nEach column must contain the digits\n1-9\nwithout repetition.\nEach of the nine\n3 x 3\nsub-boxes of the grid must contain the digits\n1-9\nwithout repetition.\nNote:\nA Sudoku board (partially filled) could be valid but is not necessarily solvable.\nOnly the filled cells need to be validated according to the mentioned rules.\nExample 1:\nInput:\nboard =\n[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nOutput:\ntrue\nExample 2:\nInput:\nboard =\n[[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\"",
+    "problemStatement": "Determine if a\n9 x 9\nSudoku board is valid. Only the filled cells need to be validated\naccording to the following rules\n:\nEach row must contain the digits\n1-9\nwithout repetition.\nEach column must contain the digits\n1-9\nwithout repetition.\nEach of the nine\n3 x 3\nsub-boxes of the grid must contain the digits\n1-9\nwithout repetition.\nNote:\nA Sudoku board (partially filled) could be valid but is not necessarily solvable.\nOnly the filled cells need to be validated according to the mentioned rules.\nExample 1:\nInput:\nboard =\n[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nOutput:\ntrue\nExample 2:\nInput:\nboard =\n[[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]\nOutput:\nfalse\nExplanation:\nSame as Example 1, except with the\n5\nin the top left corner being modified to\n8\n. Since there are two 8's in the top left 3x3 sub-box, it is invalid.\nConstraints:\nboard.length == 9\nboard[i].length == 9\nboard[i][j]\nis a digit\n1-9\nor\n'.'\n.",
+    "examples": [
+      {
+        "input": "board = \n[[\"5\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]",
+        "output": "true"
+      },
+      {
+        "input": "board = \n[[\"8\",\"3\",\".\",\".\",\"7\",\".\",\".\",\".\",\".\"]\n,[\"6\",\".\",\".\",\"1\",\"9\",\"5\",\".\",\".\",\".\"]\n,[\".\",\"9\",\"8\",\".\",\".\",\".\",\".\",\"6\",\".\"]\n,[\"8\",\".\",\".\",\".\",\"6\",\".\",\".\",\".\",\"3\"]\n,[\"4\",\".\",\".\",\"8\",\".\",\"3\",\".\",\".\",\"1\"]\n,[\"7\",\".\",\".\",\".\",\"2\",\".\",\".\",\".\",\"6\"]\n,[\".\",\"6\",\".\",\".\",\".\",\".\",\"2\",\"8\",\".\"]\n,[\".\",\".\",\".\",\"4\",\"1\",\"9\",\".\",\".\",\"5\"]\n,[\".\",\".\",\".\",\".\",\"8\",\".\",\".\",\"7\",\"9\"]]",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(2^n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Use backtracking to construct candidates incrementally, recursively explore each valid choice, and undo the choice before trying another possibility.",
+    "complexity": "Time Complexity: O(2^n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "verifying-an-alien-dictionary",
+    "title": "Verifying an Alien Dictionary",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "In an alien language, surprisingly, they also use English lowercase letters, but possibly in a different\norder\n. The\norder\nof the alphabet is some permutation of lowercase letters.\nGiven a sequence of\nwords\nwritten in the alien language, and the\norder\nof the alphabet, return\ntrue\nif and only if the given\nwords\nare sorted lexicographically in this alien language.\nExample 1:\nInput:\nwords = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"\nOutput:\ntrue\nExplanation:\nAs 'h' comes before 'l' in this language, then the sequence is sorted.\nExample 2:\nInput:\nwords = [\"word\",\"world\",\"row\"], order = \"worldabcefghijkmnpqstuvxyz\"\nOutput:\nfalse\nExplanation:\nAs 'd' comes after 'l' in this language, then words[0] > words[1], hence the sequence is unsorted.\nExample 3:\nInput:\nwords = [\"apple\",\"app\"], order = \"abcdefghijklmnopqrstuvwxyz\"\nOutput:\nfalse\nExplanation:\nThe first three characters \"app\" match, and the second string is shorter (in size.) According to lexicographical rules \"apple\" > \"app\", because 'l' > '∅', where '∅' is defined as the blank character which is less than any other character (\nMore info\n).\nConstraints:\n1 <= words.length <= 100\n1 <= words[i].length <= 20\norder.length ==",
+    "problemStatement": "In an alien language, surprisingly, they also use English lowercase letters, but possibly in a different\norder\n. The\norder\nof the alphabet is some permutation of lowercase letters.\nGiven a sequence of\nwords\nwritten in the alien language, and the\norder\nof the alphabet, return\ntrue\nif and only if the given\nwords\nare sorted lexicographically in this alien language.\nExample 1:\nInput:\nwords = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"\nOutput:\ntrue\nExplanation:\nAs 'h' comes before 'l' in this language, then the sequence is sorted.\nExample 2:\nInput:\nwords = [\"word\",\"world\",\"row\"], order = \"worldabcefghijkmnpqstuvxyz\"\nOutput:\nfalse\nExplanation:\nAs 'd' comes after 'l' in this language, then words[0] > words[1], hence the sequence is unsorted.\nExample 3:\nInput:\nwords = [\"apple\",\"app\"], order = \"abcdefghijklmnopqrstuvwxyz\"\nOutput:\nfalse\nExplanation:\nThe first three characters \"app\" match, and the second string is shorter (in size.) According to lexicographical rules \"apple\" > \"app\", because 'l' > '∅', where '∅' is defined as the blank character which is less than any other character (\nMore info\n).\nConstraints:\n1 <= words.length <= 100\n1 <= words[i].length <= 20\norder.length == 26\nAll characters in\nwords[i]\nand\norder\nare English lowercase letters.",
+    "examples": [
+      {
+        "input": "words = [\"hello\",\"leetcode\"], order = \"hlabcdefgijkmnopqrstuvwxyz\"",
+        "output": "true"
+      },
+      {
+        "input": "words = [\"word\",\"world\",\"row\"], order = \"worldabcefghijkmnpqstuvxyz\"",
+        "output": "false"
+      },
+      {
+        "input": "words = [\"apple\",\"app\"], order = \"abcdefghijklmnopqrstuvwxyz\"",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n log n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Sort the relevant values according to the ordering required by the problem and then process the ordered data to construct the requested result.",
+    "complexity": "Time Complexity: O(n log n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "ways-to-express-an-integer-as-sum-of-powers",
+    "title": "Ways to Express an Integer as Sum of Powers",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given two\npositive\nintegers\nn\nand\nx\n.\nReturn\nthe number of ways\nn\ncan be expressed as the sum of the\nx\nth\npower of\nunique\npositive integers, in other words, the number of sets of unique integers\n[n\n1\n, n\n2\n, ..., n\nk\n]\nwhere\nn = n\n1\nx\n+ n\n2\nx\n+ ... + n\nk\nx\n.\nSince the result can be very large, return it modulo\n10\n9\n+ 7\n.\nFor example, if\nn = 160\nand\nx = 3\n, one way to express\nn\nis\nn = 2\n3\n+ 3\n3\n+ 5\n3\n.\nExample 1:\nInput:\nn = 10, x = 2\nOutput:\n1\nExplanation:\nWe can express n as the following: n = 3\n2\n+ 1\n2\n= 10.\nIt can be shown that it is the only way to express 10 as the sum of the 2\nnd\npower of unique integers.\nExample 2:\nInput:\nn = 4, x = 1\nOutput:\n2\nExplanation:\nWe can express n in the following ways:\n- n = 4\n1\n= 4.\n- n = 3\n1\n+ 1\n1\n= 4.\nConstraints:\n1 <= n <= 300\n1 <= x <= 5",
+    "problemStatement": "Given two\npositive\nintegers\nn\nand\nx\n.\nReturn\nthe number of ways\nn\ncan be expressed as the sum of the\nx\nth\npower of\nunique\npositive integers, in other words, the number of sets of unique integers\n[n\n1\n, n\n2\n, ..., n\nk\n]\nwhere\nn = n\n1\nx\n+ n\n2\nx\n+ ... + n\nk\nx\n.\nSince the result can be very large, return it modulo\n10\n9\n+ 7\n.\nFor example, if\nn = 160\nand\nx = 3\n, one way to express\nn\nis\nn = 2\n3\n+ 3\n3\n+ 5\n3\n.\nExample 1:\nInput:\nn = 10, x = 2\nOutput:\n1\nExplanation:\nWe can express n as the following: n = 3\n2\n+ 1\n2\n= 10.\nIt can be shown that it is the only way to express 10 as the sum of the 2\nnd\npower of unique integers.\nExample 2:\nInput:\nn = 4, x = 1\nOutput:\n2\nExplanation:\nWe can express n in the following ways:\n- n = 4\n1\n= 4.\n- n = 3\n1\n+ 1\n1\n= 4.\nConstraints:\n1 <= n <= 300\n1 <= x <= 5",
+    "examples": [
+      {
+        "input": "n = 10, x = 2",
+        "output": "1"
+      },
+      {
+        "input": "n = 4, x = 1",
+        "output": "2"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Define states for smaller subproblems, derive each state from previously computed states, and use the final state to obtain the requested result.",
+    "complexity": "Time Complexity: O(n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "ways-to-split-array-into-good-subarrays",
+    "title": "Ways to Split Array Into Good Subarrays",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "You are given a binary array\nnums\n.\nA subarray of an array is\ngood\nif it contains\nexactly\none\nelement with the value\n1\n.\nReturn\nan integer denoting the number of ways to split the array\nnums\ninto\ngood\nsubarrays\n. As the number may be too large, return it\nmodulo\n10\n9\n+ 7\n.\nA subarray is a contiguous\nnon-empty\nsequence of elements within an array.\nExample 1:\nInput:\nnums = [0,1,0,0,1]\nOutput:\n3\nExplanation:\nThere are 3 ways to split nums into good subarrays:\n- [0,1] [0,0,1]\n- [0,1,0] [0,1]\n- [0,1,0,0] [1]\nExample 2:\nInput:\nnums = [0,1,0]\nOutput:\n1\nExplanation:\nThere is 1 way to split nums into good subarrays:\n- [0,1,0]\nConstraints:\n1 <= nums.length <= 10\n5\n0 <= nums[i] <= 1",
+    "problemStatement": "You are given a binary array\nnums\n.\nA subarray of an array is\ngood\nif it contains\nexactly\none\nelement with the value\n1\n.\nReturn\nan integer denoting the number of ways to split the array\nnums\ninto\ngood\nsubarrays\n. As the number may be too large, return it\nmodulo\n10\n9\n+ 7\n.\nA subarray is a contiguous\nnon-empty\nsequence of elements within an array.\nExample 1:\nInput:\nnums = [0,1,0,0,1]\nOutput:\n3\nExplanation:\nThere are 3 ways to split nums into good subarrays:\n- [0,1] [0,0,1]\n- [0,1,0] [0,1]\n- [0,1,0,0] [1]\nExample 2:\nInput:\nnums = [0,1,0]\nOutput:\n1\nExplanation:\nThere is 1 way to split nums into good subarrays:\n- [0,1,0]\nConstraints:\n1 <= nums.length <= 10\n5\n0 <= nums[i] <= 1",
+    "examples": [
+      {
+        "input": "nums = [0,1,0,0,1]",
+        "output": "3"
+      },
+      {
+        "input": "nums = [0,1,0]",
+        "output": "1"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Define states for smaller subproblems, derive each state from previously computed states, and use the final state to obtain the requested result.",
+    "complexity": "Time Complexity: O(n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "ways-to-split-array-into-three-subarrays",
+    "title": "Ways to Split Array Into Three Subarrays",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "A split of an integer array is\ngood\nif:\nThe array is split into three\nnon-empty\ncontiguous subarrays - named\nleft\n,\nmid\n,\nright\nrespectively from left to right.\nThe sum of the elements in\nleft\nis less than or equal to the sum of the elements in\nmid\n, and the sum of the elements in\nmid\nis less than or equal to the sum of the elements in\nright\n.\nGiven\nnums\n, an array of\nnon-negative\nintegers, return\nthe number of\ngood\nways to split\nnums\n. As the number may be too large, return it\nmodulo\n10\n9\n+ 7\n.\nExample 1:\nInput:\nnums = [1,1,1]\nOutput:\n1\nExplanation:\nThe only good way to split nums is [1] [1] [1].\nExample 2:\nInput:\nnums = [1,2,2,2,5,0]\nOutput:\n3\nExplanation:\nThere are three good ways of splitting nums:\n[1] [2] [2,2,5,0]\n[1] [2,2] [2,5,0]\n[1,2] [2,2] [5,0]\nExample 3:\nInput:\nnums = [3,2,1]\nOutput:\n0\nExplanation:\nThere is no good way to split nums.\nConstraints:\n3 <= nums.length <= 10\n5\n0 <= nums[i] <= 10\n4",
+    "problemStatement": "A split of an integer array is\ngood\nif:\nThe array is split into three\nnon-empty\ncontiguous subarrays - named\nleft\n,\nmid\n,\nright\nrespectively from left to right.\nThe sum of the elements in\nleft\nis less than or equal to the sum of the elements in\nmid\n, and the sum of the elements in\nmid\nis less than or equal to the sum of the elements in\nright\n.\nGiven\nnums\n, an array of\nnon-negative\nintegers, return\nthe number of\ngood\nways to split\nnums\n. As the number may be too large, return it\nmodulo\n10\n9\n+ 7\n.\nExample 1:\nInput:\nnums = [1,1,1]\nOutput:\n1\nExplanation:\nThe only good way to split nums is [1] [1] [1].\nExample 2:\nInput:\nnums = [1,2,2,2,5,0]\nOutput:\n3\nExplanation:\nThere are three good ways of splitting nums:\n[1] [2] [2,2,5,0]\n[1] [2,2] [2,5,0]\n[1,2] [2,2] [5,0]\nExample 3:\nInput:\nnums = [3,2,1]\nOutput:\n0\nExplanation:\nThere is no good way to split nums.\nConstraints:\n3 <= nums.length <= 10\n5\n0 <= nums[i] <= 10\n4",
+    "examples": [
+      {
+        "input": "nums = [1,1,1]",
+        "output": "1"
+      },
+      {
+        "input": "nums = [1,2,2,2,5,0]",
+        "output": "3"
+      },
+      {
+        "input": "nums = [3,2,1]",
+        "output": "0"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Maintain a moving window over the input and adjust its boundaries while tracking the information needed to preserve the required condition.",
+    "complexity": "Time Complexity: O(n)\nSpace Complexity: O(n)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "widest-vertical-area-between-two-points-containing-no-points",
+    "title": "Widest Vertical Area Between Two Points Containing No Points",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given\nn\npoints\non a 2D plane where\npoints[i] = [x\ni\n, y\ni\n]\n, Return\nthe\nwidest vertical area\nbetween two points such that no points are inside the area.\nA\nvertical area\nis an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The\nwidest vertical area\nis the one with the maximum width.\nNote that points\non the edge\nof a vertical area\nare not\nconsidered included in the area.\nExample 1:\n​\nInput:\npoints = [[8,7],[9,9],[7,4],[9,7]]\nOutput:\n1\nExplanation:\nBoth the red and the blue area are optimal.\nExample 2:\nInput:\npoints = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]\nOutput:\n3\nConstraints:\nn == points.length\n2 <= n <= 10\n5\npoints[i].length == 2\n0 <= x\ni\n, y\ni\n<= 10\n9",
+    "problemStatement": "Given\nn\npoints\non a 2D plane where\npoints[i] = [x\ni\n, y\ni\n]\n, Return\nthe\nwidest vertical area\nbetween two points such that no points are inside the area.\nA\nvertical area\nis an area of fixed-width extending infinitely along the y-axis (i.e., infinite height). The\nwidest vertical area\nis the one with the maximum width.\nNote that points\non the edge\nof a vertical area\nare not\nconsidered included in the area.\nExample 1:\n​\nInput:\npoints = [[8,7],[9,9],[7,4],[9,7]]\nOutput:\n1\nExplanation:\nBoth the red and the blue area are optimal.\nExample 2:\nInput:\npoints = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]\nOutput:\n3\nConstraints:\nn == points.length\n2 <= n <= 10\n5\npoints[i].length == 2\n0 <= x\ni\n, y\ni\n<= 10\n9",
+    "examples": [
+      {
+        "input": "points = [[8,7],[9,9],[7,4],[9,7]]",
+        "output": "1"
+      },
+      {
+        "input": "points = [[3,1],[9,0],[1,0],[1,4],[5,3],[8,8]]",
+        "output": "3"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(V+E)",
+    "spaceComplexity": "O(V+E)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Model the relationships as a graph and traverse the relevant vertices and edges with the graph algorithm required by the stated constraints.",
+    "complexity": "Time Complexity: O(V+E)\nSpace Complexity: O(V+E)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  },
+  {
+    "id": "word-search-ii",
+    "title": "Word Search II",
+    "difficulty": "Hard",
+    "topic": "String",
+    "description": "Given an\nm x n\nboard\nof characters and a list of strings\nwords\n, return\nall words on the board\n.\nEach word must be constructed from letters of sequentially adjacent cells, where\nadjacent cells\nare horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.\nExample 1:\nInput:\nboard = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]\nOutput:\n[\"eat\",\"oath\"]\nExample 2:\nInput:\nboard = [[\"a\",\"b\"],[\"c\",\"d\"]], words = [\"abcb\"]\nOutput:\n[]\nConstraints:\nm == board.length\nn == board[i].length\n1 <= m, n <= 12\nboard[i][j]\nis a lowercase English letter.\n1 <= words.length <= 3 * 10\n4\n1 <= words[i].length <= 10\nwords[i]\nconsists of lowercase English letters.\nAll the strings of\nwords\nare unique.",
+    "problemStatement": "Given an\nm x n\nboard\nof characters and a list of strings\nwords\n, return\nall words on the board\n.\nEach word must be constructed from letters of sequentially adjacent cells, where\nadjacent cells\nare horizontally or vertically neighboring. The same letter cell may not be used more than once in a word.\nExample 1:\nInput:\nboard = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]\nOutput:\n[\"eat\",\"oath\"]\nExample 2:\nInput:\nboard = [[\"a\",\"b\"],[\"c\",\"d\"]], words = [\"abcb\"]\nOutput:\n[]\nConstraints:\nm == board.length\nn == board[i].length\n1 <= m, n <= 12\nboard[i][j]\nis a lowercase English letter.\n1 <= words.length <= 3 * 10\n4\n1 <= words[i].length <= 10\nwords[i]\nconsists of lowercase English letters.\nAll the strings of\nwords\nare unique.",
+    "examples": [
+      {
+        "input": "board = [[\"o\",\"a\",\"a\",\"n\"],[\"e\",\"t\",\"a\",\"e\"],[\"i\",\"h\",\"k\",\"r\"],[\"i\",\"f\",\"l\",\"v\"]], words = [\"oath\",\"pea\",\"eat\",\"rain\"]",
+        "output": "[\"eat\",\"oath\"]"
+      },
+      {
+        "input": "board = [[\"a\",\"b\"],[\"c\",\"d\"]], words = [\"abcb\"]",
+        "output": "[]"
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n*L)",
+    "spaceComplexity": "O(n*L)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result.",
+    "approach": "Store words and shared prefixes in a trie, then follow character edges during each operation to efficiently locate complete words or prefixes.",
+    "complexity": "Time Complexity: O(n*L)\nSpace Complexity: O(n*L)",
+    "metadataSource": "JOBIX_SOURCE_BACKED_REPAIR_V3"
+  }
+]

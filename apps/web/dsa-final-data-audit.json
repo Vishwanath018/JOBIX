@@ -1,0 +1,707 @@
+[
+  {
+    "id": "all-o-one-data-structure",
+    "title": "All O`one Data Structure",
+    "example": 1
+  },
+  {
+    "id": "analyze-organization-hierarchy",
+    "title": "Analyze Organization Hierarchy",
+    "example": 2
+  },
+  {
+    "id": "analyze-organization-hierarchy",
+    "title": "Analyze Organization Hierarchy",
+    "example": 3
+  },
+  {
+    "id": "analyze-subscription-conversion",
+    "title": "Analyze Subscription Conversion",
+    "example": 2
+  },
+  {
+    "id": "analyze-subscription-conversion",
+    "title": "Analyze Subscription Conversion",
+    "example": 3
+  },
+  {
+    "id": "apply-discount-every-n-orders",
+    "title": "Apply Discount Every n Orders",
+    "example": 1
+  },
+  {
+    "id": "average-selling-price",
+    "title": "Average Selling Price",
+    "example": 2
+  },
+  {
+    "id": "bank-account-summary-ii",
+    "title": "Bank Account Summary II",
+    "example": 2
+  },
+  {
+    "id": "binary-search-tree-iterator",
+    "title": "Binary Search Tree Iterator",
+    "example": 1
+  },
+  {
+    "id": "booking-concert-tickets-in-groups",
+    "title": "Booking Concert Tickets in Groups",
+    "example": 1
+  },
+  {
+    "id": "combine-two-tables",
+    "title": "Combine Two Tables",
+    "example": 2
+  },
+  {
+    "id": "complete-binary-tree-inserter",
+    "title": "Complete Binary Tree Inserter",
+    "example": 1
+  },
+  {
+    "id": "confirmation-rate",
+    "title": "Confirmation Rate",
+    "example": 2
+  },
+  {
+    "id": "count-integers-in-intervals",
+    "title": "Count Integers in Intervals",
+    "example": 1
+  },
+  {
+    "id": "customer-who-visited-but-did-not-make-any-transactions",
+    "title": "Customer Who Visited but Did Not Make Any Transactions",
+    "example": 2
+  },
+  {
+    "id": "customers-who-bought-all-products",
+    "title": "Customers Who Bought All Products",
+    "example": 2
+  },
+  {
+    "id": "customers-who-never-order",
+    "title": "Customers Who Never Order",
+    "example": 2
+  },
+  {
+    "id": "data-stream-as-disjoint-intervals",
+    "title": "Data Stream as Disjoint Intervals",
+    "example": 1
+  },
+  {
+    "id": "department-highest-salary",
+    "title": "Department Highest Salary",
+    "example": 2
+  },
+  {
+    "id": "department-top-three-salaries",
+    "title": "Department Top Three Salaries",
+    "example": 2
+  },
+  {
+    "id": "design-a-food-rating-system",
+    "title": "Design a Food Rating System",
+    "example": 1
+  },
+  {
+    "id": "design-a-number-container-system",
+    "title": "Design a Number Container System",
+    "example": 1
+  },
+  {
+    "id": "design-a-stack-with-increment-operation",
+    "title": "Design a Stack With Increment Operation",
+    "example": 1
+  },
+  {
+    "id": "design-a-text-editor",
+    "title": "Design a Text Editor",
+    "example": 1
+  },
+  {
+    "id": "design-add-and-search-words-data-structure",
+    "title": "Design Add and Search Words Data Structure",
+    "example": 1
+  },
+  {
+    "id": "design-an-atm-machine",
+    "title": "Design an ATM Machine",
+    "example": 1
+  },
+  {
+    "id": "design-an-ordered-stream",
+    "title": "Design an Ordered Stream",
+    "example": 1
+  },
+  {
+    "id": "design-authentication-manager",
+    "title": "Design Authentication Manager",
+    "example": 1
+  },
+  {
+    "id": "design-circular-deque",
+    "title": "Design Circular Deque",
+    "example": 1
+  },
+  {
+    "id": "design-circular-queue",
+    "title": "Design Circular Queue",
+    "example": 1
+  },
+  {
+    "id": "design-graph-with-shortest-path-calculator",
+    "title": "Design Graph With Shortest Path Calculator",
+    "example": 1
+  },
+  {
+    "id": "design-hashmap",
+    "title": "Design HashMap",
+    "example": 1
+  },
+  {
+    "id": "design-hashset",
+    "title": "Design HashSet",
+    "example": 1
+  },
+  {
+    "id": "design-linked-list",
+    "title": "Design Linked List",
+    "example": 1
+  },
+  {
+    "id": "design-memory-allocator",
+    "title": "Design Memory Allocator",
+    "example": 1
+  },
+  {
+    "id": "design-movie-rental-system",
+    "title": "Design Movie Rental System",
+    "example": 1
+  },
+  {
+    "id": "design-parking-system",
+    "title": "Design Parking System",
+    "example": 1
+  },
+  {
+    "id": "design-skiplist",
+    "title": "Design Skiplist",
+    "example": 1
+  },
+  {
+    "id": "design-twitter",
+    "title": "Design Twitter",
+    "example": 1
+  },
+  {
+    "id": "design-underground-system",
+    "title": "Design Underground System",
+    "example": 1
+  },
+  {
+    "id": "design-underground-system",
+    "title": "Design Underground System",
+    "example": 2
+  },
+  {
+    "id": "detect-squares",
+    "title": "Detect Squares",
+    "example": 1
+  },
+  {
+    "id": "dinner-plate-stacks",
+    "title": "Dinner Plate Stacks",
+    "example": 1
+  },
+  {
+    "id": "dna-pattern-recognition",
+    "title": "DNA Pattern Recognition",
+    "example": 2
+  },
+  {
+    "id": "dna-pattern-recognition",
+    "title": "DNA Pattern Recognition",
+    "example": 3
+  },
+  {
+    "id": "employee-bonus",
+    "title": "Employee Bonus",
+    "example": 2
+  },
+  {
+    "id": "encrypt-and-decrypt-strings",
+    "title": "Encrypt and Decrypt Strings",
+    "example": 1
+  },
+  {
+    "id": "exam-room",
+    "title": "Exam Room",
+    "example": 1
+  },
+  {
+    "id": "fancy-sequence",
+    "title": "Fancy Sequence",
+    "example": 1
+  },
+  {
+    "id": "find-consecutive-integers-from-a-data-stream",
+    "title": "Find Consecutive Integers from a Data Stream",
+    "example": 1
+  },
+  {
+    "id": "find-elements-in-a-contaminated-binary-tree",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "example": 1
+  },
+  {
+    "id": "find-elements-in-a-contaminated-binary-tree",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "example": 2
+  },
+  {
+    "id": "find-elements-in-a-contaminated-binary-tree",
+    "title": "Find Elements in a Contaminated Binary Tree",
+    "example": 3
+  },
+  {
+    "id": "find-median-from-data-stream",
+    "title": "Find Median from Data Stream",
+    "example": 1
+  },
+  {
+    "id": "find-students-who-improved",
+    "title": "Find Students Who Improved",
+    "example": 2
+  },
+  {
+    "id": "find-students-who-improved",
+    "title": "Find Students Who Improved",
+    "example": 3
+  },
+  {
+    "id": "finding-mk-average",
+    "title": "Finding MK Average",
+    "example": 1
+  },
+  {
+    "id": "finding-pairs-with-a-certain-sum",
+    "title": "Finding Pairs With a Certain Sum",
+    "example": 1
+  },
+  {
+    "id": "flatten-deeply-nested-array",
+    "title": "Flatten Deeply Nested Array",
+    "example": 1
+  },
+  {
+    "id": "flatten-deeply-nested-array",
+    "title": "Flatten Deeply Nested Array",
+    "example": 2
+  },
+  {
+    "id": "flatten-deeply-nested-array",
+    "title": "Flatten Deeply Nested Array",
+    "example": 3
+  },
+  {
+    "id": "generate-random-point-in-a-circle",
+    "title": "Generate Random Point in a Circle",
+    "example": 1
+  },
+  {
+    "id": "implement-magic-dictionary",
+    "title": "Implement Magic Dictionary",
+    "example": 1
+  },
+  {
+    "id": "implement-queue-using-stacks",
+    "title": "Implement Queue using Stacks",
+    "example": 1
+  },
+  {
+    "id": "implement-stack-using-queues",
+    "title": "Implement Stack using Queues",
+    "example": 1
+  },
+  {
+    "id": "implement-trie-prefix-tree",
+    "title": "Implement Trie (Prefix Tree)",
+    "example": 1
+  },
+  {
+    "id": "insert-delete-getrandom-o-1",
+    "title": "Insert Delete GetRandom O(1)",
+    "example": 1
+  },
+  {
+    "id": "insert-delete-getrandom-o-1-duplicates-allowed",
+    "title": "Insert Delete GetRandom O(1) - Duplicates allowed",
+    "example": 1
+  },
+  {
+    "id": "iterator-for-combination",
+    "title": "Iterator for Combination",
+    "example": 1
+  },
+  {
+    "id": "kth-ancestor-of-a-tree-node",
+    "title": "Kth Ancestor of a Tree Node",
+    "example": 1
+  },
+  {
+    "id": "lfu-cache",
+    "title": "LFU Cache",
+    "example": 1
+  },
+  {
+    "id": "linked-list-random-node",
+    "title": "Linked List Random Node",
+    "example": 1
+  },
+  {
+    "id": "list-the-products-ordered-in-a-period",
+    "title": "List the Products Ordered in a Period",
+    "example": 2
+  },
+  {
+    "id": "longest-uploaded-prefix",
+    "title": "Longest Uploaded Prefix",
+    "example": 1
+  },
+  {
+    "id": "lru-cache",
+    "title": "LRU Cache",
+    "example": 1
+  },
+  {
+    "id": "map-sum-pairs",
+    "title": "Map Sum Pairs",
+    "example": 1
+  },
+  {
+    "id": "market-analysis-i",
+    "title": "Market Analysis I",
+    "example": 2
+  },
+  {
+    "id": "market-analysis-i",
+    "title": "Market Analysis I",
+    "example": 3
+  },
+  {
+    "id": "maximum-frequency-stack",
+    "title": "Maximum Frequency Stack",
+    "example": 1
+  },
+  {
+    "id": "min-stack",
+    "title": "Min Stack",
+    "example": 1
+  },
+  {
+    "id": "movie-rating",
+    "title": "Movie Rating",
+    "example": 2
+  },
+  {
+    "id": "movie-rating",
+    "title": "Movie Rating",
+    "example": 3
+  },
+  {
+    "id": "my-calendar-i",
+    "title": "My Calendar I",
+    "example": 1
+  },
+  {
+    "id": "my-calendar-ii",
+    "title": "My Calendar II",
+    "example": 1
+  },
+  {
+    "id": "my-calendar-iii",
+    "title": "My Calendar III",
+    "example": 1
+  },
+  {
+    "id": "number-of-recent-calls",
+    "title": "Number of Recent Calls",
+    "example": 1
+  },
+  {
+    "id": "odd-and-even-transactions",
+    "title": "Odd and Even Transactions",
+    "example": 2
+  },
+  {
+    "id": "odd-and-even-transactions",
+    "title": "Odd and Even Transactions",
+    "example": 3
+  },
+  {
+    "id": "online-election",
+    "title": "Online Election",
+    "example": 1
+  },
+  {
+    "id": "online-majority-element-in-subarray",
+    "title": "Online Majority Element In Subarray",
+    "example": 1
+  },
+  {
+    "id": "online-stock-span",
+    "title": "Online Stock Span",
+    "example": 1
+  },
+  {
+    "id": "operations-on-tree",
+    "title": "Operations on Tree",
+    "example": 1
+  },
+  {
+    "id": "peeking-iterator",
+    "title": "Peeking Iterator",
+    "example": 1
+  },
+  {
+    "id": "percentage-of-users-attended-a-contest",
+    "title": "Percentage of Users Attended a Contest",
+    "example": 2
+  },
+  {
+    "id": "prefix-and-suffix-search",
+    "title": "Prefix and Suffix Search",
+    "example": 1
+  },
+  {
+    "id": "product-of-the-last-k-numbers",
+    "title": "Product of the Last K Numbers",
+    "example": 1
+  },
+  {
+    "id": "product-sales-analysis-i",
+    "title": "Product Sales Analysis I",
+    "example": 2
+  },
+  {
+    "id": "product-sales-analysis-iii",
+    "title": "Product Sales Analysis III",
+    "example": 2
+  },
+  {
+    "id": "project-employees-i",
+    "title": "Project Employees I",
+    "example": 2
+  },
+  {
+    "id": "random-flip-matrix",
+    "title": "Random Flip Matrix",
+    "example": 1
+  },
+  {
+    "id": "random-pick-index",
+    "title": "Random Pick Index",
+    "example": 1
+  },
+  {
+    "id": "random-pick-with-blacklist",
+    "title": "Random Pick with Blacklist",
+    "example": 1
+  },
+  {
+    "id": "random-pick-with-weight",
+    "title": "Random Pick with Weight",
+    "example": 1
+  },
+  {
+    "id": "random-pick-with-weight",
+    "title": "Random Pick with Weight",
+    "example": 2
+  },
+  {
+    "id": "random-point-in-non-overlapping-rectangles",
+    "title": "Random Point in Non-overlapping Rectangles",
+    "example": 1
+  },
+  {
+    "id": "range-frequency-queries",
+    "title": "Range Frequency Queries",
+    "example": 1
+  },
+  {
+    "id": "range-module",
+    "title": "Range Module",
+    "example": 1
+  },
+  {
+    "id": "range-sum-query-immutable",
+    "title": "Range Sum Query - Immutable",
+    "example": 1
+  },
+  {
+    "id": "range-sum-query-mutable",
+    "title": "Range Sum Query - Mutable",
+    "example": 1
+  },
+  {
+    "id": "range-sum-query-2d-immutable",
+    "title": "Range Sum Query 2D - Immutable",
+    "example": 1
+  },
+  {
+    "id": "replace-employee-id-with-the-unique-identifier",
+    "title": "Replace Employee ID With The Unique Identifier",
+    "example": 2
+  },
+  {
+    "id": "rle-iterator",
+    "title": "RLE Iterator",
+    "example": 1
+  },
+  {
+    "id": "sales-analysis-iii",
+    "title": "Sales Analysis III",
+    "example": 2
+  },
+  {
+    "id": "sales-person",
+    "title": "Sales Person",
+    "example": 2
+  },
+  {
+    "id": "sales-person",
+    "title": "Sales Person",
+    "example": 3
+  },
+  {
+    "id": "seat-reservation-manager",
+    "title": "Seat Reservation Manager",
+    "example": 1
+  },
+  {
+    "id": "sequentially-ordinal-rank-tracker",
+    "title": "Sequentially Ordinal Rank Tracker",
+    "example": 1
+  },
+  {
+    "id": "shuffle-an-array",
+    "title": "Shuffle an Array",
+    "example": 1
+  },
+  {
+    "id": "simple-bank-system",
+    "title": "Simple Bank System",
+    "example": 1
+  },
+  {
+    "id": "smallest-number-in-infinite-set",
+    "title": "Smallest Number in Infinite Set",
+    "example": 1
+  },
+  {
+    "id": "stock-price-fluctuation",
+    "title": "Stock Price Fluctuation",
+    "example": 1
+  },
+  {
+    "id": "stream-of-characters",
+    "title": "Stream of Characters",
+    "example": 1
+  },
+  {
+    "id": "students-and-examinations",
+    "title": "Students and Examinations",
+    "example": 2
+  },
+  {
+    "id": "students-and-examinations",
+    "title": "Students and Examinations",
+    "example": 3
+  },
+  {
+    "id": "subrectangle-queries",
+    "title": "Subrectangle Queries",
+    "example": 1
+  },
+  {
+    "id": "subrectangle-queries",
+    "title": "Subrectangle Queries",
+    "example": 2
+  },
+  {
+    "id": "tenth-line",
+    "title": "Tenth Line",
+    "example": 1
+  },
+  {
+    "id": "tenth-line",
+    "title": "Tenth Line",
+    "example": 2
+  },
+  {
+    "id": "throne-inheritance",
+    "title": "Throne Inheritance",
+    "example": 1
+  },
+  {
+    "id": "throne-inheritance",
+    "title": "Throne Inheritance",
+    "example": 2
+  },
+  {
+    "id": "time-based-key-value-store",
+    "title": "Time Based Key-Value Store",
+    "example": 1
+  },
+  {
+    "id": "top-travellers",
+    "title": "Top Travellers",
+    "example": 2
+  },
+  {
+    "id": "transpose-file",
+    "title": "Transpose File",
+    "example": 1
+  },
+  {
+    "id": "transpose-file",
+    "title": "Transpose File",
+    "example": 2
+  },
+  {
+    "id": "trips-and-users",
+    "title": "Trips and Users",
+    "example": 2
+  },
+  {
+    "id": "tweet-counts-per-frequency",
+    "title": "Tweet Counts Per Frequency",
+    "example": 1
+  },
+  {
+    "id": "valid-phone-numbers",
+    "title": "Valid Phone Numbers",
+    "example": 1
+  },
+  {
+    "id": "valid-phone-numbers",
+    "title": "Valid Phone Numbers",
+    "example": 2
+  },
+  {
+    "id": "walking-robot-simulation-ii",
+    "title": "Walking Robot Simulation II",
+    "example": 1
+  },
+  {
+    "id": "word-frequency",
+    "title": "Word Frequency",
+    "example": 1
+  },
+  {
+    "id": "word-frequency",
+    "title": "Word Frequency",
+    "example": 2
+  }
+]

@@ -1,0 +1,370 @@
+[
+  {
+    "id": "3sum-smaller",
+    "title": "3Sum Smaller",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an array of values, solve the 3Sum Smaller problem by processing the elements according to the stated conditions and return the required result.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "4-keys-keyboard",
+    "title": "4 Keys Keyboard",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the 4 Keys Keyboard problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "active-businesses",
+    "title": "Active Businesses",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Active Businesses problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "active-users",
+    "title": "Active Users",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Active Users problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "activity-participants",
+    "title": "Activity Participants",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the Activity Participants problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "ad-free-sessions",
+    "title": "Ad-Free Sessions",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the Ad-Free Sessions problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-bold-tag-in-string",
+    "title": "Add Bold Tag in String",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "Given a string, solve the Add Bold Tag in String problem according to the required character, substring, or sequence conditions.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "adjacent-increasing-subarrays-detection-i",
+    "title": "Adjacent Increasing Subarrays Detection I",
+    "difficulty": "Easy",
+    "topic": "Array",
+    "description": "Given an array\nnums\nof\nn\nintegers and an integer\nk\n, determine whether there exist\ntwo\nadjacent\nsubarrays\nof length\nk\nsuch that both subarrays are\nstrictly\nincreasing\n. Specifically, check if there are\ntwo\nsubarrays starting at indices\na\nand\nb\n(\na < b\n), where:\nBoth subarrays\nnums[a..a + k - 1]\nand\nnums[b..b + k - 1]\nare\nstrictly increasing\n.\nThe subarrays must be\nadjacent\n, meaning\nb = a + k\n.\nReturn\ntrue\nif it is\npossible\nto find\ntwo\nsuch subarrays, and\nfalse\notherwise.\nExample 1:\nInput:\nnums = [2,5,7,8,9,2,3,4,3,1], k = 3\nOutput:\ntrue\nExplanation:\nThe subarray starting at index\n2\nis\n[7, 8, 9]\n, which is strictly increasing.\nThe subarray starting at index\n5\nis\n[2, 3, 4]\n, which is also strictly increasing.\nThese two subarrays are adjacent, so the result is\ntrue\n.\nExample 2:\nInput:\nnums = [1,2,3,4,4,4,4,5,6,7], k = 5\nOutput:\nfalse\nConstraints:\n2 <= nums.length <= 100\n1 < 2 * k <= nums.length\n-1000 <= nums[i] <= 1000",
+    "problemStatement": "Given an array\nnums\nof\nn\nintegers and an integer\nk\n, determine whether there exist\ntwo\nadjacent\nsubarrays\nof length\nk\nsuch that both subarrays are\nstrictly\nincreasing\n. Specifically, check if there are\ntwo\nsubarrays starting at indices\na\nand\nb\n(\na < b\n), where:\nBoth subarrays\nnums[a..a + k - 1]\nand\nnums[b..b + k - 1]\nare\nstrictly increasing\n.\nThe subarrays must be\nadjacent\n, meaning\nb = a + k\n.\nReturn\ntrue\nif it is\npossible\nto find\ntwo\nsuch subarrays, and\nfalse\notherwise.\nExample 1:\nInput:\nnums = [2,5,7,8,9,2,3,4,3,1], k = 3\nOutput:\ntrue\nExplanation:\nThe subarray starting at index\n2\nis\n[7, 8, 9]\n, which is strictly increasing.\nThe subarray starting at index\n5\nis\n[2, 3, 4]\n, which is also strictly increasing.\nThese two subarrays are adjacent, so the result is\ntrue\n.\nExample 2:\nInput:\nnums = [1,2,3,4,4,4,4,5,6,7], k = 5\nOutput:\nfalse\nConstraints:\n2 <= nums.length <= 100\n1 < 2 * k <= nums.length\n-1000 <= nums[i] <= 1000",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [2,5,7,8,9,2,3,4,3,1], k = 3",
+        "output": "true"
+      },
+      {
+        "input": "nums = [1,2,3,4,4,4,4,5,6,7], k = 5",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "adjacent-increasing-subarrays-detection-ii",
+    "title": "Adjacent Increasing Subarrays Detection II",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an array\nnums\nof\nn\nintegers, your task is to find the\nmaximum\nvalue of\nk\nfor which there exist\ntwo\nadjacent\nsubarrays\nof length\nk\neach, such that both subarrays are\nstrictly\nincreasing\n. Specifically, check if there are\ntwo\nsubarrays of length\nk\nstarting at indices\na\nand\nb\n(\na < b\n), where:\nBoth subarrays\nnums[a..a + k - 1]\nand\nnums[b..b + k - 1]\nare\nstrictly increasing\n.\nThe subarrays must be\nadjacent\n, meaning\nb = a + k\n.\nReturn the\nmaximum\npossible\nvalue of\nk\n.\nA\nsubarray\nis a contiguous\nnon-empty\nsequence of elements within an array.\nExample 1:\nInput:\nnums = [2,5,7,8,9,2,3,4,3,1]\nOutput:\n3\nExplanation:\nThe subarray starting at index 2 is\n[7, 8, 9]\n, which is strictly increasing.\nThe subarray starting at index 5 is\n[2, 3, 4]\n, which is also strictly increasing.\nThese two subarrays are adjacent, and 3 is the\nmaximum\npossible value of\nk\nfor which two such adjacent strictly increasing subarrays exist.\nExample 2:\nInput:\nnums = [1,2,3,4,4,4,4,5,6,7]\nOutput:\n2\nExplanation:\nThe subarray starting at index 0 is\n[1, 2]\n, which is strictly increasing.\nThe subarray starting at index 2 is\n[3, 4]\n, which is also strictly increasing.\nThese two subarrays are adjacent, and 2 is the\nmaximum",
+    "problemStatement": "Given an array\nnums\nof\nn\nintegers, your task is to find the\nmaximum\nvalue of\nk\nfor which there exist\ntwo\nadjacent\nsubarrays\nof length\nk\neach, such that both subarrays are\nstrictly\nincreasing\n. Specifically, check if there are\ntwo\nsubarrays of length\nk\nstarting at indices\na\nand\nb\n(\na < b\n), where:\nBoth subarrays\nnums[a..a + k - 1]\nand\nnums[b..b + k - 1]\nare\nstrictly increasing\n.\nThe subarrays must be\nadjacent\n, meaning\nb = a + k\n.\nReturn the\nmaximum\npossible\nvalue of\nk\n.\nA\nsubarray\nis a contiguous\nnon-empty\nsequence of elements within an array.\nExample 1:\nInput:\nnums = [2,5,7,8,9,2,3,4,3,1]\nOutput:\n3\nExplanation:\nThe subarray starting at index 2 is\n[7, 8, 9]\n, which is strictly increasing.\nThe subarray starting at index 5 is\n[2, 3, 4]\n, which is also strictly increasing.\nThese two subarrays are adjacent, and 3 is the\nmaximum\npossible value of\nk\nfor which two such adjacent strictly increasing subarrays exist.\nExample 2:\nInput:\nnums = [1,2,3,4,4,4,4,5,6,7]\nOutput:\n2\nExplanation:\nThe subarray starting at index 0 is\n[1, 2]\n, which is strictly increasing.\nThe subarray starting at index 2 is\n[3, 4]\n, which is also strictly increasing.\nThese two subarrays are adjacent, and 2 is the\nmaximum\npossible value of\nk\nfor which two such adjacent strictly increasing subarrays exist.\nConstraints:\n2 <= nums.length <= 2 * 10\n5\n-10\n9\n<= nums[i] <= 10\n9",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      },
+      {
+        "input": "nums = [2,5,7,8,9,2,3,4,3,1]",
+        "output": "3"
+      },
+      {
+        "input": "nums = [1,2,3,4,4,4,4,5,6,7]",
+        "output": "2"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "ads-performance",
+    "title": "Ads Performance",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the Ads Performance problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "alien-dictionary",
+    "title": "Alien Dictionary",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the input for the Alien Dictionary problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-paths-from-source-lead-to-destination",
+    "title": "All Paths from Source Lead to Destination",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the All Paths from Source Lead to Destination problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-people-report-to-the-given-manager",
+    "title": "All People Report to the Given Manager",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the All People Report to the Given Manager problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-the-matches-of-the-league",
+    "title": "All the Matches of the League",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the All the Matches of the League problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-the-pairs-with-the-maximum-number-of-common-followers",
+    "title": "All the Pairs With the Maximum Number of Common Followers",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given the input for the All the Pairs With the Maximum Number of Common Followers problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-valid-triplets-that-can-represent-a-country",
+    "title": "All Valid Triplets That Can Represent a Country",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given the input for the All Valid Triplets That Can Represent a Country problem, determine the required result while satisfying all conditions specified by the problem.",
+    "problemStatement": "",
+    "examples": [
+      {
+        "input": "See the example input on the original problem.",
+        "output": "See the corresponding expected output."
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  }
+]

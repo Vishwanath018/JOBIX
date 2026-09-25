@@ -1,7 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowLeft, ArrowRight, Search } from "lucide-react";
+import { ArrowLeft, ArrowRight, Search , Shuffle} from "lucide-react";
 import { useParams, useRouter } from "next/navigation";
 import CompanyLogo from "../../company-logo";
 import CompanyHero from "../../company-hero";
@@ -126,7 +126,7 @@ const companyQuestionIds: Record<string, string[]> = {
 
 function getQuestions(slug: string) {
   return dsaQuestions.filter((question) =>
-    question.companies.includes(slug)
+    (Array.isArray(question.companies) ? question.companies : []).includes(slug)
   );
 }
 
@@ -326,6 +326,20 @@ export default function CompanyDsaPage() {
               </p>
             </div>
           </div>
+          <div className="mt-4 flex justify-end">
+            <button
+              onClick={() => {
+                if (filtered.length === 0) return;
+                const randomQuestion = filtered[Math.floor(Math.random() * filtered.length)];
+                router.push(`/interview-kit/dsa/${params.company}/${randomQuestion.id}`);
+              }}
+              className="flex items-center gap-2 rounded-xl bg-black px-4 py-3 text-xs font-black text-white transition hover:bg-[#1f1f1f]"
+            >
+              <Shuffle className="h-4 w-4" />
+              Random Question
+            </button>
+          </div>
+
 
           <div className="mt-4 grid gap-3 md:grid-cols-2">
             {filtered.map((question, index) => (
@@ -356,10 +370,6 @@ export default function CompanyDsaPage() {
                         {question.topic}
                       </span>
                     </div>
-
-                    <p className="mt-2 text-xs leading-5 text-[#71819b]">
-                      {question.description}
-                    </p>
 
                     <div className="mt-2 flex flex-wrap gap-3">
                       {question.tags.map((tag) => (

@@ -1,0 +1,940 @@
+[
+  {
+    "id": "1-bit-and-2-bit-characters",
+    "title": "1-bit and 2-bit Characters",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "We have two special characters:\nThe first character can be represented by one bit\n0\n.\nThe second character can be represented by two bits (\n10\nor\n11\n).\nGiven a binary array\nbits\nthat ends with\n0\n, return\ntrue\nif the last character must be a one-bit character.\nExample 1:\nInput:\nbits = [1,0,0]\nOutput:\ntrue\nExplanation:\nThe only way to decode it is two-bit character and one-bit character.\nSo the last character is one-bit character.\nExample 2:\nInput:\nbits = [1,1,1,0]\nOutput:\nfalse\nExplanation:\nThe only way to decode it is two-bit character and two-bit character.\nSo the last character is not one-bit character.\nConstraints:\n1 <= bits.length <= 1000\nbits[i]\nis either\n0\nor\n1\n.",
+    "problemStatement": "We have two special characters:\nThe first character can be represented by one bit\n0\n.\nThe second character can be represented by two bits (\n10\nor\n11\n).\nGiven a binary array\nbits\nthat ends with\n0\n, return\ntrue\nif the last character must be a one-bit character.\nExample 1:\nInput:\nbits = [1,0,0]\nOutput:\ntrue\nExplanation:\nThe only way to decode it is two-bit character and one-bit character.\nSo the last character is one-bit character.\nExample 2:\nInput:\nbits = [1,1,1,0]\nOutput:\nfalse\nExplanation:\nThe only way to decode it is two-bit character and two-bit character.\nSo the last character is not one-bit character.\nConstraints:\n1 <= bits.length <= 1000\nbits[i]\nis either\n0\nor\n1\n.",
+    "examples": [
+      {
+        "input": "bits = [1,0,0]",
+        "output": "true"
+      },
+      {
+        "input": "bits = [1,1,1,0]",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "132-pattern",
+    "title": "132 Pattern",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given an array of\nn\nintegers\nnums\n, a\n132 pattern\nis a subsequence of three integers\nnums[i]\n,\nnums[j]\nand\nnums[k]\nsuch that\ni < j < k\nand\nnums[i] < nums[k] < nums[j]\n.\nReturn\ntrue\nif there is a\n132 pattern\nin\nnums\n, otherwise, return\nfalse\n.\nExample 1:\nInput:\nnums = [1,2,3,4]\nOutput:\nfalse\nExplanation:\nThere is no 132 pattern in the sequence.\nExample 2:\nInput:\nnums = [3,1,4,2]\nOutput:\ntrue\nExplanation:\nThere is a 132 pattern in the sequence: [1, 4, 2].\nExample 3:\nInput:\nnums = [-1,3,2,0]\nOutput:\ntrue\nExplanation:\nThere are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3, 0] and [-1, 2, 0].\nConstraints:\nn == nums.length\n1 <= n <= 2 * 10\n5\n-10\n9\n<= nums[i] <= 10\n9",
+    "problemStatement": "Given an array of\nn\nintegers\nnums\n, a\n132 pattern\nis a subsequence of three integers\nnums[i]\n,\nnums[j]\nand\nnums[k]\nsuch that\ni < j < k\nand\nnums[i] < nums[k] < nums[j]\n.\nReturn\ntrue\nif there is a\n132 pattern\nin\nnums\n, otherwise, return\nfalse\n.\nExample 1:\nInput:\nnums = [1,2,3,4]\nOutput:\nfalse\nExplanation:\nThere is no 132 pattern in the sequence.\nExample 2:\nInput:\nnums = [3,1,4,2]\nOutput:\ntrue\nExplanation:\nThere is a 132 pattern in the sequence: [1, 4, 2].\nExample 3:\nInput:\nnums = [-1,3,2,0]\nOutput:\ntrue\nExplanation:\nThere are three 132 patterns in the sequence: [-1, 3, 2], [-1, 3, 0] and [-1, 2, 0].\nConstraints:\nn == nums.length\n1 <= n <= 2 * 10\n5\n-10\n9\n<= nums[i] <= 10\n9",
+    "examples": [
+      {
+        "input": "nums = [1,2,3,4]",
+        "output": "false"
+      },
+      {
+        "input": "nums = [3,1,4,2]",
+        "output": "true"
+      },
+      {
+        "input": "nums = [-1,3,2,0]",
+        "output": "true"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "2-keys-keyboard",
+    "title": "2 Keys Keyboard",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "There is only one character\n'A'\non the screen of a notepad. You can perform one of two operations on this notepad for each step:\nCopy All: You can copy all the characters present on the screen (a partial copy is not allowed).\nPaste: You can paste the characters which are copied last time.\nGiven an integer\nn\n, return\nthe minimum number of operations to get the character\n'A'\nexactly\nn\ntimes on the screen\n.\nExample 1:\nInput:\nn = 3\nOutput:\n3\nExplanation:\nInitially, we have one character 'A'.\nIn step 1, we use Copy All operation.\nIn step 2, we use Paste operation to get 'AA'.\nIn step 3, we use Paste operation to get 'AAA'.\nExample 2:\nInput:\nn = 1\nOutput:\n0\nConstraints:\n1 <= n <= 1000",
+    "problemStatement": "There is only one character\n'A'\non the screen of a notepad. You can perform one of two operations on this notepad for each step:\nCopy All: You can copy all the characters present on the screen (a partial copy is not allowed).\nPaste: You can paste the characters which are copied last time.\nGiven an integer\nn\n, return\nthe minimum number of operations to get the character\n'A'\nexactly\nn\ntimes on the screen\n.\nExample 1:\nInput:\nn = 3\nOutput:\n3\nExplanation:\nInitially, we have one character 'A'.\nIn step 1, we use Copy All operation.\nIn step 2, we use Paste operation to get 'AA'.\nIn step 3, we use Paste operation to get 'AAA'.\nExample 2:\nInput:\nn = 1\nOutput:\n0\nConstraints:\n1 <= n <= 1000",
+    "examples": [
+      {
+        "input": "n = 3",
+        "output": "3"
+      },
+      {
+        "input": "n = 1",
+        "output": "0"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "24-game",
+    "title": "24 Game",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "You are given an integer array\ncards\nof length\n4\n. You have four cards, each containing a number in the range\n[1, 9]\n. You should arrange the numbers on these cards in a mathematical expression using the operators\n['+', '-', '*', '/']\nand the parentheses\n'('\nand\n')'\nto get the value 24.\nYou are restricted with the following rules:\nThe division operator\n'/'\nrepresents real division, not integer division.\nFor example,\n4 / (1 - 2 / 3) = 4 / (1 / 3) = 12\n.\nEvery operation done is between two numbers. In particular, we cannot use\n'-'\nas a unary operator.\nFor example, if\ncards = [1, 1, 1, 1]\n, the expression\n\"-1 - 1 - 1 - 1\"\nis\nnot allowed\n.\nYou cannot concatenate numbers together\nFor example, if\ncards = [1, 2, 1, 2]\n, the expression\n\"12 + 12\"\nis not valid.\nReturn\ntrue\nif you can get such expression that evaluates to\n24\n, and\nfalse\notherwise.\nExample 1:\nInput:\ncards = [4,1,8,7]\nOutput:\ntrue\nExplanation:\n(8-4) * (7-1) = 24\nExample 2:\nInput:\ncards = [1,2,1,2]\nOutput:\nfalse\nConstraints:\ncards.length == 4\n1 <= cards[i] <= 9",
+    "problemStatement": "You are given an integer array\ncards\nof length\n4\n. You have four cards, each containing a number in the range\n[1, 9]\n. You should arrange the numbers on these cards in a mathematical expression using the operators\n['+', '-', '*', '/']\nand the parentheses\n'('\nand\n')'\nto get the value 24.\nYou are restricted with the following rules:\nThe division operator\n'/'\nrepresents real division, not integer division.\nFor example,\n4 / (1 - 2 / 3) = 4 / (1 / 3) = 12\n.\nEvery operation done is between two numbers. In particular, we cannot use\n'-'\nas a unary operator.\nFor example, if\ncards = [1, 1, 1, 1]\n, the expression\n\"-1 - 1 - 1 - 1\"\nis\nnot allowed\n.\nYou cannot concatenate numbers together\nFor example, if\ncards = [1, 2, 1, 2]\n, the expression\n\"12 + 12\"\nis not valid.\nReturn\ntrue\nif you can get such expression that evaluates to\n24\n, and\nfalse\notherwise.\nExample 1:\nInput:\ncards = [4,1,8,7]\nOutput:\ntrue\nExplanation:\n(8-4) * (7-1) = 24\nExample 2:\nInput:\ncards = [1,2,1,2]\nOutput:\nfalse\nConstraints:\ncards.length == 4\n1 <= cards[i] <= 9",
+    "examples": [
+      {
+        "input": "cards = [4,1,8,7]",
+        "output": "true"
+      },
+      {
+        "input": "cards = [1,2,1,2]",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "3sum",
+    "title": "3Sum",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an integer array nums, return all the triplets\n[nums[i], nums[j], nums[k]]\nsuch that\ni != j\n,\ni != k\n, and\nj != k\n, and\nnums[i] + nums[j] + nums[k] == 0\n.\nNotice that the solution set must not contain duplicate triplets.\nExample 1:\nInput:\nnums = [-1,0,1,2,-1,-4]\nOutput:\n[[-1,-1,2],[-1,0,1]]\nExplanation:\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\nExample 2:\nInput:\nnums = [0,1,1]\nOutput:\n[]\nExplanation:\nThe only possible triplet does not sum up to 0.\nExample 3:\nInput:\nnums = [0,0,0]\nOutput:\n[[0,0,0]]\nExplanation:\nThe only possible triplet sums up to 0.\nConstraints:\n3 <= nums.length <= 3000\n-10\n5\n<= nums[i] <= 10\n5",
+    "problemStatement": "Given an integer array nums, return all the triplets\n[nums[i], nums[j], nums[k]]\nsuch that\ni != j\n,\ni != k\n, and\nj != k\n, and\nnums[i] + nums[j] + nums[k] == 0\n.\nNotice that the solution set must not contain duplicate triplets.\nExample 1:\nInput:\nnums = [-1,0,1,2,-1,-4]\nOutput:\n[[-1,-1,2],[-1,0,1]]\nExplanation:\nnums[0] + nums[1] + nums[2] = (-1) + 0 + 1 = 0.\nnums[1] + nums[2] + nums[4] = 0 + 1 + (-1) = 0.\nnums[0] + nums[3] + nums[4] = (-1) + 2 + (-1) = 0.\nThe distinct triplets are [-1,0,1] and [-1,-1,2].\nNotice that the order of the output and the order of the triplets does not matter.\nExample 2:\nInput:\nnums = [0,1,1]\nOutput:\n[]\nExplanation:\nThe only possible triplet does not sum up to 0.\nExample 3:\nInput:\nnums = [0,0,0]\nOutput:\n[[0,0,0]]\nExplanation:\nThe only possible triplet sums up to 0.\nConstraints:\n3 <= nums.length <= 3000\n-10\n5\n<= nums[i] <= 10\n5",
+    "examples": [
+      {
+        "input": "nums = [-1,0,1,2,-1,-4]",
+        "output": "[[-1,-1,2],[-1,0,1]]"
+      },
+      {
+        "input": "nums = [0,1,1]",
+        "output": "[]"
+      },
+      {
+        "input": "nums = [0,0,0]",
+        "output": "[[0,0,0]]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "3sum-closest",
+    "title": "3Sum Closest",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an integer array\nnums\nof length\nn\nand an integer\ntarget\n, find three integers in\nnums\nsuch that the sum is closest to\ntarget\n.\nReturn\nthe sum of the three integers\n.\nYou may assume that each input would have exactly one solution.\nExample 1:\nInput:\nnums = [-1,2,1,-4], target = 1\nOutput:\n2\nExplanation:\nThe sum that is closest to the target is 2. (-1 + 2 + 1 = 2).\nExample 2:\nInput:\nnums = [0,0,0], target = 1\nOutput:\n0\nExplanation:\nThe sum that is closest to the target is 0. (0 + 0 + 0 = 0).\nConstraints:\n3 <= nums.length <= 500\n-1000 <= nums[i] <= 1000\n-10\n4\n<= target <= 10\n4",
+    "problemStatement": "Given an integer array\nnums\nof length\nn\nand an integer\ntarget\n, find three integers in\nnums\nsuch that the sum is closest to\ntarget\n.\nReturn\nthe sum of the three integers\n.\nYou may assume that each input would have exactly one solution.\nExample 1:\nInput:\nnums = [-1,2,1,-4], target = 1\nOutput:\n2\nExplanation:\nThe sum that is closest to the target is 2. (-1 + 2 + 1 = 2).\nExample 2:\nInput:\nnums = [0,0,0], target = 1\nOutput:\n0\nExplanation:\nThe sum that is closest to the target is 0. (0 + 0 + 0 = 0).\nConstraints:\n3 <= nums.length <= 500\n-1000 <= nums[i] <= 1000\n-10\n4\n<= target <= 10\n4",
+    "examples": [
+      {
+        "input": "nums = [-1,2,1,-4], target = 1",
+        "output": "2"
+      },
+      {
+        "input": "nums = [0,0,0], target = 1",
+        "output": "0"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "3sum-with-multiplicity",
+    "title": "3Sum With Multiplicity",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an integer array\narr\n, and an integer\ntarget\n, return the number of tuples\ni, j, k\nsuch that\ni < j < k\nand\narr[i] + arr[j] + arr[k] == target\n.\nAs the answer can be very large, return it\nmodulo\n10\n9\n+ 7\n.\nExample 1:\nInput:\narr = [1,1,2,2,3,3,4,4,5,5], target = 8\nOutput:\n20\nExplanation:\nEnumerating by the values (arr[i], arr[j], arr[k]):\n(1, 2, 5) occurs 8 times;\n(1, 3, 4) occurs 8 times;\n(2, 2, 4) occurs 2 times;\n(2, 3, 3) occurs 2 times.\nExample 2:\nInput:\narr = [1,1,2,2,2,2], target = 5\nOutput:\n12\nExplanation:\narr[i] = 1, arr[j] = arr[k] = 2 occurs 12 times:\nWe choose one 1 from [1,1] in 2 ways,\nand two 2s from [2,2,2,2] in 6 ways.\nExample 3:\nInput:\narr = [2,1,3], target = 6\nOutput:\n1\nExplanation:\n(1, 2, 3) occured one time in the array so we return 1.\nConstraints:\n3 <= arr.length <= 3000\n0 <= arr[i] <= 100\n0 <= target <= 300",
+    "problemStatement": "Given an integer array\narr\n, and an integer\ntarget\n, return the number of tuples\ni, j, k\nsuch that\ni < j < k\nand\narr[i] + arr[j] + arr[k] == target\n.\nAs the answer can be very large, return it\nmodulo\n10\n9\n+ 7\n.\nExample 1:\nInput:\narr = [1,1,2,2,3,3,4,4,5,5], target = 8\nOutput:\n20\nExplanation:\nEnumerating by the values (arr[i], arr[j], arr[k]):\n(1, 2, 5) occurs 8 times;\n(1, 3, 4) occurs 8 times;\n(2, 2, 4) occurs 2 times;\n(2, 3, 3) occurs 2 times.\nExample 2:\nInput:\narr = [1,1,2,2,2,2], target = 5\nOutput:\n12\nExplanation:\narr[i] = 1, arr[j] = arr[k] = 2 occurs 12 times:\nWe choose one 1 from [1,1] in 2 ways,\nand two 2s from [2,2,2,2] in 6 ways.\nExample 3:\nInput:\narr = [2,1,3], target = 6\nOutput:\n1\nExplanation:\n(1, 2, 3) occured one time in the array so we return 1.\nConstraints:\n3 <= arr.length <= 3000\n0 <= arr[i] <= 100\n0 <= target <= 300",
+    "examples": [
+      {
+        "input": "arr = [1,1,2,2,3,3,4,4,5,5], target = 8",
+        "output": "20"
+      },
+      {
+        "input": "arr = [1,1,2,2,2,2], target = 5",
+        "output": "12"
+      },
+      {
+        "input": "arr = [2,1,3], target = 6",
+        "output": "1"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "4sum",
+    "title": "4Sum",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given an array\nnums\nof\nn\nintegers, return\nan array of all the\nunique\nquadruplets\n[nums[a], nums[b], nums[c], nums[d]]\nsuch that:\n0 <= a, b, c, d < n\na\n,\nb\n,\nc\n, and\nd\nare\ndistinct\n.\nnums[a] + nums[b] + nums[c] + nums[d] == target\nYou may return the answer in\nany order\n.\nExample 1:\nInput:\nnums = [1,0,-1,0,-2,2], target = 0\nOutput:\n[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]\nExample 2:\nInput:\nnums = [2,2,2,2,2], target = 8\nOutput:\n[[2,2,2,2]]\nConstraints:\n1 <= nums.length <= 200\n-10\n9\n<= nums[i] <= 10\n9\n-10\n9\n<= target <= 10\n9",
+    "problemStatement": "Given an array\nnums\nof\nn\nintegers, return\nan array of all the\nunique\nquadruplets\n[nums[a], nums[b], nums[c], nums[d]]\nsuch that:\n0 <= a, b, c, d < n\na\n,\nb\n,\nc\n, and\nd\nare\ndistinct\n.\nnums[a] + nums[b] + nums[c] + nums[d] == target\nYou may return the answer in\nany order\n.\nExample 1:\nInput:\nnums = [1,0,-1,0,-2,2], target = 0\nOutput:\n[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]\nExample 2:\nInput:\nnums = [2,2,2,2,2], target = 8\nOutput:\n[[2,2,2,2]]\nConstraints:\n1 <= nums.length <= 200\n-10\n9\n<= nums[i] <= 10\n9\n-10\n9\n<= target <= 10\n9",
+    "examples": [
+      {
+        "input": "nums = [1,0,-1,0,-2,2], target = 0",
+        "output": "[[-2,-1,1,2],[-2,0,0,2],[-1,0,0,1]]"
+      },
+      {
+        "input": "nums = [2,2,2,2,2], target = 8",
+        "output": "[[2,2,2,2]]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "4sum-ii",
+    "title": "4Sum II",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "Given four integer arrays\nnums1\n,\nnums2\n,\nnums3\n, and\nnums4\nall of length\nn\n, return the number of tuples\n(i, j, k, l)\nsuch that:\n0 <= i, j, k, l < n\nnums1[i] + nums2[j] + nums3[k] + nums4[l] == 0\nExample 1:\nInput:\nnums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]\nOutput:\n2\nExplanation:\nThe two tuples are:\n1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0\n2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0\nExample 2:\nInput:\nnums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]\nOutput:\n1\nConstraints:\nn == nums1.length\nn == nums2.length\nn == nums3.length\nn == nums4.length\n1 <= n <= 200\n-2\n28\n<= nums1[i], nums2[i], nums3[i], nums4[i] <= 2\n28",
+    "problemStatement": "Given four integer arrays\nnums1\n,\nnums2\n,\nnums3\n, and\nnums4\nall of length\nn\n, return the number of tuples\n(i, j, k, l)\nsuch that:\n0 <= i, j, k, l < n\nnums1[i] + nums2[j] + nums3[k] + nums4[l] == 0\nExample 1:\nInput:\nnums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]\nOutput:\n2\nExplanation:\nThe two tuples are:\n1. (0, 0, 0, 1) -> nums1[0] + nums2[0] + nums3[0] + nums4[1] = 1 + (-2) + (-1) + 2 = 0\n2. (1, 1, 0, 0) -> nums1[1] + nums2[1] + nums3[0] + nums4[0] = 2 + (-1) + (-1) + 0 = 0\nExample 2:\nInput:\nnums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]\nOutput:\n1\nConstraints:\nn == nums1.length\nn == nums2.length\nn == nums3.length\nn == nums4.length\n1 <= n <= 200\n-2\n28\n<= nums1[i], nums2[i], nums3[i], nums4[i] <= 2\n28",
+    "examples": [
+      {
+        "input": "nums1 = [1,2], nums2 = [-2,-1], nums3 = [-1,2], nums4 = [0,2]",
+        "output": "2"
+      },
+      {
+        "input": "nums1 = [0], nums2 = [0], nums3 = [0], nums4 = [0]",
+        "output": "1"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "a-number-after-a-double-reversal",
+    "title": "A Number After a Double Reversal",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Reversing\nan integer means to reverse all its digits.\nFor example, reversing\n2021\ngives\n1202\n. Reversing\n12300\ngives\n321\nas the\nleading zeros are not retained\n.\nGiven an integer\nnum\n,\nreverse\nnum\nto get\nreversed1\n,\nthen reverse\nreversed1\nto get\nreversed2\n. Return\ntrue\nif\nreversed2\nequals\nnum\n. Otherwise return\nfalse\n.\nExample 1:\nInput:\nnum = 526\nOutput:\ntrue\nExplanation:\nReverse num to get 625, then reverse 625 to get 526, which equals num.\nExample 2:\nInput:\nnum = 1800\nOutput:\nfalse\nExplanation:\nReverse num to get 81, then reverse 81 to get 18, which does not equal num.\nExample 3:\nInput:\nnum = 0\nOutput:\ntrue\nExplanation:\nReverse num to get 0, then reverse 0 to get 0, which equals num.\nConstraints:\n0 <= num <= 10\n6",
+    "problemStatement": "Reversing\nan integer means to reverse all its digits.\nFor example, reversing\n2021\ngives\n1202\n. Reversing\n12300\ngives\n321\nas the\nleading zeros are not retained\n.\nGiven an integer\nnum\n,\nreverse\nnum\nto get\nreversed1\n,\nthen reverse\nreversed1\nto get\nreversed2\n. Return\ntrue\nif\nreversed2\nequals\nnum\n. Otherwise return\nfalse\n.\nExample 1:\nInput:\nnum = 526\nOutput:\ntrue\nExplanation:\nReverse num to get 625, then reverse 625 to get 526, which equals num.\nExample 2:\nInput:\nnum = 1800\nOutput:\nfalse\nExplanation:\nReverse num to get 81, then reverse 81 to get 18, which does not equal num.\nExample 3:\nInput:\nnum = 0\nOutput:\ntrue\nExplanation:\nReverse num to get 0, then reverse 0 to get 0, which equals num.\nConstraints:\n0 <= num <= 10\n6",
+    "examples": [
+      {
+        "input": "num = 526",
+        "output": "true"
+      },
+      {
+        "input": "num = 1800",
+        "output": "false"
+      },
+      {
+        "input": "num = 0",
+        "output": "true"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "abbreviating-the-product-of-a-range",
+    "title": "Abbreviating the Product of a Range",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "You are given two positive integers\nleft\nand\nright\nwith\nleft <= right\n. Calculate the\nproduct\nof all integers in the\ninclusive\nrange\n[left, right]\n.\nSince the product may be very large, you will\nabbreviate\nit following these steps:\nCount all\ntrailing\nzeros in the product and\nremove\nthem. Let us denote this count as\nC\n.\nFor example, there are\n3\ntrailing zeros in\n1000\n, and there are\n0\ntrailing zeros in\n546\n.\nDenote the remaining number of digits in the product as\nd\n. If\nd > 10\n, then express the product as\n<pre>...<suf>\nwhere\n<pre>\ndenotes the\nfirst\n5\ndigits of the product, and\n<suf>\ndenotes the\nlast\n5\ndigits of the product\nafter\nremoving all trailing zeros. If\nd <= 10\n, we keep it unchanged.\nFor example, we express\n1234567654321\nas\n12345...54321\n, but\n1234567\nis represented as\n1234567\n.\nFinally, represent the product as a\nstring\n\"<pre>...<suf>eC\"\n.\nFor example,\n12345678987600000\nwill be represented as\n\"12345...89876e5\"\n.\nReturn\na string denoting the\nabbreviated product\nof all integers in the\ninclusive\nrange\n[left, right]\n.\nExample 1:\nInput:\nleft = 1, right = 4\nOutput:\n\"24e0\"\nExplanation:\nThe product is 1 × 2 × 3 × 4 = 24.\nThere are no trailing zeros, so 24 remains the same. The abb",
+    "problemStatement": "You are given two positive integers\nleft\nand\nright\nwith\nleft <= right\n. Calculate the\nproduct\nof all integers in the\ninclusive\nrange\n[left, right]\n.\nSince the product may be very large, you will\nabbreviate\nit following these steps:\nCount all\ntrailing\nzeros in the product and\nremove\nthem. Let us denote this count as\nC\n.\nFor example, there are\n3\ntrailing zeros in\n1000\n, and there are\n0\ntrailing zeros in\n546\n.\nDenote the remaining number of digits in the product as\nd\n. If\nd > 10\n, then express the product as\n<pre>...<suf>\nwhere\n<pre>\ndenotes the\nfirst\n5\ndigits of the product, and\n<suf>\ndenotes the\nlast\n5\ndigits of the product\nafter\nremoving all trailing zeros. If\nd <= 10\n, we keep it unchanged.\nFor example, we express\n1234567654321\nas\n12345...54321\n, but\n1234567\nis represented as\n1234567\n.\nFinally, represent the product as a\nstring\n\"<pre>...<suf>eC\"\n.\nFor example,\n12345678987600000\nwill be represented as\n\"12345...89876e5\"\n.\nReturn\na string denoting the\nabbreviated product\nof all integers in the\ninclusive\nrange\n[left, right]\n.\nExample 1:\nInput:\nleft = 1, right = 4\nOutput:\n\"24e0\"\nExplanation:\nThe product is 1 × 2 × 3 × 4 = 24.\nThere are no trailing zeros, so 24 remains the same. The abbreviation will end with \"e0\".\nSince the number of digits is 2, which is less than 10, we do not have to abbreviate it further.\nThus, the final representation is \"24e0\".\nExample 2:\nInput:\nleft = 2, right = 11\nOutput:\n\"399168e2\"\nExplanation:\nThe product is 39916800.\nThere are 2 trailing zeros, which we remove to get 399168. The abbreviation will end with \"e2\".\nThe number of digits after removing the trailing zeros is 6, so we do not abbreviate it further.\nHence, the abbreviated product is \"399168e2\".\nExample 3:\nInput:\nleft = 371, right = 375\nOutput:\n\"7219856259e3\"\nExplanation:\nThe product is 7219856259000.\nConstraints:\n1 <= left <= right <= 10\n4",
+    "examples": [
+      {
+        "input": "left = 1, right = 4",
+        "output": "\"24e0\""
+      },
+      {
+        "input": "left = 2, right = 11",
+        "output": "\"399168e2\""
+      },
+      {
+        "input": "left = 371, right = 375",
+        "output": "\"7219856259e3\""
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "accounts-merge",
+    "title": "Accounts Merge",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given a list of\naccounts\nwhere each element\naccounts[i]\nis a list of strings, where the first element\naccounts[i][0]\nis a name, and the rest of the elements are\nemails\nrepresenting emails of the account.\nNow, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some common email to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name. A person can have any number of accounts initially, but all of their accounts definitely have the same name.\nAfter merging the accounts, return the accounts in the following format: the first element of each account is the name, and the rest of the elements are emails\nin sorted order\n. The accounts themselves can be returned in\nany order\n.\nExample 1:\nInput:\naccounts = [[\"John\",\"johnsmith@mail.com\",\"john_newyork@mail.com\"],[\"John\",\"johnsmith@mail.com\",\"john00@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]\nOutput:\n[[\"John\",\"john00@mail.com\",\"john_newyork@mail.com\",\"johnsmith@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]\nExplanation:\nThe first and second John's are the same person",
+    "problemStatement": "Given a list of\naccounts\nwhere each element\naccounts[i]\nis a list of strings, where the first element\naccounts[i][0]\nis a name, and the rest of the elements are\nemails\nrepresenting emails of the account.\nNow, we would like to merge these accounts. Two accounts definitely belong to the same person if there is some common email to both accounts. Note that even if two accounts have the same name, they may belong to different people as people could have the same name. A person can have any number of accounts initially, but all of their accounts definitely have the same name.\nAfter merging the accounts, return the accounts in the following format: the first element of each account is the name, and the rest of the elements are emails\nin sorted order\n. The accounts themselves can be returned in\nany order\n.\nExample 1:\nInput:\naccounts = [[\"John\",\"johnsmith@mail.com\",\"john_newyork@mail.com\"],[\"John\",\"johnsmith@mail.com\",\"john00@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]\nOutput:\n[[\"John\",\"john00@mail.com\",\"john_newyork@mail.com\",\"johnsmith@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]\nExplanation:\nThe first and second John's are the same person as they have the common email \"johnsmith@mail.com\".\nThe third John and Mary are different people as none of their email addresses are used by other accounts.\nWe could return these lists in any order, for example the answer [['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com'],\n['John', 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com']] would still be accepted.\nExample 2:\nInput:\naccounts = [[\"Gabe\",\"Gabe0@m.co\",\"Gabe3@m.co\",\"Gabe1@m.co\"],[\"Kevin\",\"Kevin3@m.co\",\"Kevin5@m.co\",\"Kevin0@m.co\"],[\"Ethan\",\"Ethan5@m.co\",\"Ethan4@m.co\",\"Ethan0@m.co\"],[\"Hanzo\",\"Hanzo3@m.co\",\"Hanzo1@m.co\",\"Hanzo0@m.co\"],[\"Fern\",\"Fern5@m.co\",\"Fern1@m.co\",\"Fern0@m.co\"]]\nOutput:\n[[\"Ethan\",\"Ethan0@m.co\",\"Ethan4@m.co\",\"Ethan5@m.co\"],[\"Gabe\",\"Gabe0@m.co\",\"Gabe1@m.co\",\"Gabe3@m.co\"],[\"Hanzo\",\"Hanzo0@m.co\",\"Hanzo1@m.co\",\"Hanzo3@m.co\"],[\"Kevin\",\"Kevin0@m.co\",\"Kevin3@m.co\",\"Kevin5@m.co\"],[\"Fern\",\"Fern0@m.co\",\"Fern1@m.co\",\"Fern5@m.co\"]]\nConstraints:\n1 <= accounts.length <= 1000\n2 <= accounts[i].length <= 10\n1 <= accounts[i][j].length <= 30\naccounts[i][0]\nconsists of English letters.\naccounts[i][j] (for j > 0)\nis a valid email.",
+    "examples": [
+      {
+        "input": "accounts = [[\"John\",\"johnsmith@mail.com\",\"john_newyork@mail.com\"],[\"John\",\"johnsmith@mail.com\",\"john00@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]",
+        "output": "[[\"John\",\"john00@mail.com\",\"john_newyork@mail.com\",\"johnsmith@mail.com\"],[\"Mary\",\"mary@mail.com\"],[\"John\",\"johnnybravo@mail.com\"]]"
+      },
+      {
+        "input": "accounts = [[\"Gabe\",\"Gabe0@m.co\",\"Gabe3@m.co\",\"Gabe1@m.co\"],[\"Kevin\",\"Kevin3@m.co\",\"Kevin5@m.co\",\"Kevin0@m.co\"],[\"Ethan\",\"Ethan5@m.co\",\"Ethan4@m.co\",\"Ethan0@m.co\"],[\"Hanzo\",\"Hanzo3@m.co\",\"Hanzo1@m.co\",\"Hanzo0@m.co\"],[\"Fern\",\"Fern5@m.co\",\"Fern1@m.co\",\"Fern0@m.co\"]]",
+        "output": "[[\"Ethan\",\"Ethan0@m.co\",\"Ethan4@m.co\",\"Ethan5@m.co\"],[\"Gabe\",\"Gabe0@m.co\",\"Gabe1@m.co\",\"Gabe3@m.co\"],[\"Hanzo\",\"Hanzo0@m.co\",\"Hanzo1@m.co\",\"Hanzo3@m.co\"],[\"Kevin\",\"Kevin0@m.co\",\"Kevin3@m.co\",\"Kevin5@m.co\"],[\"Fern\",\"Fern0@m.co\",\"Fern1@m.co\",\"Fern5@m.co\"]]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "actors-and-directors-who-cooperated-at-least-three-times",
+    "title": "Actors and Directors Who Cooperated At Least Three Times",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Table:\nActorDirector\n+-------------+---------+\n| Column Name | Type |\n+-------------+---------+\n| actor_id | int |\n| director_id | int |\n| timestamp | int |\n+-------------+---------+\ntimestamp is the primary key (column with unique values) for this table.\nWrite a solution to find all the pairs\n(actor_id, director_id)\nwhere the actor has cooperated with the director at least three times.\nReturn the result table in\nany order\n.\nThe result format is in the following example.\nExample 1:\nInput:\nActorDirector table:\n+-------------+-------------+-------------+\n| actor_id | director_id | timestamp |\n+-------------+-------------+-------------+\n| 1 | 1 | 0 |\n| 1 | 1 | 1 |\n| 1 | 1 | 2 |\n| 1 | 2 | 3 |\n| 1 | 2 | 4 |\n| 2 | 1 | 5 |\n| 2 | 1 | 6 |\n+-------------+-------------+-------------+\nOutput:\n+-------------+-------------+\n| actor_id | director_id |\n+-------------+-------------+\n| 1 | 1 |\n+-------------+-------------+\nExplanation:\nThe only pair is (1, 1) where they cooperated exactly 3 times.",
+    "problemStatement": "Table:\nActorDirector\n+-------------+---------+\n| Column Name | Type |\n+-------------+---------+\n| actor_id | int |\n| director_id | int |\n| timestamp | int |\n+-------------+---------+\ntimestamp is the primary key (column with unique values) for this table.\nWrite a solution to find all the pairs\n(actor_id, director_id)\nwhere the actor has cooperated with the director at least three times.\nReturn the result table in\nany order\n.\nThe result format is in the following example.\nExample 1:\nInput:\nActorDirector table:\n+-------------+-------------+-------------+\n| actor_id | director_id | timestamp |\n+-------------+-------------+-------------+\n| 1 | 1 | 0 |\n| 1 | 1 | 1 |\n| 1 | 1 | 2 |\n| 1 | 2 | 3 |\n| 1 | 2 | 4 |\n| 2 | 1 | 5 |\n| 2 | 1 | 6 |\n+-------------+-------------+-------------+\nOutput:\n+-------------+-------------+\n| actor_id | director_id |\n+-------------+-------------+\n| 1 | 1 |\n+-------------+-------------+\nExplanation:\nThe only pair is (1, 1) where they cooperated exactly 3 times.",
+    "examples": [
+      {
+        "input": "+-------------+---------+\n| Column Name | Type    |\n+-------------+---------+\n| actor_id    | int     |\n| director_id | int     |\n| timestamp   | int     |\n+-------------+---------+\ntimestamp is the primary key (column with unique values) for this table.",
+        "output": "+-------------+-------------+\n| actor_id | director_id |\n+-------------+-------------+\n| 1 | 1 |\n+-------------+-------------+\nExplanation:\nThe only pair is (1, 1) where they cooperated exactly 3 times."
+      },
+      {
+        "input": "ActorDirector table:\n+-------------+-------------+-------------+\n| actor_id    | director_id | timestamp   |\n+-------------+-------------+-------------+\n| 1           | 1           | 0           |\n| 1           | 1           | 1           |\n| 1           | 1           | 2           |\n| 1           | 2           | 3           |\n| 1           | 2           | 4           |\n| 2           | 1           | 5           |\n| 2           | 1           | 6           |\n+-------------+-------------+-------------+",
+        "output": "+-------------+-------------+\n| actor_id    | director_id |\n+-------------+-------------+\n| 1           | 1           |\n+-------------+-------------+"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-binary",
+    "title": "Add Binary",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given two binary strings\na\nand\nb\n, return\ntheir sum as a binary string\n.\nExample 1:\nInput:\na = \"11\", b = \"1\"\nOutput:\n\"100\"\nExample 2:\nInput:\na = \"1010\", b = \"1011\"\nOutput:\n\"10101\"\nConstraints:\n1 <= a.length, b.length <= 10\n4\na\nand\nb\nconsist only of\n'0'\nor\n'1'\ncharacters.\nEach string does not contain leading zeros except for the zero itself.",
+    "problemStatement": "Given two binary strings\na\nand\nb\n, return\ntheir sum as a binary string\n.\nExample 1:\nInput:\na = \"11\", b = \"1\"\nOutput:\n\"100\"\nExample 2:\nInput:\na = \"1010\", b = \"1011\"\nOutput:\n\"10101\"\nConstraints:\n1 <= a.length, b.length <= 10\n4\na\nand\nb\nconsist only of\n'0'\nor\n'1'\ncharacters.\nEach string does not contain leading zeros except for the zero itself.",
+    "examples": [
+      {
+        "input": "a = \"11\", b = \"1\"",
+        "output": "\"100\""
+      },
+      {
+        "input": "a = \"1010\", b = \"1011\"",
+        "output": "\"10101\""
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-digits",
+    "title": "Add Digits",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given an integer\nnum\n, repeatedly add all its digits until the result has only one digit, and return it.\nExample 1:\nInput:\nnum = 38\nOutput:\n2\nExplanation:\nThe process is\n38 --> 3 + 8 --> 11\n11 --> 1 + 1 --> 2\nSince 2 has only one digit, return it.\nExample 2:\nInput:\nnum = 0\nOutput:\n0\nConstraints:\n0 <= num <= 2\n31\n- 1\nFollow up:\nCould you do it without any loop/recursion in\nO(1)\nruntime?",
+    "problemStatement": "Given an integer\nnum\n, repeatedly add all its digits until the result has only one digit, and return it.\nExample 1:\nInput:\nnum = 38\nOutput:\n2\nExplanation:\nThe process is\n38 --> 3 + 8 --> 11\n11 --> 1 + 1 --> 2\nSince 2 has only one digit, return it.\nExample 2:\nInput:\nnum = 0\nOutput:\n0\nConstraints:\n0 <= num <= 2\n31\n- 1\nFollow up:\nCould you do it without any loop/recursion in\nO(1)\nruntime?",
+    "examples": [
+      {
+        "input": "num = 38",
+        "output": "2"
+      },
+      {
+        "input": "num = 0",
+        "output": "0"
+      }
+    ],
+    "constraints": [
+      "0 <= num <= 2",
+      "31",
+      "1"
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-edges-to-make-degrees-of-all-nodes-even",
+    "title": "Add Edges to Make Degrees of All Nodes Even",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "There is an\nundirected\ngraph consisting of\nn\nnodes numbered from\n1\nto\nn\n. You are given the integer\nn\nand a\n2D\narray\nedges\nwhere\nedges[i] = [a\ni\n, b\ni\n]\nindicates that there is an edge between nodes\na\ni\nand\nb\ni\n. The graph can be disconnected.\nYou can add\nat most\ntwo additional edges (possibly none) to this graph so that there are no repeated edges and no self-loops.\nReturn\ntrue\nif it is possible to make the degree of each node in the graph even, otherwise return\nfalse\n.\nThe degree of a node is the number of edges connected to it.\nExample 1:\nInput:\nn = 5, edges = [[1,2],[2,3],[3,4],[4,2],[1,4],[2,5]]\nOutput:\ntrue\nExplanation:\nThe above diagram shows a valid way of adding an edge.\nEvery node in the resulting graph is connected to an even number of edges.\nExample 2:\nInput:\nn = 4, edges = [[1,2],[3,4]]\nOutput:\ntrue\nExplanation:\nThe above diagram shows a valid way of adding two edges.\nExample 3:\nInput:\nn = 4, edges = [[1,2],[1,3],[1,4]]\nOutput:\nfalse\nExplanation:\nIt is not possible to obtain a valid graph with adding at most 2 edges.\nConstraints:\n3 <= n <= 10\n5\n2 <= edges.length <= 10\n5\nedges[i].length == 2\n1 <= a\ni\n, b\ni\n<= n\na\ni\n!= b\ni\nThere are no repeated edges.",
+    "problemStatement": "There is an\nundirected\ngraph consisting of\nn\nnodes numbered from\n1\nto\nn\n. You are given the integer\nn\nand a\n2D\narray\nedges\nwhere\nedges[i] = [a\ni\n, b\ni\n]\nindicates that there is an edge between nodes\na\ni\nand\nb\ni\n. The graph can be disconnected.\nYou can add\nat most\ntwo additional edges (possibly none) to this graph so that there are no repeated edges and no self-loops.\nReturn\ntrue\nif it is possible to make the degree of each node in the graph even, otherwise return\nfalse\n.\nThe degree of a node is the number of edges connected to it.\nExample 1:\nInput:\nn = 5, edges = [[1,2],[2,3],[3,4],[4,2],[1,4],[2,5]]\nOutput:\ntrue\nExplanation:\nThe above diagram shows a valid way of adding an edge.\nEvery node in the resulting graph is connected to an even number of edges.\nExample 2:\nInput:\nn = 4, edges = [[1,2],[3,4]]\nOutput:\ntrue\nExplanation:\nThe above diagram shows a valid way of adding two edges.\nExample 3:\nInput:\nn = 4, edges = [[1,2],[1,3],[1,4]]\nOutput:\nfalse\nExplanation:\nIt is not possible to obtain a valid graph with adding at most 2 edges.\nConstraints:\n3 <= n <= 10\n5\n2 <= edges.length <= 10\n5\nedges[i].length == 2\n1 <= a\ni\n, b\ni\n<= n\na\ni\n!= b\ni\nThere are no repeated edges.",
+    "examples": [
+      {
+        "input": "n = 5, edges = [[1,2],[2,3],[3,4],[4,2],[1,4],[2,5]]",
+        "output": "true"
+      },
+      {
+        "input": "n = 4, edges = [[1,2],[3,4]]",
+        "output": "true"
+      },
+      {
+        "input": "n = 4, edges = [[1,2],[1,3],[1,4]]",
+        "output": "false"
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-strings",
+    "title": "Add Strings",
+    "difficulty": "Easy",
+    "topic": "String",
+    "description": "Given two non-negative integers,\nnum1\nand\nnum2\nrepresented as string, return\nthe sum of\nnum1\nand\nnum2\nas a string\n.\nYou must solve the problem without using any built-in library for handling large integers (such as\nBigInteger\n). You must also not convert the inputs to integers directly.\nExample 1:\nInput:\nnum1 = \"11\", num2 = \"123\"\nOutput:\n\"134\"\nExample 2:\nInput:\nnum1 = \"456\", num2 = \"77\"\nOutput:\n\"533\"\nExample 3:\nInput:\nnum1 = \"0\", num2 = \"0\"\nOutput:\n\"0\"\nConstraints:\n1 <= num1.length, num2.length <= 10\n4\nnum1\nand\nnum2\nconsist of only digits.\nnum1\nand\nnum2\ndon't have any leading zeros except for the zero itself.",
+    "problemStatement": "Given two non-negative integers,\nnum1\nand\nnum2\nrepresented as string, return\nthe sum of\nnum1\nand\nnum2\nas a string\n.\nYou must solve the problem without using any built-in library for handling large integers (such as\nBigInteger\n). You must also not convert the inputs to integers directly.\nExample 1:\nInput:\nnum1 = \"11\", num2 = \"123\"\nOutput:\n\"134\"\nExample 2:\nInput:\nnum1 = \"456\", num2 = \"77\"\nOutput:\n\"533\"\nExample 3:\nInput:\nnum1 = \"0\", num2 = \"0\"\nOutput:\n\"0\"\nConstraints:\n1 <= num1.length, num2.length <= 10\n4\nnum1\nand\nnum2\nconsist of only digits.\nnum1\nand\nnum2\ndon't have any leading zeros except for the zero itself.",
+    "examples": [
+      {
+        "input": "num1 = \"11\", num2 = \"123\"",
+        "output": "\"134\""
+      },
+      {
+        "input": "num1 = \"456\", num2 = \"77\"",
+        "output": "\"533\""
+      },
+      {
+        "input": "num1 = \"0\", num2 = \"0\"",
+        "output": "\"0\""
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-to-array-form-of-integer",
+    "title": "Add to Array-Form of Integer",
+    "difficulty": "Easy",
+    "topic": "Array",
+    "description": "The\narray-form\nof an integer\nnum\nis an array representing its digits in left to right order.\nFor example, for\nnum = 1321\n, the array form is\n[1,3,2,1]\n.\nGiven\nnum\n, the\narray-form\nof an integer, and an integer\nk\n, return\nthe\narray-form\nof the integer\nnum + k\n.\nExample 1:\nInput:\nnum = [1,2,0,0], k = 34\nOutput:\n[1,2,3,4]\nExplanation:\n1200 + 34 = 1234\nExample 2:\nInput:\nnum = [2,7,4], k = 181\nOutput:\n[4,5,5]\nExplanation:\n274 + 181 = 455\nExample 3:\nInput:\nnum = [2,1,5], k = 806\nOutput:\n[1,0,2,1]\nExplanation:\n215 + 806 = 1021\nConstraints:\n1 <= num.length <= 10\n4\n0 <= num[i] <= 9\nnum\ndoes not contain any leading zeros except for the zero itself.\n1 <= k <= 10\n4",
+    "problemStatement": "The\narray-form\nof an integer\nnum\nis an array representing its digits in left to right order.\nFor example, for\nnum = 1321\n, the array form is\n[1,3,2,1]\n.\nGiven\nnum\n, the\narray-form\nof an integer, and an integer\nk\n, return\nthe\narray-form\nof the integer\nnum + k\n.\nExample 1:\nInput:\nnum = [1,2,0,0], k = 34\nOutput:\n[1,2,3,4]\nExplanation:\n1200 + 34 = 1234\nExample 2:\nInput:\nnum = [2,7,4], k = 181\nOutput:\n[4,5,5]\nExplanation:\n274 + 181 = 455\nExample 3:\nInput:\nnum = [2,1,5], k = 806\nOutput:\n[1,0,2,1]\nExplanation:\n215 + 806 = 1021\nConstraints:\n1 <= num.length <= 10\n4\n0 <= num[i] <= 9\nnum\ndoes not contain any leading zeros except for the zero itself.\n1 <= k <= 10\n4",
+    "examples": [
+      {
+        "input": "num = [1,2,0,0], k = 34",
+        "output": "[1,2,3,4]"
+      },
+      {
+        "input": "num = [2,7,4], k = 181",
+        "output": "[4,5,5]"
+      },
+      {
+        "input": "num = [2,1,5], k = 806",
+        "output": "[1,0,2,1]"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-two-integers",
+    "title": "Add Two Integers",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given two integers\nnum1\nand\nnum2\n, return\nthe\nsum\nof the two integers\n.\nExample 1:\nInput:\nnum1 = 12, num2 = 5\nOutput:\n17\nExplanation:\nnum1 is 12, num2 is 5, and their sum is 12 + 5 = 17, so 17 is returned.\nExample 2:\nInput:\nnum1 = -10, num2 = 4\nOutput:\n-6\nExplanation:\nnum1 + num2 = -6, so -6 is returned.\nConstraints:\n-100 <= num1, num2 <= 100",
+    "problemStatement": "Given two integers\nnum1\nand\nnum2\n, return\nthe\nsum\nof the two integers\n.\nExample 1:\nInput:\nnum1 = 12, num2 = 5\nOutput:\n17\nExplanation:\nnum1 is 12, num2 is 5, and their sum is 12 + 5 = 17, so 17 is returned.\nExample 2:\nInput:\nnum1 = -10, num2 = 4\nOutput:\n-6\nExplanation:\nnum1 + num2 = -6, so -6 is returned.\nConstraints:\n-100 <= num1, num2 <= 100",
+    "examples": [
+      {
+        "input": "num1 = 12, num2 = 5",
+        "output": "17"
+      },
+      {
+        "input": "num1 = -10, num2 = 4",
+        "output": "-6"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-two-numbers",
+    "title": "Add Two Numbers",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "You are given two\nnon-empty\nlinked lists representing two non-negative integers. The digits are stored in\nreverse order\n, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\nExample 1:\nInput:\nl1 = [2,4,3], l2 = [5,6,4]\nOutput:\n[7,0,8]\nExplanation:\n342 + 465 = 807.\nExample 2:\nInput:\nl1 = [0], l2 = [0]\nOutput:\n[0]\nExample 3:\nInput:\nl1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput:\n[8,9,9,9,0,0,0,1]\nConstraints:\nThe number of nodes in each linked list is in the range\n[1, 100]\n.\n0 <= Node.val <= 9\nIt is guaranteed that the list represents a number that does not have leading zeros.",
+    "problemStatement": "You are given two\nnon-empty\nlinked lists representing two non-negative integers. The digits are stored in\nreverse order\n, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\nExample 1:\nInput:\nl1 = [2,4,3], l2 = [5,6,4]\nOutput:\n[7,0,8]\nExplanation:\n342 + 465 = 807.\nExample 2:\nInput:\nl1 = [0], l2 = [0]\nOutput:\n[0]\nExample 3:\nInput:\nl1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]\nOutput:\n[8,9,9,9,0,0,0,1]\nConstraints:\nThe number of nodes in each linked list is in the range\n[1, 100]\n.\n0 <= Node.val <= 9\nIt is guaranteed that the list represents a number that does not have leading zeros.",
+    "examples": [
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "output": "[7,0,8]"
+      },
+      {
+        "input": "l1 = [0], l2 = [0]",
+        "output": "[0]"
+      },
+      {
+        "input": "l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]",
+        "output": "[8,9,9,9,0,0,0,1]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-two-numbers-ii",
+    "title": "Add Two Numbers II",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "You are given two\nnon-empty\nlinked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\nExample 1:\nInput:\nl1 = [7,2,4,3], l2 = [5,6,4]\nOutput:\n[7,8,0,7]\nExample 2:\nInput:\nl1 = [2,4,3], l2 = [5,6,4]\nOutput:\n[8,0,7]\nExample 3:\nInput:\nl1 = [0], l2 = [0]\nOutput:\n[0]\nConstraints:\nThe number of nodes in each linked list is in the range\n[1, 100]\n.\n0 <= Node.val <= 9\nIt is guaranteed that the list represents a number that does not have leading zeros.\nFollow up:\nCould you solve it without reversing the input lists?",
+    "problemStatement": "You are given two\nnon-empty\nlinked lists representing two non-negative integers. The most significant digit comes first and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.\nYou may assume the two numbers do not contain any leading zero, except the number 0 itself.\nExample 1:\nInput:\nl1 = [7,2,4,3], l2 = [5,6,4]\nOutput:\n[7,8,0,7]\nExample 2:\nInput:\nl1 = [2,4,3], l2 = [5,6,4]\nOutput:\n[8,0,7]\nExample 3:\nInput:\nl1 = [0], l2 = [0]\nOutput:\n[0]\nConstraints:\nThe number of nodes in each linked list is in the range\n[1, 100]\n.\n0 <= Node.val <= 9\nIt is guaranteed that the list represents a number that does not have leading zeros.\nFollow up:\nCould you solve it without reversing the input lists?",
+    "examples": [
+      {
+        "input": "l1 = [7,2,4,3], l2 = [5,6,4]",
+        "output": "[7,8,0,7]"
+      },
+      {
+        "input": "l1 = [2,4,3], l2 = [5,6,4]",
+        "output": "[8,0,7]"
+      },
+      {
+        "input": "l1 = [0], l2 = [0]",
+        "output": "[0]"
+      }
+    ],
+    "constraints": [
+      "The number of nodes in each linked list is in the range",
+      "[1, 100]",
+      ".",
+      "0 <= Node.val <= 9",
+      "It is guaranteed that the list represents a number that does not have leading zeros."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "add-two-promises",
+    "title": "Add Two Promises",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given two promises\npromise1\nand\npromise2\n, return a new promise.\npromise1\nand\npromise2\nwill both resolve with a number. The returned promise should resolve with the sum of the two numbers.\nExample 1:\nInput:\npromise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)),\npromise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))\nOutput:\n7\nExplanation:\nThe two input promises resolve with the values of 2 and 5 respectively. The returned promise should resolve with a value of 2 + 5 = 7. The time the returned promise resolves is not judged for this problem.\nExample 2:\nInput:\npromise1 = new Promise(resolve => setTimeout(() => resolve(10), 50)),\npromise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))\nOutput:\n-2\nExplanation:\nThe two input promises resolve with the values of 10 and -12 respectively. The returned promise should resolve with a value of 10 + -12 = -2.\nConstraints:\npromise1\nand\npromise2\nare promises that resolve with a number",
+    "problemStatement": "Given two promises\npromise1\nand\npromise2\n, return a new promise.\npromise1\nand\npromise2\nwill both resolve with a number. The returned promise should resolve with the sum of the two numbers.\nExample 1:\nInput:\npromise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)),\npromise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))\nOutput:\n7\nExplanation:\nThe two input promises resolve with the values of 2 and 5 respectively. The returned promise should resolve with a value of 2 + 5 = 7. The time the returned promise resolves is not judged for this problem.\nExample 2:\nInput:\npromise1 = new Promise(resolve => setTimeout(() => resolve(10), 50)),\npromise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))\nOutput:\n-2\nExplanation:\nThe two input promises resolve with the values of 10 and -12 respectively. The returned promise should resolve with a value of 10 + -12 = -2.\nConstraints:\npromise1\nand\npromise2\nare promises that resolve with a number",
+    "examples": [
+      {
+        "input": "promise1 = new Promise(resolve => setTimeout(() => resolve(2), 20)), \npromise2 = new Promise(resolve => setTimeout(() => resolve(5), 60))",
+        "output": "7"
+      },
+      {
+        "input": "promise1 = new Promise(resolve => setTimeout(() => resolve(10), 50)), \npromise2 = new Promise(resolve => setTimeout(() => resolve(-12), 30))",
+        "output": "-2"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "adding-spaces-to-a-string",
+    "title": "Adding Spaces to a String",
+    "difficulty": "Medium",
+    "topic": "String",
+    "description": "You are given a\n0-indexed\nstring\ns\nand a\n0-indexed\ninteger array\nspaces\nthat describes the indices in the original string where spaces will be added. Each space should be inserted\nbefore\nthe character at the given index.\nFor example, given\ns = \"EnjoyYourCoffee\"\nand\nspaces = [5, 9]\n, we place spaces before\n'Y'\nand\n'C'\n, which are at indices\n5\nand\n9\nrespectively. Thus, we obtain\n\"Enjoy\nY\nour\nC\noffee\"\n.\nReturn\nthe modified string\nafter\nthe spaces have been added.\nExample 1:\nInput:\ns = \"LeetcodeHelpsMeLearn\", spaces = [8,13,15]\nOutput:\n\"Leetcode Helps Me Learn\"\nExplanation:\nThe indices 8, 13, and 15 correspond to the underlined characters in \"Leetcode\nH\nelps\nM\ne\nL\nearn\".\nWe then place spaces before those characters.\nExample 2:\nInput:\ns = \"icodeinpython\", spaces = [1,5,7,9]\nOutput:\n\"i code in py thon\"\nExplanation:\nThe indices 1, 5, 7, and 9 correspond to the underlined characters in \"i\nc\node\ni\nn\np\ny\nt\nhon\".\nWe then place spaces before those characters.\nExample 3:\nInput:\ns = \"spacing\", spaces = [0,1,2,3,4,5,6]\nOutput:\n\" s p a c i n g\"\nExplanation:\nWe are also able to place spaces before the first character of the string.\nConstraints:\n1 <= s.length <= 3 * 10\n5\ns\nconsists only of lowercase",
+    "problemStatement": "You are given a\n0-indexed\nstring\ns\nand a\n0-indexed\ninteger array\nspaces\nthat describes the indices in the original string where spaces will be added. Each space should be inserted\nbefore\nthe character at the given index.\nFor example, given\ns = \"EnjoyYourCoffee\"\nand\nspaces = [5, 9]\n, we place spaces before\n'Y'\nand\n'C'\n, which are at indices\n5\nand\n9\nrespectively. Thus, we obtain\n\"Enjoy\nY\nour\nC\noffee\"\n.\nReturn\nthe modified string\nafter\nthe spaces have been added.\nExample 1:\nInput:\ns = \"LeetcodeHelpsMeLearn\", spaces = [8,13,15]\nOutput:\n\"Leetcode Helps Me Learn\"\nExplanation:\nThe indices 8, 13, and 15 correspond to the underlined characters in \"Leetcode\nH\nelps\nM\ne\nL\nearn\".\nWe then place spaces before those characters.\nExample 2:\nInput:\ns = \"icodeinpython\", spaces = [1,5,7,9]\nOutput:\n\"i code in py thon\"\nExplanation:\nThe indices 1, 5, 7, and 9 correspond to the underlined characters in \"i\nc\node\ni\nn\np\ny\nt\nhon\".\nWe then place spaces before those characters.\nExample 3:\nInput:\ns = \"spacing\", spaces = [0,1,2,3,4,5,6]\nOutput:\n\" s p a c i n g\"\nExplanation:\nWe are also able to place spaces before the first character of the string.\nConstraints:\n1 <= s.length <= 3 * 10\n5\ns\nconsists only of lowercase and uppercase English letters.\n1 <= spaces.length <= 3 * 10\n5\n0 <= spaces[i] <= s.length - 1\nAll the values of\nspaces\nare\nstrictly increasing\n.",
+    "examples": [
+      {
+        "input": "s = \"LeetcodeHelpsMeLearn\", spaces = [8,13,15]",
+        "output": "\"Leetcode Helps Me Learn\""
+      },
+      {
+        "input": "s = \"icodeinpython\", spaces = [1,5,7,9]",
+        "output": "\"i code in py thon\""
+      },
+      {
+        "input": "s = \"spacing\", spaces = [0,1,2,3,4,5,6]",
+        "output": "\" s p a c i n g\""
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid string inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the string structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "adding-two-negabinary-numbers",
+    "title": "Adding Two Negabinary Numbers",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given two numbers\narr1\nand\narr2\nin base\n-2\n, return the result of adding them together.\nEach number is given in\narray format\n: as an array of 0s and 1s, from most significant bit to least significant bit. For example,\narr = [1,1,0,1]\nrepresents the number\n(-2)^3 + (-2)^2 + (-2)^0 = -3\n. A number\narr\nin\narray, format\nis also guaranteed to have no leading zeros: either\narr == [0]\nor\narr[0] == 1\n.\nReturn the result of adding\narr1\nand\narr2\nin the same format: as an array of 0s and 1s with no leading zeros.\nExample 1:\nInput:\narr1 = [1,1,1,1,1], arr2 = [1,0,1]\nOutput:\n[1,0,0,0,0]\nExplanation:\narr1 represents 11, arr2 represents 5, the output represents 16.\nExample 2:\nInput:\narr1 = [0], arr2 = [0]\nOutput:\n[0]\nExample 3:\nInput:\narr1 = [0], arr2 = [1]\nOutput:\n[1]\nConstraints:\n1 <= arr1.length, arr2.length <= 1000\narr1[i]\nand\narr2[i]\nare\n0\nor\n1\narr1\nand\narr2\nhave no leading zeros",
+    "problemStatement": "Given two numbers\narr1\nand\narr2\nin base\n-2\n, return the result of adding them together.\nEach number is given in\narray format\n: as an array of 0s and 1s, from most significant bit to least significant bit. For example,\narr = [1,1,0,1]\nrepresents the number\n(-2)^3 + (-2)^2 + (-2)^0 = -3\n. A number\narr\nin\narray, format\nis also guaranteed to have no leading zeros: either\narr == [0]\nor\narr[0] == 1\n.\nReturn the result of adding\narr1\nand\narr2\nin the same format: as an array of 0s and 1s with no leading zeros.\nExample 1:\nInput:\narr1 = [1,1,1,1,1], arr2 = [1,0,1]\nOutput:\n[1,0,0,0,0]\nExplanation:\narr1 represents 11, arr2 represents 5, the output represents 16.\nExample 2:\nInput:\narr1 = [0], arr2 = [0]\nOutput:\n[0]\nExample 3:\nInput:\narr1 = [0], arr2 = [1]\nOutput:\n[1]\nConstraints:\n1 <= arr1.length, arr2.length <= 1000\narr1[i]\nand\narr2[i]\nare\n0\nor\n1\narr1\nand\narr2\nhave no leading zeros",
+    "examples": [
+      {
+        "input": "arr1 = [1,1,1,1,1], arr2 = [1,0,1]",
+        "output": "[1,0,0,0,0]"
+      },
+      {
+        "input": "arr1 = [0], arr2 = [0]",
+        "output": "[0]"
+      },
+      {
+        "input": "arr1 = [0], arr2 = [1]",
+        "output": "[1]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "additive-number",
+    "title": "Additive Number",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "An\nadditive number\nis a string whose digits can form an\nadditive sequence\n.\nA valid\nadditive sequence\nshould contain\nat least\nthree numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.\nGiven a string containing only digits, return\ntrue\nif it is an\nadditive number\nor\nfalse\notherwise.\nNote:\nNumbers in the additive sequence\ncannot\nhave leading zeros, so sequence\n1, 2, 03\nor\n1, 02, 3\nis invalid.\nExample 1:\nInput:\n\"112358\"\nOutput:\ntrue\nExplanation:\nThe digits can form an additive sequence: 1, 1, 2, 3, 5, 8.\n1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8\nExample 2:\nInput:\n\"199100199\"\nOutput:\ntrue\nExplanation:\nThe additive sequence is: 1, 99, 100, 199.\n1 + 99 = 100, 99 + 100 = 199\nConstraints:\n1 <= num.length <= 35\nnum\nconsists only of digits.\nFollow up:\nHow would you handle overflow for very large input integers?",
+    "problemStatement": "An\nadditive number\nis a string whose digits can form an\nadditive sequence\n.\nA valid\nadditive sequence\nshould contain\nat least\nthree numbers. Except for the first two numbers, each subsequent number in the sequence must be the sum of the preceding two.\nGiven a string containing only digits, return\ntrue\nif it is an\nadditive number\nor\nfalse\notherwise.\nNote:\nNumbers in the additive sequence\ncannot\nhave leading zeros, so sequence\n1, 2, 03\nor\n1, 02, 3\nis invalid.\nExample 1:\nInput:\n\"112358\"\nOutput:\ntrue\nExplanation:\nThe digits can form an additive sequence: 1, 1, 2, 3, 5, 8.\n1 + 1 = 2, 1 + 2 = 3, 2 + 3 = 5, 3 + 5 = 8\nExample 2:\nInput:\n\"199100199\"\nOutput:\ntrue\nExplanation:\nThe additive sequence is: 1, 99, 100, 199.\n1 + 99 = 100, 99 + 100 = 199\nConstraints:\n1 <= num.length <= 35\nnum\nconsists only of digits.\nFollow up:\nHow would you handle overflow for very large input integers?",
+    "examples": [
+      {
+        "input": "\"112358\"",
+        "output": "true"
+      },
+      {
+        "input": "\"199100199\"",
+        "output": "true"
+      }
+    ],
+    "constraints": [
+      "1 <= num.length <= 35",
+      "num",
+      "consists only of digits."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "advantage-shuffle",
+    "title": "Advantage Shuffle",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "You are given two integer arrays\nnums1\nand\nnums2\nboth of the same length. The\nadvantage\nof\nnums1\nwith respect to\nnums2\nis the number of indices\ni\nfor which\nnums1[i] > nums2[i]\n.\nReturn\nany permutation of\nnums1\nthat maximizes its\nadvantage\nwith respect to\nnums2\n.\nExample 1:\nInput:\nnums1 = [2,7,11,15], nums2 = [1,10,4,11]\nOutput:\n[2,11,7,15]\nExample 2:\nInput:\nnums1 = [12,24,8,32], nums2 = [13,25,32,11]\nOutput:\n[24,32,8,12]\nConstraints:\n1 <= nums1.length <= 10\n5\nnums2.length == nums1.length\n0 <= nums1[i], nums2[i] <= 10\n9",
+    "problemStatement": "You are given two integer arrays\nnums1\nand\nnums2\nboth of the same length. The\nadvantage\nof\nnums1\nwith respect to\nnums2\nis the number of indices\ni\nfor which\nnums1[i] > nums2[i]\n.\nReturn\nany permutation of\nnums1\nthat maximizes its\nadvantage\nwith respect to\nnums2\n.\nExample 1:\nInput:\nnums1 = [2,7,11,15], nums2 = [1,10,4,11]\nOutput:\n[2,11,7,15]\nExample 2:\nInput:\nnums1 = [12,24,8,32], nums2 = [13,25,32,11]\nOutput:\n[24,32,8,12]\nConstraints:\n1 <= nums1.length <= 10\n5\nnums2.length == nums1.length\n0 <= nums1[i], nums2[i] <= 10\n9",
+    "examples": [
+      {
+        "input": "nums1 = [2,7,11,15], nums2 = [1,10,4,11]",
+        "output": "[2,11,7,15]"
+      },
+      {
+        "input": "nums1 = [12,24,8,32], nums2 = [13,25,32,11]",
+        "output": "[24,32,8,12]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "airplane-seat-assignment-probability",
+    "title": "Airplane Seat Assignment Probability",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "n\npassengers board an airplane with exactly\nn\nseats. The first passenger has lost the ticket and picks a seat randomly. But after that, the rest of the passengers will:\nTake their own seat if it is still available, and\nPick other seats randomly when they find their seat occupied\nReturn\nthe probability that the\nn\nth\nperson gets his own seat\n.\nExample 1:\nInput:\nn = 1\nOutput:\n1.00000\nExplanation:\nThe first person can only get the first seat.\nExample 2:\nInput:\nn = 2\nOutput:\n0.50000\nExplanation:\nThe second person has a probability of 0.5 to get the second seat (when first person gets the first seat).\nConstraints:\n1 <= n <= 10\n5",
+    "problemStatement": "n\npassengers board an airplane with exactly\nn\nseats. The first passenger has lost the ticket and picks a seat randomly. But after that, the rest of the passengers will:\nTake their own seat if it is still available, and\nPick other seats randomly when they find their seat occupied\nReturn\nthe probability that the\nn\nth\nperson gets his own seat\n.\nExample 1:\nInput:\nn = 1\nOutput:\n1.00000\nExplanation:\nThe first person can only get the first seat.\nExample 2:\nInput:\nn = 2\nOutput:\n0.50000\nExplanation:\nThe second person has a probability of 0.5 to get the second seat (when first person gets the first seat).\nConstraints:\n1 <= n <= 10\n5",
+    "examples": [
+      {
+        "input": "n = 1",
+        "output": "1.00000"
+      },
+      {
+        "input": "n = 2",
+        "output": "0.50000"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "alert-using-same-key-card-three-or-more-times-in-a-one-hour-period",
+    "title": "Alert Using Same Key-Card Three or More Times in a One Hour Period",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "LeetCode company workers use key-cards to unlock office doors. Each time a worker uses their key-card, the security system saves the worker's name and the time when it was used. The system emits an\nalert\nif any worker uses the key-card\nthree or more times\nin a one-hour period.\nYou are given a list of strings\nkeyName\nand\nkeyTime\nwhere\n[keyName[i], keyTime[i]]\ncorresponds to a person's name and the time when their key-card was used\nin a\nsingle day\n.\nAccess times are given in the\n24-hour time format \"HH:MM\"\n, such as\n\"23:51\"\nand\n\"09:49\"\n.\nReturn a\nlist of unique worker names who received an alert for frequent keycard use\n. Sort the names in\nascending order alphabetically\n.\nNotice that\n\"10:00\"\n-\n\"11:00\"\nis considered to be within a one-hour period, while\n\"22:51\"\n-\n\"23:52\"\nis not considered to be within a one-hour period.\nExample 1:\nInput:\nkeyName = [\"daniel\",\"daniel\",\"daniel\",\"luis\",\"luis\",\"luis\",\"luis\"], keyTime = [\"10:00\",\"10:40\",\"11:00\",\"09:00\",\"11:00\",\"13:00\",\"15:00\"]\nOutput:\n[\"daniel\"]\nExplanation:\n\"daniel\" used the keycard 3 times in a one-hour period (\"10:00\",\"10:40\", \"11:00\").\nExample 2:\nInput:\nkeyName = [\"alice\",\"alice\",\"alice\",\"bob\",\"bob\",\"bob\",\"bob\"], keyTime = [\"12:01\",\"12:",
+    "problemStatement": "LeetCode company workers use key-cards to unlock office doors. Each time a worker uses their key-card, the security system saves the worker's name and the time when it was used. The system emits an\nalert\nif any worker uses the key-card\nthree or more times\nin a one-hour period.\nYou are given a list of strings\nkeyName\nand\nkeyTime\nwhere\n[keyName[i], keyTime[i]]\ncorresponds to a person's name and the time when their key-card was used\nin a\nsingle day\n.\nAccess times are given in the\n24-hour time format \"HH:MM\"\n, such as\n\"23:51\"\nand\n\"09:49\"\n.\nReturn a\nlist of unique worker names who received an alert for frequent keycard use\n. Sort the names in\nascending order alphabetically\n.\nNotice that\n\"10:00\"\n-\n\"11:00\"\nis considered to be within a one-hour period, while\n\"22:51\"\n-\n\"23:52\"\nis not considered to be within a one-hour period.\nExample 1:\nInput:\nkeyName = [\"daniel\",\"daniel\",\"daniel\",\"luis\",\"luis\",\"luis\",\"luis\"], keyTime = [\"10:00\",\"10:40\",\"11:00\",\"09:00\",\"11:00\",\"13:00\",\"15:00\"]\nOutput:\n[\"daniel\"]\nExplanation:\n\"daniel\" used the keycard 3 times in a one-hour period (\"10:00\",\"10:40\", \"11:00\").\nExample 2:\nInput:\nkeyName = [\"alice\",\"alice\",\"alice\",\"bob\",\"bob\",\"bob\",\"bob\"], keyTime = [\"12:01\",\"12:00\",\"18:00\",\"21:00\",\"21:20\",\"21:30\",\"23:00\"]\nOutput:\n[\"bob\"]\nExplanation:\n\"bob\" used the keycard 3 times in a one-hour period (\"21:00\",\"21:20\", \"21:30\").\nConstraints:\n1 <= keyName.length, keyTime.length <= 10\n5\nkeyName.length == keyTime.length\nkeyTime[i]\nis in the format\n\"HH:MM\"\n.\n[keyName[i], keyTime[i]]\nis\nunique\n.\n1 <= keyName[i].length <= 10\nkeyName[i] contains only lowercase English letters.",
+    "examples": [
+      {
+        "input": "keyName = [\"daniel\",\"daniel\",\"daniel\",\"luis\",\"luis\",\"luis\",\"luis\"], keyTime = [\"10:00\",\"10:40\",\"11:00\",\"09:00\",\"11:00\",\"13:00\",\"15:00\"]",
+        "output": "[\"daniel\"]"
+      },
+      {
+        "input": "keyName = [\"alice\",\"alice\",\"alice\",\"bob\",\"bob\",\"bob\",\"bob\"], keyTime = [\"12:01\",\"12:00\",\"18:00\",\"21:00\",\"21:20\",\"21:30\",\"23:00\"]",
+        "output": "[\"bob\"]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "alice-and-bob-playing-flower-game",
+    "title": "Alice and Bob Playing Flower Game",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Alice and Bob are playing a turn-based game on a circular field surrounded by flowers. The circle represents the field, and there are\nx\nflowers in the clockwise direction between Alice and Bob, and\ny\nflowers in the anti-clockwise direction between them.\nThe game proceeds as follows:\nAlice takes the first turn.\nIn each turn, a player must choose either the clockwise or anti-clockwise direction and pick one flower from that side.\nAt the end of the turn, if there are no flowers left at all, the\ncurrent\nplayer captures their opponent and wins the game.\nGiven two integers,\nn\nand\nm\n, the task is to compute the number of possible pairs\n(x, y)\nthat satisfy the conditions:\nAlice must win the game according to the described rules.\nThe number of flowers\nx\nin the clockwise direction must be in the range\n[1,n]\n.\nThe number of flowers\ny\nin the anti-clockwise direction must be in the range\n[1,m]\n.\nReturn\nthe number of possible pairs\n(x, y)\nthat satisfy the conditions mentioned in the statement\n.\nExample 1:\nInput:\nn = 3, m = 2\nOutput:\n3\nExplanation:\nThe following pairs satisfy conditions described in the statement: (1,2), (3,2), (2,1).\nExample 2:\nInput:\nn = 1, m = 1\nOutput:\n0\nExplanation:\nNo pairs",
+    "problemStatement": "Alice and Bob are playing a turn-based game on a circular field surrounded by flowers. The circle represents the field, and there are\nx\nflowers in the clockwise direction between Alice and Bob, and\ny\nflowers in the anti-clockwise direction between them.\nThe game proceeds as follows:\nAlice takes the first turn.\nIn each turn, a player must choose either the clockwise or anti-clockwise direction and pick one flower from that side.\nAt the end of the turn, if there are no flowers left at all, the\ncurrent\nplayer captures their opponent and wins the game.\nGiven two integers,\nn\nand\nm\n, the task is to compute the number of possible pairs\n(x, y)\nthat satisfy the conditions:\nAlice must win the game according to the described rules.\nThe number of flowers\nx\nin the clockwise direction must be in the range\n[1,n]\n.\nThe number of flowers\ny\nin the anti-clockwise direction must be in the range\n[1,m]\n.\nReturn\nthe number of possible pairs\n(x, y)\nthat satisfy the conditions mentioned in the statement\n.\nExample 1:\nInput:\nn = 3, m = 2\nOutput:\n3\nExplanation:\nThe following pairs satisfy conditions described in the statement: (1,2), (3,2), (2,1).\nExample 2:\nInput:\nn = 1, m = 1\nOutput:\n0\nExplanation:\nNo pairs satisfy the conditions described in the statement.\nConstraints:\n1 <= n, m <= 10\n5",
+    "examples": [
+      {
+        "input": "n = 3, m = 2",
+        "output": "3"
+      },
+      {
+        "input": "n = 1, m = 1",
+        "output": "0"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-divisions-with-the-highest-score-of-a-binary-array",
+    "title": "All Divisions With the Highest Score of a Binary Array",
+    "difficulty": "Medium",
+    "topic": "Array",
+    "description": "You are given a\n0-indexed\nbinary array\nnums\nof length\nn\n.\nnums\ncan be divided at index\ni\n(where\n0 <= i <= n)\ninto two arrays (possibly empty)\nnums\nleft\nand\nnums\nright\n:\nnums\nleft\nhas all the elements of\nnums\nbetween index\n0\nand\ni - 1\n(inclusive)\n, while\nnums\nright\nhas all the elements of nums between index\ni\nand\nn - 1\n(inclusive)\n.\nIf\ni == 0\n,\nnums\nleft\nis\nempty\n, while\nnums\nright\nhas all the elements of\nnums\n.\nIf\ni == n\n,\nnums\nleft\nhas all the elements of nums, while\nnums\nright\nis\nempty\n.\nThe\ndivision score\nof an index\ni\nis the\nsum\nof the number of\n0\n's in\nnums\nleft\nand the number of\n1\n's in\nnums\nright\n.\nReturn\nall distinct indices\nthat have the\nhighest\npossible\ndivision score\n. You may return the answer in\nany order\n.\nExample 1:\nInput:\nnums = [0,0,1,0]\nOutput:\n[2,4]\nExplanation:\nDivision at index\n- 0: nums\nleft\nis []. nums\nright\nis [0,0,\n1\n,0]. The score is 0 + 1 = 1.\n- 1: nums\nleft\nis [\n0\n]. nums\nright\nis [0,\n1\n,0]. The score is 1 + 1 = 2.\n- 2: nums\nleft\nis [\n0\n,\n0\n]. nums\nright\nis [\n1\n,0]. The score is 2 + 1 = 3.\n- 3: nums\nleft\nis [\n0\n,\n0\n,1]. nums\nright\nis [0]. The score is 2 + 0 = 2.\n- 4: nums\nleft\nis [\n0\n,\n0\n,1,\n0\n]. nums\nright\nis []. The score is 3 + 0 = 3.\nIndices 2 and 4 ",
+    "problemStatement": "You are given a\n0-indexed\nbinary array\nnums\nof length\nn\n.\nnums\ncan be divided at index\ni\n(where\n0 <= i <= n)\ninto two arrays (possibly empty)\nnums\nleft\nand\nnums\nright\n:\nnums\nleft\nhas all the elements of\nnums\nbetween index\n0\nand\ni - 1\n(inclusive)\n, while\nnums\nright\nhas all the elements of nums between index\ni\nand\nn - 1\n(inclusive)\n.\nIf\ni == 0\n,\nnums\nleft\nis\nempty\n, while\nnums\nright\nhas all the elements of\nnums\n.\nIf\ni == n\n,\nnums\nleft\nhas all the elements of nums, while\nnums\nright\nis\nempty\n.\nThe\ndivision score\nof an index\ni\nis the\nsum\nof the number of\n0\n's in\nnums\nleft\nand the number of\n1\n's in\nnums\nright\n.\nReturn\nall distinct indices\nthat have the\nhighest\npossible\ndivision score\n. You may return the answer in\nany order\n.\nExample 1:\nInput:\nnums = [0,0,1,0]\nOutput:\n[2,4]\nExplanation:\nDivision at index\n- 0: nums\nleft\nis []. nums\nright\nis [0,0,\n1\n,0]. The score is 0 + 1 = 1.\n- 1: nums\nleft\nis [\n0\n]. nums\nright\nis [0,\n1\n,0]. The score is 1 + 1 = 2.\n- 2: nums\nleft\nis [\n0\n,\n0\n]. nums\nright\nis [\n1\n,0]. The score is 2 + 1 = 3.\n- 3: nums\nleft\nis [\n0\n,\n0\n,1]. nums\nright\nis [0]. The score is 2 + 0 = 2.\n- 4: nums\nleft\nis [\n0\n,\n0\n,1,\n0\n]. nums\nright\nis []. The score is 3 + 0 = 3.\nIndices 2 and 4 both have the highest possible division score 3.\nNote the answer [4,2] would also be accepted.\nExample 2:\nInput:\nnums = [0,0,0]\nOutput:\n[3]\nExplanation:\nDivision at index\n- 0: nums\nleft\nis []. nums\nright\nis [0,0,0]. The score is 0 + 0 = 0.\n- 1: nums\nleft\nis [\n0\n]. nums\nright\nis [0,0]. The score is 1 + 0 = 1.\n- 2: nums\nleft\nis [\n0\n,\n0\n]. nums\nright\nis [0]. The score is 2 + 0 = 2.\n- 3: nums\nleft\nis [\n0\n,\n0\n,\n0\n]. nums\nright\nis []. The score is 3 + 0 = 3.\nOnly index 3 has the highest possible division score 3.\nExample 3:\nInput:\nnums = [1,1]\nOutput:\n[0]\nExplanation:\nDivision at index\n- 0: nums\nleft\nis []. nums\nright\nis [\n1\n,\n1\n]. The score is 0 + 2 = 2.\n- 1: nums\nleft\nis [1]. nums\nright\nis [\n1\n]. The score is 0 + 1 = 1.\n- 2: nums\nleft\nis [1,1]. nums\nright\nis []. The score is 0 + 0 = 0.\nOnly index 0 has the highest possible division score 2.\nConstraints:\nn == nums.length\n1 <= n <= 10\n5\nnums[i]\nis either\n0\nor\n1\n.",
+    "examples": [
+      {
+        "input": "nums = [0,0,1,0]",
+        "output": "[2,4]"
+      },
+      {
+        "input": "nums = [0,0,0]",
+        "output": "[3]"
+      },
+      {
+        "input": "nums = [1,1]",
+        "output": "[0]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid array inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the array structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "all-paths-from-source-to-target",
+    "title": "All Paths From Source to Target",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "Given a directed acyclic graph (\nDAG\n) of\nn\nnodes labeled from\n0\nto\nn - 1\n, find all possible paths from node\n0\nto node\nn - 1\nand return them in\nany order\n.\nThe graph is given as follows:\ngraph[i]\nis a list of all nodes you can visit from node\ni\n(i.e., there is a directed edge from node\ni\nto node\ngraph[i][j]\n).\nExample 1:\nInput:\ngraph = [[1,2],[3],[3],[]]\nOutput:\n[[0,1,3],[0,2,3]]\nExplanation:\nThere are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.\nExample 2:\nInput:\ngraph = [[4,3,1],[3,2,4],[3],[4],[]]\nOutput:\n[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]\nConstraints:\nn == graph.length\n2 <= n <= 15\n0 <= graph[i][j] < n\ngraph[i][j] != i\n(i.e., there will be no self-loops).\nAll the elements of\ngraph[i]\nare\nunique\n.\nThe input graph is\nguaranteed\nto be a\nDAG\n.",
+    "problemStatement": "Given a directed acyclic graph (\nDAG\n) of\nn\nnodes labeled from\n0\nto\nn - 1\n, find all possible paths from node\n0\nto node\nn - 1\nand return them in\nany order\n.\nThe graph is given as follows:\ngraph[i]\nis a list of all nodes you can visit from node\ni\n(i.e., there is a directed edge from node\ni\nto node\ngraph[i][j]\n).\nExample 1:\nInput:\ngraph = [[1,2],[3],[3],[]]\nOutput:\n[[0,1,3],[0,2,3]]\nExplanation:\nThere are two paths: 0 -> 1 -> 3 and 0 -> 2 -> 3.\nExample 2:\nInput:\ngraph = [[4,3,1],[3,2,4],[3],[4],[]]\nOutput:\n[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]\nConstraints:\nn == graph.length\n2 <= n <= 15\n0 <= graph[i][j] < n\ngraph[i][j] != i\n(i.e., there will be no self-loops).\nAll the elements of\ngraph[i]\nare\nunique\n.\nThe input graph is\nguaranteed\nto be a\nDAG\n.",
+    "examples": [
+      {
+        "input": "graph = [[1,2],[3],[3],[]]",
+        "output": "[[0,1,3],[0,2,3]]"
+      },
+      {
+        "input": "graph = [[4,3,1],[3,2,4],[3],[4],[]]",
+        "output": "[[0,4],[0,3,4],[0,1,3,4],[0,1,2,3,4],[0,1,4]]"
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "allocate-mailboxes",
+    "title": "Allocate Mailboxes",
+    "difficulty": "Hard",
+    "topic": "Other",
+    "description": "Given the array\nhouses\nwhere\nhouses[i]\nis the location of the\ni\nth\nhouse along a street and an integer\nk\n, allocate\nk\nmailboxes in the street.\nReturn\nthe\nminimum\ntotal distance between each house and its nearest mailbox\n.\nThe test cases are generated so that the answer fits in a 32-bit integer.\nExample 1:\nInput:\nhouses = [1,4,8,10,20], k = 3\nOutput:\n5\nExplanation:\nAllocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5\nExample 2:\nInput:\nhouses = [2,3,5,12,18], k = 2\nOutput:\n9\nExplanation:\nAllocate mailboxes in position 3 and 14.\nMinimum total distance from each houses to nearest mailboxes is |2-3| + |3-3| + |5-3| + |12-14| + |18-14| = 9.\nConstraints:\n1 <= k <= houses.length <= 100\n1 <= houses[i] <= 10\n4\nAll the integers of\nhouses\nare\nunique\n.",
+    "problemStatement": "Given the array\nhouses\nwhere\nhouses[i]\nis the location of the\ni\nth\nhouse along a street and an integer\nk\n, allocate\nk\nmailboxes in the street.\nReturn\nthe\nminimum\ntotal distance between each house and its nearest mailbox\n.\nThe test cases are generated so that the answer fits in a 32-bit integer.\nExample 1:\nInput:\nhouses = [1,4,8,10,20], k = 3\nOutput:\n5\nExplanation:\nAllocate mailboxes in position 3, 9 and 20.\nMinimum total distance from each houses to nearest mailboxes is |3-1| + |4-3| + |9-8| + |10-9| + |20-20| = 5\nExample 2:\nInput:\nhouses = [2,3,5,12,18], k = 2\nOutput:\n9\nExplanation:\nAllocate mailboxes in position 3 and 14.\nMinimum total distance from each houses to nearest mailboxes is |2-3| + |3-3| + |5-3| + |12-14| + |18-14| = 9.\nConstraints:\n1 <= k <= houses.length <= 100\n1 <= houses[i] <= 10\n4\nAll the integers of\nhouses\nare\nunique\n.",
+    "examples": [
+      {
+        "input": "houses = [1,4,8,10,20], k = 3",
+        "output": "5"
+      },
+      {
+        "input": "houses = [2,3,5,12,18], k = 2",
+        "output": "9"
+      }
+    ],
+    "constraints": [
+      "The input may be large, so the intended solution should use an efficient algorithm.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "allow-one-function-call",
+    "title": "Allow One Function Call",
+    "difficulty": "Easy",
+    "topic": "Other",
+    "description": "Given a function\nfn\n, return a new function that is identical to the original function except that it ensures\nfn\nis called at most once.\nThe first time the returned function is called, it should return the same result as\nfn\n.\nEvery subsequent time it is called, it should return\nundefined\n.\nExample 1:\nInput:\nfn = (a,b,c) => (a + b + c), calls = [[1,2,3],[2,3,6]]\nOutput:\n[{\"calls\":1,\"value\":6}]\nExplanation:\nconst onceFn = once(fn);\nonceFn(1, 2, 3); // 6\nonceFn(2, 3, 6); // undefined, fn was not called\nExample 2:\nInput:\nfn = (a,b,c) => (a * b * c), calls = [[5,7,4],[2,3,6],[4,6,8]]\nOutput:\n[{\"calls\":1,\"value\":140}]\nExplanation:\nconst onceFn = once(fn);\nonceFn(5, 7, 4); // 140\nonceFn(2, 3, 6); // undefined, fn was not called\nonceFn(4, 6, 8); // undefined, fn was not called\nConstraints:\ncalls\nis a valid JSON array\n1 <= calls.length <= 10\n1 <= calls[i].length <= 100\n2 <= JSON.stringify(calls).length <= 1000",
+    "problemStatement": "Given a function\nfn\n, return a new function that is identical to the original function except that it ensures\nfn\nis called at most once.\nThe first time the returned function is called, it should return the same result as\nfn\n.\nEvery subsequent time it is called, it should return\nundefined\n.\nExample 1:\nInput:\nfn = (a,b,c) => (a + b + c), calls = [[1,2,3],[2,3,6]]\nOutput:\n[{\"calls\":1,\"value\":6}]\nExplanation:\nconst onceFn = once(fn);\nonceFn(1, 2, 3); // 6\nonceFn(2, 3, 6); // undefined, fn was not called\nExample 2:\nInput:\nfn = (a,b,c) => (a * b * c), calls = [[5,7,4],[2,3,6],[4,6,8]]\nOutput:\n[{\"calls\":1,\"value\":140}]\nExplanation:\nconst onceFn = once(fn);\nonceFn(5, 7, 4); // 140\nonceFn(2, 3, 6); // undefined, fn was not called\nonceFn(4, 6, 8); // undefined, fn was not called\nConstraints:\ncalls\nis a valid JSON array\n1 <= calls.length <= 10\n1 <= calls[i].length <= 100\n2 <= JSON.stringify(calls).length <= 1000",
+    "examples": [
+      {
+        "input": "fn = (a,b,c) => (a + b + c), calls = [[1,2,3],[2,3,6]]",
+        "output": "[{\"calls\":1,\"value\":6}]"
+      },
+      {
+        "input": "fn = (a,b,c) => (a * b * c), calls = [[5,7,4],[2,3,6],[4,6,8]]",
+        "output": "[{\"calls\":1,\"value\":140}]"
+      }
+    ],
+    "constraints": [
+      "The input size is within the limits specified by the original problem.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  },
+  {
+    "id": "alphabet-board-path",
+    "title": "Alphabet Board Path",
+    "difficulty": "Medium",
+    "topic": "Other",
+    "description": "On an alphabet board, we start at position\n(0, 0)\n, corresponding to character\nboard[0][0]\n.\nHere,\nboard = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxy\", \"z\"]\n, as shown in the diagram below.\nWe may make the following moves:\n'U'\nmoves our position up one row, if the position exists on the board;\n'D'\nmoves our position down one row, if the position exists on the board;\n'L'\nmoves our position left one column, if the position exists on the board;\n'R'\nmoves our position right one column, if the position exists on the board;\n'!'\nadds the character\nboard[r][c]\nat our current position\n(r, c)\nto the answer.\n(Here, the only positions that exist on the board are positions with letters on them.)\nReturn a sequence of moves that makes our answer equal to\ntarget\nin the minimum number of moves. You may return any path that does so.\nExample 1:\nInput:\ntarget = \"leet\"\nOutput:\n\"DDR!UURRR!!DDD!\"\nExample 2:\nInput:\ntarget = \"code\"\nOutput:\n\"RR!DDRR!UUL!R!\"\nConstraints:\n1 <= target.length <= 100\ntarget\nconsists only of English lowercase letters.",
+    "problemStatement": "On an alphabet board, we start at position\n(0, 0)\n, corresponding to character\nboard[0][0]\n.\nHere,\nboard = [\"abcde\", \"fghij\", \"klmno\", \"pqrst\", \"uvwxy\", \"z\"]\n, as shown in the diagram below.\nWe may make the following moves:\n'U'\nmoves our position up one row, if the position exists on the board;\n'D'\nmoves our position down one row, if the position exists on the board;\n'L'\nmoves our position left one column, if the position exists on the board;\n'R'\nmoves our position right one column, if the position exists on the board;\n'!'\nadds the character\nboard[r][c]\nat our current position\n(r, c)\nto the answer.\n(Here, the only positions that exist on the board are positions with letters on them.)\nReturn a sequence of moves that makes our answer equal to\ntarget\nin the minimum number of moves. You may return any path that does so.\nExample 1:\nInput:\ntarget = \"leet\"\nOutput:\n\"DDR!UURRR!!DDD!\"\nExample 2:\nInput:\ntarget = \"code\"\nOutput:\n\"RR!DDRR!UUL!R!\"\nConstraints:\n1 <= target.length <= 100\ntarget\nconsists only of English lowercase letters.",
+    "examples": [
+      {
+        "input": "target = \"leet\"",
+        "output": "\"DDR!UURRR!!DDD!\""
+      },
+      {
+        "input": "target = \"code\"",
+        "output": "\"RR!DDRR!UUL!R!\""
+      }
+    ],
+    "constraints": [
+      "The input size may be large enough that an inefficient brute-force solution can be impractical.",
+      "The solution must handle valid other inputs.",
+      "Return the result in the format required by the problem."
+    ],
+    "timeComplexity": "O(n)",
+    "spaceComplexity": "O(n)",
+    "currentApproach": "Analyze the other structure of the problem and process the input in a single organized traversal where possible. Maintain only the state required to construct the final result."
+  }
+]
