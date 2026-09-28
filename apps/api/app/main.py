@@ -1,4 +1,4 @@
-﻿from fastapi import FastAPI
+from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
@@ -6,6 +6,9 @@ from app.core.config import settings
 from app.db.session import engine
 from app.routers.auth import router as auth_router
 from app.routers.ats import router as ats_router
+from app.routers.code import router as code_router
+from app.routers.dsa import router as dsa_router
+from app.routers.mock_interview_session import router as mock_interview_session_router
 
 app = FastAPI(
     title=settings.app_name,
@@ -22,6 +25,9 @@ app.add_middleware(
 
 app.include_router(auth_router)
 app.include_router(ats_router)
+app.include_router(code_router)
+app.include_router(dsa_router)
+app.include_router(mock_interview_session_router)
 
 
 @app.get("/")
